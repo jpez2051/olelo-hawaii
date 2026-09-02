@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "title": "ʻŌlelo Hawaiʻi Learning Path",
+  "units": [
+    {
+      "id": "foundations-writing",
+      "order": 1,
+      "title": "Foundations: Sound & Writing",
+      "description": "Build accurate Hawaiian spelling habits before vocabulary and grammar become larger. ʻOkina and kahakō are treated as meaningful parts of spelling, not optional decoration.",
+      "outcomes": [
+        "Recognize the ʻokina as a consonant/glottal stop",
+        "Recognize kahakō as vowel length",
+        "Type common Hawaiian words with correct Unicode orthography"
+      ],
+      "lessons": [
+        {
+          "id": "orthography-01",
+          "title": "ʻOkina & Kahakō",
+          "summary": "Repair spellings and learn to notice Hawaiian orthography precisely.",
+          "focus": ["orthography", "pronunciation"],
+          "path": "./data/lessons/01-orthography.json",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "id": "foundations-listening",
+      "order": 2,
+      "title": "Foundations: Listening & Pronunciation",
+      "description": "Train the ear before relying on written prompts: vowel quality, vowel length, ʻokina, rhythm, and shadowing.",
+      "outcomes": [
+        "Distinguish short and long vowels",
+        "Hear the ʻokina in familiar words",
+        "Shadow short phrases with natural rhythm"
+      ],
+      "lessons": [],
+      "status": "planned"
+    },
+    {
+      "id": "pepeke-foundations",
+      "order": 3,
+      "title": "Sentence Foundations: Pepeke",
+      "description": "Move from isolated words into Hawaiian sentence patterns and learn to see how poʻo, piko, and ʻāwe work together.",
+      "outcomes": [
+        "Recognize core sentence patterns",
+        "Build simple Hawaiian sentences from meaning",
+        "Explain a sentence structure without forcing English word order onto it"
+      ],
+      "lessons": [],
+      "status": "planned"
+    }
+  ]
+}
