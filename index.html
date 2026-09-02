@@ -64,7 +64,7 @@
           <p id="support" class="support-text"></p>
 
           <label for="answer-input" class="answer-label">Your answer</label>
-          <input id="answer-input" class="answer-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <input id="answer-input" class="answer-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" readonly>
 
           <div class="hawaiian-keyboard" aria-label="Hawaiian characters">
             <button type="button" data-char="ʻ">ʻ</button>
@@ -107,6 +107,36 @@
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
   </footer>
 
+  <script>
+    (() => {
+      const input = document.getElementById('answer-input');
+      const next = document.getElementById('next-btn');
+      const check = document.getElementById('check-btn');
+      const startDue = document.getElementById('start-due-btn');
+      const unitList = document.getElementById('unit-list');
+
+      const lockKeyboard = () => {
+        input.readOnly = true;
+        input.blur();
+      };
+
+      const unlockFromUserTap = () => {
+        if (!input.disabled) input.readOnly = false;
+      };
+
+      input.addEventListener('pointerdown', unlockFromUserTap);
+      input.addEventListener('touchstart', unlockFromUserTap, { passive: true });
+      input.addEventListener('mousedown', unlockFromUserTap);
+
+      next.addEventListener('pointerdown', lockKeyboard, true);
+      next.addEventListener('click', lockKeyboard, true);
+      check.addEventListener('click', () => setTimeout(lockKeyboard, 0), true);
+      startDue.addEventListener('click', lockKeyboard, true);
+      unitList.addEventListener('click', event => {
+        if (event.target.closest('button')) lockKeyboard();
+      }, true);
+    })();
+  </script>
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>
