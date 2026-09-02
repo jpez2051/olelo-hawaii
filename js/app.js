@@ -156,6 +156,7 @@ function showNextActivity() {
   answerLocked = false;
 
   if (!currentActivity) {
+    $("#answer-input")?.blur();
     $("#practice-content").hidden = true;
     $("#practice-empty").hidden = false;
     $("#practice-empty").textContent = "Round complete. Your next reviews will appear here when they are due.";
@@ -177,7 +178,11 @@ function showNextActivity() {
   $("#feedback").hidden = true;
   $("#feedback").className = "feedback";
   $("#feedback").innerHTML = "";
-  $("#answer-input").focus();
+
+  // Do not autofocus the answer field. On phones, autofocus opens the
+  // system keyboard immediately and hides the lesson content above it.
+  // The keyboard should appear only after the learner taps the text field.
+  $("#answer-input").blur();
 }
 
 function feedbackTitle(status) {
