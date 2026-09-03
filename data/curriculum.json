@@ -27,14 +27,23 @@
       "id": "foundations-listening",
       "order": 2,
       "title": "Foundations: Listening & Pronunciation",
-      "description": "Train the ear before relying on written prompts: vowel quality, vowel length, ʻokina, rhythm, and shadowing.",
+      "description": "Train your ear with trusted Hawaiian-language audio before relying on generated or unverified pronunciation.",
       "outcomes": [
-        "Distinguish short and long vowels",
-        "Hear the ʻokina in familiar words",
-        "Shadow short phrases with natural rhythm"
+        "Become more comfortable hearing Hawaiian spoken naturally",
+        "Begin noticing rhythm, pauses, vowel length, and ʻokina by ear",
+        "Build toward later listen-and-type and shadowing practice"
       ],
-      "lessons": [],
-      "status": "planned"
+      "lessons": [
+        {
+          "id": "listening-01",
+          "title": "Guided Listening: HAW 101",
+          "summary": "Listen to an official UH Hilo HAW 101 recording and begin training your ear without treating exposure as mastery.",
+          "focus": ["listening", "pronunciation"],
+          "path": "./data/lessons/02-listening-pronunciation.json",
+          "status": "active"
+        }
+      ],
+      "status": "active"
     },
     {
       "id": "pepeke-foundations",
