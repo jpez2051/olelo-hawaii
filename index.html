@@ -30,7 +30,7 @@
         <div>
           <p class="section-kicker">Your path</p>
           <h2 id="learn-title">Learn it, hide it, remember it</h2>
-          <p>Lessons deliberately remove clues. You will study, handwrite, recall, and revisit material later instead of earning credit for simply recognizing the answer.</p>
+          <p>Lessons deliberately remove clues. You will study, listen, handwrite, recall, and revisit material later instead of earning credit for simply recognizing the answer.</p>
         </div>
         <button id="start-due-btn" class="primary-btn">Practice what’s due</button>
       </div>
@@ -42,8 +42,8 @@
     <section id="view-practice" class="view" aria-labelledby="practice-title">
       <div class="practice-header">
         <div>
-          <p class="section-kicker">Active recall</p>
-          <h2 id="practice-title">Produce it without the answer in front of you</h2>
+          <p class="section-kicker">Practice</p>
+          <h2 id="practice-title">Build memory and train your ear</h2>
         </div>
         <div id="practice-count" class="pill">0 due</div>
       </div>
@@ -60,6 +60,22 @@
           <p id="instruction" class="instruction"></p>
           <div id="prompt" class="prompt"></div>
           <p id="support" class="support-text"></p>
+
+          <div id="listening-panel" class="listening-panel" hidden>
+            <p class="study-label">Trusted listening source</p>
+            <div class="audio-source-copy">
+              <strong id="listening-source-name"></strong>
+              <span id="listening-speaker"></span>
+            </div>
+            <audio id="listening-audio" controls preload="metadata"></audio>
+            <p class="study-label">While you listen</p>
+            <ul id="listening-notes" class="study-notes"></ul>
+            <div class="practice-actions">
+              <button id="listening-continue-btn" class="primary-btn" type="button" disabled>Continue after listening</button>
+              <a id="listening-source-link" class="secondary-link" href="#" target="_blank" rel="noopener noreferrer">Open official audio</a>
+            </div>
+            <p class="exposure-note">Listening exposure is recorded separately from scored practice. Pressing play does not count as mastery.</p>
+          </div>
 
           <div id="study-panel" class="study-panel" hidden>
             <p class="study-label">Study the word</p>
@@ -110,6 +126,12 @@
       </div>
 
       <div class="panel">
+        <p class="section-kicker">By skill</p>
+        <h2>What you are practicing</h2>
+        <div id="skill-progress" class="skill-progress"></div>
+      </div>
+
+      <div class="panel">
         <div class="needs-header">
           <div>
             <p class="section-kicker">Needs practice</p>
@@ -124,7 +146,7 @@
 
       <div class="panel">
         <h3>Mastery means remembering</h3>
-        <p>The app tracks what you can remember after support is removed and when material needs to come back—not XP, leagues, or easy recognition scores.</p>
+        <p>Scored practice tracks what you can remember after support is removed. Guided listening is tracked separately until an exercise can test what you actually heard.</p>
         <div class="data-actions">
           <button id="export-btn" class="secondary-btn">Export progress</button>
           <button id="reset-btn" class="danger-btn">Reset local progress</button>
@@ -135,7 +157,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 4.3.2</span>
+    <span class="site-version">Version 4.4.0</span>
   </footer>
 
   <script>
