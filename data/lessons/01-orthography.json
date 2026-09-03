@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "id": "orthography-01",
   "title": "ʻOkina & Kahakō",
-  "description": "Train accurate Hawaiian spelling through noticing, handwriting, and retrieval after the model is hidden.",
-  "focus": ["orthography", "pronunciation", "active recall"],
+  "description": "Train accurate Hawaiian spelling through noticing, handwriting, and recall after the word is hidden.",
+  "focus": ["spelling", "pronunciation", "active recall"],
   "contentStatus": "starter-vetted",
   "activities": [
     {
@@ -11,23 +11,23 @@
       "type": "repair-spelling",
       "instruction": "Repair the Hawaiian spelling.",
       "prompt": "Aole",
-      "support": "Restore the missing Hawaiian orthography without looking anything up.",
+      "support": "Restore the two missing ʻokina.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
-      "explanation": "ʻAʻole contains two ʻokina: one at the beginning and one between A and o. There is no kahakō in this word."
+      "explanation": "ʻAʻole has two ʻokina: one at the beginning and one between A and o. It does not use a kahakō."
     },
     {
       "id": "ortho-aole-study",
       "type": "study-hide-recall",
-      "instruction": "Study the word, then hide it and produce it from memory.",
-      "prompt": "Learn the spelling, not the shape.",
-      "support": "Notice the exact placement of each mark before you hide the model.",
+      "instruction": "Study the word, then hide it and write it from memory.",
+      "prompt": "Learn the spelling carefully.",
+      "support": "Notice exactly where each ʻokina appears before you hide the word.",
       "studyWord": "ʻAʻole",
       "studyNotes": ["Two ʻokina: one at the beginning and one between A and o", "No kahakō in this word", "Say the word aloud while you study it"],
-      "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time. Then type it from memory.",
+      "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
-      "explanation": "You retrieved the spelling after the model disappeared. The key detail is remembering both ʻokina and not adding a kahakō."
+      "explanation": "You recalled the spelling after the word disappeared instead of copying it while it was visible."
     },
     {
       "id": "ortho-hawaii-repair",
@@ -37,53 +37,53 @@
       "support": "Restore the missing ʻokina.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "The ʻokina in Hawaiʻi comes before the final i and belongs in the spelling."
+      "explanation": "Hawaiʻi has an ʻokina before the final i. The ʻokina represents a glottal stop and is part of the spelling."
     },
     {
       "id": "ortho-hawaii-study",
       "type": "study-hide-recall",
-      "instruction": "Study, hide, handwrite, then recall.",
+      "instruction": "Study the word, then hide it and write it from memory.",
       "prompt": "Pay attention to exactly where the ʻokina occurs.",
-      "support": "Notice the spelling before the model is hidden.",
+      "support": "Notice the spelling before you hide the word.",
       "studyWord": "Hawaiʻi",
       "studyNotes": ["One ʻokina before the final i", "No kahakō in this word", "Say the syllables slowly while you study it"],
-      "paperInstruction": "Write the word you just studied three times on paper from memory. Then type it from memory.",
+      "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "The goal is to retrieve the location of the ʻokina, not simply recognize it when it is shown."
+      "explanation": "The goal is to remember where the ʻokina belongs, not simply recognize it when it is shown."
     },
     {
       "id": "ortho-olelo-repair",
       "type": "repair-spelling",
       "instruction": "Repair the Hawaiian spelling.",
       "prompt": "Olelo Hawaii",
-      "support": "Restore all missing ʻokina and kahakō.",
+      "support": "Restore the missing ʻokina and kahakō.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "ʻŌlelo begins with an ʻokina and Ō with a kahakō. Hawaiʻi contains an ʻokina before the final i."
+      "explanation": "ʻŌlelo begins with an ʻokina and Ō has a kahakō. Hawaiʻi has an ʻokina before the final i."
     },
     {
       "id": "ortho-olelo-study",
       "type": "study-hide-recall",
-      "instruction": "Study the phrase, hide it, then rebuild it from memory.",
-      "prompt": "This time you must remember more than one orthographic mark.",
-      "support": "Notice the exact marks in each word before hiding the phrase.",
+      "instruction": "Study the phrase, then hide it and write it from memory.",
+      "prompt": "This phrase has more than one spelling mark to remember.",
+      "support": "Notice the opening ʻokina, the kahakō over Ō, and the ʻokina in Hawaiʻi.",
       "studyWord": "ʻŌlelo Hawaiʻi",
-      "studyNotes": ["ʻŌlelo begins with ʻ + Ō", "Hawaiʻi has an ʻokina before the final i", "Only ʻŌlelo contains a kahakō in this phrase"],
-      "paperInstruction": "Write the phrase you just studied three times on paper from memory. Circle each ʻokina and underline each kahakō from memory. Then type the phrase from memory.",
+      "studyNotes": ["ʻŌlelo starts with ʻ + Ō", "The Ō in ʻŌlelo has a kahakō", "Hawaiʻi has an ʻokina before the final i", "Say the whole phrase aloud while you study it"],
+      "paperInstruction": "Write the phrase you just studied three times on paper from memory. Circle each ʻokina and underline the kahakō each time.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "Combining handwriting, speaking, and delayed typing forces you to reconstruct the spelling instead of copying it."
+      "explanation": "Writing, speaking, and then typing the phrase helps you remember the exact spelling instead of copying it."
     },
     {
       "id": "ortho-ae-recall",
       "type": "meaning-recall",
-      "instruction": "Produce the Hawaiian spelling from meaning alone.",
+      "instruction": "Write the Hawaiian word from its meaning.",
       "prompt": "yes",
       "support": "Type the Hawaiian word accurately.",
       "answer": "ʻAe",
       "answerLanguage": "haw",
-      "explanation": "Even a short word must be retrieved with its initial ʻokina."
+      "explanation": "ʻAe begins with an ʻokina."
     }
   ]
 }
