@@ -80,7 +80,7 @@
       "type": "meaning-recall",
       "instruction": "Produce the Hawaiian spelling from meaning alone.",
       "prompt": "yes",
-      "support": "No Hawaiian model is shown. Type the Hawaiian word accurately.",
+      "support": "Type the Hawaiian word accurately.",
       "answer": "ʻAe",
       "answerLanguage": "haw",
       "explanation": "Even a short word must be retrieved with its initial ʻokina."
