@@ -1,10 +1,24 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "id": "orthography-01",
   "title": "ʻOkina & Kahakō",
   "description": "Train accurate Hawaiian spelling through noticing, handwriting, and recall after the word is hidden.",
   "focus": ["spelling", "pronunciation", "active recall"],
-  "contentStatus": "starter-vetted",
+  "contentStatus": "source-checked",
+  "contentReview": {
+    "checkedAt": "2026-09-03",
+    "standard": "Hawaiian-language spelling and meanings are checked against authoritative University of Hawaiʻi resources before release.",
+    "sources": [
+      {
+        "name": "University of Hawaiʻi — Hawaiian Language Considerations",
+        "url": "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/"
+      },
+      {
+        "name": "Nā Puke Wehewehe ʻŌlelo Hawaiʻi / Wehewehe Wikiwiki — Pukui-Elbert dictionary entries",
+        "url": "https://wehe.hilo.hawaii.edu/"
+      }
+    ]
+  },
   "activities": [
     {
       "id": "ortho-aole-repair",
