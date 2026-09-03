@@ -29,7 +29,7 @@
       <div class="hero-card">
         <div>
           <p class="section-kicker">Your path</p>
-          <h2 id="learn-title">Learn it, hide it, retrieve it</h2>
+          <h2 id="learn-title">Learn it, hide it, remember it</h2>
           <p>Lessons deliberately remove clues. You will study, handwrite, recall, and revisit material later instead of earning credit for simply recognizing the answer.</p>
         </div>
         <button id="start-due-btn" class="primary-btn">Practice what’s due</button>
@@ -70,9 +70,12 @@
           </div>
 
           <div id="paper-panel" class="paper-panel" hidden>
-            <p class="paper-title">Use your paper</p>
+            <p class="paper-title">Write it down</p>
             <p id="paper-instruction"></p>
-            <button id="paper-done-btn" class="primary-btn" type="button">Done writing</button>
+            <div class="practice-actions">
+              <button id="paper-done-btn" class="primary-btn" type="button">Done writing</button>
+              <button id="skip-paper-btn" class="secondary-btn" type="button">Skip paper</button>
+            </div>
           </div>
 
           <div id="answer-area">
@@ -89,7 +92,7 @@
             </div>
 
             <div class="practice-actions">
-              <button id="check-btn" class="primary-btn">Check from memory</button>
+              <button id="check-btn" class="primary-btn">Check answer</button>
               <button id="next-btn" class="secondary-btn" hidden>Next</button>
             </div>
           </div>
@@ -107,8 +110,8 @@
       </div>
 
       <div class="panel">
-        <h3>Mastery means retrieval</h3>
-        <p>The app tracks what you can retrieve after support is removed and when material needs to come back—not XP, leagues, or easy recognition scores.</p>
+        <h3>Mastery means remembering</h3>
+        <p>The app tracks what you can remember after support is removed and when material needs to come back—not XP, leagues, or easy recognition scores.</p>
         <div class="data-actions">
           <button id="export-btn" class="secondary-btn">Export progress</button>
           <button id="reset-btn" class="danger-btn">Reset local progress</button>
@@ -119,7 +122,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 4.1.5</span>
+    <span class="site-version">Version 4.2.0</span>
   </footer>
 
   <script>
@@ -131,7 +134,7 @@
       input.addEventListener('touchstart', unlockFromUserTap, { passive: true });
       input.addEventListener('mousedown', unlockFromUserTap);
       document.addEventListener('click', event => {
-        if (event.target.closest('#next-btn, #check-btn, #start-due-btn, #hide-and-recall-btn, #paper-done-btn, #unit-list button')) lockKeyboard();
+        if (event.target.closest('#next-btn, #check-btn, #start-due-btn, #hide-and-recall-btn, #paper-done-btn, #skip-paper-btn, #unit-list button')) lockKeyboard();
       }, true);
     })();
   </script>
