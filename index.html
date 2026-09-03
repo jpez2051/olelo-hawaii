@@ -110,6 +110,19 @@
       </div>
 
       <div class="panel">
+        <div class="needs-header">
+          <div>
+            <p class="section-kicker">Needs practice</p>
+            <h2>Words to revisit</h2>
+            <p>Items appear here when an answer is missed or nearly correct. They clear after you show that the spelling is sticking again.</p>
+          </div>
+          <button id="practice-needs-btn" class="primary-btn" type="button" hidden>Practice these</button>
+        </div>
+        <p id="needs-practice-empty" class="needs-empty">Nothing is being flagged right now. If a word gives you trouble later, it will show up here automatically.</p>
+        <div id="needs-practice-list" class="needs-practice-list"></div>
+      </div>
+
+      <div class="panel">
         <h3>Mastery means remembering</h3>
         <p>The app tracks what you can remember after support is removed and when material needs to come back—not XP, leagues, or easy recognition scores.</p>
         <div class="data-actions">
@@ -122,7 +135,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 4.2.0</span>
+    <span class="site-version">Version 4.3.0</span>
   </footer>
 
   <script>
@@ -134,7 +147,7 @@
       input.addEventListener('touchstart', unlockFromUserTap, { passive: true });
       input.addEventListener('mousedown', unlockFromUserTap);
       document.addEventListener('click', event => {
-        if (event.target.closest('#next-btn, #check-btn, #start-due-btn, #hide-and-recall-btn, #paper-done-btn, #skip-paper-btn, #unit-list button')) lockKeyboard();
+        if (event.target.closest('#next-btn, #check-btn, #start-due-btn, #practice-needs-btn, #hide-and-recall-btn, #paper-done-btn, #skip-paper-btn, #unit-list button')) lockKeyboard();
       }, true);
     })();
   </script>
