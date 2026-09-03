@@ -1,12 +1,21 @@
 const STORAGE_KEY = "olelo-hawaii-progress-v1";
 
+function emptyProgress() {
+  return {
+    reviews: {},
+    exposures: {},
+    totals: { correct: 0, almost: 0, incorrect: 0 }
+  };
+}
+
 export function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { reviews: {}, totals: { correct: 0, almost: 0, incorrect: 0 } };
+    if (!raw) return emptyProgress();
     const parsed = JSON.parse(raw);
     return {
       reviews: parsed.reviews || {},
+      exposures: parsed.exposures || {},
       totals: {
         correct: Number(parsed.totals?.correct) || 0,
         almost: Number(parsed.totals?.almost) || 0,
@@ -14,7 +23,7 @@ export function loadProgress() {
       }
     };
   } catch {
-    return { reviews: {}, totals: { correct: 0, almost: 0, incorrect: 0 } };
+    return emptyProgress();
   }
 }
 
@@ -28,7 +37,7 @@ export function clearProgress() {
 
 export function exportProgress(progress) {
   const payload = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     exportedAt: new Date().toISOString(),
     progress
   };
