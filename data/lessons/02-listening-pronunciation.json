@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "listening-01",
+  "title": "Guided Listening: HAW 101",
+  "description": "Begin training your ear with an official University of Hawaiʻi at Hilo Hawaiian-language learning recording.",
+  "focus": ["listening", "pronunciation"],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-09-03",
+    "notes": "The audio source and speaker attribution were verified on the official Ka Haka ʻUla O Keʻelikōlani HAW 101 podcast page. This lesson treats the recording as guided exposure only; it does not claim mastery or provide an invented transcript.",
+    "sources": [
+      "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
+      "https://olelo.hawaii.edu/khuok/limahana/kainani-kahaunaele"
+    ]
+  },
+  "activities": [
+    {
+      "id": "listen-haw101-pela-puana",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "instruction": "Listen before trying to analyze every word.",
+      "prompt": "HAW 101: Pela Puana",
+      "support": "This is listening exposure, not a quiz. Your goal is to become more comfortable hearing Hawaiian spoken by a trusted source.",
+      "audioUrl": "https://www.olelo.hawaii.edu/en/olelo/documents/olelo/hoolele101/HH02_Pela_Puana.mp3",
+      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
+      "audioSpeaker": "Kumu Kainani Kahaunaele",
+      "listeningNotes": [
+        "Listen for the overall rhythm before worrying about individual words.",
+        "Notice pauses and changes in vowel length as you hear them.",
+        "Replay sections when something catches your ear. You do not need to understand everything yet."
+      ],
+      "completionLabel": "Continue after listening"
+    }
+  ]
+}
