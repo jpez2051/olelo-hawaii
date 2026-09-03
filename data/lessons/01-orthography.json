@@ -14,20 +14,20 @@
       "support": "Restore the missing Hawaiian orthography without looking anything up.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
-      "explanation": "ʻAʻole begins with an ʻokina and the o carries a kahakō. Both marks are part of the word."
+      "explanation": "ʻAʻole contains two ʻokina: one at the beginning and one between A and o. There is no kahakō in this word."
     },
     {
       "id": "ortho-aole-study",
       "type": "study-hide-recall",
       "instruction": "Study the word, then hide it and produce it from memory.",
       "prompt": "Learn the spelling, not the shape.",
-      "support": "Notice each mark before you hide the model.",
+      "support": "Notice the exact placement of each mark before you hide the model.",
       "studyWord": "ʻAʻole",
-      "studyNotes": ["Initial ʻokina", "Kahakō over ō", "Say the word aloud while you study it"],
+      "studyNotes": ["Two ʻokina: one at the beginning and one between A and o", "No kahakō in this word", "Say the word aloud while you study it"],
       "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time. Then type it from memory.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
-      "explanation": "You retrieved the spelling after the model disappeared. That is much stronger evidence of learning than copying it while visible."
+      "explanation": "You retrieved the spelling after the model disappeared. The key detail is remembering both ʻokina and not adding a kahakō."
     },
     {
       "id": "ortho-hawaii-repair",
@@ -37,16 +37,16 @@
       "support": "Restore the missing ʻokina.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "The ʻokina in Hawaiʻi represents a glottal stop and belongs in the spelling."
+      "explanation": "The ʻokina in Hawaiʻi comes before the final i and belongs in the spelling."
     },
     {
       "id": "ortho-hawaii-study",
       "type": "study-hide-recall",
       "instruction": "Study, hide, handwrite, then recall.",
       "prompt": "Pay attention to exactly where the ʻokina occurs.",
-      "support": "Do not type until the model has been hidden.",
+      "support": "Notice the spelling before the model is hidden.",
       "studyWord": "Hawaiʻi",
-      "studyNotes": ["The ʻokina comes before the final i", "Say the syllables slowly", "Look away and picture the spelling before continuing"],
+      "studyNotes": ["One ʻokina before the final i", "No kahakō in this word", "Say the syllables slowly while you study it"],
       "paperInstruction": "Write the word you just studied three times on paper from memory. Then type it from memory.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
@@ -60,16 +60,16 @@
       "support": "Restore all missing ʻokina and kahakō.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "ʻŌlelo begins with an ʻokina and a long ō. Hawaiʻi also contains an ʻokina."
+      "explanation": "ʻŌlelo begins with an ʻokina and Ō with a kahakō. Hawaiʻi contains an ʻokina before the final i."
     },
     {
       "id": "ortho-olelo-study",
       "type": "study-hide-recall",
       "instruction": "Study the phrase, hide it, then rebuild it from memory.",
       "prompt": "This time you must remember more than one orthographic mark.",
-      "support": "Notice the opening ʻokina, the ō, and the ʻokina in Hawaiʻi.",
+      "support": "Notice the exact marks in each word before hiding the phrase.",
       "studyWord": "ʻŌlelo Hawaiʻi",
-      "studyNotes": ["ʻŌlelo starts with ʻ + Ō", "Hawaiʻi has an ʻokina before the final i", "Say the whole phrase aloud"],
+      "studyNotes": ["ʻŌlelo begins with ʻ + Ō", "Hawaiʻi has an ʻokina before the final i", "Only ʻŌlelo contains a kahakō in this phrase"],
       "paperInstruction": "Write the phrase you just studied three times on paper from memory. Circle each ʻokina and underline each kahakō from memory. Then type the phrase from memory.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
