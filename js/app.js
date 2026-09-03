@@ -29,6 +29,15 @@ function switchView(name) {
   if (name === "progress") renderProgress();
 }
 
+function scrollPracticeToTop(behavior = "smooth") {
+  requestAnimationFrame(() => {
+    const target = $("#view-practice");
+    if (!target || !target.classList.contains("active")) return;
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - 8);
+    window.scrollTo({ top, behavior });
+  });
+}
+
 async function loadJson(path) {
   const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`Could not load ${path}`);
@@ -144,7 +153,6 @@ function representativeActivity(groupActivities) {
 
 function needsPracticeGroups() {
   const groups = new Map();
-
   activities.forEach(activity => {
     const state = progress.reviews[activity.id];
     if (!needsMorePractice(state)) return;
@@ -170,7 +178,8 @@ function needsPracticeGroups() {
 function startLesson(lessonId) {
   practiceQueue = activities.filter(activity => activity.lessonId === lessonId);
   switchView("practice");
-  showNextActivity();
+  showNextActivity(false);
+  scrollPracticeToTop("smooth");
 }
 
 function startDuePractice() {
@@ -178,7 +187,8 @@ function startDuePractice() {
   if (!due.length) due = activities.slice();
   practiceQueue = shuffle(due);
   switchView("practice");
-  showNextActivity();
+  showNextActivity(false);
+  scrollPracticeToTop("smooth");
 }
 
 function startNeedsPractice() {
@@ -186,7 +196,8 @@ function startNeedsPractice() {
   if (!weak.length) return;
   practiceQueue = shuffle(weak);
   switchView("practice");
-  showNextActivity();
+  showNextActivity(false);
+  scrollPracticeToTop("smooth");
 }
 
 function resetPracticeUi() {
@@ -205,7 +216,7 @@ function resetPracticeUi() {
   $("#feedback").innerHTML = "";
 }
 
-function showNextActivity() {
+function showNextActivity(returnToTop = true) {
   currentActivity = practiceQueue.shift() || null;
   answerLocked = false;
   resetPracticeUi();
@@ -215,6 +226,7 @@ function showNextActivity() {
     $("#practice-empty").hidden = false;
     $("#practice-empty").textContent = "Round complete. These words will return later for more practice.";
     updateDueCount();
+    if (returnToTop) scrollPracticeToTop();
     return;
   }
 
@@ -235,6 +247,8 @@ function showNextActivity() {
   } else {
     activityStage = "answer";
   }
+
+  if (returnToTop) scrollPracticeToTop();
 }
 
 function beginHiddenRecall() {
@@ -350,11 +364,11 @@ function bindEvents() {
   $("#paper-done-btn").addEventListener("click", finishPaperStage);
   $("#skip-paper-btn").addEventListener("click", finishPaperStage);
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
-  $("#next-btn").addEventListener("click", showNextActivity);
+  $("#next-btn").addEventListener("click", () => showNextActivity(true));
   $("#answer-input").addEventListener("keydown", event => {
     if (event.key !== "Enter") return;
     event.preventDefault();
-    if (answerLocked) showNextActivity();
+    if (answerLocked) showNextActivity(true);
     else checkCurrentAnswer();
   });
   $$(".hawaiian-keyboard button").forEach(btn => btn.addEventListener("click", () => insertCharacter(btn.dataset.char)));
