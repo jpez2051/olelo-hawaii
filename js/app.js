@@ -38,6 +38,28 @@ function scrollPracticeToTop(behavior = "smooth") {
   });
 }
 
+function settleAfterKeyboard() {
+  const input = $("#answer-input");
+  input.blur();
+  const run = () => scrollPracticeToTop("smooth");
+  if (window.visualViewport) {
+    let baseline = window.visualViewport.height;
+    const onResize = () => {
+      if (window.visualViewport.height > baseline + 40) {
+        window.visualViewport.removeEventListener("resize", onResize);
+        setTimeout(run, 80);
+      }
+    };
+    window.visualViewport.addEventListener("resize", onResize);
+    setTimeout(() => {
+      window.visualViewport.removeEventListener("resize", onResize);
+      run();
+    }, 450);
+  } else {
+    setTimeout(run, 220);
+  }
+}
+
 async function loadJson(path) {
   const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`Could not load ${path}`);
@@ -304,10 +326,10 @@ function checkCurrentAnswer() {
     ${explanation}`;
 
   $("#answer-input").disabled = true;
-  $("#answer-input").blur();
   $("#check-btn").hidden = true;
   $("#next-btn").hidden = false;
   updateDueCount();
+  settleAfterKeyboard();
 }
 
 function insertCharacter(character) {
@@ -364,11 +386,11 @@ function bindEvents() {
   $("#paper-done-btn").addEventListener("click", finishPaperStage);
   $("#skip-paper-btn").addEventListener("click", finishPaperStage);
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
-  $("#next-btn").addEventListener("click", () => showNextActivity(true));
+  $("#next-btn").addEventListener("click", showNextActivity);
   $("#answer-input").addEventListener("keydown", event => {
     if (event.key !== "Enter") return;
     event.preventDefault();
-    if (answerLocked) showNextActivity(true);
+    if (answerLocked) showNextActivity();
     else checkCurrentAnswer();
   });
   $$(".hawaiian-keyboard button").forEach(btn => btn.addEventListener("click", () => insertCharacter(btn.dataset.char)));
