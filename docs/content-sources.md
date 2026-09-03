@@ -19,6 +19,11 @@ https://www.olelo.hawaii.edu/
 
 Use for Hawaiian-language educational resources, pronunciation/spelling resources, and materials produced within UH Hilo's Hawaiian-language program.
 
+The HAW 101 audio podcast by Kumu Kainani Kahaunaele is an approved trusted listening source for guided exposure:
+https://www.olelo.hawaii.edu/en/olelo/hoolele101
+
+For now, the app links or streams audio from the official UH source rather than copying the audio file into this repository. A recording should not be bundled locally unless its reuse rights or permission are clear.
+
 ### ʻŌlelo Online
 https://oleloonline.com/
 
@@ -32,6 +37,8 @@ Every live lesson should carry a `contentStatus` and a source record.
 - `source-checked` — spelling, meaning, and factual language notes checked against authoritative references
 - `expert-reviewed` — reviewed by a qualified Hawaiian-language speaker or educator for natural usage as well as technical accuracy
 
+The app only makes `source-checked` and `expert-reviewed` lessons playable.
+
 ## Rules for adding Hawaiian content
 
 1. Preserve correct ʻokina and kahakō.
@@ -43,8 +50,10 @@ Every live lesson should carry a `contentStatus` and a source record.
 7. Do not assume English or Spanish grammar maps cleanly onto Hawaiian.
 8. Dictionary correctness is not enough for conversational Hawaiian. Phrases presented as natural everyday usage should be checked against trusted instructional material and, when practical, reviewed by a qualified Hawaiian-language speaker or educator before release.
 9. Avoid presenting a phrase as broadly interchangeable with an English phrase when Hawaiian usage is more specific or context-dependent.
-10. Audio must have a trusted speaker/source and known usage rights before it is bundled with the app.
-11. If a language point is uncertain, leave it out of the live curriculum until it can be checked.
+10. Audio must have a trusted speaker/source before it is used for instruction.
+11. Linking or streaming an official audio resource is different from redistributing it. Do not copy third-party recordings into the repository unless reuse rights or permission are clear.
+12. Listening exposure is not mastery. Passive or guided listening should be tracked separately from scored listen-and-identify, dictation, or production tasks.
+13. If a language point is uncertain, leave it out of the live curriculum until it can be checked.
 
 ## Product principle
 
