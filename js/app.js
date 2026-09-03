@@ -97,7 +97,7 @@ function renderCurriculum() {
     }
     list.appendChild(card);
   });
-  $("#curriculum-status").textContent = `${activities.length} active-recall activities loaded.`;
+  $("#curriculum-status").textContent = `${activities.length} practice activities loaded.`;
   updateDueCount();
 }
 
@@ -153,7 +153,7 @@ function showNextActivity() {
   if (!currentActivity) {
     $("#practice-content").hidden = true;
     $("#practice-empty").hidden = false;
-    $("#practice-empty").textContent = "Round complete. The material will return later when retrieval is useful again.";
+    $("#practice-empty").textContent = "Round complete. These words will return later for more practice.";
     updateDueCount();
     return;
   }
@@ -162,7 +162,7 @@ function showNextActivity() {
   $("#practice-content").hidden = false;
   $("#activity-type").textContent = currentActivity.type.replaceAll("-", " ");
   $("#activity-focus").textContent = currentActivity.focus.join(" • ");
-  $("#instruction").textContent = currentActivity.instruction || "Retrieve the answer.";
+  $("#instruction").textContent = currentActivity.instruction || "Type your answer.";
   $("#prompt").textContent = currentActivity.prompt || "";
   $("#support").textContent = currentActivity.support || "";
 
@@ -181,8 +181,8 @@ function beginHiddenRecall() {
   if (!currentActivity || currentActivity.type !== "study-hide-recall") return;
   activityStage = "paper";
   $("#study-panel").hidden = true;
-  $("#prompt").textContent = "The model is hidden. Reconstruct it from memory.";
-  $("#support").textContent = "Do not reveal the answer. Use your paper first.";
+  $("#prompt").textContent = "Write the word you just studied.";
+  $("#support").textContent = "Use paper if you have it. You can also skip this step and type the answer instead.";
   $("#paper-instruction").textContent = currentActivity.paperInstruction || "Write it three times from memory, then continue.";
   $("#paper-panel").hidden = false;
   $("#answer-area").hidden = true;
@@ -195,13 +195,14 @@ function finishPaperStage() {
   $("#answer-area").hidden = false;
   $("#answer-input").readOnly = true;
   $("#answer-input").blur();
-  $("#support").textContent = "Now type it from memory. The keyboard will open only when you tap the answer box.";
+  $("#prompt").textContent = "Now type the word you studied.";
+  $("#support").textContent = "Tap the answer box when you are ready to type.";
 }
 
 function feedbackTitle(status) {
-  if (status === "correct") return "Retrieved correctly";
-  if (status === "almost") return "Almost — the memory is there, refine the spelling";
-  return "Not yet — this one needs another retrieval";
+  if (status === "correct") return "Correct";
+  if (status === "almost") return "Almost — check the spelling";
+  return "Not yet";
 }
 
 function checkCurrentAnswer() {
@@ -220,7 +221,7 @@ function checkCurrentAnswer() {
   feedback.className = `feedback ${result.status}`;
   const notes = (result.notes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
   const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
-  const correctionPractice = result.status === "correct" ? "" : `<p><strong>Paper reset:</strong> Write the correct form 3 times before moving on.</p>`;
+  const correctionPractice = result.status === "correct" ? "" : `<p><strong>Try it on paper:</strong> Write the correct spelling 3 times before moving on if you can.</p>`;
   feedback.innerHTML = `
     <strong>${feedbackTitle(result.status)}</strong>
     ${notes ? `<ul>${notes}</ul>` : ""}
@@ -251,8 +252,8 @@ function renderProgress() {
   const due = dueActivities().length;
   const lapses = reviewedStates.reduce((sum, state) => sum + (state.lapses || 0), 0);
   const totalAttempts = progress.totals.correct + progress.totals.almost + progress.totals.incorrect;
-  const retrievalRate = totalAttempts ? Math.round((progress.totals.correct / totalAttempts) * 100) : 0;
-  const stats = [[reviewed, "items retrieved"], [due, "due now"], [retrievalRate + "%", "clean retrieval"], [lapses, "needs rebuilding"]];
+  const recallRate = totalAttempts ? Math.round((progress.totals.correct / totalAttempts) * 100) : 0;
+  const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct on first check"], [lapses, "needs more practice"]];
   $("#progress-summary").innerHTML = stats.map(([value, label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join("");
 }
 
@@ -261,6 +262,7 @@ function bindEvents() {
   $("#start-due-btn").addEventListener("click", startDuePractice);
   $("#hide-and-recall-btn").addEventListener("click", beginHiddenRecall);
   $("#paper-done-btn").addEventListener("click", finishPaperStage);
+  $("#skip-paper-btn").addEventListener("click", finishPaperStage);
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
   $("#next-btn").addEventListener("click", showNextActivity);
   $("#answer-input").addEventListener("keydown", event => {
