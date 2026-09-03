@@ -23,6 +23,10 @@ function shuffle(items) {
   return copy;
 }
 
+function isScoredActivity(activity) {
+  return activity?.scored !== false && activity?.type !== "guided-listening";
+}
+
 function switchView(name) {
   $$(".nav-btn").forEach(btn => btn.classList.toggle("active", btn.dataset.view === name));
   $$(".view").forEach(view => view.classList.toggle("active", view.id === `view-${name}`));
@@ -43,7 +47,7 @@ function settleAfterKeyboard() {
   input.blur();
   const run = () => scrollPracticeToTop("smooth");
   if (window.visualViewport) {
-    let baseline = window.visualViewport.height;
+    const baseline = window.visualViewport.height;
     const onResize = () => {
       if (window.visualViewport.height > baseline + 40) {
         window.visualViewport.removeEventListener("resize", onResize);
@@ -77,7 +81,13 @@ async function loadCurriculum() {
       lessonSummary.playable = PLAYABLE_CONTENT_STATUSES.has(lessonSummary.contentStatus);
       if (!lessonSummary.playable) continue;
       lesson.activities.forEach(activity => {
-        activities.push({ ...activity, lessonId: lesson.id, lessonTitle: lesson.title, focus: lesson.focus || [] });
+        activities.push({
+          ...activity,
+          lessonId: lesson.id,
+          lessonTitle: lesson.title,
+          focus: lesson.focus || [],
+          skill: activity.skill || (activity.type === "guided-listening" ? "listening" : "spelling")
+        });
       });
     }
   }
@@ -137,7 +147,7 @@ function renderCurriculum() {
     }
     list.appendChild(card);
   });
-  $("#curriculum-status").textContent = `${activities.length} practice activities loaded.`;
+  $("#curriculum-status").textContent = `${activities.length} learning activities loaded.`;
   updateDueCount();
 }
 
@@ -146,7 +156,7 @@ function reviewStateFor(activityId) {
 }
 
 function dueActivities() {
-  return activities.filter(activity => isDue(reviewStateFor(activity.id)));
+  return activities.filter(activity => isScoredActivity(activity) && isDue(reviewStateFor(activity.id)));
 }
 
 function updateDueCount() {
@@ -175,7 +185,7 @@ function representativeActivity(groupActivities) {
 
 function needsPracticeGroups() {
   const groups = new Map();
-  activities.forEach(activity => {
+  activities.filter(isScoredActivity).forEach(activity => {
     const state = progress.reviews[activity.id];
     if (!needsMorePractice(state)) return;
     const key = (activity.answer || activity.id).normalize("NFC").toLocaleLowerCase();
@@ -206,7 +216,7 @@ function startLesson(lessonId) {
 
 function startDuePractice() {
   let due = dueActivities();
-  if (!due.length) due = activities.slice();
+  if (!due.length) due = activities.filter(isScoredActivity);
   practiceQueue = shuffle(due);
   switchView("practice");
   showNextActivity(false);
@@ -224,18 +234,24 @@ function startNeedsPractice() {
 
 function resetPracticeUi() {
   const input = $("#answer-input");
+  const audio = $("#listening-audio");
   input.value = "";
   input.disabled = false;
   input.readOnly = true;
   input.blur();
   $("#study-panel").hidden = true;
   $("#paper-panel").hidden = true;
+  $("#listening-panel").hidden = true;
   $("#answer-area").hidden = false;
   $("#check-btn").hidden = false;
   $("#next-btn").hidden = true;
+  $("#listening-continue-btn").disabled = true;
   $("#feedback").hidden = true;
   $("#feedback").className = "feedback";
   $("#feedback").innerHTML = "";
+  audio.pause();
+  audio.removeAttribute("src");
+  audio.load();
 }
 
 function showNextActivity(returnToTop = true) {
@@ -246,7 +262,7 @@ function showNextActivity(returnToTop = true) {
   if (!currentActivity) {
     $("#practice-content").hidden = true;
     $("#practice-empty").hidden = false;
-    $("#practice-empty").textContent = "Round complete. These words will return later for more practice.";
+    $("#practice-empty").textContent = "Round complete. This material will return when more practice is useful.";
     updateDueCount();
     if (returnToTop) scrollPracticeToTop();
     return;
@@ -256,11 +272,23 @@ function showNextActivity(returnToTop = true) {
   $("#practice-content").hidden = false;
   $("#activity-type").textContent = currentActivity.type.replaceAll("-", " ");
   $("#activity-focus").textContent = currentActivity.focus.join(" • ");
-  $("#instruction").textContent = currentActivity.instruction || "Type your answer.";
+  $("#instruction").textContent = currentActivity.instruction || "Continue the activity.";
   $("#prompt").textContent = currentActivity.prompt || "";
   $("#support").textContent = currentActivity.support || "";
 
-  if (currentActivity.type === "study-hide-recall") {
+  if (currentActivity.type === "guided-listening") {
+    activityStage = "listening";
+    $("#answer-area").hidden = true;
+    $("#listening-panel").hidden = false;
+    $("#listening-source-name").textContent = currentActivity.audioSourceName || "Trusted audio source";
+    $("#listening-speaker").textContent = currentActivity.audioSpeaker ? `Speaker: ${currentActivity.audioSpeaker}` : "";
+    $("#listening-notes").innerHTML = (currentActivity.listeningNotes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
+    $("#listening-source-link").href = currentActivity.audioUrl;
+    $("#listening-continue-btn").textContent = currentActivity.completionLabel || "Continue";
+    const audio = $("#listening-audio");
+    audio.src = currentActivity.audioUrl;
+    audio.load();
+  } else if (currentActivity.type === "study-hide-recall") {
     activityStage = "study";
     $("#study-panel").hidden = false;
     $("#answer-area").hidden = true;
@@ -293,6 +321,18 @@ function finishPaperStage() {
   $("#answer-input").blur();
   $("#prompt").textContent = currentActivity.studyWord?.includes(" ") ? "Now type the phrase you studied." : "Now type the word you studied.";
   $("#support").textContent = "Tap the answer box when you are ready to type.";
+}
+
+function completeListeningActivity() {
+  if (!currentActivity || currentActivity.type !== "guided-listening") return;
+  const previous = progress.exposures[currentActivity.id] || {};
+  progress.exposures[currentActivity.id] = {
+    count: (Number(previous.count) || 0) + 1,
+    lastCompletedAt: new Date().toISOString(),
+    skill: currentActivity.skill || "listening"
+  };
+  saveProgress(progress);
+  showNextActivity();
 }
 
 function feedbackTitle(status) {
@@ -366,8 +406,25 @@ function renderNeedsPractice() {
   });
 }
 
+function renderSkillProgress() {
+  const scored = activities.filter(isScoredActivity);
+  const spellingReviewed = scored.filter(activity => progress.reviews[activity.id]).length;
+  const weak = needsPracticeGroups().length;
+  const listeningSessions = Object.values(progress.exposures || {}).reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+
+  $("#skill-progress").innerHTML = `
+    <div class="skill-card">
+      <div><strong>Spelling & recall</strong><span>${spellingReviewed} items practiced</span></div>
+      <span class="skill-detail">${weak} need${weak === 1 ? "s" : ""} practice</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Listening</strong><span>${listeningSessions} guided session${listeningSessions === 1 ? "" : "s"}</span></div>
+      <span class="skill-detail">Exposure tracked separately from mastery</span>
+    </div>`;
+}
+
 function renderProgress() {
-  const activeReviewStates = activities.map(activity => progress.reviews[activity.id]).filter(Boolean);
+  const activeReviewStates = activities.filter(isScoredActivity).map(activity => progress.reviews[activity.id]).filter(Boolean);
   const reviewed = activeReviewStates.length;
   const due = dueActivities().length;
   const weak = needsPracticeGroups().length;
@@ -376,6 +433,7 @@ function renderProgress() {
   const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct answers"], [weak, "needs practice"]];
   $("#progress-summary").innerHTML = stats.map(([value, label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join("");
   renderNeedsPractice();
+  renderSkillProgress();
 }
 
 function bindEvents() {
@@ -387,6 +445,10 @@ function bindEvents() {
   $("#skip-paper-btn").addEventListener("click", finishPaperStage);
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
   $("#next-btn").addEventListener("click", showNextActivity);
+  $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
+  $("#listening-audio").addEventListener("play", () => {
+    if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
+  });
   $("#answer-input").addEventListener("keydown", event => {
     if (event.key !== "Enter") return;
     event.preventDefault();
