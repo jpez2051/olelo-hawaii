@@ -9,7 +9,12 @@ export function freshReviewState() {
     ease: 2.5,
     dueAt: 0,
     lastReviewedAt: null,
-    lastGrade: null
+    lastGrade: null,
+    attempts: 0,
+    correctCount: 0,
+    almostCount: 0,
+    incorrectCount: 0,
+    consecutiveCorrect: 0
   };
 }
 
@@ -22,8 +27,11 @@ export function scheduleReview(previousState, grade, now = Date.now()) {
   const state = { ...freshReviewState(), ...(previousState || {}) };
   state.lastReviewedAt = new Date(now).toISOString();
   state.lastGrade = grade;
+  state.attempts = (state.attempts || 0) + 1;
 
   if (grade === "correct") {
+    state.correctCount = (state.correctCount || 0) + 1;
+    state.consecutiveCorrect = (state.consecutiveCorrect || 0) + 1;
     state.reps += 1;
     if (state.reps === 1) state.intervalDays = 1;
     else if (state.reps === 2) state.intervalDays = 3;
@@ -33,7 +41,10 @@ export function scheduleReview(previousState, grade, now = Date.now()) {
     return state;
   }
 
+  state.consecutiveCorrect = 0;
+
   if (grade === "almost") {
+    state.almostCount = (state.almostCount || 0) + 1;
     state.ease = Math.max(1.5, state.ease - 0.15);
     state.reps = Math.max(0, state.reps - 1);
     state.intervalDays = 0.5;
@@ -41,6 +52,7 @@ export function scheduleReview(previousState, grade, now = Date.now()) {
     return state;
   }
 
+  state.incorrectCount = (state.incorrectCount || 0) + 1;
   state.lapses += 1;
   state.reps = 0;
   state.ease = Math.max(1.4, state.ease - 0.2);
