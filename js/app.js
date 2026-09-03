@@ -4,6 +4,7 @@ import { clearProgress, exportProgress, loadProgress, saveProgress } from "./sto
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
+const PLAYABLE_CONTENT_STATUSES = new Set(["source-checked", "expert-reviewed"]);
 
 let curriculum = null;
 let progress = loadProgress();
@@ -41,6 +42,9 @@ async function loadCurriculum() {
     for (const lessonSummary of unit.lessons || []) {
       if (lessonSummary.status !== "active" || !lessonSummary.path) continue;
       const lesson = await loadJson(lessonSummary.path);
+      lessonSummary.contentStatus = lesson.contentStatus || "draft";
+      lessonSummary.playable = PLAYABLE_CONTENT_STATUSES.has(lessonSummary.contentStatus);
+      if (!lessonSummary.playable) continue;
       lesson.activities.forEach(activity => {
         activities.push({ ...activity, lessonId: lesson.id, lessonTitle: lesson.title, focus: lesson.focus || [] });
       });
@@ -80,12 +84,17 @@ function renderCurriculum() {
         const row = document.createElement("div");
         row.className = "lesson-row";
         row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small></div>`;
-        if (lesson.status === "active") {
+        if (lesson.status === "active" && lesson.playable) {
           const button = document.createElement("button");
           button.className = "primary-btn";
           button.textContent = "Start lesson";
           button.addEventListener("click", () => startLesson(lesson.id));
           row.appendChild(button);
+        } else if (lesson.status === "active" && lesson.playable === false) {
+          const tag = document.createElement("span");
+          tag.className = "tag";
+          tag.textContent = "content check";
+          row.appendChild(tag);
         }
         lessonList.appendChild(row);
       });
