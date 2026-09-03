@@ -1,5 +1,5 @@
 import { gradeAnswer } from "./grading.js";
-import { freshReviewState, isDue, scheduleReview } from "./srs.js";
+import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js";
 import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js";
 
 const $ = (selector) => document.querySelector(selector);
@@ -92,7 +92,7 @@ function renderCurriculum() {
     } else {
       const row = document.createElement("div");
       row.className = "lesson-row";
-      row.innerHTML = "<div><strong>Coming next</strong><small>This unit is intentionally not filled with unchecked generated content.</small></div>";
+      row.innerHTML = "<div><strong>Coming next</strong><small>New Hawaiian-language content is added only after it has been checked against trusted sources.</small></div>";
       lessonList.appendChild(row);
     }
     list.appendChild(card);
@@ -115,6 +115,49 @@ function updateDueCount() {
   $("#start-due-btn").textContent = count ? `Practice ${count} due` : "Review a lesson";
 }
 
+function needsMorePractice(state) {
+  if (!state) return false;
+  const misses = (state.almostCount || 0) + (state.incorrectCount || state.lapses || 0);
+  if (state.lastGrade === "incorrect" || state.lastGrade === "almost") return true;
+  return misses > 0 && (state.consecutiveCorrect || 0) < 2;
+}
+
+function practiceReason(states) {
+  if (states.some(state => state.lastGrade === "incorrect")) return "Missed on the last try";
+  if (states.some(state => state.lastGrade === "almost")) return "Spelling was close on the last try";
+  return "Improving — keep reviewing until it sticks";
+}
+
+function representativeActivity(groupActivities) {
+  const strength = { "meaning-recall": 3, "repair-spelling": 2, "study-hide-recall": 1 };
+  return groupActivities.slice().sort((a, b) => (strength[b.type] || 0) - (strength[a.type] || 0))[0];
+}
+
+function needsPracticeGroups() {
+  const groups = new Map();
+
+  activities.forEach(activity => {
+    const state = progress.reviews[activity.id];
+    if (!needsMorePractice(state)) return;
+    const key = (activity.answer || activity.id).normalize("NFC").toLocaleLowerCase();
+    if (!groups.has(key)) groups.set(key, { answer: activity.answer, activities: [], states: [] });
+    const group = groups.get(key);
+    group.activities.push(activity);
+    group.states.push(state);
+  });
+
+  return [...groups.values()].map(group => ({
+    ...group,
+    reason: practiceReason(group.states),
+    representative: representativeActivity(group.activities),
+    due: group.states.some(state => isDue(state)),
+    nextReview: group.states.reduce((earliest, state) => {
+      if (!state?.dueAt) return earliest;
+      return !earliest || state.dueAt < earliest.dueAt ? state : earliest;
+    }, null)
+  }));
+}
+
 function startLesson(lessonId) {
   practiceQueue = activities.filter(activity => activity.lessonId === lessonId);
   switchView("practice");
@@ -125,6 +168,14 @@ function startDuePractice() {
   let due = dueActivities();
   if (!due.length) due = activities.slice();
   practiceQueue = shuffle(due);
+  switchView("practice");
+  showNextActivity();
+}
+
+function startNeedsPractice() {
+  const weak = needsPracticeGroups().map(group => group.representative).filter(Boolean);
+  if (!weak.length) return;
+  practiceQueue = shuffle(weak);
   switchView("practice");
   showNextActivity();
 }
@@ -181,7 +232,7 @@ function beginHiddenRecall() {
   if (!currentActivity || currentActivity.type !== "study-hide-recall") return;
   activityStage = "paper";
   $("#study-panel").hidden = true;
-  $("#prompt").textContent = "Write the word you just studied.";
+  $("#prompt").textContent = currentActivity.studyWord?.includes(" ") ? "Write the phrase you just studied." : "Write the word you just studied.";
   $("#support").textContent = "Use paper if you have it. You can also skip this step and type the answer instead.";
   $("#paper-instruction").textContent = currentActivity.paperInstruction || "Write it three times from memory, then continue.";
   $("#paper-panel").hidden = false;
@@ -195,7 +246,7 @@ function finishPaperStage() {
   $("#answer-area").hidden = false;
   $("#answer-input").readOnly = true;
   $("#answer-input").blur();
-  $("#prompt").textContent = "Now type the word you studied.";
+  $("#prompt").textContent = currentActivity.studyWord?.includes(" ") ? "Now type the phrase you studied." : "Now type the word you studied.";
   $("#support").textContent = "Tap the answer box when you are ready to type.";
 }
 
@@ -246,20 +297,46 @@ function insertCharacter(character) {
   input.setSelectionRange(start + character.length, start + character.length);
 }
 
+function renderNeedsPractice() {
+  const groups = needsPracticeGroups();
+  const list = $("#needs-practice-list");
+  const empty = $("#needs-practice-empty");
+  const button = $("#practice-needs-btn");
+
+  list.innerHTML = "";
+  empty.hidden = groups.length > 0;
+  button.hidden = groups.length === 0;
+
+  groups.forEach(group => {
+    const item = document.createElement("div");
+    item.className = "needs-item";
+    const when = group.due ? "Due now" : dueLabel(group.nextReview);
+    item.innerHTML = `
+      <div class="needs-copy">
+        <strong lang="haw">${escapeHtml(group.answer)}</strong>
+        <span>${escapeHtml(group.reason)}</span>
+      </div>
+      <span class="needs-when">${escapeHtml(when)}</span>`;
+    list.appendChild(item);
+  });
+}
+
 function renderProgress() {
-  const reviewedStates = Object.values(progress.reviews);
-  const reviewed = reviewedStates.length;
+  const activeReviewStates = activities.map(activity => progress.reviews[activity.id]).filter(Boolean);
+  const reviewed = activeReviewStates.length;
   const due = dueActivities().length;
-  const lapses = reviewedStates.reduce((sum, state) => sum + (state.lapses || 0), 0);
+  const weak = needsPracticeGroups().length;
   const totalAttempts = progress.totals.correct + progress.totals.almost + progress.totals.incorrect;
   const recallRate = totalAttempts ? Math.round((progress.totals.correct / totalAttempts) * 100) : 0;
-  const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct on first check"], [lapses, "needs more practice"]];
+  const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct answers"], [weak, "needs practice"]];
   $("#progress-summary").innerHTML = stats.map(([value, label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join("");
+  renderNeedsPractice();
 }
 
 function bindEvents() {
   $$(".nav-btn").forEach(btn => btn.addEventListener("click", () => switchView(btn.dataset.view)));
   $("#start-due-btn").addEventListener("click", startDuePractice);
+  $("#practice-needs-btn").addEventListener("click", startNeedsPractice);
   $("#hide-and-recall-btn").addEventListener("click", beginHiddenRecall);
   $("#paper-done-btn").addEventListener("click", finishPaperStage);
   $("#skip-paper-btn").addEventListener("click", finishPaperStage);
