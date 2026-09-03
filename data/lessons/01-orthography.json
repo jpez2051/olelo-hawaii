@@ -24,7 +24,7 @@
       "support": "Notice each mark before you hide the model.",
       "studyWord": "ʻAʻole",
       "studyNotes": ["Initial ʻokina", "Kahakō over ō", "Say the word aloud while you study it"],
-      "paperInstruction": "After the word is hidden, write ʻAʻole three times on paper from memory. Say it aloud each time. Then type it without revealing the model.",
+      "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time. Then type it without revealing the model.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
       "explanation": "You retrieved the spelling after the model disappeared. That is much stronger evidence of learning than copying it while visible."
@@ -47,7 +47,7 @@
       "support": "Do not type until the model has been hidden.",
       "studyWord": "Hawaiʻi",
       "studyNotes": ["The ʻokina comes before the final i", "Say the syllables slowly", "Look away and picture the spelling before continuing"],
-      "paperInstruction": "Write Hawaiʻi three times on paper from memory. Then type it from memory.",
+      "paperInstruction": "Write the word you just studied three times on paper from memory. Then type it from memory.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
       "explanation": "The goal is to retrieve the location of the ʻokina, not simply recognize it when it is shown."
@@ -70,7 +70,7 @@
       "support": "Notice the opening ʻokina, the ō, and the ʻokina in Hawaiʻi.",
       "studyWord": "ʻŌlelo Hawaiʻi",
       "studyNotes": ["ʻŌlelo starts with ʻ + Ō", "Hawaiʻi has an ʻokina before the final i", "Say the whole phrase aloud"],
-      "paperInstruction": "Write ʻŌlelo Hawaiʻi three times on paper from memory. Circle the ʻokina and underline the kahakō each time. Then type the phrase from memory.",
+      "paperInstruction": "Write the phrase you just studied three times on paper from memory. Circle each ʻokina and underline each kahakō from memory. Then type the phrase from memory.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
       "explanation": "Combining handwriting, speaking, and delayed typing forces you to reconstruct the spelling instead of copying it."
