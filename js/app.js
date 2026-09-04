@@ -24,13 +24,14 @@ function shuffle(items) {
 }
 
 function isScoredActivity(activity) {
-  return activity?.scored !== false && activity?.type !== "guided-listening";
+  return activity?.scored !== false && !["guided-listening", "sentence-study"].includes(activity?.type);
 }
 
 function switchView(name) {
   $$(".nav-btn").forEach(btn => btn.classList.toggle("active", btn.dataset.view === name));
   $$(".view").forEach(view => view.classList.toggle("active", view.id === `view-${name}`));
   if (name === "progress") renderProgress();
+  if (name === "immerse") renderImmersionLibrary();
 }
 
 function scrollPracticeToTop(behavior = "smooth") {
@@ -79,14 +80,16 @@ async function loadCurriculum() {
       const lesson = await loadJson(lessonSummary.path);
       lessonSummary.contentStatus = lesson.contentStatus || "draft";
       lessonSummary.playable = PLAYABLE_CONTENT_STATUSES.has(lessonSummary.contentStatus);
+      lessonSummary.unitMode = unit.mode || "learn";
       if (!lessonSummary.playable) continue;
       lesson.activities.forEach(activity => {
         activities.push({
           ...activity,
           lessonId: lesson.id,
           lessonTitle: lesson.title,
+          unitMode: unit.mode || "learn",
           focus: lesson.focus || [],
-          skill: activity.skill || (activity.type === "guided-listening" ? "listening" : "spelling")
+          skill: activity.skill || (activity.type === "guided-listening" ? "listening" : activity.type === "sentence-study" ? "sentence-patterns" : "spelling")
         });
       });
     }
@@ -99,56 +102,121 @@ function escapeHtml(value = "") {
   return el.innerHTML;
 }
 
+function renderStages() {
+  const list = $("#stage-list");
+  list.innerHTML = (curriculum.stages || []).map((stage, index) => `
+    <div class="stage-card ${index < 3 ? "available" : "planned"}">
+      <span class="stage-number">${index + 1}</span>
+      <div><strong>${escapeHtml(stage.title)}</strong><span>${escapeHtml(stage.description)}</span></div>
+    </div>`).join("");
+}
+
 function renderCurriculum() {
+  renderStages();
   const list = $("#unit-list");
   list.innerHTML = "";
-  curriculum.units.slice().sort((a, b) => (a.order || 0) - (b.order || 0)).forEach(unit => {
-    const card = document.createElement("article");
-    card.className = "unit-card";
-    const planned = unit.status === "planned" || !(unit.lessons || []).length;
-    const outcomes = (unit.outcomes || []).map(item => `<li>${escapeHtml(item)}</li>`).join("");
-    card.innerHTML = `
-      <div class="unit-top">
-        <div>
-          <p class="section-kicker">Unit ${escapeHtml(String(unit.order || ""))}</p>
-          <h3>${escapeHtml(unit.title)}</h3>
-          <p>${escapeHtml(unit.description)}</p>
+  curriculum.units
+    .filter(unit => unit.mode !== "immersion")
+    .slice()
+    .sort((a, b) => (a.order || 0) - (b.order || 0))
+    .forEach(unit => {
+      const card = document.createElement("article");
+      card.className = "unit-card";
+      const planned = unit.status === "planned" || !(unit.lessons || []).length;
+      const outcomes = (unit.outcomes || []).map(item => `<li>${escapeHtml(item)}</li>`).join("");
+      card.innerHTML = `
+        <div class="unit-top">
+          <div>
+            <p class="section-kicker">Stage ${escapeHtml(String(unit.order || ""))}</p>
+            <h3>${escapeHtml(unit.title)}</h3>
+            <p>${escapeHtml(unit.description)}</p>
+          </div>
+          <span class="tag">${planned ? "planned" : "active"}</span>
         </div>
-        <span class="tag">${planned ? "planned" : "active"}</span>
-      </div>
-      ${outcomes ? `<details><summary>What this unit builds</summary><ul>${outcomes}</ul></details>` : ""}
-      <div class="lesson-list"></div>`;
+        ${outcomes ? `<details><summary>What this stage builds</summary><ul>${outcomes}</ul></details>` : ""}
+        <div class="lesson-list"></div>`;
 
-    const lessonList = card.querySelector(".lesson-list");
-    if (unit.lessons?.length) {
-      unit.lessons.forEach(lesson => {
+      const lessonList = card.querySelector(".lesson-list");
+      if (unit.lessons?.length) {
+        unit.lessons.forEach(lesson => {
+          const row = document.createElement("div");
+          row.className = "lesson-row";
+          row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small></div>`;
+          if (lesson.status === "active" && lesson.playable) {
+            const button = document.createElement("button");
+            button.className = "primary-btn";
+            button.textContent = "Start lesson";
+            button.addEventListener("click", () => startLesson(lesson.id));
+            row.appendChild(button);
+          } else if (lesson.status === "active" && lesson.playable === false) {
+            const tag = document.createElement("span");
+            tag.className = "tag";
+            tag.textContent = "content check";
+            row.appendChild(tag);
+          }
+          lessonList.appendChild(row);
+        });
+      } else {
         const row = document.createElement("div");
         row.className = "lesson-row";
-        row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small></div>`;
-        if (lesson.status === "active" && lesson.playable) {
-          const button = document.createElement("button");
-          button.className = "primary-btn";
-          button.textContent = "Start lesson";
-          button.addEventListener("click", () => startLesson(lesson.id));
-          row.appendChild(button);
-        } else if (lesson.status === "active" && lesson.playable === false) {
-          const tag = document.createElement("span");
-          tag.className = "tag";
-          tag.textContent = "content check";
-          row.appendChild(tag);
-        }
+        row.innerHTML = "<div><strong>Coming next</strong><small>New Hawaiian-language content is added only after it has been checked against trusted sources.</small></div>";
         lessonList.appendChild(row);
-      });
-    } else {
-      const row = document.createElement("div");
-      row.className = "lesson-row";
-      row.innerHTML = "<div><strong>Coming next</strong><small>New Hawaiian-language content is added only after it has been checked against trusted sources.</small></div>";
-      lessonList.appendChild(row);
-    }
+      }
+      list.appendChild(card);
+    });
+
+  $("#curriculum-status").textContent = `${activities.filter(activity => activity.unitMode !== "immersion").length} learning activities loaded.`;
+  updateDueCount();
+}
+
+function recordExposure(activity, key = activity.id) {
+  const previous = progress.exposures?.[key] || {};
+  progress.exposures = progress.exposures || {};
+  progress.exposures[key] = {
+    count: (Number(previous.count) || 0) + 1,
+    lastCompletedAt: new Date().toISOString(),
+    skill: activity.skill || "exposure"
+  };
+  saveProgress(progress);
+}
+
+function renderImmersionLibrary() {
+  const list = $("#immersion-list");
+  const listening = activities.filter(activity => activity.type === "guided-listening");
+  if (!listening.length) {
+    list.innerHTML = '<div class="panel"><p>No immersion audio is available yet.</p></div>';
+    return;
+  }
+
+  list.innerHTML = "";
+  listening.forEach(activity => {
+    const card = document.createElement("article");
+    card.className = "immersion-card";
+    card.innerHTML = `
+      <div class="immersion-card-head">
+        <div>
+          <p class="section-kicker">Trusted source</p>
+          <h3>${escapeHtml(activity.audioSourceName || activity.lessonTitle)}</h3>
+          <p>${escapeHtml(activity.audioSpeaker ? `Speaker: ${activity.audioSpeaker}` : "")}</p>
+        </div>
+        <span class="tag">immersion</span>
+      </div>
+      <h4>${escapeHtml(activity.prompt || "Listening")}</h4>
+      <p>${escapeHtml(activity.support || "Listen freely and replay as often as you like.")}</p>
+      <audio controls preload="metadata" src="${escapeHtml(activity.audioUrl || "")}"></audio>
+      <div class="immersion-actions">
+        <button class="secondary-btn log-listen-btn" type="button">Log listening session</button>
+        <a class="secondary-link" href="${escapeHtml(activity.audioUrl || "#")}" target="_blank" rel="noopener noreferrer">Open official audio</a>
+      </div>
+      <p class="exposure-note">Listening here never changes your mastery score.</p>`;
+    const button = card.querySelector(".log-listen-btn");
+    button.addEventListener("click", () => {
+      recordExposure(activity);
+      button.textContent = "Session logged";
+      button.disabled = true;
+    });
     list.appendChild(card);
   });
-  $("#curriculum-status").textContent = `${activities.length} learning activities loaded.`;
-  updateDueCount();
 }
 
 function reviewStateFor(activityId) {
@@ -242,6 +310,7 @@ function resetPracticeUi() {
   $("#study-panel").hidden = true;
   $("#paper-panel").hidden = true;
   $("#listening-panel").hidden = true;
+  $("#sentence-panel").hidden = true;
   $("#answer-area").hidden = false;
   $("#check-btn").hidden = false;
   $("#next-btn").hidden = true;
@@ -276,7 +345,23 @@ function showNextActivity(returnToTop = true) {
   $("#prompt").textContent = currentActivity.prompt || "";
   $("#support").textContent = currentActivity.support || "";
 
-  if (currentActivity.type === "guided-listening") {
+  if (currentActivity.type === "sentence-study") {
+    activityStage = "sentence-study";
+    $("#answer-area").hidden = true;
+    $("#sentence-panel").hidden = false;
+    $("#sentence-text").textContent = currentActivity.sentence || "";
+    $("#sentence-english").textContent = currentActivity.naturalEnglish || "";
+    $("#sentence-pattern-name").textContent = currentActivity.patternName || "Sentence pattern";
+    $("#sentence-pattern-intro").textContent = currentActivity.patternIntro || "";
+    $("#sentence-language-note").textContent = currentActivity.languageNote || "";
+    $("#sentence-continue-btn").textContent = currentActivity.completionLabel || "Continue";
+    $("#sentence-parts").innerHTML = (currentActivity.parts || []).map(part => `
+      <div class="sentence-part">
+        <span>${escapeHtml(part.label)}</span>
+        <strong lang="haw">${escapeHtml(part.hawaiian)}</strong>
+        <p>${escapeHtml(part.note)}</p>
+      </div>`).join("");
+  } else if (currentActivity.type === "guided-listening") {
     activityStage = "listening";
     $("#answer-area").hidden = true;
     $("#listening-panel").hidden = false;
@@ -325,13 +410,13 @@ function finishPaperStage() {
 
 function completeListeningActivity() {
   if (!currentActivity || currentActivity.type !== "guided-listening") return;
-  const previous = progress.exposures[currentActivity.id] || {};
-  progress.exposures[currentActivity.id] = {
-    count: (Number(previous.count) || 0) + 1,
-    lastCompletedAt: new Date().toISOString(),
-    skill: currentActivity.skill || "listening"
-  };
-  saveProgress(progress);
+  recordExposure(currentActivity);
+  showNextActivity();
+}
+
+function completeSentenceStudy() {
+  if (!currentActivity || currentActivity.type !== "sentence-study") return;
+  recordExposure(currentActivity);
   showNextActivity();
 }
 
@@ -406,11 +491,16 @@ function renderNeedsPractice() {
   });
 }
 
+function exposureCountForSkill(skill) {
+  return Object.values(progress.exposures || {}).filter(item => item.skill === skill).reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+}
+
 function renderSkillProgress() {
   const scored = activities.filter(isScoredActivity);
   const spellingReviewed = scored.filter(activity => progress.reviews[activity.id]).length;
   const weak = needsPracticeGroups().length;
-  const listeningSessions = Object.values(progress.exposures || {}).reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+  const listeningSessions = exposureCountForSkill("listening");
+  const sentenceSessions = exposureCountForSkill("sentence-patterns");
 
   $("#skill-progress").innerHTML = `
     <div class="skill-card">
@@ -418,8 +508,12 @@ function renderSkillProgress() {
       <span class="skill-detail">${weak} need${weak === 1 ? "s" : ""} practice</span>
     </div>
     <div class="skill-card">
-      <div><strong>Listening</strong><span>${listeningSessions} guided session${listeningSessions === 1 ? "" : "s"}</span></div>
-      <span class="skill-detail">Exposure tracked separately from mastery</span>
+      <div><strong>Sentence patterns</strong><span>${sentenceSessions} study session${sentenceSessions === 1 ? "" : "s"}</span></div>
+      <span class="skill-detail">Understanding first; production comes later</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Immersion</strong><span>${listeningSessions} listening session${listeningSessions === 1 ? "" : "s"}</span></div>
+      <span class="skill-detail">Exposure only — not a mastery score</span>
     </div>`;
 }
 
@@ -445,6 +539,7 @@ function bindEvents() {
   $("#skip-paper-btn").addEventListener("click", finishPaperStage);
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
   $("#next-btn").addEventListener("click", showNextActivity);
+  $("#sentence-continue-btn").addEventListener("click", completeSentenceStudy);
   $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
   $("#listening-audio").addEventListener("play", () => {
     if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
@@ -463,6 +558,7 @@ function bindEvents() {
     progress = loadProgress();
     updateDueCount();
     renderProgress();
+    renderImmersionLibrary();
   });
 }
 
@@ -471,6 +567,7 @@ async function init() {
   try {
     await loadCurriculum();
     renderCurriculum();
+    renderImmersionLibrary();
     renderProgress();
   } catch (error) {
     console.error(error);
