@@ -20,6 +20,7 @@
 
   <nav class="main-nav" aria-label="Main navigation">
     <button class="nav-btn active" data-view="learn">Learn</button>
+    <button class="nav-btn" data-view="immerse">Immerse</button>
     <button class="nav-btn" data-view="practice">Practice</button>
     <button class="nav-btn" data-view="progress">Progress</button>
   </nav>
@@ -29,21 +30,33 @@
       <div class="hero-card">
         <div>
           <p class="section-kicker">Your path</p>
-          <h2 id="learn-title">Learn it, hide it, remember it</h2>
-          <p>Lessons deliberately remove clues. You will study, listen, handwrite, recall, and revisit material later instead of earning credit for simply recognizing the answer.</p>
+          <h2 id="learn-title">Build the language in stages</h2>
+          <p>Start with sound and spelling, spend time listening, then move into sentence patterns and vocabulary in context. New Hawaiian-language content only goes live after a source check.</p>
         </div>
         <button id="start-due-btn" class="primary-btn">Practice what’s due</button>
       </div>
 
+      <div id="stage-list" class="stage-list" aria-label="Learning stages"></div>
       <div id="curriculum-status" class="status-line" role="status">Loading curriculum…</div>
       <div id="unit-list" class="unit-list"></div>
+    </section>
+
+    <section id="view-immerse" class="view" aria-labelledby="immerse-title">
+      <div class="hero-card immersion-hero">
+        <div>
+          <p class="section-kicker">Immersion</p>
+          <h2 id="immerse-title">Listen without having to prove anything</h2>
+          <p>This space is for hearing Hawaiian from trusted sources. Replay, listen casually, or focus closely. Nothing here changes your mastery score.</p>
+        </div>
+      </div>
+      <div id="immersion-list" class="immersion-list"></div>
     </section>
 
     <section id="view-practice" class="view" aria-labelledby="practice-title">
       <div class="practice-header">
         <div>
           <p class="section-kicker">Practice</p>
-          <h2 id="practice-title">Build memory and train your ear</h2>
+          <h2 id="practice-title">Remember what you have learned</h2>
         </div>
         <div id="practice-count" class="pill">0 due</div>
       </div>
@@ -61,6 +74,23 @@
           <div id="prompt" class="prompt"></div>
           <p id="support" class="support-text"></p>
 
+          <div id="sentence-panel" class="sentence-panel" hidden>
+            <p class="study-label">Sentence</p>
+            <div id="sentence-text" class="sentence-text" lang="haw"></div>
+            <div class="sentence-meaning">
+              <span>Natural English</span>
+              <strong id="sentence-english"></strong>
+            </div>
+            <div class="sentence-pattern-heading">
+              <p class="study-label">See the pattern</p>
+              <span id="sentence-pattern-name" class="tag"></span>
+            </div>
+            <p id="sentence-pattern-intro" class="sentence-intro"></p>
+            <div id="sentence-parts" class="sentence-parts"></div>
+            <p id="sentence-language-note" class="sentence-note"></p>
+            <button id="sentence-continue-btn" class="primary-btn" type="button">Continue</button>
+          </div>
+
           <div id="listening-panel" class="listening-panel" hidden>
             <p class="study-label">Trusted listening source</p>
             <div class="audio-source-copy">
@@ -74,7 +104,7 @@
               <button id="listening-continue-btn" class="primary-btn" type="button" disabled>Continue after listening</button>
               <a id="listening-source-link" class="secondary-link" href="#" target="_blank" rel="noopener noreferrer">Open official audio</a>
             </div>
-            <p class="exposure-note">Listening exposure is recorded separately from scored practice. Pressing play does not count as mastery.</p>
+            <p class="exposure-note">Listening exposure is recorded separately from scored practice.</p>
           </div>
 
           <div id="study-panel" class="study-panel" hidden>
@@ -127,7 +157,7 @@
 
       <div class="panel">
         <p class="section-kicker">By skill</p>
-        <h2>What you are practicing</h2>
+        <h2>What you are working on</h2>
         <div id="skill-progress" class="skill-progress"></div>
       </div>
 
@@ -146,7 +176,7 @@
 
       <div class="panel">
         <h3>Mastery means remembering</h3>
-        <p>Scored practice tracks what you can remember after support is removed. Guided listening is tracked separately until an exercise can test what you actually heard.</p>
+        <p>Scored practice tracks what you can remember after support is removed. Immersion and unscored sentence study are tracked separately so they never inflate your mastery score.</p>
         <div class="data-actions">
           <button id="export-btn" class="secondary-btn">Export progress</button>
           <button id="reset-btn" class="danger-btn">Reset local progress</button>
@@ -157,7 +187,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 4.4.0</span>
+    <span class="site-version">Version 4.5.0</span>
   </footer>
 
   <script>
@@ -169,7 +199,7 @@
       input.addEventListener('touchstart', unlockFromUserTap, { passive: true });
       input.addEventListener('mousedown', unlockFromUserTap);
       document.addEventListener('click', event => {
-        if (event.target.closest('#next-btn, #check-btn, #start-due-btn, #practice-needs-btn, #hide-and-recall-btn, #paper-done-btn, #skip-paper-btn, #unit-list button')) lockKeyboard();
+        if (event.target.closest('#next-btn, #check-btn, #start-due-btn, #practice-needs-btn, #hide-and-recall-btn, #paper-done-btn, #skip-paper-btn, #sentence-continue-btn, #unit-list button')) lockKeyboard();
       }, true);
     })();
   </script>
