@@ -2,79 +2,92 @@
 
 This is a product/curriculum roadmap, not a claim that every Hawaiian example is already ready for release. Individual lessons should be source-checked and carry a content review status.
 
-## Learning loop
+## Learning philosophy
 
-Each important concept should move through several forms of retrieval:
+The app should separate **learning**, **immersion**, and **mastery evidence** instead of treating every interaction as a test.
 
-1. **Hear** — encounter the sound before depending on text.
-2. **Understand** — identify meaning in context.
-3. **Notice** — see the relevant sound, spelling, particle, or sentence pattern.
-4. **Build** — assemble a Hawaiian form from meaning or components.
-5. **Say** — shadow or produce the phrase aloud.
-6. **Write** — type it accurately, including ʻokina and kahakō.
-7. **Review** — revisit it through spaced practice and different contexts.
+Core learning progression:
 
-## Stage 1 — Orthography and sound
+**Exposure → guided understanding → handwritten or spoken practice → unaided recall → delayed recall → use in context.**
+
+A correct answer only counts as strong mastery evidence when the learner actually had to retrieve it without the answer being visible.
+
+## Stage 1 — Foundations
 
 Goals:
 
-- reliable vowel sounds
-- long versus short vowels
-- hearing and typing ʻokina
-- hearing and typing kahakō
-- syllable/rhythm awareness
-- no habit of treating Hawaiian marks as optional
+- reliable Hawaiian spelling habits
+- understanding the role of ʻokina and kahakō
+- early pronunciation awareness
+- short-term study followed by recall
+- no habit of treating Hawaiian spelling marks as optional
 
 Exercise types:
 
 - spelling repair
-- accurate copy from short-term memory
-- listen and choose
-- listen and type
-- minimal contrasts where source audio is available
-- shadowing
+- study → hide → write/type
+- meaning → Hawaiian recall
+- delayed review
 
-## Stage 2 — High-frequency language in context
+## Stage 2 — Immersion
 
-Vocabulary should be learned inside useful phrases and small situations rather than as an isolated word dump.
+Immersion is **not a quiz mode**. It exists so the learner can spend time hearing Hawaiian from trusted speakers and educational sources.
 
 Goals:
 
-- greetings and common interaction
-- people and family
-- places and location
-- everyday actions
-- descriptions
-- numbers/time when appropriate
+- become comfortable with Hawaiian rhythm and pacing
+- hear the language without needing to understand every word
+- replay trusted audio freely
+- notice sounds, pauses, vowel length, and ʻokina naturally over time
 
-Exercise types:
+Product rules:
 
-- picture/context → Hawaiian
-- Hawaiian → meaning without word-for-word translation
-- short listening comprehension
-- cloze completion
-- prompted production
+- immersion does not affect mastery scores
+- never require an answer after listening unless the activity is explicitly a separate, source-validated listening exercise
+- prefer official or clearly licensed Hawaiian-language audio
+- identify the source and speaker whenever possible
+- do not generate a transcript or interpretation unless it has been checked
 
-## Stage 3 — Pepeke sentence foundations
+## Stage 3 — Sentence Patterns
 
-The app should teach Hawaiian sentence structure on Hawaiian terms rather than forcing English word-order labels onto it.
+Sentence learning should begin with **understanding the pattern before production**.
 
 Goals:
 
-- recognize common pepeke patterns
-- identify poʻo, piko, and ʻāwe where appropriate to the instructional model
-- understand what changes when a sentence component changes
-- build original sentences from a known pattern
+- notice that Hawaiian sentence order does not have to mirror English
+- see how meaningful parts of a sentence work together
+- introduce Hawaiian grammar labels gradually rather than making terminology the first obstacle
+- build toward sentence production only after the learner has enough examples
 
-Exercise types:
+Early interface:
+
+1. Show a source-checked Hawaiian sentence.
+2. Show a natural English meaning when it can be supported accurately.
+3. Break the Hawaiian sentence into learner-friendly parts such as Action / Who / What.
+4. Introduce terms such as Pepeke Painu, painu, piko, or other Hawaiian grammatical labels gradually and only when the explanation is accurate for that pattern.
+5. Let the learner study the structure without scoring it.
+
+Later exercise types:
 
 - sentence dissection
-- reorder components
-- choose the pattern that matches a meaning
-- substitute one component while preserving the pattern
-- write an original sentence from a constrained prompt
+- reorder known components
+- substitute one component while preserving a known pattern
+- cloze completion
+- constrained sentence building
+- unaided production only after sufficient exposure
 
-## Stage 4 — Grammar networks
+## Stage 4 — Vocabulary in Context
+
+Vocabulary should grow through source-checked sentences, situations, and repeated use rather than isolated word dumps.
+
+Goals:
+
+- understand words inside useful contexts
+- connect vocabulary to known sentence patterns
+- recognize a word across more than one context
+- eventually produce familiar vocabulary naturally inside known structures
+
+## Later grammar networks
 
 Add connected concepts only after the learner has enough sentence experience for them to be meaningful.
 
@@ -90,17 +103,17 @@ Candidate areas:
 - modifiers
 - increasingly complex pepeke
 
-## Stage 5 — Comprehension and production
+## Hawaiian-forward progression
 
-The interface should gradually hide English scaffolding.
+The interface should gradually reduce English scaffolding.
 
-Progression:
+Possible progression:
 
 - Hawaiian + English explanation
-- Hawaiian + optional literal gloss
+- Hawaiian + optional literal guide
 - Hawaiian-first with optional English help
 - Hawaiian prompt → Hawaiian answer
-- audio-only Hawaiian prompt → spoken/written Hawaiian response
+- trusted audio-only input when an appropriate source exists
 
 ## Spanish support
 
@@ -110,22 +123,22 @@ Possible uses:
 
 - vowel/pronunciation comparisons
 - highlighting places where English habits are particularly misleading
-- occasional grammar analogies when the comparison is truly helpful
+- occasional grammar analogies when the comparison is genuinely useful
 
-The app should also explicitly say when neither English nor Spanish maps cleanly to the Hawaiian concept.
+The app should explicitly say when neither English nor Spanish maps cleanly to a Hawaiian concept.
 
 ## Progress model
 
 Avoid XP, leagues, streak anxiety, and arbitrary levels.
 
-Prefer ability signals such as:
+Prefer signals such as:
 
-- orthography accuracy
-- listening accuracy
-- production accuracy
-- sentence-pattern mastery
+- spelling and recall accuracy
 - items due for review
 - recurring weak points
+- sentence-pattern study history
+- later sentence-pattern mastery once production is actually tested
+- immersion sessions tracked separately from mastery
 - confidence across multiple contexts
 
 The long-term dashboard should answer: **What can I understand and produce now that I could not before?**
