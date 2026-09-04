@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "sentence-foundations-01",
+  "title": "Sentence Foundations: See the Pattern",
+  "description": "Begin noticing how a Hawaiian sentence is organized without forcing English word order onto it.",
+  "focus": ["sentence patterns", "meaning", "grammar"],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-09-03",
+    "notes": "The Hawaiian example is taken from UH Maui College's E Hoʻoulu Lāhui Pepeke Painu instructional page. The learner-facing breakdown uses plain-English labels and does not introduce broader conversational claims beyond the sourced example.",
+    "sources": [
+      "https://ehooululahui.maui.hawaii.edu/?page_id=1132"
+    ]
+  },
+  "activities": [
+    {
+      "id": "sentence-painu-lani-poi",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "See how the sentence is built.",
+      "prompt": "Start with the pattern, not an English word-for-word translation.",
+      "support": "This first sentence lesson is for understanding. There is nothing to memorize or pass yet.",
+      "sentence": "ʻAi ʻo Lani i ka poi.",
+      "naturalEnglish": "Lani eats poi.",
+      "patternName": "Pepeke Painu",
+      "patternIntro": "In this example, the action comes first, followed by who is doing it, then what the action is directed toward.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "ʻAi",
+          "note": "The sentence begins with the action: eat/eats."
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ʻo Lani",
+          "note": "This part identifies Lani as the person doing the action."
+        },
+        {
+          "label": "What",
+          "hawaiian": "i ka poi",
+          "note": "This part tells what Lani eats: the poi."
+        }
+      ],
+      "languageNote": "Hawaiian does not need to mirror English word order. For now, notice the shape of this sentence and let the pattern become familiar.",
+      "completionLabel": "Continue"
+    }
+  ]
+}
