@@ -1,9 +1,16 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
+  "stages": [
+    {"id":"foundations","title":"Foundations","description":"Sound, spelling, and reliable recall."},
+    {"id":"immersion","title":"Immersion","description":"Listen to trusted Hawaiian-language audio without turning it into a quiz."},
+    {"id":"sentences","title":"Sentence Patterns","description":"See how Hawaiian sentences are organized and build understanding in context."},
+    {"id":"context","title":"Vocabulary in Context","description":"Planned: grow vocabulary through sentences and meaningful use."}
+  ],
   "units": [
     {
       "id": "foundations-writing",
+      "stage": "foundations",
       "order": 1,
       "title": "Foundations: Sound & Writing",
       "description": "Build accurate Hawaiian spelling habits before vocabulary and grammar become larger. ʻOkina and kahakō are meaningful parts of spelling, not optional decoration.",
@@ -25,20 +32,22 @@
     },
     {
       "id": "foundations-listening",
+      "stage": "immersion",
+      "mode": "immersion",
       "order": 2,
-      "title": "Foundations: Listening & Pronunciation",
-      "description": "Train your ear with trusted Hawaiian-language audio before relying on generated or unverified pronunciation.",
+      "title": "Immersion: Listening",
+      "description": "Spend time hearing Hawaiian from trusted sources without turning listening into a test.",
       "outcomes": [
         "Become more comfortable hearing Hawaiian spoken naturally",
-        "Begin noticing rhythm, pauses, vowel length, and ʻokina by ear",
-        "Build toward later listen-and-type and shadowing practice"
+        "Notice rhythm, pacing, vowel length, and ʻokina over time",
+        "Replay trusted audio freely without affecting mastery scores"
       ],
       "lessons": [
         {
           "id": "listening-01",
-          "title": "Guided Listening: HAW 101",
-          "summary": "Listen to an official UH Hilo HAW 101 recording and begin training your ear without treating exposure as mastery.",
-          "focus": ["listening", "pronunciation"],
+          "title": "HAW 101 Listening",
+          "summary": "Listen to an official UH Hilo HAW 101 recording for immersion and ear training.",
+          "focus": ["listening", "immersion"],
           "path": "./data/lessons/02-listening-pronunciation.json",
           "status": "active"
         }
@@ -47,13 +56,37 @@
     },
     {
       "id": "pepeke-foundations",
+      "stage": "sentences",
       "order": 3,
-      "title": "Sentence Foundations: Pepeke",
-      "description": "Move from isolated words into Hawaiian sentence patterns and learn to see how poʻo, piko, and ʻāwe work together.",
+      "title": "Sentence Foundations",
+      "description": "Move from isolated words into source-checked Hawaiian sentence patterns, starting with understanding how the parts fit together.",
       "outcomes": [
-        "Recognize core sentence patterns",
-        "Build simple Hawaiian sentences from meaning",
-        "Explain a sentence structure without forcing English word order onto it"
+        "Notice that Hawaiian sentence order does not have to mirror English",
+        "Identify the action, who, and other key parts in a beginner sentence",
+        "Build toward sentence production only after the pattern is familiar"
+      ],
+      "lessons": [
+        {
+          "id": "sentence-foundations-01",
+          "title": "See the Pattern: Pepeke Painu",
+          "summary": "Study one source-checked sentence and see how its parts work together before trying to produce the pattern yourself.",
+          "focus": ["sentence patterns", "meaning"],
+          "path": "./data/lessons/03-sentence-foundations.json",
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocabulary-context",
+      "stage": "context",
+      "order": 4,
+      "title": "Vocabulary in Context",
+      "description": "Planned: learn new vocabulary through source-checked sentences and situations instead of isolated word lists.",
+      "outcomes": [
+        "Understand words in context",
+        "Connect vocabulary to sentence patterns",
+        "Use familiar words in meaningful situations"
       ],
       "lessons": [],
       "status": "planned"
