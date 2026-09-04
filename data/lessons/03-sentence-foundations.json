@@ -7,9 +7,11 @@
   "contentStatus": "source-checked",
   "sourceReview": {
     "reviewedAt": "2026-09-03",
-    "notes": "The Hawaiian example is taken from UH Maui College's E Hoʻoulu Lāhui Pepeke Painu instructional page. The learner-facing breakdown uses plain-English labels and does not introduce broader conversational claims beyond the sourced example.",
+    "notes": "The Hawaiian example is taken from UH Maui College's E Hoʻoulu Lāhui Pepeke Painu instructional page. The basic English meaning is cross-checked against Nā Puke Wehewehe entries for ʻai and poi. The learner-facing breakdown stays close to this sourced example and does not generalize beyond it.",
     "sources": [
-      "https://ehooululahui.maui.hawaii.edu/?page_id=1132"
+      "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
+      "https://wehe.hilo.hawaii.edu/?q=%CA%BBai",
+      "https://wehe.hilo.hawaii.edu/?q=poi"
     ]
   },
   "activities": [
