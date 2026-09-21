@@ -1,11 +1,27 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
   "stages": [
-    {"id":"foundations","title":"Foundations","description":"Sound, spelling, and reliable recall."},
-    {"id":"immersion","title":"Immersion","description":"Listen to trusted Hawaiian-language audio without turning it into a quiz."},
-    {"id":"sentences","title":"Sentence Patterns","description":"See how Hawaiian sentences are organized and build understanding in context."},
-    {"id":"context","title":"Vocabulary in Context","description":"Planned: grow vocabulary through sentences and meaningful use."}
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "description": "Sound, spelling, and reliable recall."
+    },
+    {
+      "id": "immersion",
+      "title": "Immersion",
+      "description": "Listen to trusted Hawaiian-language audio without turning it into a quiz."
+    },
+    {
+      "id": "sentences",
+      "title": "Sentence Patterns",
+      "description": "Study source-checked Hawaiian sentence structure, then test what you can identify."
+    },
+    {
+      "id": "context",
+      "title": "Vocabulary in Context",
+      "description": "Planned: grow vocabulary through sentences and meaningful use."
+    }
   ],
   "units": [
     {
@@ -17,14 +33,18 @@
       "outcomes": [
         "Recognize the ʻokina as a consonant/glottal stop",
         "Recognize kahakō as vowel length",
-        "Type common Hawaiian words with the ʻokina and kahakō in the right places"
+        "Type source-checked Hawaiian words with the ʻokina and kahakō in the right places",
+        "Notice that missing marks can point to a different Hawaiian form"
       ],
       "lessons": [
         {
           "id": "orthography-01",
           "title": "ʻOkina & Kahakō",
-          "summary": "Repair spellings and learn to notice exactly where ʻokina and kahakō belong.",
-          "focus": ["spelling", "pronunciation"],
+          "summary": "Practice ʻAʻole, Hawaiʻi, ʻŌlelo Hawaiʻi, ʻAe, ʻāina, kāne, mālama, and ʻōlelo through repair, study, and recall.",
+          "focus": [
+            "spelling",
+            "pronunciation"
+          ],
           "path": "./data/lessons/01-orthography.json",
           "status": "active"
         }
@@ -35,19 +55,22 @@
       "stage": "immersion",
       "mode": "immersion",
       "order": 2,
-      "title": "Immersion: Listening",
-      "description": "Spend time hearing Hawaiian from trusted sources without turning listening into a test.",
+      "title": "Immersion: HAW 101",
+      "description": "Spend time hearing Hawaiian from a trusted UH Hilo source without turning listening into a test.",
       "outcomes": [
         "Become more comfortable hearing Hawaiian spoken naturally",
         "Notice rhythm, pacing, vowel length, and ʻokina over time",
-        "Replay trusted audio freely without affecting mastery scores"
+        "Move through the HAW 101 collection at your own pace without affecting mastery scores"
       ],
       "lessons": [
         {
           "id": "listening-01",
-          "title": "HAW 101 Listening",
-          "summary": "Listen to an official UH Hilo HAW 101 recording for immersion and ear training.",
-          "focus": ["listening", "immersion"],
+          "title": "HAW 101 Immersion Library",
+          "summary": "Explore introductory audio and Mokuna 1–10 from the official UH Hilo HAW 101 collection.",
+          "focus": [
+            "listening",
+            "immersion"
+          ],
           "path": "./data/lessons/02-listening-pronunciation.json",
           "status": "active"
         }
@@ -59,18 +82,22 @@
       "stage": "sentences",
       "order": 3,
       "title": "Sentence Foundations",
-      "description": "Move from isolated words into source-checked Hawaiian sentence patterns, starting with understanding how the parts fit together.",
+      "description": "Move from isolated words into source-checked Hawaiian sentence patterns, starting with a Pepeke Painu example and its negative form.",
       "outcomes": [
         "Notice that Hawaiian sentence order does not have to mirror English",
-        "Identify the action, who, and other key parts in a beginner sentence",
+        "Identify the action, who, and what in the first sourced pattern",
+        "Recognize the negative version of the same sourced sentence",
         "Build toward sentence production only after the pattern is familiar"
       ],
       "lessons": [
         {
           "id": "sentence-foundations-01",
-          "title": "See the Pattern: Pepeke Painu",
-          "summary": "Study one source-checked sentence and see how its parts work together before trying to produce the pattern yourself.",
-          "focus": ["sentence patterns", "meaning"],
+          "title": "Pepeke Painu: See and Check the Pattern",
+          "summary": "Study a sourced positive/negative pair, then identify Action, Who, What, and the negative form.",
+          "focus": [
+            "sentence patterns",
+            "meaning"
+          ],
           "path": "./data/lessons/03-sentence-foundations.json",
           "status": "active"
         }
