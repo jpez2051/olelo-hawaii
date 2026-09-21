@@ -46,7 +46,7 @@
         <div>
           <p class="section-kicker">Immersion</p>
           <h2 id="immerse-title">Listen without having to prove anything</h2>
-          <p>This space is for hearing Hawaiian from trusted sources. Replay, listen casually, or focus closely. Nothing here changes your mastery score.</p>
+          <p>This space is for hearing Hawaiian from trusted sources. Each card sends you to the official UH Hilo collection for reliable playback and seeking. Listen casually, replay sections, or focus closely—nothing here changes your mastery score.</p>
         </div>
       </div>
       <div id="immersion-list" class="immersion-list"></div>
@@ -73,6 +73,11 @@
           <p id="instruction" class="instruction"></p>
           <div id="prompt" class="prompt"></div>
           <p id="support" class="support-text"></p>
+
+          <div id="choice-panel" class="choice-panel" hidden>
+            <p class="study-label">Check your understanding</p>
+            <div id="choice-options" class="choice-options"></div>
+          </div>
 
           <div id="sentence-panel" class="sentence-panel" hidden>
             <p class="study-label">Sentence</p>
@@ -165,12 +170,12 @@
         <div class="needs-header">
           <div>
             <p class="section-kicker">Needs practice</p>
-            <h2>Words to revisit</h2>
-            <p>Items appear here when an answer is missed or nearly correct. They clear after you show that the spelling is sticking again.</p>
+            <h2>Items to revisit</h2>
+            <p>Spelling and sentence-pattern items appear here when an answer is missed or nearly correct. They clear after successful follow-up practice.</p>
           </div>
           <button id="practice-needs-btn" class="primary-btn" type="button" hidden>Practice these</button>
         </div>
-        <p id="needs-practice-empty" class="needs-empty">Nothing is being flagged right now. If a word gives you trouble later, it will show up here automatically.</p>
+        <p id="needs-practice-empty" class="needs-empty">Nothing is being flagged right now. If a spelling or sentence-pattern item gives you trouble later, it will show up here automatically.</p>
         <div id="needs-practice-list" class="needs-practice-list"></div>
       </div>
 
@@ -187,7 +192,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 4.5.0</span>
+    <span class="site-version">Version 4.6.0</span>
   </footer>
 
   <script>
