@@ -1,21 +1,41 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "orthography-01",
   "title": "ʻOkina & Kahakō",
   "description": "Train accurate Hawaiian spelling through noticing, handwriting, and recall after the word is hidden.",
-  "focus": ["spelling", "pronunciation", "active recall"],
+  "focus": [
+    "spelling",
+    "pronunciation",
+    "active recall"
+  ],
   "contentStatus": "source-checked",
   "contentReview": {
-    "checkedAt": "2026-09-03",
-    "standard": "Hawaiian-language spelling and meanings are checked against authoritative University of Hawaiʻi resources before release.",
+    "checkedAt": "2026-09-21",
+    "standard": "Spellings and basic meanings are checked against University of Hawaiʻi resources and Nā Puke Wehewehe before release.",
     "sources": [
       {
         "name": "University of Hawaiʻi — Hawaiian Language Considerations",
         "url": "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/"
       },
       {
-        "name": "Nā Puke Wehewehe ʻŌlelo Hawaiʻi / Wehewehe Wikiwiki — Pukui-Elbert dictionary entries",
+        "name": "Nā Puke Wehewehe ʻŌlelo Hawaiʻi / Wehewehe Wikiwiki",
         "url": "https://wehe.hilo.hawaii.edu/"
+      },
+      {
+        "name": "Wehewehe — ʻāina",
+        "url": "https://wehe.hilo.hawaii.edu/?q=aina"
+      },
+      {
+        "name": "Wehewehe — kāne",
+        "url": "https://wehe.hilo.hawaii.edu/?q=kane"
+      },
+      {
+        "name": "Wehewehe — mālama",
+        "url": "https://wehe.hilo.hawaii.edu/?l=&q=m%C4%81lama"
+      },
+      {
+        "name": "Wehewehe — ʻōlelo",
+        "url": "https://wehe.hilo.hawaii.edu/?q=olelo"
       }
     ]
   },
@@ -23,6 +43,7 @@
     {
       "id": "ortho-aole-repair",
       "type": "repair-spelling",
+      "skill": "spelling",
       "instruction": "Repair the Hawaiian spelling.",
       "prompt": "Aole",
       "support": "Restore the two missing ʻokina.",
@@ -33,11 +54,16 @@
     {
       "id": "ortho-aole-study",
       "type": "study-hide-recall",
+      "skill": "spelling",
       "instruction": "Study the word, then hide it and write it from memory.",
       "prompt": "Learn the spelling carefully.",
       "support": "Notice exactly where each ʻokina appears before you hide the word.",
       "studyWord": "ʻAʻole",
-      "studyNotes": ["Two ʻokina: one at the beginning and one between A and o", "No kahakō in this word", "Say the word aloud while you study it"],
+      "studyNotes": [
+        "Two ʻokina: one at the beginning and one between A and o",
+        "No kahakō in this word",
+        "Say the word aloud while you study it"
+      ],
       "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
@@ -46,21 +72,27 @@
     {
       "id": "ortho-hawaii-repair",
       "type": "repair-spelling",
+      "skill": "spelling",
       "instruction": "Repair the Hawaiian spelling.",
       "prompt": "Hawaii",
       "support": "Restore the missing ʻokina.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "Hawaiʻi has an ʻokina before the final i. The ʻokina represents a glottal stop and is part of the spelling."
+      "explanation": "Hawaiʻi has an ʻokina before the final i. The ʻokina is part of the spelling."
     },
     {
       "id": "ortho-hawaii-study",
       "type": "study-hide-recall",
+      "skill": "spelling",
       "instruction": "Study the word, then hide it and write it from memory.",
       "prompt": "Pay attention to exactly where the ʻokina occurs.",
       "support": "Notice the spelling before you hide the word.",
       "studyWord": "Hawaiʻi",
-      "studyNotes": ["One ʻokina before the final i", "No kahakō in this word", "Say the syllables slowly while you study it"],
+      "studyNotes": [
+        "One ʻokina before the final i",
+        "No kahakō in this word",
+        "Say the syllables slowly while you study it"
+      ],
       "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
@@ -69,6 +101,7 @@
     {
       "id": "ortho-olelo-repair",
       "type": "repair-spelling",
+      "skill": "spelling",
       "instruction": "Repair the Hawaiian spelling.",
       "prompt": "Olelo Hawaii",
       "support": "Restore the missing ʻokina and kahakō.",
@@ -79,11 +112,17 @@
     {
       "id": "ortho-olelo-study",
       "type": "study-hide-recall",
+      "skill": "spelling",
       "instruction": "Study the phrase, then hide it and write it from memory.",
       "prompt": "This phrase has more than one spelling mark to remember.",
       "support": "Notice the opening ʻokina, the kahakō over Ō, and the ʻokina in Hawaiʻi.",
       "studyWord": "ʻŌlelo Hawaiʻi",
-      "studyNotes": ["ʻŌlelo starts with ʻ + Ō", "The Ō in ʻŌlelo has a kahakō", "Hawaiʻi has an ʻokina before the final i", "Say the whole phrase aloud while you study it"],
+      "studyNotes": [
+        "ʻŌlelo starts with ʻ + Ō",
+        "The Ō in ʻŌlelo has a kahakō",
+        "Hawaiʻi has an ʻokina before the final i",
+        "Say the whole phrase aloud while you study it"
+      ],
       "paperInstruction": "Write the phrase you just studied three times on paper from memory. Circle each ʻokina and underline the kahakō each time.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
@@ -92,12 +131,122 @@
     {
       "id": "ortho-ae-recall",
       "type": "meaning-recall",
+      "skill": "spelling",
       "instruction": "Write the Hawaiian word from its meaning.",
       "prompt": "yes",
       "support": "Type the Hawaiian word accurately.",
       "answer": "ʻAe",
       "answerLanguage": "haw",
       "explanation": "ʻAe begins with an ʻokina."
+    },
+    {
+      "id": "ortho-aina-repair",
+      "type": "repair-spelling",
+      "skill": "spelling",
+      "instruction": "Write the spelling that means land or earth.",
+      "prompt": "aina",
+      "support": "Restore the ʻokina and kahakō for ʻāina.",
+      "answer": "ʻāina",
+      "answerLanguage": "haw",
+      "explanation": "ʻĀina means land or earth. It begins with an ʻokina and the a carries a kahakō."
+    },
+    {
+      "id": "ortho-aina-study",
+      "type": "study-hide-recall",
+      "skill": "spelling",
+      "instruction": "Study the word, then hide it and write it from memory.",
+      "prompt": "This word means land or earth.",
+      "support": "Notice both marks before you hide the word.",
+      "studyWord": "ʻāina",
+      "studyNotes": [
+        "Initial ʻokina",
+        "Kahakō over ā",
+        "The marks distinguish this spelling from other Hawaiian forms"
+      ],
+      "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
+      "answer": "ʻāina",
+      "answerLanguage": "haw",
+      "explanation": "The spelling of ʻāina includes both an initial ʻokina and ā."
+    },
+    {
+      "id": "ortho-kane-repair",
+      "type": "repair-spelling",
+      "skill": "spelling",
+      "instruction": "Repair the Hawaiian spelling.",
+      "prompt": "kane",
+      "support": "For the word meaning male or husband, restore the missing kahakō.",
+      "answer": "kāne",
+      "answerLanguage": "haw",
+      "explanation": "Kāne uses a kahakō over the a."
+    },
+    {
+      "id": "ortho-kane-study",
+      "type": "study-hide-recall",
+      "skill": "spelling",
+      "instruction": "Study the word, then hide it and write it from memory.",
+      "prompt": "Remember where the long vowel is.",
+      "support": "Focus on the first vowel.",
+      "studyWord": "kāne",
+      "studyNotes": [
+        "Kahakō over ā",
+        "No ʻokina in this word",
+        "The dictionary includes male and husband among its meanings"
+      ],
+      "paperInstruction": "Write the word three times from memory. Underline the vowel with the kahakō each time.",
+      "answer": "kāne",
+      "answerLanguage": "haw",
+      "explanation": "Kāne is written with ā."
+    },
+    {
+      "id": "ortho-malama-repair",
+      "type": "repair-spelling",
+      "skill": "spelling",
+      "instruction": "Repair the Hawaiian spelling.",
+      "prompt": "malama",
+      "support": "For the word meaning to care for or take care of, restore the missing kahakō.",
+      "answer": "mālama",
+      "answerLanguage": "haw",
+      "explanation": "Mālama begins with mā. The Pukui-Elbert entry includes meanings such as take care of, tend, preserve, and protect."
+    },
+    {
+      "id": "ortho-malama-study",
+      "type": "study-hide-recall",
+      "skill": "spelling",
+      "instruction": "Study the word, then hide it and write it from memory.",
+      "prompt": "Notice the first syllable.",
+      "support": "The kahakō belongs on the first a.",
+      "studyWord": "mālama",
+      "studyNotes": [
+        "Kahakō over the first ā",
+        "No ʻokina in this word",
+        "Keep the second a short"
+      ],
+      "paperInstruction": "Write the word three times from memory. Underline the ā each time.",
+      "answer": "mālama",
+      "answerLanguage": "haw",
+      "explanation": "Mālama has a kahakō on the first a."
+    },
+    {
+      "id": "ortho-olelo-word-repair",
+      "type": "repair-spelling",
+      "skill": "spelling",
+      "instruction": "Repair the Hawaiian spelling.",
+      "prompt": "olelo",
+      "support": "Restore the missing ʻokina and kahakō.",
+      "answer": "ʻōlelo",
+      "answerLanguage": "haw",
+      "explanation": "ʻŌlelo begins with an ʻokina and ō. Pukui-Elbert includes language, speech, word, speak, and say among its meanings."
+    },
+    {
+      "id": "ortho-olelo-word-recall",
+      "type": "meaning-recall",
+      "skill": "spelling",
+      "instruction": "Write the Hawaiian word from the meaning clue.",
+      "prompt": "language / speech",
+      "support": "Type the source-checked Hawaiian word accurately.",
+      "answer": "ʻōlelo",
+      "answerLanguage": "haw",
+      "explanation": "ʻŌlelo is written with an initial ʻokina and ō."
     }
   ]
 }
