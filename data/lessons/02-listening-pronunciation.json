@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "id": "listening-01",
-  "title": "HAW 101 Immersion Library",
-  "description": "Spend time hearing Hawaiian through the official University of Hawaiʻi at Hilo HAW 101 collection without turning listening into a quiz.",
+  "title": "Immersion Library",
+  "description": "Choose from several trusted Hawaiian-language collections and listen without turning immersion into a test.",
   "focus": [
     "listening",
     "immersion",
@@ -11,239 +11,87 @@
   "contentStatus": "source-checked",
   "sourceReview": {
     "reviewedAt": "2026-09-21",
-    "notes": "Episode labels are taken from the official Ka Haka ʻUla O Keʻelikōlani HAW 101 podcast page. The app links to that official collection instead of embedding the remote MP3 stream, which avoids the unreliable playback/seeking behavior seen in the in-app player.",
+    "notes": "The immersion library now favors reliable source collections and video/podcast series over embedding individual legacy MP3 files. Each collection is presented for exposure, not mastery.",
     "sources": [
-      "https://www.olelo.hawaii.edu/en/olelo/hoolele101"
+      "https://oiwi.tv/ka-leo-oiwi/",
+      "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "https://podcasts.apple.com/us/podcast/hawaiian-at-home/id1493872846",
+      "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
+      "https://www.olelo.hawaii.edu/documents/olelo/NHMOIIIPuke_compressed.pdf"
     ]
   },
   "activities": [
     {
-      "id": "listen-haw101-hoolauna",
+      "id": "immerse-ka-leo-oiwi",
       "type": "guided-listening",
       "skill": "listening",
       "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Introduction / Hoolauna",
-      "support": "Start by listening for the overall sound and pacing. Do not worry about catching every word.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH01 Hoolauna",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
+      "instruction": "Choose an episode and listen.",
+      "prompt": "Ka Leo ʻŌiwi",
+      "support": "A 13-episode Hawaiian language learning series from ʻŌiwi TV. Episodes combine hearing, participation, language instruction, and cultural context.",
+      "sourcePageUrl": "https://oiwi.tv/ka-leo-oiwi/",
+      "collectionSize": "13 episodes",
+      "audioSourceName": "ʻŌiwi TV",
+      "audioSpeaker": "Multiple hosts and guests",
       "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
+        "Start with Episode 1 if you want structured beginner material.",
+        "Replay episodes freely; the series is designed so learners can set their own pace.",
+        "Listen for familiar words and patterns without trying to translate everything."
+      ]
     },
     {
-      "id": "listen-haw101-pela-puana",
+      "id": "immerse-kulaiwi",
       "type": "guided-listening",
       "skill": "listening",
       "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Pela Puana",
-      "support": "Listen for rhythm, pauses, and repeated sound patterns.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH02 Pela Puana",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
+      "instruction": "Choose a lesson and listen.",
+      "prompt": "Kulāiwi",
+      "support": "A free Kamehameha Schools Hawaiian-language video series hosted by ʻEkela Kanīʻaupiʻo Crozier, with 24 lessons available online.",
+      "sourcePageUrl": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "collectionSize": "24 video lessons",
+      "audioSourceName": "Kamehameha Schools",
+      "audioSpeaker": "ʻEkela Kanīʻaupiʻo Crozier and guests",
       "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
+        "Use the video format for both listening and visual context.",
+        "You can follow the lessons in order or revisit a lesson that interests you.",
+        "Workbooks/transcripts are available for some lessons if you want support after listening."
+      ]
     },
     {
-      "id": "listen-haw101-mokuna1",
+      "id": "immerse-hawaiian-at-home",
       "type": "guided-listening",
       "skill": "listening",
       "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 1",
-      "support": "Try one pass without stopping, then a second pass where you replay anything that catches your ear.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH03–HH04 Mokuna 1",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
+      "instruction": "Choose an episode and listen.",
+      "prompt": "Hawaiian at Home",
+      "support": "A conversational podcast about learning and using Hawaiian at home. Good for longer-form listening and hearing how learners discuss language use in everyday life.",
+      "sourcePageUrl": "https://podcasts.apple.com/us/podcast/hawaiian-at-home/id1493872846",
+      "collectionSize": "10 episodes",
+      "audioSourceName": "Hawaiian at Home",
+      "audioSpeaker": "Emily States and guests",
       "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
+        "Treat this as conversational immersion rather than a formal lesson.",
+        "Notice Hawaiian words and phrases as they appear naturally in discussion.",
+        "Longer episodes are useful for background listening as well as focused sessions."
+      ]
     },
     {
-      "id": "listen-haw101-mokuna2",
+      "id": "immerse-haw101-archive",
       "type": "guided-listening",
       "skill": "listening",
       "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 2",
-      "support": "Let familiar sounds stand out naturally; there is no need to translate line by line.",
+      "instruction": "Use this archive when the audio works well in your browser.",
+      "prompt": "HAW 101 Audio Archive",
+      "support": "The official UH Hilo HAW 101 podcast archive by Kumu Kainani Kahaunaele. Keep it as an optional resource rather than the main immersion experience because the older MP3 delivery can be inconsistent.",
       "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH05–HH07 Mokuna 2",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
+      "collectionSize": "21 audio files",
+      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — UH Hilo",
       "audioSpeaker": "Kumu Kainani Kahaunaele",
       "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna3",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 3",
-      "support": "Pay attention to how phrases rise, fall, and connect.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH08–HH09 Mokuna 3",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna4",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 4",
-      "support": "Use this as background immersion once, then focused listening on a later pass.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH10–HH11 Mokuna 4",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna5",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 5",
-      "support": "Notice which words or sounds are beginning to feel familiar.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH12 Mokuna 5",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna6",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 6",
-      "support": "Replay short sections if you want, but do not turn the session into a test.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH13–HH14 Mokuna 6",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna7",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 7",
-      "support": "Listen for phrase boundaries and the natural pace of the speaker.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH15–HH16 Mokuna 7",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna8",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 8",
-      "support": "Compare how much more you notice now than in the earlier episodes.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH17–HH18 Mokuna 8",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna9",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 9",
-      "support": "Stay with the flow of the language even when individual words are unfamiliar.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH19 Mokuna 9",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
-    },
-    {
-      "id": "listen-haw101-mokuna10",
-      "type": "guided-listening",
-      "skill": "listening",
-      "scored": false,
-      "instruction": "Listen for immersion.",
-      "prompt": "Mokuna 10",
-      "support": "Use this as a longer immersion session and notice what your ear now catches automatically.",
-      "sourcePageUrl": "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "episodeRefs": "HH20–HH21 Mokuna 10",
-      "audioSourceName": "Ka Haka ʻUla O Keʻelikōlani — HAW 101",
-      "audioSpeaker": "Kumu Kainani Kahaunaele",
-      "listeningNotes": [
-        "Open the official UH Hilo collection and choose the episode listed on this card.",
-        "Listen once for the overall flow before focusing on individual words.",
-        "Replay or seek freely on the official source. Nothing here is scored."
-      ],
-      "completionLabel": "Log listening session"
+        "Use this collection when playback behaves normally on your device.",
+        "If a file cuts off or seeking fails, switch to one of the video/podcast collections above.",
+        "The archive remains valuable as an official HAW 101 resource, but it is no longer the app's primary immersion source."
+      ]
     }
   ]
 }
