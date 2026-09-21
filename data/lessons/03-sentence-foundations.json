@@ -1,32 +1,37 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "sentence-foundations-01",
-  "title": "Sentence Foundations: See the Pattern",
-  "description": "Begin noticing how a Hawaiian sentence is organized without forcing English word order onto it.",
-  "focus": ["sentence patterns", "meaning", "grammar"],
+  "title": "Sentence Foundations: Pepeke Painu",
+  "description": "Study a source-checked action sentence, compare its negative form, and test whether you can identify the main parts.",
+  "focus": [
+    "sentence patterns",
+    "meaning",
+    "grammar"
+  ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-09-03",
-    "notes": "The Hawaiian example is taken from UH Maui College's E Hoʻoulu Lāhui Pepeke Painu instructional page. The basic English meaning is cross-checked against Nā Puke Wehewehe entries for ʻai and poi. The learner-facing breakdown stays close to this sourced example and does not generalize beyond it.",
+    "reviewedAt": "2026-09-21",
+    "notes": "The positive and negative Hawaiian examples are taken directly from UH Maui College's E Hoʻoulu Lāhui Pepeke Painu page. The learner-facing breakdown stays close to those examples.",
     "sources": [
       "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
       "https://wehe.hilo.hawaii.edu/?q=%CA%BBai",
-      "https://wehe.hilo.hawaii.edu/?q=poi"
+      "https://wehe.hilo.hawaii.edu/?q=poi",
+      "https://wehe.hilo.hawaii.edu/?q=%CA%BB%C5%8D-"
     ]
   },
   "activities": [
     {
-      "id": "sentence-painu-lani-poi",
+      "id": "sentence-painu-lani-poi-study",
       "type": "sentence-study",
       "skill": "sentence-patterns",
       "scored": false,
       "instruction": "See how the sentence is built.",
-      "prompt": "Start with the pattern, not an English word-for-word translation.",
-      "support": "This first sentence lesson is for understanding. There is nothing to memorize or pass yet.",
+      "prompt": "Start with the Hawaiian pattern instead of forcing English word order onto it.",
+      "support": "Read the whole sentence first, then look at the three parts.",
       "sentence": "ʻAi ʻo Lani i ka poi.",
       "naturalEnglish": "Lani eats poi.",
       "patternName": "Pepeke Painu",
-      "patternIntro": "In this example, the action comes first, followed by who is doing it, then what the action is directed toward.",
+      "patternIntro": "In this sourced example, the action comes first, followed by who is doing it, then what the action is directed toward.",
       "parts": [
         {
           "label": "Action",
@@ -36,16 +41,132 @@
         {
           "label": "Who",
           "hawaiian": "ʻo Lani",
-          "note": "This part identifies Lani as the person doing the action."
+          "note": "This identifies Lani as the person doing the action."
         },
         {
           "label": "What",
           "hawaiian": "i ka poi",
-          "note": "This part tells what Lani eats: the poi."
+          "note": "This tells what the action is directed toward: the poi."
         }
       ],
-      "languageNote": "Hawaiian does not need to mirror English word order. For now, notice the shape of this sentence and let the pattern become familiar.",
+      "languageNote": "For now, notice the shape: Action → Who → What. The Hawaiian sentence does not need to copy English word order.",
       "completionLabel": "Continue"
+    },
+    {
+      "id": "sentence-painu-who-check",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Identify the part of the sentence.",
+      "prompt": "ʻAi ʻo Lani i ka poi.",
+      "support": "Which part tells you who is doing the action?",
+      "options": [
+        "ʻAi",
+        "ʻo Lani",
+        "i ka poi"
+      ],
+      "answer": "ʻo Lani",
+      "answerLanguage": "haw",
+      "explanation": "In this example, ʻo Lani identifies Lani as the person doing the action."
+    },
+    {
+      "id": "sentence-painu-what-check",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Identify the part of the sentence.",
+      "prompt": "ʻAi ʻo Lani i ka poi.",
+      "support": "Which part tells what Lani eats?",
+      "options": [
+        "ʻAi",
+        "ʻo Lani",
+        "i ka poi"
+      ],
+      "answer": "i ka poi",
+      "answerLanguage": "haw",
+      "explanation": "In this example, i ka poi identifies what the action is directed toward."
+    },
+    {
+      "id": "sentence-painu-action-check",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Identify the part of the sentence.",
+      "prompt": "ʻAi ʻo Lani i ka poi.",
+      "support": "Which part carries the action?",
+      "options": [
+        "ʻAi",
+        "ʻo Lani",
+        "i ka poi"
+      ],
+      "answer": "ʻAi",
+      "answerLanguage": "haw",
+      "explanation": "ʻAi is the action at the beginning of this example."
+    },
+    {
+      "id": "sentence-painu-negative-study",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Compare the positive and negative forms.",
+      "prompt": "Look at what changes when the sourced example is made negative.",
+      "support": "Read the negative sentence as a whole before comparing the parts.",
+      "sentence": "ʻAʻole ʻai ʻo Lani i ka poi.",
+      "naturalEnglish": "Lani does not eat poi.",
+      "patternName": "Pepeke Painu — negative",
+      "patternIntro": "UH Maui College presents this negative form alongside the positive example. Notice ʻAʻole at the beginning before ʻai.",
+      "parts": [
+        {
+          "label": "Negative",
+          "hawaiian": "ʻAʻole",
+          "note": "The negative form begins with ʻAʻole in this example."
+        },
+        {
+          "label": "Action + Who",
+          "hawaiian": "ʻai ʻo Lani",
+          "note": "The action and the person remain visible after the negative opening."
+        },
+        {
+          "label": "What",
+          "hawaiian": "i ka poi",
+          "note": "The part referring to poi remains at the end."
+        }
+      ],
+      "languageNote": "At this stage, the goal is recognition: see the contrast between the two sourced sentences before trying to generate negative sentences yourself.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "sentence-painu-negative-choice",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Choose the negative sentence.",
+      "prompt": "Which sourced sentence says that Lani does not eat poi?",
+      "support": "Look for the negative opening shown in the previous screen.",
+      "options": [
+        "ʻAi ʻo Lani i ka poi.",
+        "ʻAʻole ʻai ʻo Lani i ka poi."
+      ],
+      "answer": "ʻAʻole ʻai ʻo Lani i ka poi.",
+      "answerLanguage": "haw",
+      "explanation": "The negative example begins with ʻAʻole: ʻAʻole ʻai ʻo Lani i ka poi."
+    },
+    {
+      "id": "sentence-painu-order-choice",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recognize the pattern.",
+      "prompt": "ʻAi ʻo Lani i ka poi.",
+      "support": "Which order best describes the three parts you studied?",
+      "options": [
+        "Who → Action → What",
+        "Action → Who → What",
+        "What → Who → Action"
+      ],
+      "answer": "Action → Who → What",
+      "answerLanguage": "en",
+      "explanation": "For this sourced example, the lesson breaks the sentence into Action → Who → What."
     }
   ]
 }
