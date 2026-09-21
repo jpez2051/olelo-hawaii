@@ -72,6 +72,7 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
 .immersion-card p { color: #505a59; line-height: 1.5; }
 .immersion-card audio { display: block; width: 100%; margin: 14px 0; }
 .immersion-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.collection-size { display: inline-flex; margin: 10px 0 2px; padding: 5px 9px; border-radius: 999px; background: var(--gold-soft); color: #5d460a; font-size: .78rem; font-weight: 800; }
 .episode-ref { margin: 14px 0; padding: 10px 12px; border-radius: 10px; background: var(--ocean-soft); color: var(--ocean-dark); font-size: .9rem; }
 .immersion-focus-list { margin: 0 0 16px; padding-left: 20px; color: #4f5959; line-height: 1.55; }
 
@@ -130,6 +131,7 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
 .choice-options { display: grid; gap: 10px; }
 .choice-option { width: 100%; min-height: 50px; padding: 12px 14px; border: 1px solid #b8c7c2; border-radius: 11px; background: white; color: var(--ocean-dark); font-weight: 800; text-align: left; }
 .choice-option:hover:not(:disabled) { border-color: var(--ocean); background: #f5faf8; }
+.choice-option.selected-choice { border: 2px solid var(--ocean); background: var(--ocean-soft); }
 .choice-option.correct-choice { background: var(--leaf-soft); border-color: #88aa91; color: #24482f; }
 .choice-option.wrong-choice { background: var(--lava-soft); border-color: #d9a093; color: #732719; }
 .answer-label { display: block; font-size: .8rem; font-weight: 800; color: var(--ocean-dark); margin-bottom: 6px; }
@@ -205,3 +207,5 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
   .practice-header .pill { align-self: flex-start; }
   .needs-item { flex-direction: column; gap: 8px; }
 }
+
+.choice-actions { margin-top: 14px; }
