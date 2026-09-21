@@ -192,23 +192,25 @@ function renderImmersionLibrary() {
   listening.forEach(activity => {
     const card = document.createElement("article");
     card.className = "immersion-card";
+    const refs = activity.episodeRefs ? `<div class="episode-ref">On the UH Hilo page: <strong>${escapeHtml(activity.episodeRefs)}</strong></div>` : "";
+    const notes = (activity.listeningNotes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
     card.innerHTML = `
       <div class="immersion-card-head">
         <div>
           <p class="section-kicker">Trusted source</p>
-          <h3>${escapeHtml(activity.audioSourceName || activity.lessonTitle)}</h3>
-          <p>${escapeHtml(activity.audioSpeaker ? `Speaker: ${activity.audioSpeaker}` : "")}</p>
+          <h3>${escapeHtml(activity.prompt || activity.lessonTitle)}</h3>
+          <p>${escapeHtml(activity.audioSourceName || "")}${activity.audioSpeaker ? ` · ${escapeHtml(activity.audioSpeaker)}` : ""}</p>
         </div>
         <span class="tag">immersion</span>
       </div>
-      <h4>${escapeHtml(activity.prompt || "Listening")}</h4>
       <p>${escapeHtml(activity.support || "Listen freely and replay as often as you like.")}</p>
-      <audio controls preload="metadata" src="${escapeHtml(activity.audioUrl || "")}"></audio>
+      ${refs}
+      ${notes ? `<ul class="immersion-focus-list">${notes}</ul>` : ""}
       <div class="immersion-actions">
+        <a class="primary-link" href="${escapeHtml(activity.sourcePageUrl || "#")}" target="_blank" rel="noopener noreferrer">Open official HAW 101 collection</a>
         <button class="secondary-btn log-listen-btn" type="button">Log listening session</button>
-        <a class="secondary-link" href="${escapeHtml(activity.audioUrl || "#")}" target="_blank" rel="noopener noreferrer">Open official audio</a>
       </div>
-      <p class="exposure-note">Listening here never changes your mastery score.</p>`;
+      <p class="exposure-note">The official UH Hilo page handles playback. This avoids the unreliable embedded stream and lets your browser handle seeking/playback directly. Listening never changes your mastery score.</p>`;
     const button = card.querySelector(".log-listen-btn");
     button.addEventListener("click", () => {
       recordExposure(activity);
@@ -218,7 +220,6 @@ function renderImmersionLibrary() {
     list.appendChild(card);
   });
 }
-
 function reviewStateFor(activityId) {
   return progress.reviews[activityId] || freshReviewState();
 }
@@ -240,14 +241,19 @@ function needsMorePractice(state) {
   return misses > 0 && (state.consecutiveCorrect || 0) < 2;
 }
 
-function practiceReason(states) {
+function practiceReason(group) {
+  const states = group.states;
+  if (group.skill === "sentence-patterns") {
+    if (states.some(state => state.lastGrade === "incorrect")) return "Sentence pattern needs another look";
+    return "Keep reviewing this sentence pattern";
+  }
   if (states.some(state => state.lastGrade === "incorrect")) return "Missed on the last try";
   if (states.some(state => state.lastGrade === "almost")) return "Spelling was close on the last try";
   return "Improving — keep reviewing until it sticks";
 }
 
 function representativeActivity(groupActivities) {
-  const strength = { "meaning-recall": 3, "repair-spelling": 2, "study-hide-recall": 1 };
+  const strength = { "sentence-choice": 4, "meaning-recall": 3, "repair-spelling": 2, "study-hide-recall": 1 };
   return groupActivities.slice().sort((a, b) => (strength[b.type] || 0) - (strength[a.type] || 0))[0];
 }
 
@@ -257,7 +263,7 @@ function needsPracticeGroups() {
     const state = progress.reviews[activity.id];
     if (!needsMorePractice(state)) return;
     const key = (activity.answer || activity.id).normalize("NFC").toLocaleLowerCase();
-    if (!groups.has(key)) groups.set(key, { answer: activity.answer, activities: [], states: [] });
+    if (!groups.has(key)) groups.set(key, { answer: activity.answer, skill: activity.skill || "spelling", activities: [], states: [] });
     const group = groups.get(key);
     group.activities.push(activity);
     group.states.push(state);
@@ -265,7 +271,7 @@ function needsPracticeGroups() {
 
   return [...groups.values()].map(group => ({
     ...group,
-    reason: practiceReason(group.states),
+    reason: practiceReason(group),
     representative: representativeActivity(group.activities),
     due: group.states.some(state => isDue(state)),
     nextReview: group.states.reduce((earliest, state) => {
@@ -311,6 +317,8 @@ function resetPracticeUi() {
   $("#paper-panel").hidden = true;
   $("#listening-panel").hidden = true;
   $("#sentence-panel").hidden = true;
+  $("#choice-panel").hidden = true;
+  $("#choice-options").innerHTML = "";
   $("#answer-area").hidden = false;
   $("#check-btn").hidden = false;
   $("#next-btn").hidden = true;
@@ -345,7 +353,14 @@ function showNextActivity(returnToTop = true) {
   $("#prompt").textContent = currentActivity.prompt || "";
   $("#support").textContent = currentActivity.support || "";
 
-  if (currentActivity.type === "sentence-study") {
+  if (currentActivity.type === "sentence-choice") {
+    activityStage = "choice";
+    $("#answer-area").hidden = true;
+    $("#choice-panel").hidden = false;
+    $("#choice-options").innerHTML = (currentActivity.options || []).map(option => `
+      <button type="button" class="choice-option" data-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`
+    ).join("");
+  } else if (currentActivity.type === "sentence-study") {
     activityStage = "sentence-study";
     $("#answer-area").hidden = true;
     $("#sentence-panel").hidden = false;
@@ -426,6 +441,32 @@ function feedbackTitle(status) {
   return "Not yet";
 }
 
+function checkChoiceAnswer(selected) {
+  if (!currentActivity || currentActivity.type !== "sentence-choice" || answerLocked) return;
+  const status = selected === currentActivity.answer ? "correct" : "incorrect";
+  answerLocked = true;
+  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], status);
+  progress.totals[status] = (progress.totals[status] || 0) + 1;
+  saveProgress(progress);
+
+  $("#choice-options .choice-option").forEach(button => {
+    button.disabled = true;
+    if (button.dataset.answer === currentActivity.answer) button.classList.add("correct-choice");
+    if (button.dataset.answer === selected && status !== "correct") button.classList.add("wrong-choice");
+  });
+
+  const feedback = $("#feedback");
+  feedback.hidden = false;
+  feedback.className = `feedback ${status}`;
+  const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
+  feedback.innerHTML = `
+    <strong>${feedbackTitle(status)}</strong>
+    ${status !== "correct" ? `<div class="expected-answer">Answer: ${escapeHtml(currentActivity.answer)}</div>` : ""}
+    ${explanation}`;
+  $("#next-btn").hidden = false;
+  updateDueCount();
+}
+
 function checkCurrentAnswer() {
   if (!currentActivity || answerLocked || activityStage !== "answer") return;
   const given = $("#answer-input").value;
@@ -442,7 +483,7 @@ function checkCurrentAnswer() {
   feedback.className = `feedback ${result.status}`;
   const notes = (result.notes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
   const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
-  const correctionPractice = result.status === "correct" ? "" : `<p><strong>Try it on paper:</strong> Write the correct spelling 3 times before moving on if you can.</p>`;
+  const correctionPractice = result.status === "correct" || currentActivity.skill === "sentence-patterns" ? "" : `<p><strong>Try it on paper:</strong> Write the correct spelling 3 times before moving on if you can.</p>`;
   feedback.innerHTML = `
     <strong>${feedbackTitle(result.status)}</strong>
     ${notes ? `<ul>${notes}</ul>` : ""}
@@ -497,26 +538,28 @@ function exposureCountForSkill(skill) {
 
 function renderSkillProgress() {
   const scored = activities.filter(isScoredActivity);
-  const spellingReviewed = scored.filter(activity => progress.reviews[activity.id]).length;
-  const weak = needsPracticeGroups().length;
+  const spellingReviewed = scored.filter(activity => activity.skill === "spelling" && progress.reviews[activity.id]).length;
+  const sentenceReviewed = scored.filter(activity => activity.skill === "sentence-patterns" && progress.reviews[activity.id]).length;
+  const groups = needsPracticeGroups();
+  const weakSpelling = groups.filter(group => group.skill === "spelling").length;
+  const weakSentences = groups.filter(group => group.skill === "sentence-patterns").length;
   const listeningSessions = exposureCountForSkill("listening");
-  const sentenceSessions = exposureCountForSkill("sentence-patterns");
+  const sentenceStudySessions = exposureCountForSkill("sentence-patterns");
 
   $("#skill-progress").innerHTML = `
     <div class="skill-card">
-      <div><strong>Spelling & recall</strong><span>${spellingReviewed} items practiced</span></div>
-      <span class="skill-detail">${weak} need${weak === 1 ? "s" : ""} practice</span>
+      <div><strong>Spelling & recall</strong><span>${spellingReviewed} scored items practiced</span></div>
+      <span class="skill-detail">${weakSpelling} need${weakSpelling === 1 ? "s" : ""} practice</span>
     </div>
     <div class="skill-card">
-      <div><strong>Sentence patterns</strong><span>${sentenceSessions} study session${sentenceSessions === 1 ? "" : "s"}</span></div>
-      <span class="skill-detail">Understanding first; production comes later</span>
+      <div><strong>Sentence patterns</strong><span>${sentenceReviewed} scored checks · ${sentenceStudySessions} study session${sentenceStudySessions === 1 ? "" : "s"}</span></div>
+      <span class="skill-detail">${weakSentences} pattern item${weakSentences === 1 ? "" : "s"} need review</span>
     </div>
     <div class="skill-card">
       <div><strong>Immersion</strong><span>${listeningSessions} listening session${listeningSessions === 1 ? "" : "s"}</span></div>
       <span class="skill-detail">Exposure only — not a mastery score</span>
     </div>`;
 }
-
 function renderProgress() {
   const activeReviewStates = activities.filter(isScoredActivity).map(activity => progress.reviews[activity.id]).filter(Boolean);
   const reviewed = activeReviewStates.length;
@@ -540,6 +583,11 @@ function bindEvents() {
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
   $("#next-btn").addEventListener("click", showNextActivity);
   $("#sentence-continue-btn").addEventListener("click", completeSentenceStudy);
+  $("#choice-options").addEventListener("click", event => {
+    const button = event.target.closest(".choice-option");
+    if (!button) return;
+    checkChoiceAnswer(button.dataset.answer);
+  });
   $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
   $("#listening-audio").addEventListener("play", () => {
     if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
