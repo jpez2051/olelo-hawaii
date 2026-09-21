@@ -13,6 +13,7 @@ let practiceQueue = [];
 let currentActivity = null;
 let answerLocked = false;
 let activityStage = "answer";
+let selectedChoice = "";
 
 function shuffle(items) {
   const copy = items.slice();
@@ -203,6 +204,7 @@ function renderImmersionLibrary() {
         </div>
         <span class="tag">immersion</span>
       </div>
+      ${activity.collectionSize ? `<div class="collection-size">${escapeHtml(activity.collectionSize)}</div>` : ""}
       <p>${escapeHtml(activity.support || "Listen freely and replay as often as you like.")}</p>
       ${refs}
       ${notes ? `<ul class="immersion-focus-list">${notes}</ul>` : ""}
@@ -319,6 +321,8 @@ function resetPracticeUi() {
   $("#sentence-panel").hidden = true;
   $("#choice-panel").hidden = true;
   $("#choice-options").innerHTML = "";
+  $("#choice-check-btn").disabled = true;
+  selectedChoice = "";
   $("#answer-area").hidden = false;
   $("#check-btn").hidden = false;
   $("#next-btn").hidden = true;
@@ -357,6 +361,8 @@ function showNextActivity(returnToTop = true) {
     activityStage = "choice";
     $("#answer-area").hidden = true;
     $("#choice-panel").hidden = false;
+    $("#choice-check-btn").disabled = true;
+    selectedChoice = "";
     $("#choice-options").innerHTML = (currentActivity.options || []).map(option => `
       <button type="button" class="choice-option" data-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`
     ).join("");
@@ -441,8 +447,9 @@ function feedbackTitle(status) {
   return "Not yet";
 }
 
-function checkChoiceAnswer(selected) {
-  if (!currentActivity || currentActivity.type !== "sentence-choice" || answerLocked) return;
+function checkChoiceAnswer() {
+  if (!currentActivity || currentActivity.type !== "sentence-choice" || answerLocked || !selectedChoice) return;
+  const selected = selectedChoice;
   const status = selected === currentActivity.answer ? "correct" : "incorrect";
   answerLocked = true;
   progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], status);
@@ -585,9 +592,12 @@ function bindEvents() {
   $("#sentence-continue-btn").addEventListener("click", completeSentenceStudy);
   $("#choice-options").addEventListener("click", event => {
     const button = event.target.closest(".choice-option");
-    if (!button) return;
-    checkChoiceAnswer(button.dataset.answer);
+    if (!button || answerLocked) return;
+    selectedChoice = button.dataset.answer;
+    $("#choice-options .choice-option").forEach(option => option.classList.toggle("selected-choice", option === button));
+    $("#choice-check-btn").disabled = false;
   });
+  $("#choice-check-btn").addEventListener("click", checkChoiceAnswer);
   $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
   $("#listening-audio").addEventListener("play", () => {
     if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
