@@ -314,7 +314,10 @@ function resetPracticeUi() {
   input.value = "";
   input.disabled = false;
   input.readOnly = true;
+  input.hidden = false;
   input.blur();
+  $(".hawaiian-keyboard").hidden = false;
+  $(".answer-label").hidden = false;
   $("#study-panel").hidden = true;
   $("#paper-panel").hidden = true;
   $("#listening-panel").hidden = true;
@@ -322,6 +325,7 @@ function resetPracticeUi() {
   $("#choice-panel").hidden = true;
   $("#choice-options").innerHTML = "";
   $("#choice-check-btn").disabled = true;
+  $("#choice-check-btn").hidden = false;
   selectedChoice = "";
   $("#answer-area").hidden = false;
   $("#check-btn").hidden = false;
@@ -470,6 +474,12 @@ function checkChoiceAnswer() {
     <strong>${feedbackTitle(status)}</strong>
     ${status !== "correct" ? `<div class="expected-answer">Answer: ${escapeHtml(currentActivity.answer)}</div>` : ""}
     ${explanation}`;
+  $("#choice-check-btn").hidden = true;
+  $("#answer-area").hidden = false;
+  $("#answer-input").hidden = true;
+  $(".hawaiian-keyboard").hidden = true;
+  $(".answer-label").hidden = true;
+  $("#check-btn").hidden = true;
   $("#next-btn").hidden = false;
   updateDueCount();
 }
