@@ -460,7 +460,7 @@ function checkChoiceAnswer() {
   progress.totals[status] = (progress.totals[status] || 0) + 1;
   saveProgress(progress);
 
-  $("#choice-options .choice-option").forEach(button => {
+  $$("#choice-options .choice-option").forEach(button => {
     button.disabled = true;
     if (button.dataset.answer === currentActivity.answer) button.classList.add("correct-choice");
     if (button.dataset.answer === selected && status !== "correct") button.classList.add("wrong-choice");
