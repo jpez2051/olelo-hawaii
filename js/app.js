@@ -594,7 +594,7 @@ function bindEvents() {
     const button = event.target.closest(".choice-option");
     if (!button || answerLocked) return;
     selectedChoice = button.dataset.answer;
-    $("#choice-options .choice-option").forEach(option => option.classList.toggle("selected-choice", option === button));
+    $$("#choice-options .choice-option").forEach(option => option.classList.toggle("selected-choice", option === button));
     $("#choice-check-btn").disabled = false;
   });
   $("#choice-check-btn").addEventListener("click", checkChoiceAnswer);
