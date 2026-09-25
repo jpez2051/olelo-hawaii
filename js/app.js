@@ -326,6 +326,7 @@ function resetPracticeUi() {
   $("#choice-options").innerHTML = "";
   $("#choice-check-btn").disabled = true;
   $("#choice-check-btn").hidden = false;
+  $("#choice-next-btn").hidden = true;
   selectedChoice = "";
   $("#answer-area").hidden = false;
   $("#check-btn").hidden = false;
@@ -366,6 +367,8 @@ function showNextActivity(returnToTop = true) {
     $("#answer-area").hidden = true;
     $("#choice-panel").hidden = false;
     $("#choice-check-btn").disabled = true;
+    $("#choice-check-btn").hidden = false;
+    $("#choice-next-btn").hidden = true;
     selectedChoice = "";
     $("#choice-options").innerHTML = (currentActivity.options || []).map(option => `
       <button type="button" class="choice-option" data-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`
@@ -475,12 +478,7 @@ function checkChoiceAnswer() {
     ${status !== "correct" ? `<div class="expected-answer">Answer: ${escapeHtml(currentActivity.answer)}</div>` : ""}
     ${explanation}`;
   $("#choice-check-btn").hidden = true;
-  $("#answer-area").hidden = false;
-  $("#answer-input").hidden = true;
-  $(".hawaiian-keyboard").hidden = true;
-  $(".answer-label").hidden = true;
-  $("#check-btn").hidden = true;
-  $("#next-btn").hidden = false;
+  $("#choice-next-btn").hidden = false;
   updateDueCount();
 }
 
@@ -608,6 +606,7 @@ function bindEvents() {
     $("#choice-check-btn").disabled = false;
   });
   $("#choice-check-btn").addEventListener("click", checkChoiceAnswer);
+  $("#choice-next-btn").addEventListener("click", showNextActivity);
   $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
   $("#listening-audio").addEventListener("play", () => {
     if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
