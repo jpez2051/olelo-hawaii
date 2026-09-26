@@ -202,17 +202,17 @@ function renderImmersionLibrary() {
           <h3>${escapeHtml(activity.prompt || activity.lessonTitle)}</h3>
           <p>${escapeHtml(activity.audioSourceName || "")}${activity.audioSpeaker ? ` · ${escapeHtml(activity.audioSpeaker)}` : ""}</p>
         </div>
-        <span class="tag">immersion</span>
+        <span class="tag">${escapeHtml(activity.resourceType || "immersion")}</span>
       </div>
       ${activity.collectionSize ? `<div class="collection-size">${escapeHtml(activity.collectionSize)}</div>` : ""}
       <p>${escapeHtml(activity.support || "Listen freely and replay as often as you like.")}</p>
       ${refs}
       ${notes ? `<ul class="immersion-focus-list">${notes}</ul>` : ""}
       <div class="immersion-actions">
-        <a class="primary-link" href="${escapeHtml(activity.sourcePageUrl || "#")}" target="_blank" rel="noopener noreferrer">Open official HAW 101 collection</a>
+        <a class="primary-link" href="${escapeHtml(activity.sourcePageUrl || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(activity.openLabel || "Open source")}</a>
         <button class="secondary-btn log-listen-btn" type="button">Log listening session</button>
       </div>
-      <p class="exposure-note">The official UH Hilo page handles playback. This avoids the unreliable embedded stream and lets your browser handle seeking/playback directly. Listening never changes your mastery score.</p>`;
+      <p class="exposure-note">${escapeHtml(activity.sourceNote || "Open the trusted source in your browser for playback. Listening never changes your mastery score.")}</p>`;
     const button = card.querySelector(".log-listen-btn");
     button.addEventListener("click", () => {
       recordExposure(activity);
@@ -564,7 +564,7 @@ function renderSkillProgress() {
   $("#skill-progress").innerHTML = `
     <div class="skill-card">
       <div><strong>Spelling & recall</strong><span>${spellingReviewed} scored items practiced</span></div>
-      <span class="skill-detail">${weakSpelling} need${weakSpelling === 1 ? "s" : ""} practice</span>
+      <span class="skill-detail">${weakSpelling} item${weakSpelling === 1 ? "" : "s"} need${weakSpelling === 1 ? "s" : ""} practice</span>
     </div>
     <div class="skill-card">
       <div><strong>Sentence patterns</strong><span>${sentenceReviewed} scored checks · ${sentenceStudySessions} study session${sentenceStudySessions === 1 ? "" : "s"}</span></div>
