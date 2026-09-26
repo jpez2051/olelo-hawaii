@@ -335,6 +335,7 @@ function resetPracticeUi() {
   $("#feedback").hidden = true;
   $("#feedback").className = "feedback";
   $("#feedback").innerHTML = "";
+  $("#retry-actions").hidden = true;
   audio.pause();
   audio.removeAttribute("src");
   audio.load();
@@ -356,7 +357,16 @@ function showNextActivity(returnToTop = true) {
 
   $("#practice-empty").hidden = true;
   $("#practice-content").hidden = false;
-  $("#activity-type").textContent = currentActivity.type.replaceAll("-", " ");
+  const activityLabels = {
+    "repair-spelling": "spelling repair",
+    "study-hide-recall": "study then recall",
+    "meaning-recall": "meaning recall",
+    "sentence-study": "sentence study",
+    "sentence-choice": "sentence check",
+    "sentence-recall": "sentence recall",
+    "guided-listening": "listening"
+  };
+  $("#activity-type").textContent = activityLabels[currentActivity.type] || currentActivity.type.replaceAll("-", " ");
   $("#activity-focus").textContent = currentActivity.focus.join(" • ");
   $("#instruction").textContent = currentActivity.instruction || "Continue the activity.";
   $("#prompt").textContent = currentActivity.prompt || "";
@@ -479,6 +489,7 @@ function checkChoiceAnswer() {
     ${explanation}`;
   $("#choice-check-btn").hidden = true;
   $("#choice-next-btn").hidden = false;
+  $("#retry-actions").hidden = status === "correct";
   updateDueCount();
 }
 
@@ -509,8 +520,16 @@ function checkCurrentAnswer() {
   $("#answer-input").disabled = true;
   $("#check-btn").hidden = true;
   $("#next-btn").hidden = false;
+  $("#retry-actions").hidden = result.status === "correct";
   updateDueCount();
   settleAfterKeyboard();
+}
+
+function retryCurrentActivity() {
+  if (!currentActivity || !answerLocked) return;
+  const retry = currentActivity;
+  practiceQueue.unshift(retry);
+  showNextActivity();
 }
 
 function insertCharacter(character) {
@@ -607,6 +626,7 @@ function bindEvents() {
   });
   $("#choice-check-btn").addEventListener("click", checkChoiceAnswer);
   $("#choice-next-btn").addEventListener("click", showNextActivity);
+  $("#retry-btn").addEventListener("click", retryCurrentActivity);
   $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
   $("#listening-audio").addEventListener("play", () => {
     if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
