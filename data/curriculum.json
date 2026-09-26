@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
   "stages": [
     {
@@ -82,18 +82,18 @@
       "stage": "sentences",
       "order": 3,
       "title": "Sentence Foundations",
-      "description": "Move from isolated words into source-checked Hawaiian sentence patterns, starting with a Pepeke Painu example and its negative form.",
+      "description": "Move from source-checked sentence study into recognition, partial recall, full recall, and spaced review.",
       "outcomes": [
         "Notice that Hawaiian sentence order does not have to mirror English",
-        "Identify the action, who, and what in the first sourced pattern",
-        "Recognize the negative version of the same sourced sentence",
-        "Build toward sentence production only after the pattern is familiar"
+        "Identify key parts and verbal markers in source-checked examples",
+        "Recall missing chunks without choices",
+        "Produce familiar sourced sentences from memory and revisit misses later"
       ],
       "lessons": [
         {
           "id": "sentence-foundations-01",
-          "title": "Pepeke Painu: See and Check the Pattern",
-          "summary": "Study a positive/negative pair, then recognize Action/Who/What and additional source-listed Pepeke Painu markers.",
+          "title": "Pepeke Painu: Study → Recognize → Recall",
+          "summary": "Study sourced examples, identify their structure, then move into partial and full typed recall with spaced review.",
           "focus": [
             "sentence patterns",
             "meaning"
