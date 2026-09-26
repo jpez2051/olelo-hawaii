@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "id": "sentence-foundations-01",
   "title": "Sentence Foundations: Pepeke Painu",
   "description": "Study a source-checked action sentence, compare its negative form, and test whether you can identify the main parts.",
@@ -10,8 +10,8 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-09-21",
-    "notes": "The positive and negative Hawaiian examples are taken directly from UH Maui College's E Hoʻoulu Lāhui Pepeke Painu page. The learner-facing breakdown stays close to those examples.",
+    "reviewedAt": "2026-09-25",
+    "notes": "Examples and verbal-marker forms are taken from UH Maui College's Pepeke Painu page. New checks ask learners to recognize source-listed structures without inventing additional Hawaiian sentences.",
     "sources": [
       "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
       "https://wehe.hilo.hawaii.edu/?q=%CA%BBai",
@@ -167,6 +167,57 @@
       "answer": "Action → Who → What",
       "answerLanguage": "en",
       "explanation": "For this sourced example, the lesson breaks the sentence into Action → Who → What."
+    },
+    {
+      "id": "sentence-painu-ua-marker",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Notice another Pepeke Painu marker.",
+      "prompt": "Which sourced example begins with the Ua PAINU pattern?",
+      "support": "UH Maui College lists Ua PAINU among the Pepeke Painu verbal markers.",
+      "options": [
+        "Ua hoʻi mai nei ke koa i Hawaiʻi",
+        "ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi.",
+        "ʻAi ʻo Lani i ka poi."
+      ],
+      "answer": "Ua hoʻi mai nei ke koa i Hawaiʻi",
+      "answerLanguage": "haw",
+      "explanation": "UH Maui College gives “Ua hoʻi mai nei ke koa i Hawaiʻi” as an example under the Pepeke Painu verbal-marker section."
+    },
+    {
+      "id": "sentence-painu-e-ana-marker",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Notice another Pepeke Painu marker.",
+      "prompt": "Which sourced example shows an e ... ana pattern?",
+      "support": "Look for e before the action and ana after it.",
+      "options": [
+        "Ua hoʻi mai nei ke koa i Hawaiʻi",
+        "ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi.",
+        "ʻAi ʻo Lani i ka poi."
+      ],
+      "answer": "ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi.",
+      "answerLanguage": "haw",
+      "explanation": "In the UH Maui College example, e comes before hiki and ana follows it: e hiki mai ana."
+    },
+    {
+      "id": "sentence-painu-e-ana-parts",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Identify the marker around the action.",
+      "prompt": "ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi.",
+      "support": "Which pair surrounds the action hiki in this sourced example?",
+      "options": [
+        "ua ... nei",
+        "e ... ana",
+        "ʻaʻole ... i"
+      ],
+      "answer": "e ... ana",
+      "answerLanguage": "en",
+      "explanation": "The example contains e hiki mai ana, so the visible marker pair is e ... ana."
     }
   ]
 }
