@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "sentence-foundations-01",
   "title": "Sentence Foundations: Pepeke Painu",
   "description": "Study a source-checked action sentence, compare its negative form, and test whether you can identify the main parts.",
@@ -11,7 +11,7 @@
   "contentStatus": "source-checked",
   "sourceReview": {
     "reviewedAt": "2026-09-25",
-    "notes": "Examples and verbal-marker forms are taken from UH Maui College's Pepeke Painu page. New checks ask learners to recognize source-listed structures without inventing additional Hawaiian sentences.",
+    "notes": "Examples and verbal-marker forms are taken from UH Maui College's Pepeke Painu page. The lesson now progresses from recognition to partial and full typed recall while keeping all Hawaiian sentences source-grounded.",
     "sources": [
       "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
       "https://wehe.hilo.hawaii.edu/?q=%CA%BBai",
@@ -218,6 +218,54 @@
       "answer": "e ... ana",
       "answerLanguage": "en",
       "explanation": "The example contains e hiki mai ana, so the visible marker pair is e ... ana."
+    },
+    {
+      "id": "sentence-painu-lani-full-recall",
+      "type": "sentence-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Produce the sourced sentence from memory.",
+      "prompt": "Lani eats poi.",
+      "support": "Type the complete Hawaiian sentence you studied. No choices this time.",
+      "answer": "ʻAi ʻo Lani i ka poi.",
+      "answerLanguage": "haw",
+      "explanation": "The sourced sentence is ʻAi ʻo Lani i ka poi. This step checks whether you can produce the whole form after the recognition exercises."
+    },
+    {
+      "id": "sentence-painu-negative-full-recall",
+      "type": "sentence-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Produce the negative sourced sentence from memory.",
+      "prompt": "Lani does not eat poi.",
+      "support": "Type the complete Hawaiian sentence you studied.",
+      "answer": "ʻAʻole ʻai ʻo Lani i ka poi.",
+      "answerLanguage": "haw",
+      "explanation": "The sourced negative sentence is ʻAʻole ʻai ʻo Lani i ka poi."
+    },
+    {
+      "id": "sentence-painu-eana-partial-recall",
+      "type": "sentence-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recall the missing Hawaiian chunk.",
+      "prompt": "ʻApōpō, ______ ka mokulele i ka hola ʻumi.",
+      "support": "Type only the missing words from the sourced UH Maui College example.",
+      "answer": "e hiki mai ana",
+      "answerLanguage": "haw",
+      "explanation": "The complete sourced example is ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi. The missing chunk is e hiki mai ana."
+    },
+    {
+      "id": "sentence-painu-ua-partial-recall",
+      "type": "sentence-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recall the beginning of the sourced sentence.",
+      "prompt": "______ ke koa i Hawaiʻi",
+      "support": "Type the missing beginning from the UH Maui College example.",
+      "answer": "Ua hoʻi mai nei",
+      "answerLanguage": "haw",
+      "explanation": "The sourced example is Ua hoʻi mai nei ke koa i Hawaiʻi."
     }
   ]
 }
