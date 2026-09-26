@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 5,
+  "schemaVersion": 6,
   "id": "orthography-01",
   "title": "ʻOkina & Kahakō",
   "description": "Train accurate Hawaiian spelling through noticing, handwriting, and recall after the word is hidden.",
@@ -288,6 +288,39 @@
       "answer": "Panaʻewa",
       "answerLanguage": "haw",
       "explanation": "UH Hilo's Inoa Matters series writes the Hilo place name as Panaʻewa, with an ʻokina between a and e."
+    },
+    {
+      "id": "ortho-aina-meaning-recall",
+      "type": "meaning-recall",
+      "skill": "spelling",
+      "instruction": "Recall the Hawaiian word from meaning.",
+      "prompt": "land / earth",
+      "support": "Type the source-checked Hawaiian word from memory.",
+      "answer": "ʻāina",
+      "answerLanguage": "haw",
+      "explanation": "ʻĀina is a source-checked word for land or earth. This time you had to retrieve the spelling without seeing a damaged version first."
+    },
+    {
+      "id": "ortho-kane-meaning-recall",
+      "type": "meaning-recall",
+      "skill": "spelling",
+      "instruction": "Recall the Hawaiian word from meaning.",
+      "prompt": "male / husband",
+      "support": "Type the source-checked Hawaiian word from memory.",
+      "answer": "kāne",
+      "answerLanguage": "haw",
+      "explanation": "Kāne includes a kahakō over the a."
+    },
+    {
+      "id": "ortho-malama-meaning-recall",
+      "type": "meaning-recall",
+      "skill": "spelling",
+      "instruction": "Recall the Hawaiian word from meaning.",
+      "prompt": "care for / take care of",
+      "support": "Type the source-checked Hawaiian word from memory.",
+      "answer": "mālama",
+      "answerLanguage": "haw",
+      "explanation": "Mālama begins with mā. This recall step removes the misspelled-word cue used in the repair activity."
     }
   ]
 }
