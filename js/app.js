@@ -255,7 +255,7 @@ function practiceReason(group) {
 }
 
 function representativeActivity(groupActivities) {
-  const strength = { "sentence-choice": 4, "meaning-recall": 3, "repair-spelling": 2, "study-hide-recall": 1 };
+  const strength = { "sentence-recall": 6, "meaning-recall": 5, "sentence-choice": 4, "repair-spelling": 2, "study-hide-recall": 1 };
   return groupActivities.slice().sort((a, b) => (strength[b.type] || 0) - (strength[a.type] || 0))[0];
 }
 
