@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "id": "listening-01",
   "title": "Immersion Library",
   "description": "Choose from several trusted Hawaiian-language collections and listen without turning immersion into a test.",
@@ -10,14 +10,16 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-09-21",
-    "notes": "The immersion library now favors reliable source collections and video/podcast series over embedding individual legacy MP3 files. Each collection is presented for exposure, not mastery.",
+    "reviewedAt": "2026-09-25",
+    "notes": "The library distinguishes structured lessons, short pronunciation audiograms, learner conversation, and legacy audio instead of treating every source as the same kind of immersion.",
     "sources": [
       "https://oiwi.tv/ka-leo-oiwi/",
       "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
       "https://podcasts.apple.com/us/podcast/hawaiian-at-home/id1493872846",
       "https://www.olelo.hawaii.edu/en/olelo/hoolele101",
-      "https://www.olelo.hawaii.edu/documents/olelo/NHMOIIIPuke_compressed.pdf"
+      "https://www.olelo.hawaii.edu/documents/olelo/NHMOIIIPuke_compressed.pdf",
+      "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-hilo/",
+      "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/"
     ]
   },
   "activities": [
@@ -37,7 +39,10 @@
         "Start with Episode 1 if you want structured beginner material.",
         "Replay episodes freely; the series is designed so learners can set their own pace.",
         "Listen for familiar words and patterns without trying to translate everything."
-      ]
+      ],
+      "resourceType": "Structured video series",
+      "openLabel": "Open Ka Leo ʻŌiwi",
+      "sourceNote": "Long-form structured Hawaiian-language learning with video and cultural context."
     },
     {
       "id": "immerse-kulaiwi",
@@ -55,7 +60,10 @@
         "Use the video format for both listening and visual context.",
         "You can follow the lessons in order or revisit a lesson that interests you.",
         "Workbooks/transcripts are available for some lessons if you want support after listening."
-      ]
+      ],
+      "resourceType": "Structured video lessons",
+      "openLabel": "Open Kulāiwi",
+      "sourceNote": "Video-based lessons from Kamehameha Schools; useful for guided listening with visual support."
     },
     {
       "id": "immerse-hawaiian-at-home",
@@ -73,6 +81,51 @@
         "Treat this as conversational immersion rather than a formal lesson.",
         "Notice Hawaiian words and phrases as they appear naturally in discussion.",
         "Longer episodes are useful for background listening as well as focused sessions."
+      ],
+      "resourceType": "Learner conversation podcast",
+      "openLabel": "Open Hawaiian at Home",
+      "sourceNote": "Mixed conversational discussion about learning and using Hawaiian. Useful exposure, but not the same as sustained Hawaiian-only input."
+    },
+    {
+      "id": "immerse-inoa-hilo",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "instruction": "Choose a short place-name audiogram and listen.",
+      "prompt": "Inoa Matters — Hilo",
+      "support": "Short UH Hilo audiograms focused on the pronunciation and background of Hilo-area place names.",
+      "sourcePageUrl": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-hilo/",
+      "collectionSize": "Short audiograms",
+      "audioSourceName": "Ka Leo o Ka Uluau — UH Hilo",
+      "audioSpeaker": "Bruce Torres Fischer / Ka Leo o Ka Uluau",
+      "resourceType": "Short pronunciation audiograms",
+      "openLabel": "Open Inoa Matters — Hilo",
+      "sourceNote": "Short, focused listening is easier to repeat than a long podcast and directly reinforces ʻokina/kahakō in real place names.",
+      "listeningNotes": [
+        "Try Panaʻewa, Kaʻūmana, Pūʻainakō, Kahaʻōpeʻa, or Haʻihaʻi.",
+        "Listen once without reading, then compare the written place name.",
+        "Repeat the name aloud only after hearing the source."
+      ]
+    },
+    {
+      "id": "immerse-inoa-puna",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "instruction": "Choose a short place-name audiogram and listen.",
+      "prompt": "Inoa Matters — Puna",
+      "support": "Short UH Hilo audiograms for Puna place names, including Keaʻau and Pāhoa.",
+      "sourcePageUrl": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+      "collectionSize": "Short audiograms",
+      "audioSourceName": "Ka Leo o Ka Uluau — UH Hilo",
+      "audioSpeaker": "Bruce Torres Fischer / Ka Leo o Ka Uluau",
+      "resourceType": "Short pronunciation audiograms",
+      "openLabel": "Open Inoa Matters — Puna",
+      "sourceNote": "Short pronunciation clips make a better bridge between Stage 1 spelling and real listening than long-form audio alone.",
+      "listeningNotes": [
+        "Start with Keaʻau or Pāhoa if you practiced those spellings in Stage 1.",
+        "Listen for the ʻokina or vowel length you see in the spelling.",
+        "Replay freely; this is exposure, not a score."
       ]
     },
     {
@@ -91,7 +144,10 @@
         "Use this collection when playback behaves normally on your device.",
         "If a file cuts off or seeking fails, switch to one of the video/podcast collections above.",
         "The archive remains valuable as an official HAW 101 resource, but it is no longer the app's primary immersion source."
-      ]
+      ],
+      "resourceType": "Legacy audio archive",
+      "openLabel": "Open HAW 101 archive",
+      "sourceNote": "Official UH Hilo archive. Playback can vary by browser/device, so treat this as an optional legacy source."
     }
   ]
 }
