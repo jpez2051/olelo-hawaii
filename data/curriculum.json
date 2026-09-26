@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
   "stages": [
     {
@@ -40,7 +40,7 @@
         {
           "id": "orthography-01",
           "title": "ʻOkina & Kahakō",
-          "summary": "Practice ʻAʻole, Hawaiʻi, ʻŌlelo Hawaiʻi, ʻAe, ʻāina, kāne, mālama, and ʻōlelo through repair, study, and recall.",
+          "summary": "Practice core words plus Hawaiʻi Island place names through repair, study, and recall.",
           "focus": [
             "spelling",
             "pronunciation"
@@ -55,18 +55,18 @@
       "stage": "immersion",
       "mode": "immersion",
       "order": 2,
-      "title": "Immersion: HAW 101",
-      "description": "Spend time hearing Hawaiian from a trusted UH Hilo source without turning listening into a test.",
+      "title": "Immersion: Listening Library",
+      "description": "Use several trusted listening formats: structured lessons, short pronunciation audiograms, conversational podcasts, and the legacy HAW 101 archive.",
       "outcomes": [
-        "Become more comfortable hearing Hawaiian spoken naturally",
-        "Notice rhythm, pacing, vowel length, and ʻokina over time",
-        "Move through the HAW 101 collection at your own pace without affecting mastery scores"
+        "Become more comfortable hearing Hawaiian across different source types",
+        "Use short place-name audiograms to connect spelling with sound",
+        "Choose long-form or short-form listening without affecting mastery scores"
       ],
       "lessons": [
         {
           "id": "listening-01",
-          "title": "HAW 101 Immersion Library",
-          "summary": "Explore introductory audio and Mokuna 1–10 from the official UH Hilo HAW 101 collection.",
+          "title": "Curated Immersion Library",
+          "summary": "Explore structured video lessons, short UH Hilo pronunciation audiograms, learner conversation, and the HAW 101 archive.",
           "focus": [
             "listening",
             "immersion"
@@ -93,7 +93,7 @@
         {
           "id": "sentence-foundations-01",
           "title": "Pepeke Painu: See and Check the Pattern",
-          "summary": "Study a sourced positive/negative pair, then identify Action, Who, What, and the negative form.",
+          "summary": "Study a positive/negative pair, then recognize Action/Who/What and additional source-listed Pepeke Painu markers.",
           "focus": [
             "sentence patterns",
             "meaning"
