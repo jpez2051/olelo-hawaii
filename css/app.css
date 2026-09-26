@@ -146,6 +146,8 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
 .feedback.almost { background: var(--gold-soft); color: #5d460a; }
 .feedback.incorrect { background: var(--lava-soft); color: #732719; }
 .feedback strong { display: block; margin-bottom: 4px; }
+.retry-actions { margin-top: 10px; padding: 14px; border: 1px dashed #9eb4b4; border-radius: 12px; background: #f7faf8; }
+.retry-actions p { margin: 0 0 10px; color: #566060; font-size: .88rem; line-height: 1.45; }
 .expected-answer { margin-top: 8px; font-weight: 800; color: var(--ink); }
 .panel { padding: 22px; margin-bottom: 14px; }
 .progress-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
