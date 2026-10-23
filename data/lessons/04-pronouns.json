@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "id": "pronouns-01",
+  "title": "Pronouns: Who Is Included?",
+  "description": "Learn Hawaiian pronouns through repeated sentence frames so you understand who is speaking, who is included, and how many people are involved.",
+  "focus": [
+    "pronouns",
+    "sentence comprehension",
+    "inclusive/exclusive"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-22",
+    "notes": "Subject pronouns and example sentences are taken from the modern Reference Grammar of the Hawaiian Language. Judd is used only as a sequencing reference; learner-facing spellings follow modern sources with ʻokina and kahakō.",
+    "sources": [
+      "https://hawaiian-grammar.org/current/",
+      "https://wehe.hilo.hawaii.edu/?q=k%C4%81kou",
+      "https://wehe.hilo.hawaii.edu/?q=m%C4%81kou",
+      "https://wehe.hilo.hawaii.edu/?q=%CA%BBoukou",
+      "https://wehe.hilo.hawaii.edu/?q=l%C4%81ua"
+    ]
+  },
+  "activities": [
+    {
+      "id": "pronoun-au-study",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Start with one person.",
+      "prompt": "Notice who is doing the action.",
+      "support": "The sentence stays simple so you can focus on the pronoun.",
+      "sentence": "E hele au i ke kula.",
+      "naturalEnglish": "I will go to school.",
+      "patternName": "Singular: au",
+      "patternIntro": "au means I. One speaker is referring to themself.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "E hele",
+          "note": "go / will go in this sourced example"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "au",
+          "note": "I — one speaker"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "to school"
+        }
+      ],
+      "languageNote": "Do not memorize au as an isolated card only. Listen for what role it plays in the whole sentence.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-kaua-study",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Now change only who is included.",
+      "prompt": "Compare this sentence with the previous one.",
+      "support": "The action and place stay the same. Only the pronoun changes.",
+      "sentence": "E hele kāua i ke kula.",
+      "naturalEnglish": "Let's you and me go to school.",
+      "patternName": "Dual inclusive: kāua",
+      "patternIntro": "kāua means two people: the speaker and the person being addressed.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "E hele",
+          "note": "same action"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "kāua",
+          "note": "you and me — exactly two people"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "same destination"
+        }
+      ],
+      "languageNote": "The listener is included in kāua.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-maua-study",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Contrast inclusive and exclusive 'we'.",
+      "prompt": "This sentence still refers to two people, but the listener is excluded.",
+      "support": "Compare māua with kāua.",
+      "sentence": "E hele māua i ke kula.",
+      "naturalEnglish": "The two of us, not including you, will go to school.",
+      "patternName": "Dual exclusive: māua",
+      "patternIntro": "māua means the speaker plus one other person, excluding the person being addressed.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "E hele",
+          "note": "same action"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "māua",
+          "note": "two people including the speaker, but not you"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "same destination"
+        }
+      ],
+      "languageNote": "English says 'we' for both kāua and māua; Hawaiian requires you to track whether the listener is included.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-kakou-study",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Expand the group.",
+      "prompt": "Now the group is three or more and includes the listener.",
+      "support": "Compare kāua and kākou.",
+      "sentence": "E hele kākou i ke kula.",
+      "naturalEnglish": "Let's go to school — three or more people, including you.",
+      "patternName": "Plural inclusive: kākou",
+      "patternIntro": "kākou means the speaker, the listener, and at least one more person.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "E hele",
+          "note": "same action"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "kākou",
+          "note": "three or more, including you"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "same destination"
+        }
+      ],
+      "languageNote": "kāua is inclusive dual; kākou is inclusive plural.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-makou-study",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Compare the other plural 'we'.",
+      "prompt": "This group has three or more people but excludes the listener.",
+      "support": "Compare mākou with kākou.",
+      "sentence": "E hele mākou i ke kula.",
+      "naturalEnglish": "We will go to school — three or more people, not including you.",
+      "patternName": "Plural exclusive: mākou",
+      "patternIntro": "mākou means the speaker and others, but not the person being addressed.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "E hele",
+          "note": "same action"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "mākou",
+          "note": "three or more, excluding you"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "same destination"
+        }
+      ],
+      "languageNote": "kākou includes the listener; mākou excludes the listener.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-kaua-vs-maua",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Track who is included.",
+      "prompt": "Your friend says: E hele māua i ke kula.",
+      "support": "Are you included in the group going to school?",
+      "options": [
+        "Yes — the speaker means you and them",
+        "No — the speaker means themself and one other person"
+      ],
+      "answer": "No — the speaker means themself and one other person",
+      "answerLanguage": "en",
+      "explanation": "māua is dual exclusive: two people including the speaker, excluding the listener."
+    },
+    {
+      "id": "pronoun-kakou-vs-makou",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Track the listener.",
+      "prompt": "Someone tells you: E hele kākou i ke kula.",
+      "support": "Which interpretation is correct?",
+      "options": [
+        "You are included",
+        "You are not included"
+      ],
+      "answer": "You are included",
+      "answerLanguage": "en",
+      "explanation": "kākou is plural inclusive: three or more people including the listener."
+    },
+    {
+      "id": "pronoun-dual-count",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Track how many people.",
+      "prompt": "E hele kāua i ke kula.",
+      "support": "How many people does kāua refer to here?",
+      "options": [
+        "One",
+        "Exactly two",
+        "Three or more"
+      ],
+      "answer": "Exactly two",
+      "answerLanguage": "en",
+      "explanation": "kāua is first-person dual inclusive: you and me."
+    },
+    {
+      "id": "pronoun-plural-count",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Track how many people.",
+      "prompt": "E hele mākou i ke kula.",
+      "support": "How many people does mākou refer to?",
+      "options": [
+        "Exactly two",
+        "Three or more",
+        "Only the listener"
+      ],
+      "answer": "Three or more",
+      "answerLanguage": "en",
+      "explanation": "mākou is first-person plural exclusive: three or more including the speaker, excluding the listener."
+    },
+    {
+      "id": "pronoun-you-two",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Now listen for second person number.",
+      "prompt": "The action stays familiar; only the listener group changes.",
+      "support": "This is a question directed to exactly two people.",
+      "sentence": "Ua hele ʻolua i ke kula?",
+      "naturalEnglish": "Did you two go to school?",
+      "patternName": "Second-person dual: ʻolua",
+      "patternIntro": "ʻolua means you two.",
+      "parts": [
+        {
+          "label": "Action frame",
+          "hawaiian": "Ua hele",
+          "note": "went / did go"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ʻolua",
+          "note": "you two"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "to school"
+        }
+      ],
+      "languageNote": "Hawaiian distinguishes one listener, two listeners, and three-or-more listeners.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-you-plural",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Expand the listener group.",
+      "prompt": "Compare ʻolua with ʻoukou.",
+      "support": "This question is addressed to three or more people.",
+      "sentence": "Ua hele ʻoukou i ke kula?",
+      "naturalEnglish": "Did you, three or more people, go to school?",
+      "patternName": "Second-person plural: ʻoukou",
+      "patternIntro": "ʻoukou means you, when addressing three or more people.",
+      "parts": [
+        {
+          "label": "Action frame",
+          "hawaiian": "Ua hele",
+          "note": "same action"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ʻoukou",
+          "note": "you — three or more people"
+        },
+        {
+          "label": "Place",
+          "hawaiian": "i ke kula",
+          "note": "same place"
+        }
+      ],
+      "languageNote": "English 'you' hides number; Hawaiian does not.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "pronoun-third-dual",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Identify how many people.",
+      "prompt": "Ua hele lāua i ke kula.",
+      "support": "What does lāua tell you?",
+      "options": [
+        "One person went",
+        "Two people went",
+        "Three or more people went"
+      ],
+      "answer": "Two people went",
+      "answerLanguage": "en",
+      "explanation": "lāua is third-person dual: they two."
+    },
+    {
+      "id": "pronoun-third-plural",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Identify how many people.",
+      "prompt": "Ua hele lākou i ke kula.",
+      "support": "What does lākou tell you?",
+      "options": [
+        "Two people",
+        "Three or more people",
+        "The speaker and listener"
+      ],
+      "answer": "Three or more people",
+      "answerLanguage": "en",
+      "explanation": "lākou is third-person plural: they, three or more."
+    },
+    {
+      "id": "pronoun-kaua-recall",
+      "type": "meaning-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recall the Hawaiian pronoun.",
+      "prompt": "we two: you and me",
+      "support": "Type the inclusive dual pronoun.",
+      "answer": "kāua",
+      "answerLanguage": "haw",
+      "explanation": "kāua includes the listener and refers to exactly two people."
+    },
+    {
+      "id": "pronoun-maua-recall",
+      "type": "meaning-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recall the Hawaiian pronoun.",
+      "prompt": "we two: speaker + one other, not you",
+      "support": "Type the exclusive dual pronoun.",
+      "answer": "māua",
+      "answerLanguage": "haw",
+      "explanation": "māua excludes the listener."
+    },
+    {
+      "id": "pronoun-kakou-recall",
+      "type": "meaning-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recall the Hawaiian pronoun.",
+      "prompt": "we: three or more, including you",
+      "support": "Type the inclusive plural pronoun.",
+      "answer": "kākou",
+      "answerLanguage": "haw",
+      "explanation": "kākou includes the listener."
+    },
+    {
+      "id": "pronoun-makou-recall",
+      "type": "meaning-recall",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Recall the Hawaiian pronoun.",
+      "prompt": "we: three or more, not including you",
+      "support": "Type the exclusive plural pronoun.",
+      "answer": "mākou",
+      "answerLanguage": "haw",
+      "explanation": "mākou excludes the listener."
+    }
+  ]
+}
