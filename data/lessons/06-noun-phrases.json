@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "id": "noun-phrases-01",
+  "title": "Noun Phrases: One or More?",
+  "description": "Learn how ka, ke, and nā help signal singular and plural noun phrases in common patterns.",
+  "focus": [
+    "noun phrases",
+    "determiners",
+    "comprehension"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-22",
+    "notes": "Rules and examples are taken from the modern Reference Grammar of the Hawaiian Language. The lesson teaches the general ka/ke/nā pattern while explicitly noting that ke has exceptions.",
+    "sources": [
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "noun-ka-hale-study",
+      "type": "sentence-study",
+      "skill": "noun-phrases",
+      "scored": false,
+      "instruction": "Notice the singular noun phrase.",
+      "prompt": "Focus on the determiner before the noun.",
+      "support": "This example follows the general ka pattern.",
+      "sentence": "ka hale",
+      "naturalEnglish": "the house",
+      "patternName": "Singular noun phrase",
+      "patternIntro": "ka is the usual singular definite article before many nouns.",
+      "parts": [
+        {
+          "label": "Determiner",
+          "hawaiian": "ka",
+          "note": "the — singular"
+        },
+        {
+          "label": "Noun",
+          "hawaiian": "hale",
+          "note": "house"
+        }
+      ],
+      "languageNote": "This is a noun phrase, not a complete sentence. The goal is to notice how number is signaled.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "noun-na-hale-study",
+      "type": "sentence-study",
+      "skill": "noun-phrases",
+      "scored": false,
+      "instruction": "Now change only the number.",
+      "prompt": "Compare this with ka hale.",
+      "support": "The noun stays the same; the determiner changes.",
+      "sentence": "nā hale",
+      "naturalEnglish": "the houses",
+      "patternName": "Plural noun phrase",
+      "patternIntro": "nā marks a definite plural noun phrase.",
+      "parts": [
+        {
+          "label": "Determiner",
+          "hawaiian": "nā",
+          "note": "the — plural"
+        },
+        {
+          "label": "Noun",
+          "hawaiian": "hale",
+          "note": "houses in this phrase"
+        }
+      ],
+      "languageNote": "Plural meaning can be carried by the determiner even when the noun form itself does not change.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "noun-ke-kao-study",
+      "type": "sentence-study",
+      "skill": "noun-phrases",
+      "scored": false,
+      "instruction": "See the usual ke pattern.",
+      "prompt": "This noun begins with k.",
+      "support": "The modern reference grammar gives this exact example.",
+      "sentence": "ke kao",
+      "naturalEnglish": "the goat",
+      "patternName": "Singular with ke",
+      "patternIntro": "As a general rule, ke is used before words beginning with k, a, e, or o.",
+      "parts": [
+        {
+          "label": "Determiner",
+          "hawaiian": "ke",
+          "note": "the — singular"
+        },
+        {
+          "label": "Noun",
+          "hawaiian": "kao",
+          "note": "goat"
+        }
+      ],
+      "languageNote": "This is a general rule, not an exception-free formula. Some nouns take ke outside that simple pattern.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "noun-na-kao-study",
+      "type": "sentence-study",
+      "skill": "noun-phrases",
+      "scored": false,
+      "instruction": "Make the noun phrase plural.",
+      "prompt": "Compare ke kao with nā kao.",
+      "support": "The noun stays the same; the determiner signals plural.",
+      "sentence": "nā kao",
+      "naturalEnglish": "the goats",
+      "patternName": "Plural with nā",
+      "patternIntro": "nā replaces singular ka/ke when the noun phrase is definite plural.",
+      "parts": [
+        {
+          "label": "Determiner",
+          "hawaiian": "nā",
+          "note": "the — plural"
+        },
+        {
+          "label": "Noun",
+          "hawaiian": "kao",
+          "note": "goats in this phrase"
+        }
+      ],
+      "languageNote": "Listen for nā because it can immediately change how many participants or things are being discussed.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "noun-hale-number",
+      "type": "sentence-choice",
+      "skill": "noun-phrases",
+      "scored": true,
+      "instruction": "Track number.",
+      "prompt": "Aia nā hale ma ʻō.",
+      "support": "How many houses are being referred to?",
+      "options": [
+        "One house",
+        "More than one house"
+      ],
+      "answer": "More than one house",
+      "answerLanguage": "en",
+      "explanation": "nā marks the noun phrase as plural."
+    },
+    {
+      "id": "noun-keiki-number",
+      "type": "sentence-choice",
+      "skill": "noun-phrases",
+      "scored": true,
+      "instruction": "Track number inside a sentence.",
+      "prompt": "Aia ke keiki ma ʻō.",
+      "support": "Is ke keiki singular or plural here?",
+      "options": [
+        "Singular",
+        "Plural"
+      ],
+      "answer": "Singular",
+      "answerLanguage": "en",
+      "explanation": "ke is singular in this phrase; the sourced sentence means the child is over there."
+    },
+    {
+      "id": "noun-keiki-plural",
+      "type": "sentence-choice",
+      "skill": "noun-phrases",
+      "scored": true,
+      "instruction": "Notice the same noun with a different determiner.",
+      "prompt": "Aia nā keiki ma ʻō.",
+      "support": "What changed compared with Aia ke keiki ma ʻō?",
+      "options": [
+        "The place changed",
+        "The number of children changed",
+        "The sentence became a question"
+      ],
+      "answer": "The number of children changed",
+      "answerLanguage": "en",
+      "explanation": "nā makes the noun phrase plural."
+    },
+    {
+      "id": "noun-ka-ke-rule",
+      "type": "sentence-choice",
+      "skill": "noun-phrases",
+      "scored": true,
+      "instruction": "Apply the general singular rule.",
+      "prompt": "Which phrase matches the general rule given in the reference grammar?",
+      "support": "Words beginning with k, a, e, or o usually take ke.",
+      "options": [
+        "ke kao",
+        "ka kao"
+      ],
+      "answer": "ke kao",
+      "answerLanguage": "haw",
+      "explanation": "ke kao is the sourced example for 'the goat.'"
+    },
+    {
+      "id": "noun-na-recall",
+      "type": "meaning-recall",
+      "skill": "noun-phrases",
+      "scored": true,
+      "instruction": "Recall the plural determiner.",
+      "prompt": "definite plural 'the' before a noun",
+      "support": "Type the Hawaiian determiner.",
+      "answer": "nā",
+      "answerLanguage": "haw",
+      "explanation": "nā marks definite plural noun phrases."
+    },
+    {
+      "id": "noun-context-poi",
+      "type": "sentence-choice",
+      "skill": "noun-phrases",
+      "scored": true,
+      "instruction": "Use the noun phrase inside a familiar sentence.",
+      "prompt": "Ua ʻai ʻo ia i ka poi.",
+      "support": "What does ka poi tell you about the noun phrase here?",
+      "options": [
+        "It is a singular definite noun phrase",
+        "It refers to three or more people",
+        "It marks the sentence as a question"
+      ],
+      "answer": "It is a singular definite noun phrase",
+      "answerLanguage": "en",
+      "explanation": "ka is a singular definite determiner in ka poi."
+    }
+  ]
+}
