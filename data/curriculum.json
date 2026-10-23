@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 6,
+  "schemaVersion": 7,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
   "stages": [
     {
@@ -57,6 +57,17 @@
             "comprehension"
           ],
           "path": "./data/lessons/04-pronouns.json",
+          "status": "active"
+        },
+        {
+          "id": "noun-phrases-01",
+          "title": "Noun Phrases: One or More?",
+          "summary": "Learn how ka, ke, and nā help signal singular/plural meaning and practice tracking number inside complete sentences.",
+          "focus": [
+            "noun phrases",
+            "comprehension"
+          ],
+          "path": "./data/lessons/06-noun-phrases.json",
           "status": "active"
         }
       ]
