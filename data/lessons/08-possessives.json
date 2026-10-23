@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "id": "possessives-01",
+  "title": "Possession & Relationships: Whose Is It?",
+  "description": "Learn common possessive forms through source-checked examples and repeated participant tracking.",
+  "focus": [
+    "possessives",
+    "relationships",
+    "comprehension"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-22",
+    "notes": "Possessive forms and examples are taken from the modern Reference Grammar. The lesson introduces the existence of a-class/o-class relationships without pretending the distinction can be reduced to one simple English rule.",
+    "sources": [
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "poss-koʻu-study",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "Start with a familiar o-class example.",
+      "prompt": "Focus on whose thing is being discussed.",
+      "support": "The modern reference gives this exact phrase.",
+      "sentence": "koʻu inoa",
+      "naturalEnglish": "my name",
+      "patternName": "koʻu — my",
+      "patternIntro": "koʻu marks a first-person singular o-class possessive relationship.",
+      "parts": [
+        {
+          "label": "Possessive",
+          "hawaiian": "koʻu",
+          "note": "my"
+        },
+        {
+          "label": "Thing",
+          "hawaiian": "inoa",
+          "note": "name"
+        }
+      ],
+      "languageNote": "Do not assume every English 'my' uses koʻu; Hawaiian has both o-class and a-class possessive relationships.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-kou-study",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "Track second person.",
+      "prompt": "Now the possessor is the listener.",
+      "support": "This source example uses an o-class possessive.",
+      "sentence": "kou kaʻa",
+      "naturalEnglish": "your car",
+      "patternName": "kou — your",
+      "patternIntro": "kou marks second-person singular possession in this sourced o-class example.",
+      "parts": [
+        {
+          "label": "Possessive",
+          "hawaiian": "kou",
+          "note": "your"
+        },
+        {
+          "label": "Thing",
+          "hawaiian": "kaʻa",
+          "note": "car"
+        }
+      ],
+      "languageNote": "The possessor changed from speaker to listener.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-kau-study",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "See the other possessive class.",
+      "prompt": "English still says 'your,' but Hawaiian uses a different possessive class here.",
+      "support": "This exact example is listed in the modern reference grammar.",
+      "sentence": "kāu ʻeke",
+      "naturalEnglish": "your bag",
+      "patternName": "kāu — your (a-class example)",
+      "patternIntro": "kāu is the second-person singular a-class form in this example.",
+      "parts": [
+        {
+          "label": "Possessive",
+          "hawaiian": "kāu",
+          "note": "your"
+        },
+        {
+          "label": "Thing",
+          "hawaiian": "ʻeke",
+          "note": "bag"
+        }
+      ],
+      "languageNote": "Do not reduce a-class/o-class to a single memorized English rule. Learn the relationship patterns with examples.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-kana-study",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "Track a third-person possessor.",
+      "prompt": "The owner/relationship is now someone else.",
+      "support": "This is a sourced a-class example.",
+      "sentence": "kāna kope",
+      "naturalEnglish": "his coffee",
+      "patternName": "kāna — his/her (a-class example)",
+      "patternIntro": "kāna is third-person singular a-class in this source example.",
+      "parts": [
+        {
+          "label": "Possessive",
+          "hawaiian": "kāna",
+          "note": "his/her"
+        },
+        {
+          "label": "Thing",
+          "hawaiian": "kope",
+          "note": "coffee"
+        }
+      ],
+      "languageNote": "Third-person forms also vary by possessive class.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-kalākou-study",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "Combine possession with plural pronouns.",
+      "prompt": "Track both class and who the possessor group is.",
+      "support": "This exact source example uses a plural third-person possessor.",
+      "sentence": "kā lākou ʻīlio",
+      "naturalEnglish": "their dog",
+      "patternName": "kā lākou — their",
+      "patternIntro": "lākou means they (three or more); kā lākou is the corresponding a-class possessive phrase here.",
+      "parts": [
+        {
+          "label": "Possessive frame",
+          "hawaiian": "kā lākou",
+          "note": "their — three or more possessors"
+        },
+        {
+          "label": "Thing",
+          "hawaiian": "ʻīlio",
+          "note": "dog"
+        }
+      ],
+      "languageNote": "Your pronoun knowledge now helps decode possession too.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-komaua-study",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "Reuse the inclusive/exclusive system.",
+      "prompt": "Who does 'our' include here?",
+      "support": "māua still means two people including the speaker but excluding the listener.",
+      "sentence": "ko māua makuakāne",
+      "naturalEnglish": "our father",
+      "patternName": "ko māua — our (two, excluding you)",
+      "patternIntro": "The possessive frame preserves the dual exclusive meaning of māua.",
+      "parts": [
+        {
+          "label": "Possessive frame",
+          "hawaiian": "ko māua",
+          "note": "our — two people, excluding listener"
+        },
+        {
+          "label": "Relationship",
+          "hawaiian": "makuakāne",
+          "note": "father"
+        }
+      ],
+      "languageNote": "Possessive grammar builds on the pronoun system rather than replacing it.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-context-house",
+      "type": "sentence-study",
+      "skill": "possessives",
+      "scored": false,
+      "instruction": "Find possession inside a full sentence.",
+      "prompt": "Track place and relationship together.",
+      "support": "This exact source sentence places Kimo at the speaker's house.",
+      "sentence": "Aia ʻo Kimo ma koʻu hale.",
+      "naturalEnglish": "Kimo is at my house.",
+      "patternName": "Possession inside context",
+      "patternIntro": "koʻu modifies hale while the sentence as a whole tells where Kimo is.",
+      "parts": [
+        {
+          "label": "Who",
+          "hawaiian": "ʻo Kimo",
+          "note": "Kimo"
+        },
+        {
+          "label": "Where",
+          "hawaiian": "ma koʻu hale",
+          "note": "at my house"
+        }
+      ],
+      "languageNote": "Understanding koʻu changes whose location is being described.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "poss-who-koʻu",
+      "type": "sentence-choice",
+      "skill": "possessives",
+      "scored": true,
+      "instruction": "Track the possessor.",
+      "prompt": "Aia ʻo Kimo ma koʻu hale.",
+      "support": "Whose house is it?",
+      "options": [
+        "The speaker's",
+        "The listener's",
+        "Kimo's"
+      ],
+      "answer": "The speaker's",
+      "answerLanguage": "en",
+      "explanation": "koʻu means my in this sourced o-class example."
+    },
+    {
+      "id": "poss-who-kou",
+      "type": "sentence-choice",
+      "skill": "possessives",
+      "scored": true,
+      "instruction": "Track the possessor.",
+      "prompt": "kou kaʻa",
+      "support": "Whose car?",
+      "options": [
+        "The speaker's",
+        "The listener's",
+        "Their car"
+      ],
+      "answer": "The listener's",
+      "answerLanguage": "en",
+      "explanation": "kou is second-person singular: your."
+    },
+    {
+      "id": "poss-our-group",
+      "type": "sentence-choice",
+      "skill": "possessives",
+      "scored": true,
+      "instruction": "Reuse pronoun inclusion.",
+      "prompt": "ko māua makuakāne",
+      "support": "Is the listener included in 'our' here?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No",
+      "answerLanguage": "en",
+      "explanation": "māua is dual exclusive, so the listener is not included."
+    },
+    {
+      "id": "poss-their-count",
+      "type": "sentence-choice",
+      "skill": "possessives",
+      "scored": true,
+      "instruction": "Track how many possessors.",
+      "prompt": "kā lākou ʻīlio",
+      "support": "How many people does lākou refer to?",
+      "options": [
+        "One",
+        "Exactly two",
+        "Three or more"
+      ],
+      "answer": "Three or more",
+      "answerLanguage": "en",
+      "explanation": "lākou is third-person plural."
+    },
+    {
+      "id": "poss-class-awareness",
+      "type": "sentence-choice",
+      "skill": "possessives",
+      "scored": true,
+      "instruction": "Avoid overgeneralizing from English.",
+      "prompt": "kou kaʻa / kāu ʻeke",
+      "support": "What is the important lesson from this contrast?",
+      "options": [
+        "English 'your' can map to different Hawaiian possessive classes",
+        "kou is singular and kāu is plural",
+        "One form is informal"
+      ],
+      "answer": "English 'your' can map to different Hawaiian possessive classes",
+      "answerLanguage": "en",
+      "explanation": "Hawaiian distinguishes a-class and o-class possessive relationships; English 'your' does not show that distinction."
+    }
+  ]
+}
