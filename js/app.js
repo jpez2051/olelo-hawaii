@@ -105,8 +105,9 @@ function escapeHtml(value = "") {
 
 function renderStages() {
   const list = $("#stage-list");
+  const activeStages = new Set((curriculum.units || []).filter(unit => unit.status !== "planned" && (unit.lessons || []).some(lesson => lesson.status === "active")).map(unit => unit.stage));
   list.innerHTML = (curriculum.stages || []).map((stage, index) => `
-    <div class="stage-card ${index < 3 ? "available" : "planned"}">
+    <div class="stage-card ${activeStages.has(stage.id) ? "available" : "planned"}">
       <span class="stage-number">${index + 1}</span>
       <div><strong>${escapeHtml(stage.title)}</strong><span>${escapeHtml(stage.description)}</span></div>
     </div>`).join("");
@@ -249,6 +250,14 @@ function practiceReason(group) {
     if (states.some(state => state.lastGrade === "incorrect")) return "Sentence pattern needs another look";
     return "Keep reviewing this sentence pattern";
   }
+  if (group.skill === "pronouns") {
+    if (states.some(state => state.lastGrade === "incorrect")) return "Participant or inclusion meaning needs review";
+    return "Keep checking who is included";
+  }
+  if (group.skill === "comprehension") {
+    if (states.some(state => state.lastGrade === "incorrect")) return "Whole-sentence meaning needs another look";
+    return "Keep rebuilding the sentence context";
+  }
   if (states.some(state => state.lastGrade === "incorrect")) return "Missed on the last try";
   if (states.some(state => state.lastGrade === "almost")) return "Spelling was close on the last try";
   return "Improving — keep reviewing until it sticks";
@@ -264,8 +273,10 @@ function needsPracticeGroups() {
   activities.filter(isScoredActivity).forEach(activity => {
     const state = progress.reviews[activity.id];
     if (!needsMorePractice(state)) return;
-    const key = (activity.answer || activity.id).normalize("NFC").toLocaleLowerCase();
-    if (!groups.has(key)) groups.set(key, { answer: activity.answer, skill: activity.skill || "spelling", activities: [], states: [] });
+    const normalizedAnswer = (activity.answer || activity.id).normalize("NFC").toLocaleLowerCase();
+    const key = activity.skill === "spelling" ? normalizedAnswer : activity.id;
+    const label = activity.skill === "spelling" ? activity.answer : (activity.prompt || activity.answer || activity.id);
+    if (!groups.has(key)) groups.set(key, { answer: activity.answer, label, skill: activity.skill || "spelling", activities: [], states: [] });
     const group = groups.get(key);
     group.activities.push(activity);
     group.states.push(state);
@@ -558,7 +569,7 @@ function renderNeedsPractice() {
     const when = group.due ? "Due now" : dueLabel(group.nextReview);
     item.innerHTML = `
       <div class="needs-copy">
-        <strong lang="haw">${escapeHtml(group.answer)}</strong>
+        <strong${group.skill === "spelling" ? ' lang="haw"' : ""}>${escapeHtml(group.label || group.answer)}</strong>
         <span>${escapeHtml(group.reason)}</span>
       </div>
       <span class="needs-when">${escapeHtml(when)}</span>`;
@@ -572,22 +583,28 @@ function exposureCountForSkill(skill) {
 
 function renderSkillProgress() {
   const scored = activities.filter(isScoredActivity);
-  const spellingReviewed = scored.filter(activity => activity.skill === "spelling" && progress.reviews[activity.id]).length;
-  const sentenceReviewed = scored.filter(activity => activity.skill === "sentence-patterns" && progress.reviews[activity.id]).length;
   const groups = needsPracticeGroups();
-  const weakSpelling = groups.filter(group => group.skill === "spelling").length;
-  const weakSentences = groups.filter(group => group.skill === "sentence-patterns").length;
+  const countReviewed = skill => scored.filter(activity => activity.skill === skill && progress.reviews[activity.id]).length;
+  const countWeak = skill => groups.filter(group => group.skill === skill).length;
   const listeningSessions = exposureCountForSkill("listening");
   const sentenceStudySessions = exposureCountForSkill("sentence-patterns");
 
   $("#skill-progress").innerHTML = `
     <div class="skill-card">
-      <div><strong>Spelling & recall</strong><span>${spellingReviewed} scored items practiced</span></div>
-      <span class="skill-detail">${weakSpelling} item${weakSpelling === 1 ? "" : "s"} need${weakSpelling === 1 ? "s" : ""} practice</span>
+      <div><strong>Spelling & recall</strong><span>${countReviewed("spelling")} scored items practiced</span></div>
+      <span class="skill-detail">${countWeak("spelling")} item${countWeak("spelling") === 1 ? "" : "s"} need${countWeak("spelling") === 1 ? "s" : ""} practice</span>
     </div>
     <div class="skill-card">
-      <div><strong>Sentence patterns</strong><span>${sentenceReviewed} scored checks · ${sentenceStudySessions} study session${sentenceStudySessions === 1 ? "" : "s"}</span></div>
-      <span class="skill-detail">${weakSentences} pattern item${weakSentences === 1 ? "" : "s"} need review</span>
+      <div><strong>Pronouns & participants</strong><span>${countReviewed("pronouns")} scored checks practiced</span></div>
+      <span class="skill-detail">${countWeak("pronouns")} item${countWeak("pronouns") === 1 ? "" : "s"} need review</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Sentence patterns</strong><span>${countReviewed("sentence-patterns")} scored checks · ${sentenceStudySessions} study session${sentenceStudySessions === 1 ? "" : "s"}</span></div>
+      <span class="skill-detail">${countWeak("sentence-patterns")} pattern item${countWeak("sentence-patterns") === 1 ? "" : "s"} need review</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Whole-sentence comprehension</strong><span>${countReviewed("comprehension")} scored checks practiced</span></div>
+      <span class="skill-detail">${countWeak("comprehension")} context item${countWeak("comprehension") === 1 ? "" : "s"} need review</span>
     </div>
     <div class="skill-card">
       <div><strong>Immersion</strong><span>${listeningSessions} listening session${listeningSessions === 1 ? "" : "s"}</span></div>
