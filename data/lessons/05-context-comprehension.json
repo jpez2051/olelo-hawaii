@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "id": "context-comprehension-01",
+  "title": "Comprehension: Follow the Whole Sentence",
+  "description": "Practice extracting who, number, inclusion, action frame, and time clues from source-checked Hawaiian sentences.",
+  "focus": [
+    "comprehension",
+    "sentence patterns",
+    "pronouns",
+    "context"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-22",
+    "notes": "Examples are taken from UH Maui College E Hoʻoulu Lāhui and the modern Reference Grammar of the Hawaiian Language. Activities test interpretation of relationships and context rather than isolated word spotting.",
+    "sources": [
+      "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
+      "https://ehooululahui.maui.hawaii.edu/?page_id=1144",
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "context-yesterday-au",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Read for the whole message.",
+      "prompt": "Do not translate one word at a time.",
+      "support": "Use the time clue, action frame, and pronoun together.",
+      "sentence": "I nehinei, e hiamoe ana au i ka hola ʻekolu.",
+      "naturalEnglish": "Yesterday, I was sleeping at three o'clock.",
+      "patternName": "Time + action frame + speaker",
+      "patternIntro": "The sentence gives a past-time clue first, then an e ... ana action frame, then au tells you the speaker is the one doing the action.",
+      "parts": [
+        {
+          "label": "When",
+          "hawaiian": "I nehinei",
+          "note": "yesterday"
+        },
+        {
+          "label": "Action frame",
+          "hawaiian": "e hiamoe ana",
+          "note": "sleeping / ongoing action in this context"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "au",
+          "note": "I"
+        },
+        {
+          "label": "Time",
+          "hawaiian": "i ka hola ʻekolu",
+          "note": "at three o'clock"
+        }
+      ],
+      "languageNote": "The meaning comes from the combination of clues. e ... ana by itself does not force one English tense; the time expression helps establish context.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "context-yesterday-who",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Understand the participant.",
+      "prompt": "I nehinei, e hiamoe ana au i ka hola ʻekolu.",
+      "support": "Who was sleeping?",
+      "options": [
+        "The speaker",
+        "The listener",
+        "Two other people"
+      ],
+      "answer": "The speaker",
+      "answerLanguage": "en",
+      "explanation": "au means I, so the speaker is the person sleeping."
+    },
+    {
+      "id": "context-yesterday-when",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Use the context clue.",
+      "prompt": "I nehinei, e hiamoe ana au i ka hola ʻekolu.",
+      "support": "Which word tells you the larger time context?",
+      "options": [
+        "nehinei",
+        "au",
+        "hola"
+      ],
+      "answer": "nehinei",
+      "answerLanguage": "en",
+      "explanation": "I nehinei means yesterday, which anchors the ongoing action in past context."
+    },
+    {
+      "id": "context-question-oukou",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Read the question as a whole.",
+      "prompt": "Track both the question and who is being addressed.",
+      "support": "The pronoun changes how many listeners are included.",
+      "sentence": "E aha ana ʻoukou?",
+      "naturalEnglish": "What will you all be doing?",
+      "patternName": "Question + plural listener",
+      "patternIntro": "aha asks what, while ʻoukou tells you the question is addressed to three or more people.",
+      "parts": [
+        {
+          "label": "Question",
+          "hawaiian": "E aha ana",
+          "note": "what will be happening / what will be done in this pattern"
+        },
+        {
+          "label": "Who is addressed",
+          "hawaiian": "ʻoukou",
+          "note": "you — three or more people"
+        }
+      ],
+      "languageNote": "Recognizing ʻoukou changes the social context of the whole question.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "context-question-count",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Track the audience.",
+      "prompt": "E aha ana ʻoukou?",
+      "support": "How many people is the speaker addressing?",
+      "options": [
+        "One person",
+        "Exactly two people",
+        "Three or more people"
+      ],
+      "answer": "Three or more people",
+      "answerLanguage": "en",
+      "explanation": "ʻoukou is second-person plural."
+    },
+    {
+      "id": "context-papa-makou",
+      "type": "sentence-study",
+      "skill": "sentence-patterns",
+      "scored": false,
+      "instruction": "Follow who is afraid.",
+      "prompt": "Notice that one sentence can contain more than one person reference.",
+      "support": "Do not stop after recognizing Pāpā.",
+      "sentence": "I koʻu wā kamaliʻi, ke huhū ʻo Pāpā, makaʻu mākou.",
+      "naturalEnglish": "When I was a child, when Dad gets angry, we are afraid.",
+      "patternName": "Multiple participants",
+      "patternIntro": "This sentence contains the speaker's childhood context, Pāpā as one participant, and mākou as a different group.",
+      "parts": [
+        {
+          "label": "Context",
+          "hawaiian": "I koʻu wā kamaliʻi",
+          "note": "in my childhood / when I was a child"
+        },
+        {
+          "label": "Participant",
+          "hawaiian": "ʻo Pāpā",
+          "note": "Dad"
+        },
+        {
+          "label": "Group",
+          "hawaiian": "mākou",
+          "note": "we — three or more, excluding the listener"
+        }
+      ],
+      "languageNote": "Understanding the sentence requires tracking that Pāpā and mākou refer to different participants.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "context-papa-listener",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Track inclusion.",
+      "prompt": "I koʻu wā kamaliʻi, ke huhū ʻo Pāpā, makaʻu mākou.",
+      "support": "Does mākou include the person being spoken to?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No",
+      "answerLanguage": "en",
+      "explanation": "mākou is first-person plural exclusive, so the listener is not included."
+    },
+    {
+      "id": "context-school-transfer",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Apply the pronoun system in a new sentence.",
+      "prompt": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "support": "Who did he or she see?",
+      "options": [
+        "The speaker alone",
+        "The speaker's group of three or more, excluding the listener",
+        "Two listeners"
+      ],
+      "answer": "The speaker's group of three or more, excluding the listener",
+      "answerLanguage": "en",
+      "explanation": "iā mākou refers to us — three or more including the speaker but excluding the listener."
+    },
+    {
+      "id": "context-school-youplural",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Apply the same system after a preposition.",
+      "prompt": "E hele au me ʻoukou i ke kula.",
+      "support": "Who will the speaker go with?",
+      "options": [
+        "One other person",
+        "Exactly two people",
+        "You all — three or more people"
+      ],
+      "answer": "You all — three or more people",
+      "answerLanguage": "en",
+      "explanation": "me ʻoukou means with you, addressing three or more people."
+    },
+    {
+      "id": "context-eana-meaning",
+      "type": "sentence-choice",
+      "skill": "sentence-patterns",
+      "scored": true,
+      "instruction": "Use context, not a one-word translation.",
+      "prompt": "E kamaʻilio ana au iā Kimo i nehinei.",
+      "support": "Why is a past-time meaning appropriate here even though the sentence uses e ... ana?",
+      "options": [
+        "Because nehinei gives a past-time context",
+        "Because au always means past tense",
+        "Because e ... ana always means past"
+      ],
+      "answer": "Because nehinei gives a past-time context",
+      "answerLanguage": "en",
+      "explanation": "The reference grammar notes that e ... ana can describe incomplete action in different time frames; surrounding context such as nehinei determines the interpretation."
+    }
+  ]
+}
