@@ -24,7 +24,7 @@
     {
       "id": "pronoun-au-study",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Start with one person.",
       "prompt": "Notice who is doing the action.",
@@ -56,7 +56,7 @@
     {
       "id": "pronoun-kaua-study",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Now change only who is included.",
       "prompt": "Compare this sentence with the previous one.",
@@ -88,7 +88,7 @@
     {
       "id": "pronoun-maua-study",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Contrast inclusive and exclusive 'we'.",
       "prompt": "This sentence still refers to two people, but the listener is excluded.",
@@ -120,7 +120,7 @@
     {
       "id": "pronoun-kakou-study",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Expand the group.",
       "prompt": "Now the group is three or more and includes the listener.",
@@ -152,7 +152,7 @@
     {
       "id": "pronoun-makou-study",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Compare the other plural 'we'.",
       "prompt": "This group has three or more people but excludes the listener.",
@@ -184,7 +184,7 @@
     {
       "id": "pronoun-kaua-vs-maua",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Track who is included.",
       "prompt": "Your friend says: E hele māua i ke kula.",
@@ -200,7 +200,7 @@
     {
       "id": "pronoun-kakou-vs-makou",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Track the listener.",
       "prompt": "Someone tells you: E hele kākou i ke kula.",
@@ -216,7 +216,7 @@
     {
       "id": "pronoun-dual-count",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Track how many people.",
       "prompt": "E hele kāua i ke kula.",
@@ -233,7 +233,7 @@
     {
       "id": "pronoun-plural-count",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Track how many people.",
       "prompt": "E hele mākou i ke kula.",
@@ -250,7 +250,7 @@
     {
       "id": "pronoun-you-two",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Now listen for second person number.",
       "prompt": "The action stays familiar; only the listener group changes.",
@@ -282,7 +282,7 @@
     {
       "id": "pronoun-you-plural",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": false,
       "instruction": "Expand the listener group.",
       "prompt": "Compare ʻolua with ʻoukou.",
@@ -314,7 +314,7 @@
     {
       "id": "pronoun-third-dual",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Identify how many people.",
       "prompt": "Ua hele lāua i ke kula.",
@@ -331,7 +331,7 @@
     {
       "id": "pronoun-third-plural",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Identify how many people.",
       "prompt": "Ua hele lākou i ke kula.",
@@ -348,7 +348,7 @@
     {
       "id": "pronoun-kaua-recall",
       "type": "meaning-recall",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Recall the Hawaiian pronoun.",
       "prompt": "we two: you and me",
@@ -360,7 +360,7 @@
     {
       "id": "pronoun-maua-recall",
       "type": "meaning-recall",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Recall the Hawaiian pronoun.",
       "prompt": "we two: speaker + one other, not you",
@@ -372,7 +372,7 @@
     {
       "id": "pronoun-kakou-recall",
       "type": "meaning-recall",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Recall the Hawaiian pronoun.",
       "prompt": "we: three or more, including you",
@@ -384,7 +384,7 @@
     {
       "id": "pronoun-makou-recall",
       "type": "meaning-recall",
-      "skill": "sentence-patterns",
+      "skill": "pronouns",
       "scored": true,
       "instruction": "Recall the Hawaiian pronoun.",
       "prompt": "we: three or more, not including you",
