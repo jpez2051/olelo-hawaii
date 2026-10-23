@@ -258,6 +258,10 @@ function practiceReason(group) {
     if (states.some(state => state.lastGrade === "incorrect")) return "Whole-sentence meaning needs another look";
     return "Keep rebuilding the sentence context";
   }
+  if (group.skill === "noun-phrases") {
+    if (states.some(state => state.lastGrade === "incorrect")) return "Number or noun-phrase meaning needs review";
+    return "Keep tracking singular and plural noun phrases";
+  }
   if (states.some(state => state.lastGrade === "incorrect")) return "Missed on the last try";
   if (states.some(state => state.lastGrade === "almost")) return "Spelling was close on the last try";
   return "Improving — keep reviewing until it sticks";
@@ -605,6 +609,10 @@ function renderSkillProgress() {
     <div class="skill-card">
       <div><strong>Whole-sentence comprehension</strong><span>${countReviewed("comprehension")} scored checks practiced</span></div>
       <span class="skill-detail">${countWeak("comprehension")} context item${countWeak("comprehension") === 1 ? "" : "s"} need review</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Noun phrases & number</strong><span>${countReviewed("noun-phrases")} scored checks practiced</span></div>
+      <span class="skill-detail">${countWeak("noun-phrases")} item${countWeak("noun-phrases") === 1 ? "" : "s"} need review</span>
     </div>
     <div class="skill-card">
       <div><strong>Immersion</strong><span>${listeningSessions} listening session${listeningSessions === 1 ? "" : "s"}</span></div>
