@@ -14,6 +14,23 @@ https://wehe.hilo.hawaii.edu/
 
 Use as a primary dictionary reference. It includes Pukui-Elbert and other referenced Hawaiian-language dictionaries and resources.
 
+
+### Reference Grammar of the Hawaiian Language
+https://hawaiian-grammar.org/current/
+
+Use for modern grammar descriptions, pronoun systems, sentence patterns, noun phrases, and cross-checking older grammatical descriptions. It draws on Pukui-Elbert and other major Hawaiian grammar sources.
+
+### Henry P. Judd — *The Hawaiian Language and Hawaiian-English Dictionary: A Complete Grammar*
+
+Use as a **secondary historical grammar and sequencing reference**, not as the final source for learner-facing spelling or modern grammatical interpretation.
+
+Judd is valuable for lesson sequencing, repeated sentence-frame practice, early pronoun instruction, and comparison with later grammatical descriptions. However, the text often omits modern ʻokina/kahakō conventions and uses older English/European grammatical framing.
+
+Any Judd-derived word, sentence, or pattern must be:
+1. respelled with verified modern ʻokina and kahakō;
+2. checked against Pukui-Elbert / Wehewehe, UH materials, or the modern Reference Grammar;
+3. excluded from live curriculum if the modern form or interpretation is uncertain.
+
 ### Ka Haka ʻUla O Keʻelikōlani — College of Hawaiian Language, UH Hilo
 https://www.olelo.hawaii.edu/
 
