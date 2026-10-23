@@ -75,6 +75,9 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
 .collection-size { display: inline-flex; margin: 10px 0 2px; padding: 5px 9px; border-radius: 999px; background: var(--gold-soft); color: #5d460a; font-size: .78rem; font-weight: 800; }
 .episode-ref { margin: 14px 0; padding: 10px 12px; border-radius: 10px; background: var(--ocean-soft); color: var(--ocean-dark); font-size: .9rem; }
 .immersion-focus-list { margin: 0 0 16px; padding-left: 20px; color: #4f5959; line-height: 1.55; }
+.learning-bridge { display: grid; gap: 5px; margin: 0 0 16px; padding: 12px 14px; border-radius: 12px; border: 1px solid #bfd4ca; background: #f2f7f4; }
+.learning-bridge strong { color: var(--ocean-dark); font-size: .84rem; }
+.learning-bridge span { color: #4f5959; font-size: .88rem; line-height: 1.5; }
 
 .practice-header {
   display: flex;
