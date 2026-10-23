@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 7,
+  "schemaVersion": 8,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
   "stages": [
     {
@@ -104,12 +104,13 @@
       "stage": "sentences",
       "order": 3,
       "title": "Sentence Foundations",
-      "description": "Move from source-checked sentence study into recognition, partial recall, full recall, and spaced review.",
+      "description": "Build a connected grammar network: action patterns, question forms, and possessive relationships, each moving from guided understanding into retrieval.",
       "outcomes": [
-        "Notice that Hawaiian sentence order does not have to mirror English",
-        "Identify key parts and verbal markers in source-checked examples",
-        "Recall missing chunks without choices",
-        "Produce familiar sourced sentences from memory and revisit misses later"
+        "Recognize core action frames without forcing English tense labels onto them",
+        "Understand what information Hawaiian question forms are requesting",
+        "Track possession and participant relationships inside noun phrases",
+        "Recall familiar structures without visible choices",
+        "Transfer the same grammar into different source-checked sentences"
       ],
       "lessons": [
         {
@@ -121,6 +122,28 @@
             "meaning"
           ],
           "path": "./data/lessons/03-sentence-foundations.json",
+          "status": "active"
+        },
+        {
+          "id": "questions-01",
+          "title": "Questions: What Information Is Missing?",
+          "summary": "Learn aha, hea, wai, āhea, ināhea, ʻehia, and anei by identifying what kind of answer each complete question requires.",
+          "focus": [
+            "questions",
+            "comprehension"
+          ],
+          "path": "./data/lessons/07-questions.json",
+          "status": "active"
+        },
+        {
+          "id": "possessives-01",
+          "title": "Possession & Relationships: Whose Is It?",
+          "summary": "Reuse pronouns inside koʻu/kou/kona and a-class examples so possession becomes part of sentence comprehension, not a separate chart.",
+          "focus": [
+            "possessives",
+            "relationships"
+          ],
+          "path": "./data/lessons/08-possessives.json",
           "status": "active"
         }
       ],
@@ -136,7 +159,8 @@
         "Follow who is acting and who is being addressed",
         "Use pronouns to understand whether a listener is included or excluded",
         "Combine time words and action frames to infer sentence context",
-        "Interpret familiar grammar in new source-checked sentences"
+        "Interpret possession, number, and question intent inside complete sentences",
+        "Transfer familiar grammar into mixed, unpredictable review"
       ],
       "lessons": [
         {
@@ -148,6 +172,17 @@
             "context"
           ],
           "path": "./data/lessons/05-context-comprehension.json",
+          "status": "active"
+        },
+        {
+          "id": "mixed-checkpoint-01",
+          "title": "Mixed Comprehension Checkpoint",
+          "summary": "Mix pronouns, possession, questions, noun phrases, action frames, and context so understanding must transfer across lesson boundaries.",
+          "focus": [
+            "transfer",
+            "comprehension"
+          ],
+          "path": "./data/lessons/09-mixed-checkpoint.json",
           "status": "active"
         }
       ],
