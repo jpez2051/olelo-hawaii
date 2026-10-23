@@ -131,15 +131,15 @@
       "skill": "noun-phrases",
       "scored": true,
       "instruction": "Track number.",
-      "prompt": "Aia nā hale ma ʻō.",
-      "support": "How many houses are being referred to?",
+      "prompt": "nā hale",
+      "support": "Does this sourced noun phrase refer to one house or more than one?",
       "options": [
         "One house",
         "More than one house"
       ],
       "answer": "More than one house",
       "answerLanguage": "en",
-      "explanation": "nā marks the noun phrase as plural."
+      "explanation": "nā marks the definite noun phrase as plural."
     },
     {
       "id": "noun-keiki-number",
