@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "id": "listening-01",
   "title": "Immersion Library",
   "description": "Choose from several trusted Hawaiian-language collections and listen without turning immersion into a test.",
@@ -10,7 +10,7 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-09-25",
+    "reviewedAt": "2026-10-22",
     "notes": "The library distinguishes structured lessons, short pronunciation audiograms, learner conversation, and legacy audio instead of treating every source as the same kind of immersion.",
     "sources": [
       "https://oiwi.tv/ka-leo-oiwi/",
@@ -42,7 +42,8 @@
       ],
       "resourceType": "Structured video series",
       "openLabel": "Open Ka Leo ʻŌiwi",
-      "sourceNote": "Long-form structured Hawaiian-language learning with video and cultural context."
+      "sourceNote": "Long-form structured Hawaiian-language learning with video and cultural context.",
+      "learningBridge": "Connect this to your lessons: on a second listen, notice whether you can identify a familiar pronoun, question form, or action frame without stopping the audio. Do not force a translation."
     },
     {
       "id": "immerse-kulaiwi",
@@ -63,7 +64,8 @@
       ],
       "resourceType": "Structured video lessons",
       "openLabel": "Open Kulāiwi",
-      "sourceNote": "Video-based lessons from Kamehameha Schools; useful for guided listening with visual support."
+      "sourceNote": "Video-based lessons from Kamehameha Schools; useful for guided listening with visual support.",
+      "learningBridge": "Connect this to your lessons: choose one known target before listening—pronouns, question words, possession, or ka/ke/nā—and see whether you notice it in natural instructional speech."
     },
     {
       "id": "immerse-hawaiian-at-home",
@@ -84,7 +86,8 @@
       ],
       "resourceType": "Learner conversation podcast",
       "openLabel": "Open Hawaiian at Home",
-      "sourceNote": "Mixed conversational discussion about learning and using Hawaiian. Useful exposure, but not the same as sustained Hawaiian-only input."
+      "sourceNote": "Mixed conversational discussion about learning and using Hawaiian. Useful exposure, but not the same as sustained Hawaiian-only input.",
+      "learningBridge": "Use this as lower-pressure recognition practice. Notice when a Hawaiian phrase carries participant, possession, or question meaning you already know; do not treat the English discussion as a Hawaiian-comprehension score."
     },
     {
       "id": "immerse-inoa-hilo",
@@ -105,7 +108,8 @@
         "Try Panaʻewa, Kaʻūmana, Pūʻainakō, Kahaʻōpeʻa, or Haʻihaʻi.",
         "Listen once without reading, then compare the written place name.",
         "Repeat the name aloud only after hearing the source."
-      ]
+      ],
+      "learningBridge": "Pairs with Sound & Writing. Hear the place name first, then compare its ʻokina/kahakō and repeat only after the source."
     },
     {
       "id": "immerse-inoa-puna",
@@ -126,7 +130,8 @@
         "Start with Keaʻau or Pāhoa if you practiced those spellings in Stage 1.",
         "Listen for the ʻokina or vowel length you see in the spelling.",
         "Replay freely; this is exposure, not a score."
-      ]
+      ],
+      "learningBridge": "Pairs with Sound & Writing. Use Keaʻau and Pāhoa to connect written marks with what you actually hear."
     },
     {
       "id": "immerse-haw101-archive",
@@ -147,7 +152,8 @@
       ],
       "resourceType": "Legacy audio archive",
       "openLabel": "Open HAW 101 archive",
-      "sourceNote": "Official UH Hilo archive. Playback can vary by browser/device, so treat this as an optional legacy source."
+      "sourceNote": "Official UH Hilo archive. Playback can vary by browser/device, so treat this as an optional legacy source.",
+      "learningBridge": "Use this after a grammar lesson as optional listening transfer: pick one target you know and listen for it naturally. If playback misbehaves, switch sources rather than fighting the player."
     }
   ]
 }
