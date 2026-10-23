@@ -168,3 +168,24 @@ Rules:
 - Do not copy older European-style grammar labels uncritically when modern Hawaiian-centered terminology is available.
 - Do not treat Judd's historical or anthropological framing as current authority.
 - Use Judd's pedagogical strengths — early pronouns, repeated sentence frames, controlled substitution, and grammar plus vocabulary — while validating every live example against modern sources.
+
+
+## Connected grammar networks
+
+The curriculum should now treat grammar as overlapping meaning networks rather than isolated units.
+
+Active networks include:
+
+- personal pronouns and participant inclusion/exclusion
+- ka / ke / nā and noun-phrase number
+- Pepeke Painu action patterns
+- question words and anei yes/no questions
+- possessive relationships, including a-class and o-class awareness
+- whole-sentence comprehension
+- mixed transfer checkpoints that combine multiple networks
+
+A learner should repeatedly meet the same pronouns, noun phrases, and grammatical cues in new sourced sentences. Progress should measure each network separately so strong spelling does not hide weak comprehension.
+
+## Listening transfer
+
+Immersion remains unscored, but each source should include a low-pressure bridge back to learned material. The learner may choose one known target—such as pronouns, question forms, noun-phrase number, or a familiar action frame—and notice whether it appears during natural listening. Failure to notice a target is not scored.
