@@ -99,23 +99,23 @@
       "instruction": "Read the question as a whole.",
       "prompt": "Track both the question and who is being addressed.",
       "support": "The pronoun changes how many listeners are included.",
-      "sentence": "E aha ana ʻoukou?",
-      "naturalEnglish": "What will you all be doing?",
-      "patternName": "Question + plural listener",
-      "patternIntro": "aha asks what, while ʻoukou tells you the question is addressed to three or more people.",
+      "sentence": "E aha ana ʻoe?",
+      "naturalEnglish": "What are you doing?",
+      "patternName": "Question + one listener",
+      "patternIntro": "aha asks what, while ʻoe tells you the question is addressed to one person.",
       "parts": [
         {
           "label": "Question",
           "hawaiian": "E aha ana",
-          "note": "what will be happening / what will be done in this pattern"
+          "note": "what are you doing? in this sourced pattern"
         },
         {
           "label": "Who is addressed",
-          "hawaiian": "ʻoukou",
-          "note": "you — three or more people"
+          "hawaiian": "ʻoe",
+          "note": "you — one person"
         }
       ],
-      "languageNote": "Recognizing ʻoukou changes the social context of the whole question.",
+      "languageNote": "Recognizing ʻoe tells you the question is directed to one listener.",
       "completionLabel": "Continue"
     },
     {
@@ -124,47 +124,47 @@
       "skill": "comprehension",
       "scored": true,
       "instruction": "Track the audience.",
-      "prompt": "E aha ana ʻoukou?",
+      "prompt": "E aha ana ʻoe?",
       "support": "How many people is the speaker addressing?",
       "options": [
         "One person",
         "Exactly two people",
         "Three or more people"
       ],
-      "answer": "Three or more people",
+      "answer": "One person",
       "answerLanguage": "en",
-      "explanation": "ʻoukou is second-person plural."
+      "explanation": "ʻoe is second-person singular."
     },
     {
       "id": "context-papa-makou",
       "type": "sentence-study",
       "skill": "comprehension",
       "scored": false,
-      "instruction": "Follow who is afraid.",
-      "prompt": "Notice that one sentence can contain more than one person reference.",
-      "support": "Do not stop after recognizing Pāpā.",
-      "sentence": "I koʻu wā kamaliʻi, ke huhū ʻo Pāpā, makaʻu mākou.",
-      "naturalEnglish": "When I was a child, when Dad gets angry, we are afraid.",
-      "patternName": "Multiple participants",
-      "patternIntro": "This sentence contains the speaker's childhood context, Pāpā as one participant, and mākou as a different group.",
+      "instruction": "Follow multiple participants.",
+      "prompt": "Notice that one sentence can contain a subject and two possessed family relationships.",
+      "support": "Track who is present and whose relationships are being described.",
+      "sentence": "Aia ʻo ia me kona makuahine a me kona makua kāne.",
+      "naturalEnglish": "She is with her mother and her father.",
+      "patternName": "Participant + possessive relationships",
+      "patternIntro": "The sentence has ʻo ia as the person located with two family members, both linked through kona.",
       "parts": [
         {
-          "label": "Context",
-          "hawaiian": "I koʻu wā kamaliʻi",
-          "note": "in my childhood / when I was a child"
+          "label": "Who",
+          "hawaiian": "ʻo ia",
+          "note": "he/she"
         },
         {
-          "label": "Participant",
-          "hawaiian": "ʻo Pāpā",
-          "note": "Dad"
+          "label": "With",
+          "hawaiian": "me",
+          "note": "with"
         },
         {
-          "label": "Group",
-          "hawaiian": "mākou",
-          "note": "we — three or more, excluding the listener"
+          "label": "Relationships",
+          "hawaiian": "kona makuahine a me kona makua kāne",
+          "note": "his/her mother and father"
         }
       ],
-      "languageNote": "Understanding the sentence requires tracking that Pāpā and mākou refer to different participants.",
+      "languageNote": "Understanding the sentence requires tracking that kona connects both family relationships to ʻo ia.",
       "completionLabel": "Continue"
     },
     {
@@ -173,15 +173,16 @@
       "skill": "comprehension",
       "scored": true,
       "instruction": "Track inclusion.",
-      "prompt": "I koʻu wā kamaliʻi, ke huhū ʻo Pāpā, makaʻu mākou.",
-      "support": "Does mākou include the person being spoken to?",
+      "prompt": "Aia ʻo ia me kona makuahine a me kona makua kāne.",
+      "support": "Whose mother and father are being described?",
       "options": [
-        "Yes",
-        "No"
+        "His/her mother and father",
+        "The listener's mother and father",
+        "The speaker's mother and father"
       ],
-      "answer": "No",
+      "answer": "His/her mother and father",
       "answerLanguage": "en",
-      "explanation": "mākou is first-person plural exclusive, so the listener is not included."
+      "explanation": "kona is third-person singular possessive in both relationships."
     },
     {
       "id": "context-school-transfer",
