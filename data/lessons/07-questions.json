@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "id": "questions-01",
+  "title": "Questions: What Information Is Missing?",
+  "description": "Learn common Hawaiian question words and the yes/no particle anei through complete source-checked sentences.",
+  "focus": [
+    "questions",
+    "comprehension",
+    "sentence patterns"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-22",
+    "notes": "Question words and example sentences are taken from the modern Reference Grammar of the Hawaiian Language.",
+    "sources": [
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "q-aha-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "Start with a question asking what something is.",
+      "prompt": "Notice what information the speaker is requesting.",
+      "support": "The whole phrase he aha functions together here.",
+      "sentence": "He aha kēlā?",
+      "naturalEnglish": "What's that?",
+      "patternName": "he aha — what",
+      "patternIntro": "aha asks for missing information about what something is or what happened.",
+      "parts": [
+        {
+          "label": "Question phrase",
+          "hawaiian": "He aha",
+          "note": "what?"
+        },
+        {
+          "label": "Reference",
+          "hawaiian": "kēlā",
+          "note": "that"
+        }
+      ],
+      "languageNote": "Do not reduce aha to a single fixed English word; its role depends on the whole question.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-hea-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "Now ask for location.",
+      "prompt": "Track what kind of answer would satisfy the question.",
+      "support": "hea asks where or which, depending on structure.",
+      "sentence": "Aia ke kumu ma hea?",
+      "naturalEnglish": "Where is the teacher?",
+      "patternName": "hea — where/which",
+      "patternIntro": "Here, ma hea asks for location.",
+      "parts": [
+        {
+          "label": "Person",
+          "hawaiian": "ke kumu",
+          "note": "the teacher"
+        },
+        {
+          "label": "Missing information",
+          "hawaiian": "ma hea",
+          "note": "where?"
+        }
+      ],
+      "languageNote": "The question word tells you what type of information the listener must supply.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-wai-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "Ask who.",
+      "prompt": "The sentence is asking for a person or identity.",
+      "support": "wai is the interrogative for who.",
+      "sentence": "ʻO wai ke kumu?",
+      "naturalEnglish": "Who's the teacher?",
+      "patternName": "wai — who",
+      "patternIntro": "wai asks for a person's identity.",
+      "parts": [
+        {
+          "label": "Question",
+          "hawaiian": "ʻO wai",
+          "note": "who?"
+        },
+        {
+          "label": "Role",
+          "hawaiian": "ke kumu",
+          "note": "the teacher"
+        }
+      ],
+      "languageNote": "Recognizing wai immediately narrows the expected answer to a person or identity.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-when-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "Compare future and past 'when'.",
+      "prompt": "Hawaiian distinguishes these two question forms.",
+      "support": "āhea looks forward; ināhea asks about past time.",
+      "sentence": "Āhea ʻoe e hele mai ai?",
+      "naturalEnglish": "When will you come?",
+      "patternName": "āhea — when (future)",
+      "patternIntro": "āhea asks when something will happen.",
+      "parts": [
+        {
+          "label": "When",
+          "hawaiian": "Āhea",
+          "note": "future when?"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ʻoe",
+          "note": "you"
+        }
+      ],
+      "languageNote": "Later you will contrast this with ināhea for past-time questions.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-when-past-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "Now look backward in time.",
+      "prompt": "Compare this with āhea.",
+      "support": "ināhea asks when something happened in the past.",
+      "sentence": "Ināhea ʻoe i hele mai ai?",
+      "naturalEnglish": "When did you come?",
+      "patternName": "ināhea — when (past)",
+      "patternIntro": "ināhea asks for a past time.",
+      "parts": [
+        {
+          "label": "When",
+          "hawaiian": "Ināhea",
+          "note": "past when?"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ʻoe",
+          "note": "you"
+        }
+      ],
+      "languageNote": "The question word itself helps establish the time orientation.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-ehia-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "Ask how many or how much.",
+      "prompt": "Think about the kind of answer expected.",
+      "support": "ʻehia asks for a quantity.",
+      "sentence": "ʻEhia kālā?",
+      "naturalEnglish": "How much money?",
+      "patternName": "ʻehia — how many/how much",
+      "patternIntro": "ʻehia asks for quantity.",
+      "parts": [
+        {
+          "label": "Quantity question",
+          "hawaiian": "ʻEhia",
+          "note": "how many/how much?"
+        },
+        {
+          "label": "Thing counted",
+          "hawaiian": "kālā",
+          "note": "money"
+        }
+      ],
+      "languageNote": "The listener should expect to answer with a quantity.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-anei-study",
+      "type": "sentence-study",
+      "skill": "questions",
+      "scored": false,
+      "instruction": "See a yes/no question marker.",
+      "prompt": "Unlike a question word, anei makes the whole statement a yes/no question.",
+      "support": "This source sentence asks whether the listener has seen Keola.",
+      "sentence": "Ua ʻike anei ʻoe i Keola?",
+      "naturalEnglish": "Have you seen Keola?",
+      "patternName": "anei — yes/no question",
+      "patternIntro": "anei marks a yes/no question without replacing a noun.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "Ua ʻike",
+          "note": "saw / have seen in this context"
+        },
+        {
+          "label": "Question marker",
+          "hawaiian": "anei",
+          "note": "yes/no question"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ʻoe",
+          "note": "you"
+        }
+      ],
+      "languageNote": "The expected response is yes/no or equivalent confirmation, not a missing person/place/quantity.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "q-type-aha",
+      "type": "sentence-choice",
+      "skill": "questions",
+      "scored": true,
+      "instruction": "Identify what kind of answer is being requested.",
+      "prompt": "He aha kēlā?",
+      "support": "What information is missing?",
+      "options": [
+        "A thing/identity",
+        "A location",
+        "A quantity"
+      ],
+      "answer": "A thing/identity",
+      "answerLanguage": "en",
+      "explanation": "he aha asks what something is."
+    },
+    {
+      "id": "q-type-hea",
+      "type": "sentence-choice",
+      "skill": "questions",
+      "scored": true,
+      "instruction": "Identify what kind of answer is being requested.",
+      "prompt": "Aia ke kumu ma hea?",
+      "support": "What information should the answer provide?",
+      "options": [
+        "A person",
+        "A location",
+        "A time"
+      ],
+      "answer": "A location",
+      "answerLanguage": "en",
+      "explanation": "ma hea asks where."
+    },
+    {
+      "id": "q-type-wai",
+      "type": "sentence-choice",
+      "skill": "questions",
+      "scored": true,
+      "instruction": "Identify what kind of answer is being requested.",
+      "prompt": "ʻO wai ke kumu?",
+      "support": "What kind of answer fits?",
+      "options": [
+        "A person/identity",
+        "A location",
+        "A quantity"
+      ],
+      "answer": "A person/identity",
+      "answerLanguage": "en",
+      "explanation": "wai asks who."
+    },
+    {
+      "id": "q-future-past",
+      "type": "sentence-choice",
+      "skill": "questions",
+      "scored": true,
+      "instruction": "Choose the correct time-oriented question word.",
+      "prompt": "Which asks about a future time?",
+      "support": "Contrast āhea and ināhea.",
+      "options": [
+        "āhea",
+        "ināhea"
+      ],
+      "answer": "āhea",
+      "answerLanguage": "haw",
+      "explanation": "āhea is used for future 'when'; ināhea for past 'when'."
+    },
+    {
+      "id": "q-quantity",
+      "type": "sentence-choice",
+      "skill": "questions",
+      "scored": true,
+      "instruction": "Track the requested information.",
+      "prompt": "ʻEhia kālā?",
+      "support": "What kind of answer is expected?",
+      "options": [
+        "A number/amount",
+        "A person",
+        "A place"
+      ],
+      "answer": "A number/amount",
+      "answerLanguage": "en",
+      "explanation": "ʻehia asks how many/how much."
+    },
+    {
+      "id": "q-anei-check",
+      "type": "sentence-choice",
+      "skill": "questions",
+      "scored": true,
+      "instruction": "Recognize the question type.",
+      "prompt": "Ua ʻike anei ʻoe i Keola?",
+      "support": "What kind of response is this question designed to invite?",
+      "options": [
+        "Yes/no confirmation",
+        "A location",
+        "A quantity"
+      ],
+      "answer": "Yes/no confirmation",
+      "answerLanguage": "en",
+      "explanation": "anei marks a yes/no question."
+    }
+  ]
+}
