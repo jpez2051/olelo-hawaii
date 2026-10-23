@@ -19,6 +19,10 @@ Goals:
 - reliable Hawaiian spelling habits
 - understanding the role of ʻokina and kahakō
 - early pronunciation awareness
+- understand singular, dual, and plural pronouns
+- distinguish inclusive and exclusive first-person pronouns
+- track who is included or excluded in a sentence
+- notice basic noun-phrase number through ka / ke / nā
 - short-term study followed by recall
 - no habit of treating Hawaiian spelling marks as optional
 
@@ -27,6 +31,9 @@ Exercise types:
 - spelling repair
 - study → hide → write/type
 - meaning → Hawaiian recall
+- controlled sentence comparison where one grammatical element changes
+- participant/inclusion checks
+- singular/plural noun-phrase checks
 - delayed review
 
 ## Stage 2 — Immersion
@@ -76,16 +83,23 @@ Later exercise types:
 - constrained sentence building
 - unaided production only after sufficient exposure
 
-## Stage 4 — Vocabulary in Context
+## Stage 4 — Comprehension in Context
 
-Vocabulary should grow through source-checked sentences, situations, and repeated use rather than isolated word dumps.
+The learner must move beyond recognizing familiar words and learn to combine multiple clues into a coherent interpretation of a sentence.
 
 Goals:
 
-- understand words inside useful contexts
-- connect vocabulary to known sentence patterns
-- recognize a word across more than one context
-- eventually produce familiar vocabulary naturally inside known structures
+- identify who is acting and who is being addressed
+- track singular, dual, and plural participants
+- use inclusive/exclusive pronouns to understand social context
+- combine time words with action markers instead of assigning one English tense mechanically
+- follow noun-phrase number and familiar particles inside complete sentences
+- understand a familiar structure when vocabulary or participants change
+- eventually paraphrase the meaning of a sentence before translating it word-by-word
+
+Core rule:
+
+**Recognizing several words is not comprehension. The learner should be able to explain who did what, to whom, when, and which listeners are included when the sentence provides those clues.**
 
 ## Later grammar networks
 
@@ -93,9 +107,8 @@ Add connected concepts only after the learner has enough sentence experience for
 
 Candidate areas:
 
-- pronouns
 - possessive relationships
-- kaʻi / noun phrase structure
+- broader kaʻi / noun phrase structure
 - common ʻami / particles
 - tense/aspect patterns
 - negation
@@ -142,3 +155,16 @@ Prefer signals such as:
 - confidence across multiple contexts
 
 The long-term dashboard should answer: **What can I understand and produce now that I could not before?**
+
+
+## Historical grammar guide: Henry P. Judd
+
+Henry P. Judd's *The Hawaiian Language and Hawaiian-English Dictionary: A Complete Grammar* may be used as a secondary guide for curriculum sequencing, comparison, and historical examples.
+
+Rules:
+
+- Judd does not control learner-facing spelling.
+- Restore and verify ʻokina and kahakō against modern references before any Judd-derived form appears in live curriculum.
+- Do not copy older European-style grammar labels uncritically when modern Hawaiian-centered terminology is available.
+- Do not treat Judd's historical or anthropological framing as current authority.
+- Use Judd's pedagogical strengths — early pronouns, repeated sentence frames, controlled substitution, and grammar plus vocabulary — while validating every live example against modern sources.
