@@ -196,6 +196,7 @@ function renderImmersionLibrary() {
     card.className = "immersion-card";
     const refs = activity.episodeRefs ? `<div class="episode-ref">On the UH Hilo page: <strong>${escapeHtml(activity.episodeRefs)}</strong></div>` : "";
     const notes = (activity.listeningNotes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
+    const bridge = activity.learningBridge ? `<div class="learning-bridge"><strong>Connect this to what you know</strong><span>${escapeHtml(activity.learningBridge)}</span></div>` : "";
     card.innerHTML = `
       <div class="immersion-card-head">
         <div>
@@ -209,6 +210,7 @@ function renderImmersionLibrary() {
       <p>${escapeHtml(activity.support || "Listen freely and replay as often as you like.")}</p>
       ${refs}
       ${notes ? `<ul class="immersion-focus-list">${notes}</ul>` : ""}
+      ${bridge}
       <div class="immersion-actions">
         <a class="primary-link" href="${escapeHtml(activity.sourcePageUrl || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(activity.openLabel || "Open source")}</a>
         <button class="secondary-btn log-listen-btn" type="button">Log listening session</button>
@@ -261,6 +263,14 @@ function practiceReason(group) {
   if (group.skill === "noun-phrases") {
     if (states.some(state => state.lastGrade === "incorrect")) return "Number or noun-phrase meaning needs review";
     return "Keep tracking singular and plural noun phrases";
+  }
+  if (group.skill === "questions") {
+    if (states.some(state => state.lastGrade === "incorrect")) return "Question meaning or expected answer type needs review";
+    return "Keep tracking what information the question requests";
+  }
+  if (group.skill === "possessives") {
+    if (states.some(state => state.lastGrade === "incorrect")) return "Possessor or relationship meaning needs review";
+    return "Keep tracking whose relationship is being described";
   }
   if (states.some(state => state.lastGrade === "incorrect")) return "Missed on the last try";
   if (states.some(state => state.lastGrade === "almost")) return "Spelling was close on the last try";
@@ -613,6 +623,14 @@ function renderSkillProgress() {
     <div class="skill-card">
       <div><strong>Noun phrases & number</strong><span>${countReviewed("noun-phrases")} scored checks practiced</span></div>
       <span class="skill-detail">${countWeak("noun-phrases")} item${countWeak("noun-phrases") === 1 ? "" : "s"} need review</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Questions & information gaps</strong><span>${countReviewed("questions")} scored checks practiced</span></div>
+      <span class="skill-detail">${countWeak("questions")} item${countWeak("questions") === 1 ? "" : "s"} need review</span>
+    </div>
+    <div class="skill-card">
+      <div><strong>Possession & relationships</strong><span>${countReviewed("possessives")} scored checks practiced</span></div>
+      <span class="skill-detail">${countWeak("possessives")} item${countWeak("possessives") === 1 ? "" : "s"} need review</span>
     </div>
     <div class="skill-card">
       <div><strong>Immersion</strong><span>${listeningSessions} listening session${listeningSessions === 1 ? "" : "s"}</span></div>
