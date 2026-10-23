@@ -23,25 +23,20 @@
     {
       "id": "context-yesterday-au",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": false,
       "instruction": "Read for the whole message.",
       "prompt": "Do not translate one word at a time.",
       "support": "Use the time clue, action frame, and pronoun together.",
-      "sentence": "I nehinei, e hiamoe ana au i ka hola ʻekolu.",
-      "naturalEnglish": "Yesterday, I was sleeping at three o'clock.",
+      "sentence": "E kamaʻilio ana au iā Kimo i nehinei.",
+      "naturalEnglish": "I was talking to Kimo yesterday.",
       "patternName": "Time + action frame + speaker",
-      "patternIntro": "The sentence gives a past-time clue first, then an e ... ana action frame, then au tells you the speaker is the one doing the action.",
+      "patternIntro": "The e ... ana action frame is interpreted with the past-time clue nehinei, while au identifies the speaker as the person doing the action.",
       "parts": [
         {
-          "label": "When",
-          "hawaiian": "I nehinei",
-          "note": "yesterday"
-        },
-        {
           "label": "Action frame",
-          "hawaiian": "e hiamoe ana",
-          "note": "sleeping / ongoing action in this context"
+          "hawaiian": "E kamaʻilio ana",
+          "note": "talking / ongoing action in this context"
         },
         {
           "label": "Who",
@@ -49,22 +44,27 @@
           "note": "I"
         },
         {
-          "label": "Time",
-          "hawaiian": "i ka hola ʻekolu",
-          "note": "at three o'clock"
+          "label": "Other participant",
+          "hawaiian": "iā Kimo",
+          "note": "Kimo"
+        },
+        {
+          "label": "When",
+          "hawaiian": "i nehinei",
+          "note": "yesterday"
         }
       ],
-      "languageNote": "The meaning comes from the combination of clues. e ... ana by itself does not force one English tense; the time expression helps establish context.",
+      "languageNote": "The reference grammar explicitly uses this example to show that e ... ana relies on surrounding context for time interpretation.",
       "completionLabel": "Continue"
     },
     {
       "id": "context-yesterday-who",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Understand the participant.",
-      "prompt": "I nehinei, e hiamoe ana au i ka hola ʻekolu.",
-      "support": "Who was sleeping?",
+      "prompt": "E kamaʻilio ana au iā Kimo i nehinei.",
+      "support": "Who was talking?",
       "options": [
         "The speaker",
         "The listener",
@@ -72,20 +72,20 @@
       ],
       "answer": "The speaker",
       "answerLanguage": "en",
-      "explanation": "au means I, so the speaker is the person sleeping."
+      "explanation": "au means I, so the speaker is the person talking."
     },
     {
       "id": "context-yesterday-when",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Use the context clue.",
-      "prompt": "I nehinei, e hiamoe ana au i ka hola ʻekolu.",
-      "support": "Which word tells you the larger time context?",
+      "prompt": "E kamaʻilio ana au iā Kimo i nehinei.",
+      "support": "Which word gives the past-time context?",
       "options": [
         "nehinei",
         "au",
-        "hola"
+        "Kimo"
       ],
       "answer": "nehinei",
       "answerLanguage": "en",
@@ -94,7 +94,7 @@
     {
       "id": "context-question-oukou",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": false,
       "instruction": "Read the question as a whole.",
       "prompt": "Track both the question and who is being addressed.",
@@ -121,7 +121,7 @@
     {
       "id": "context-question-count",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Track the audience.",
       "prompt": "E aha ana ʻoukou?",
@@ -138,7 +138,7 @@
     {
       "id": "context-papa-makou",
       "type": "sentence-study",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": false,
       "instruction": "Follow who is afraid.",
       "prompt": "Notice that one sentence can contain more than one person reference.",
@@ -170,7 +170,7 @@
     {
       "id": "context-papa-listener",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Track inclusion.",
       "prompt": "I koʻu wā kamaliʻi, ke huhū ʻo Pāpā, makaʻu mākou.",
@@ -186,7 +186,7 @@
     {
       "id": "context-school-transfer",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Apply the pronoun system in a new sentence.",
       "prompt": "Ua ʻike ʻo ia iā mākou i ke kula.",
@@ -203,7 +203,7 @@
     {
       "id": "context-school-youplural",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Apply the same system after a preposition.",
       "prompt": "E hele au me ʻoukou i ke kula.",
@@ -220,7 +220,7 @@
     {
       "id": "context-eana-meaning",
       "type": "sentence-choice",
-      "skill": "sentence-patterns",
+      "skill": "comprehension",
       "scored": true,
       "instruction": "Use context, not a one-word translation.",
       "prompt": "E kamaʻilio ana au iā Kimo i nehinei.",
