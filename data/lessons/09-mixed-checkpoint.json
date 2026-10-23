@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "id": "mixed-checkpoint-01",
+  "title": "Mixed Comprehension Checkpoint",
+  "description": "Mix pronouns, possession, questions, noun phrases, action frames, and context so understanding has to transfer across lesson boundaries.",
+  "focus": [
+    "transfer",
+    "comprehension",
+    "mixed grammar"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-22",
+    "notes": "All Hawaiian examples are taken from the modern Reference Grammar of the Hawaiian Language. The questions test relationships and context rather than isolated translation.",
+    "sources": [
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "mix-saw-us",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Track subject, object, and group size.",
+      "prompt": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "support": "Which interpretation matches the sentence?",
+      "options": [
+        "He/she saw us, three or more, at school",
+        "We saw him/her at school",
+        "He/she saw two listeners at school"
+      ],
+      "answer": "He/she saw us, three or more, at school",
+      "answerLanguage": "en",
+      "explanation": "ʻo ia is the subject; iā mākou is the object, a first-person plural exclusive group."
+    },
+    {
+      "id": "mix-with-us-two",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Track who is going with whom.",
+      "prompt": "E hele ʻo ia me kāua i ke kula.",
+      "support": "Who is included in kāua?",
+      "options": [
+        "The speaker and listener",
+        "The speaker and one other, not listener",
+        "Two third-person people"
+      ],
+      "answer": "The speaker and listener",
+      "answerLanguage": "en",
+      "explanation": "kāua is first-person dual inclusive."
+    },
+    {
+      "id": "mix-where-myhouse",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Combine location and possession.",
+      "prompt": "Aia ʻo Kimo ma koʻu hale.",
+      "support": "What does the full sentence tell you?",
+      "options": [
+        "Kimo is at the speaker's house",
+        "Kimo owns the house",
+        "The speaker is at Kimo's house"
+      ],
+      "answer": "Kimo is at the speaker's house",
+      "answerLanguage": "en",
+      "explanation": "ma koʻu hale means at my house."
+    },
+    {
+      "id": "mix-question-future",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Identify the missing information and time orientation.",
+      "prompt": "Āhea ʻoe e hele mai ai?",
+      "support": "What is the speaker asking for?",
+      "options": [
+        "A future time",
+        "A past time",
+        "A location"
+      ],
+      "answer": "A future time",
+      "answerLanguage": "en",
+      "explanation": "āhea asks when in future-oriented context."
+    },
+    {
+      "id": "mix-question-past",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Contrast the time question.",
+      "prompt": "Ināhea ʻoe i hele mai ai?",
+      "support": "What is being requested?",
+      "options": [
+        "A past time",
+        "A future time",
+        "A person"
+      ],
+      "answer": "A past time",
+      "answerLanguage": "en",
+      "explanation": "ināhea asks when in past context."
+    },
+    {
+      "id": "mix-anei-negative",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Interpret a negative yes/no question.",
+      "prompt": "ʻAʻole anei ʻoe i ʻike mai iā mākou?",
+      "support": "What kind of message is this?",
+      "options": [
+        "A negative yes/no question addressed to one listener",
+        "A request for a location",
+        "A statement about two people"
+      ],
+      "answer": "A negative yes/no question addressed to one listener",
+      "answerLanguage": "en",
+      "explanation": "anei marks a yes/no question; ʻaʻole makes it negative; ʻoe addresses one listener; iā mākou refers to us, three or more."
+    },
+    {
+      "id": "mix-mother-father",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Track possession across two noun phrases.",
+      "prompt": "Aia ʻo ia me kona makuahine a me kona makua kāne.",
+      "support": "Whose mother and father?",
+      "options": [
+        "His/her mother and father",
+        "The listener's parents",
+        "The speaker's parents"
+      ],
+      "answer": "His/her mother and father",
+      "answerLanguage": "en",
+      "explanation": "kona is third-person singular o-class possessive in both relationships."
+    },
+    {
+      "id": "mix-noun-number",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Track number before translating the noun.",
+      "prompt": "nā hale",
+      "support": "What meaning is contributed by nā?",
+      "options": [
+        "Plural definite noun phrase",
+        "A question",
+        "Possession"
+      ],
+      "answer": "Plural definite noun phrase",
+      "answerLanguage": "en",
+      "explanation": "nā marks definite plural noun phrases."
+    },
+    {
+      "id": "mix-question-who",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Identify what kind of answer belongs.",
+      "prompt": "ʻO wai ke kumu?",
+      "support": "What would a good answer supply?",
+      "options": [
+        "A person's identity",
+        "A location",
+        "A number"
+      ],
+      "answer": "A person's identity",
+      "answerLanguage": "en",
+      "explanation": "wai asks who."
+    },
+    {
+      "id": "mix-uncertainty",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Notice stance, not just content.",
+      "prompt": "Aia paha lākou ma loko o ka hale.",
+      "support": "What does paha add?",
+      "options": [
+        "Uncertainty: they might be inside the house",
+        "A yes/no question",
+        "Plural possession"
+      ],
+      "answer": "Uncertainty: they might be inside the house",
+      "answerLanguage": "en",
+      "explanation": "paha marks uncertainty such as maybe/might in this sourced example."
+    }
+  ]
+}
