@@ -189,3 +189,25 @@ A learner should repeatedly meet the same pronouns, noun phrases, and grammatica
 ## Listening transfer
 
 Immersion remains unscored, but each source should include a low-pressure bridge back to learned material. The learner may choose one known target—such as pronouns, question forms, noun-phrase number, or a familiar action frame—and notice whether it appears during natural listening. Failure to notice a target is not scored.
+
+
+## Pronunciation support
+
+Pronunciation help must reinforce Hawaiian orthography rather than replace it with English respelling.
+
+Rules:
+- Hawaiian spelling remains primary.
+- The optional Sound guide points out ʻokina, kahakō, vowel sequences, syllable shape, and stress cues.
+- Do not create ad-hoc English-style romanizations such as "mah-cow" for Hawaiian words.
+- Pronunciation study should fade from explicit guidance toward independent reading and trusted listening.
+- Audio from trusted speakers remains more authoritative than a written helper.
+
+## Evidence strength
+
+Correct answers are not all equal.
+
+- recognition — choosing or identifying with visible options
+- recall — producing from memory without the answer visible
+- transfer — interpreting or using familiar grammar in a different sourced context
+
+Progress should treat recall and transfer as stronger evidence than recognition. Repeated success should also reduce visible hints.
