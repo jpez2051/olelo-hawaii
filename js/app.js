@@ -673,9 +673,14 @@ function renderSkillProgress() {
   const countReviewed = skill => scored.filter(activity => activity.skill === skill && progress.reviews[activity.id]).length;
   const countWeak = skill => groups.filter(group => group.skill === skill).length;
   const listeningSessions = exposureCountForSkill("listening");
+  const pronunciationStudies = exposureCountForSkill("pronunciation");
   const sentenceStudySessions = exposureCountForSkill("sentence-patterns");
 
   $("#skill-progress").innerHTML = `
+    <div class="skill-card">
+      <div><strong>Pronunciation foundations</strong><span>${countReviewed("pronunciation")} scored checks · ${pronunciationStudies} study session${pronunciationStudies === 1 ? "" : "s"}</span></div>
+      <span class="skill-detail">${countWeak("pronunciation")} item${countWeak("pronunciation") === 1 ? "" : "s"} need review</span>
+    </div>
     <div class="skill-card">
       <div><strong>Spelling & recall</strong><span>${countReviewed("spelling")} scored items practiced</span></div>
       <span class="skill-detail">${countWeak("spelling")} item${countWeak("spelling") === 1 ? "" : "s"} need${countWeak("spelling") === 1 ? "s" : ""} practice</span>
@@ -716,7 +721,8 @@ function renderProgress() {
   const weak = needsPracticeGroups().length;
   const totalAttempts = progress.totals.correct + progress.totals.almost + progress.totals.incorrect;
   const recallRate = totalAttempts ? Math.round((progress.totals.correct / totalAttempts) * 100) : 0;
-  const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct answers"], [weak, "needs practice"]];
+  const strongEvidence = activeReviewStates.filter(state => state.lastGrade === "correct" && ["recall", "transfer"].includes(state.strongestEvidence)).length;
+  const stats = [[reviewed, "items practiced"], [due, "due now"], [strongEvidence, "strong evidence"], [weak, "needs practice"]];
   $("#progress-summary").innerHTML = stats.map(([value, label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join("");
   renderNeedsPractice();
   renderSkillProgress();
