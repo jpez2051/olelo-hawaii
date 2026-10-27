@@ -545,6 +545,12 @@ function completeSentenceStudy() {
   showNextActivity();
 }
 
+function completePronunciationStudy() {
+  if (!currentActivity || currentActivity.type !== "pronunciation-study") return;
+  recordExposure(currentActivity);
+  showNextActivity();
+}
+
 function feedbackTitle(status) {
   if (status === "correct") return "Correct";
   if (status === "almost") return "Almost — check the spelling";
@@ -556,7 +562,7 @@ function checkChoiceAnswer() {
   const selected = selectedChoice;
   const status = selected === currentActivity.answer ? "correct" : "incorrect";
   answerLocked = true;
-  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], status);
+  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], status, Date.now(), evidenceForActivity(currentActivity));
   progress.totals[status] = (progress.totals[status] || 0) + 1;
   saveProgress(progress);
 
@@ -587,7 +593,7 @@ function checkCurrentAnswer() {
 
   const result = gradeAnswer(given, currentActivity.answer, currentActivity.answerLanguage || "haw", currentActivity.alternatives || []);
   answerLocked = true;
-  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], result.status);
+  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], result.status, Date.now(), evidenceForActivity(currentActivity));
   progress.totals[result.status] = (progress.totals[result.status] || 0) + 1;
   saveProgress(progress);
 
@@ -722,6 +728,7 @@ function bindEvents() {
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
   $("#next-btn").addEventListener("click", showNextActivity);
   $("#sentence-continue-btn").addEventListener("click", completeSentenceStudy);
+  $("#pronunciation-continue-btn").addEventListener("click", completePronunciationStudy);
   $("#choice-options").addEventListener("click", event => {
     const button = event.target.closest(".choice-option");
     if (!button || answerLocked) return;
