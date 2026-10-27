@@ -576,9 +576,11 @@ function checkChoiceAnswer() {
   feedback.hidden = false;
   feedback.className = `feedback ${status}`;
   const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
+  const diagnosis = status === "correct" ? "" : `<p><strong>Review focus:</strong> ${escapeHtml(errorFocusForActivity(currentActivity))}</p>`;
   feedback.innerHTML = `
     <strong>${feedbackTitle(status)}</strong>
     ${status !== "correct" ? `<div class="expected-answer">Answer: ${escapeHtml(currentActivity.answer)}</div>` : ""}
+    ${diagnosis}
     ${explanation}`;
   $("#choice-check-btn").hidden = true;
   $("#choice-next-btn").hidden = false;
@@ -603,10 +605,12 @@ function checkCurrentAnswer() {
   const notes = (result.notes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
   const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
   const correctionPractice = result.status === "correct" || currentActivity.skill === "sentence-patterns" ? "" : `<p><strong>Try it on paper:</strong> Write the correct spelling 3 times before moving on if you can.</p>`;
+  const diagnosis = result.status === "correct" ? "" : `<p><strong>Review focus:</strong> ${escapeHtml(errorFocusForActivity(currentActivity))}</p>`;
   feedback.innerHTML = `
     <strong>${feedbackTitle(result.status)}</strong>
     ${notes ? `<ul>${notes}</ul>` : ""}
     ${result.status !== "correct" ? `<div class="expected-answer" lang="haw">Expected: ${escapeHtml(result.expected)}</div>` : ""}
+    ${diagnosis}
     ${correctionPractice}
     ${explanation}`;
 
