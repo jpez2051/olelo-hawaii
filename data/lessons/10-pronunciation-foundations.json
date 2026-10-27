@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "id": "pronunciation-01",
+  "title": "Pronunciation Foundations: Read What You Hear",
+  "description": "Learn the sound rules carried by Hawaiian spelling so the words you rehearse in your head match what you are more likely to recognize in speech.",
+  "focus": [
+    "pronunciation",
+    "listening",
+    "orthography"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-26",
+    "notes": "Pronunciation rules are taken from UH and the modern Reference Grammar. Learner help describes Hawaiian sound cues rather than replacing Hawaiian spelling with English-style respelling.",
+    "sources": [
+      "https://www.hawaii.edu/site/info/diacritics.php",
+      "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/",
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "pron-vowels",
+      "type": "pronunciation-study",
+      "skill": "pronunciation",
+      "scored": false,
+      "instruction": "Build a stable vowel map.",
+      "prompt": "a · e · i · o · u",
+      "support": "Hawaiian vowel qualities are much more stable than English spelling.",
+      "sourceText": "a e i o u",
+      "ruleTitle": "Five core vowels",
+      "soundNotes": [
+        "a — like the a in above",
+        "e — like e in bet",
+        "i — like the final y in city",
+        "o — like o in sole, but without the English off-glide",
+        "u — like oo in moon, without an added off-glide"
+      ],
+      "languageNote": "Use these as sound anchors, not as an English respelling system."
+    },
+    {
+      "id": "pron-long-vowels",
+      "type": "pronunciation-study",
+      "skill": "pronunciation",
+      "scored": false,
+      "instruction": "Hear what the kahakō changes.",
+      "prompt": "ā · ē · ī · ō · ū",
+      "support": "A kahakō marks a longer vowel and that vowel is stressed.",
+      "sourceText": "ā ē ī ō ū",
+      "ruleTitle": "Long vowels with kahakō",
+      "soundNotes": [
+        "ā — longer a; compare the reference sound to a in far",
+        "ē — longer e; reference comparison ay in pay",
+        "ī — longer i; reference comparison ee in see",
+        "ō — longer o",
+        "ū — longer u",
+        "Vowels with kahakō are somewhat longer and are always stressed"
+      ],
+      "languageNote": "Do not treat a kahakō as decoration. It changes pronunciation and can distinguish words."
+    },
+    {
+      "id": "pron-okina",
+      "type": "pronunciation-study",
+      "skill": "pronunciation",
+      "scored": false,
+      "instruction": "Treat the ʻokina as a consonant.",
+      "prompt": "ʻ",
+      "support": "The ʻokina is part of the Hawaiian alphabet.",
+      "sourceText": "ʻ",
+      "ruleTitle": "ʻOkina — glottal stop",
+      "soundNotes": [
+        "The ʻokina is a glottal stop.",
+        "UH compares it to the break between the two parts of English “oh-oh.”",
+        "Because it is a consonant, it can separate adjacent vowels into different syllables."
+      ],
+      "languageNote": "When you see ʻ, do not silently skip it."
+    },
+    {
+      "id": "pron-syllables",
+      "type": "pronunciation-study",
+      "skill": "pronunciation",
+      "scored": false,
+      "instruction": "Learn the shape of a Hawaiian syllable.",
+      "prompt": "Every Hawaiian syllable ends in a vowel.",
+      "support": "This makes written Hawaiian unusually informative once you know the sound system.",
+      "sourceText": "Hawaiʻi",
+      "ruleTitle": "Syllable shape",
+      "soundNotes": [
+        "A Hawaiian syllable is a vowel by itself or a consonant followed by a vowel.",
+        "Two ordinary consonants do not occur together inside a Hawaiian syllable.",
+        "The ʻokina counts as a consonant.",
+        "A Hawaiian word ends in a vowel."
+      ],
+      "languageNote": "Use the written vowels to help you hear syllable boundaries instead of compressing the word using English habits."
+    },
+    {
+      "id": "pron-stress",
+      "type": "pronunciation-study",
+      "skill": "pronunciation",
+      "scored": false,
+      "instruction": "Notice where emphasis falls.",
+      "prompt": "Stress is part of sounding natural.",
+      "support": "The reference grammar gives predictable default stress rules, with longer words forming accent groups.",
+      "sourceText": "makuahine",
+      "ruleTitle": "Basic stress",
+      "soundNotes": [
+        "In words shorter than four syllables, stress normally falls on the second-to-last syllable.",
+        "If the final syllable has a kahakō, that final long vowel receives the strongest emphasis.",
+        "Longer words may have more than one accent group.",
+        "A stressed Hawaiian syllable is somewhat louder, longer, and often higher in pitch."
+      ],
+      "languageNote": "These are useful reading rules, but fluent speech still needs listening practice."
+    },
+    {
+      "id": "pron-vowel-sequences",
+      "type": "pronunciation-study",
+      "skill": "pronunciation",
+      "scored": false,
+      "instruction": "Do not flatten Hawaiian vowel sequences into English diphthongs.",
+      "prompt": "ai · ae · ao · au · ei · eu · oi · ou",
+      "support": "The second vowel retains more vowel quality than an English off-glide.",
+      "sourceText": "ai ae ao au ei eu oi ou",
+      "ruleTitle": "Common rising vowel sequences",
+      "soundNotes": [
+        "The reference grammar groups ei, eu, oi, ou, ai, ae, ao, and au as rising diphthongs.",
+        "The first element is stressed.",
+        "The second element remains more vowel-like than the weak glide heard in many English diphthongs."
+      ],
+      "languageNote": "This is one reason an English-looking respelling can easily teach the wrong sound."
+    },
+    {
+      "id": "pron-mark-check",
+      "type": "sentence-choice",
+      "skill": "pronunciation",
+      "scored": true,
+      "instruction": "Connect spelling to sound.",
+      "prompt": "What does a kahakō tell you?",
+      "support": "Choose the pronunciation consequence, not merely the visual description.",
+      "options": [
+        "The vowel is longer and stressed",
+        "Insert a glottal stop",
+        "Make the following consonant silent"
+      ],
+      "answer": "The vowel is longer and stressed",
+      "answerLanguage": "en",
+      "explanation": "The modern reference grammar describes vowels with kahakō as somewhat longer and always stressed.",
+      "evidenceLevel": "recognition"
+    },
+    {
+      "id": "pron-okina-check",
+      "type": "sentence-choice",
+      "skill": "pronunciation",
+      "scored": true,
+      "instruction": "Connect spelling to sound.",
+      "prompt": "What is the ʻokina?",
+      "support": "Treat it as part of the alphabet.",
+      "options": [
+        "A consonant representing a glottal stop",
+        "A stress mark only",
+        "Optional punctuation"
+      ],
+      "answer": "A consonant representing a glottal stop",
+      "answerLanguage": "en",
+      "explanation": "UH and the reference grammar treat the ʻokina as a consonant/glottal stop.",
+      "evidenceLevel": "recognition"
+    },
+    {
+      "id": "pron-syllable-check",
+      "type": "sentence-choice",
+      "skill": "pronunciation",
+      "scored": true,
+      "instruction": "Use the syllable rule.",
+      "prompt": "Which statement matches Hawaiian syllable structure?",
+      "support": "Think about how Hawaiian words are built.",
+      "options": [
+        "A syllable always ends in a vowel",
+        "A syllable normally ends in two consonants",
+        "Words normally end in consonants"
+      ],
+      "answer": "A syllable always ends in a vowel",
+      "answerLanguage": "en",
+      "explanation": "The reference grammar states that Hawaiian syllables always end in a vowel.",
+      "evidenceLevel": "recognition"
+    },
+    {
+      "id": "pron-reading-transfer",
+      "type": "sentence-choice",
+      "skill": "pronunciation",
+      "scored": true,
+      "instruction": "Apply the sound rules to real spelling.",
+      "prompt": "If you see a word with both ʻokina and kahakō, what should you do?",
+      "support": "Choose the reading habit the app wants you to build.",
+      "options": [
+        "Pronounce both cues rather than ignoring them",
+        "Drop both marks when speaking",
+        "Use an English respelling instead"
+      ],
+      "answer": "Pronounce both cues rather than ignoring them",
+      "answerLanguage": "en",
+      "explanation": "Both marks carry pronunciation information and belong to correct Hawaiian orthography.",
+      "evidenceLevel": "transfer"
+    }
+  ]
+}
