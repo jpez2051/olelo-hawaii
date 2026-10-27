@@ -75,3 +75,10 @@ The app only makes `source-checked` and `expert-reviewed` lessons playable.
 ## Product principle
 
 The app should become more Hawaiian-forward as the learner advances. English and optional Spanish comparisons are scaffolding and should gradually recede rather than becoming permanent translation crutches.
+
+
+## Pronunciation guidance
+
+Use UH Hawaiian language guidance and the current Reference Grammar for vowel quality, kahakō, ʻokina, syllable formation, stress, and vowel sequences.
+
+Learner-facing pronunciation support should describe verified Hawaiian sound cues. Avoid invented English-style respellings that can distort Hawaiian vowel quality, stress, or ʻokina. When trusted speaker audio is available, use it as the preferred pronunciation model and treat written guidance as support.
