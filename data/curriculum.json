@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 8,
+  "schemaVersion": 9,
   "title": "ʻŌlelo Hawaiʻi Learning Path",
   "stages": [
     {
@@ -38,6 +38,17 @@
       ],
       "lessons": [
         {
+          "id": "pronunciation-01",
+          "title": "Pronunciation Foundations: Read What You Hear",
+          "summary": "Learn vowels, long vowels, ʻokina, syllable shape, stress, and vowel sequences before relying on your own internal pronunciation.",
+          "focus": [
+            "pronunciation",
+            "listening"
+          ],
+          "path": "./data/lessons/10-pronunciation-foundations.json",
+          "status": "active"
+        },
+        {
           "id": "orthography-01",
           "title": "ʻOkina & Kahakō",
           "summary": "Practice core words plus Hawaiʻi Island place names through repair, study, and recall.",
@@ -46,7 +57,10 @@
             "pronunciation"
           ],
           "path": "./data/lessons/01-orthography.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "pronunciation-01"
+          ]
         },
         {
           "id": "pronouns-01",
@@ -57,7 +71,10 @@
             "comprehension"
           ],
           "path": "./data/lessons/04-pronouns.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "orthography-01"
+          ]
         },
         {
           "id": "noun-phrases-01",
@@ -68,7 +85,10 @@
             "comprehension"
           ],
           "path": "./data/lessons/06-noun-phrases.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "pronouns-01"
+          ]
         }
       ]
     },
@@ -122,7 +142,11 @@
             "meaning"
           ],
           "path": "./data/lessons/03-sentence-foundations.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "pronouns-01",
+            "noun-phrases-01"
+          ]
         },
         {
           "id": "questions-01",
@@ -133,7 +157,10 @@
             "comprehension"
           ],
           "path": "./data/lessons/07-questions.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "sentence-foundations-01"
+          ]
         },
         {
           "id": "possessives-01",
@@ -144,7 +171,11 @@
             "relationships"
           ],
           "path": "./data/lessons/08-possessives.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "pronouns-01",
+            "noun-phrases-01"
+          ]
         }
       ],
       "status": "active"
@@ -183,7 +214,26 @@
             "comprehension"
           ],
           "path": "./data/lessons/09-mixed-checkpoint.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "context-comprehension-01",
+            "questions-01",
+            "possessives-01"
+          ]
+        },
+        {
+          "id": "transfer-expansion-01",
+          "title": "Expanded Transfer: New Sentences, Same Grammar",
+          "summary": "Apply familiar pronouns, location, possession, negation, and participant tracking to new exact source examples.",
+          "focus": [
+            "transfer",
+            "comprehension"
+          ],
+          "path": "./data/lessons/11-transfer-expansion.json",
+          "status": "active",
+          "prerequisites": [
+            "context-comprehension-01"
+          ]
         }
       ],
       "status": "active"
