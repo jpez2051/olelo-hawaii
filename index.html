@@ -77,6 +77,23 @@
           <div id="prompt" class="prompt"></div>
           <p id="support" class="support-text"></p>
 
+          <details id="sound-guide-panel" class="sound-guide" hidden>
+            <summary>Sound guide</summary>
+            <div id="sound-guide-content"></div>
+          </details>
+
+          <div id="pronunciation-panel" class="pronunciation-panel" hidden>
+            <p class="study-label">Pronunciation foundation</p>
+            <div id="pronunciation-source" class="pronunciation-source" lang="haw"></div>
+            <div class="sentence-pattern-heading">
+              <p class="study-label">What to notice</p>
+              <span id="pronunciation-rule" class="tag"></span>
+            </div>
+            <ul id="pronunciation-notes" class="study-notes"></ul>
+            <p id="pronunciation-language-note" class="sentence-note"></p>
+            <button id="pronunciation-continue-btn" class="primary-btn" type="button">Continue</button>
+          </div>
+
           <div id="choice-panel" class="choice-panel" hidden>
             <p class="study-label">Check your understanding</p>
             <div id="choice-options" class="choice-options"></div>
@@ -191,8 +208,8 @@
       </div>
 
       <div class="panel">
-        <h3>Mastery means remembering</h3>
-        <p>Scored practice separates spelling, pronouns/participants, noun phrases, sentence patterns, questions, possession, and whole-sentence comprehension. Mixed checkpoints test whether those skills transfer across contexts; Immersion remains unscored exposure.</p>
+        <h3>Mastery means more than recognition</h3>
+        <p>Scored practice separates spelling, pronunciation, pronouns/participants, noun phrases, sentence patterns, questions, possession, and whole-sentence comprehension. Recognition counts as weaker evidence than unaided recall or transfer in a new context; Immersion remains unscored exposure.</p>
         <div class="data-actions">
           <button id="export-btn" class="secondary-btn">Export progress</button>
           <button id="reset-btn" class="danger-btn">Reset local progress</button>
