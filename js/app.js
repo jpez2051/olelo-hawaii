@@ -25,7 +25,42 @@ function shuffle(items) {
 }
 
 function isScoredActivity(activity) {
-  return activity?.scored !== false && !["guided-listening", "sentence-study"].includes(activity?.type);
+  return activity?.scored !== false && !["guided-listening", "sentence-study", "pronunciation-study"].includes(activity?.type);
+}
+
+function evidenceForActivity(activity) {
+  if (activity?.evidenceLevel) return activity.evidenceLevel;
+  if (activity?.lessonId === "mixed-checkpoint-01" || activity?.lessonId === "transfer-expansion-01") return "transfer";
+  if (["sentence-recall", "meaning-recall", "study-hide-recall"].includes(activity?.type)) return "recall";
+  return "recognition";
+}
+
+function errorFocusForActivity(activity) {
+  const labels = {
+    spelling: "exact spelling and diacritics",
+    pronunciation: "sound rule and written cue",
+    pronouns: "who is included, excluded, or how many people",
+    "noun-phrases": "singular/plural noun phrase meaning",
+    "sentence-patterns": "sentence pattern and marker relationship",
+    questions: "what information the question is requesting",
+    possessives: "who the possessor is and the relationship being expressed",
+    comprehension: "the whole message: participants, action, time, place, and relationships"
+  };
+  return labels[activity?.skill] || "the meaning relationship in this item";
+}
+
+function soundGuideFor(text = "") {
+  const value = String(text || "").normalize("NFC");
+  if (!value.trim()) return [];
+  const notes = [];
+  const okinaCount = (value.match(/ʻ/g) || []).length;
+  if (okinaCount) notes.push(okinaCount + " ʻokina" + (okinaCount === 1 ? "" : "s") + ": treat each as a consonant/glottal stop.");
+  const longVowels = [...new Set((value.match(/[āēīōūĀĒĪŌŪ]/g) || []).map(ch => ch.toLowerCase()))];
+  if (longVowels.length) notes.push("Kahakō present on " + longVowels.join(", ") + ": those vowels are longer and stressed.");
+  const sequences = [...new Set((value.toLowerCase().match(/ai|ae|ao|au|ei|eu|oi|ou|iu/g) || []))];
+  if (sequences.length) notes.push("Vowel sequence" + (sequences.length === 1 ? "" : "s") + " " + sequences.join(", ") + ": keep the second vowel audible instead of reducing it to an English-style glide.");
+  if (!notes.length) notes.push("Use stable Hawaiian vowel sounds and keep each syllable vowel-final.");
+  return notes;
 }
 
 function switchView(name) {
