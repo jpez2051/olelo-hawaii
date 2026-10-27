@@ -178,7 +178,12 @@ function renderCurriculum() {
         unit.lessons.forEach(lesson => {
           const row = document.createElement("div");
           row.className = "lesson-row";
-          row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small></div>`;
+          const prereqNames = (lesson.prerequisites || []).map(id => {
+            const match = curriculum.units.flatMap(item => item.lessons || []).find(item => item.id === id);
+            return match?.title || id;
+          });
+          const prereqText = prereqNames.length ? `<span class="prereq-note">Recommended after: ${escapeHtml(prereqNames.join(" · "))}</span>` : "";
+          row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small>${prereqText}</div>`;
           if (lesson.status === "active" && lesson.playable) {
             const button = document.createElement("button");
             button.className = "primary-btn";
@@ -271,7 +276,7 @@ function dueActivities() {
 function updateDueCount() {
   const count = dueActivities().length;
   $("#practice-count").textContent = `${count} due`;
-  $("#start-due-btn").textContent = count ? `Practice ${count} due` : "Review a lesson";
+  $("#start-due-btn").textContent = count ? `Mixed review · ${count} due` : "Mixed review";
 }
 
 function needsMorePractice(state) {
