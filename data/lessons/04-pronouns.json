@@ -10,15 +10,15 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-22",
-    "notes": "Subject pronouns and example sentences are taken from the modern Reference Grammar of the Hawaiian Language. Judd is used only as a sequencing reference; learner-facing spellings follow modern sources with ʻokina and kahakō.",
+    "reviewedAt": "2026-10-27",
     "sources": [
       "https://hawaiian-grammar.org/current/",
       "https://wehe.hilo.hawaii.edu/?q=k%C4%81kou",
       "https://wehe.hilo.hawaii.edu/?q=m%C4%81kou",
       "https://wehe.hilo.hawaii.edu/?q=%CA%BBoukou",
       "https://wehe.hilo.hawaii.edu/?q=l%C4%81ua"
-    ]
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
   },
   "activities": [
     {
@@ -51,7 +51,14 @@
         }
       ],
       "languageNote": "Do not memorize au as an isolated card only. Listen for what role it plays in the whole sentence.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-kaua-study",
@@ -83,7 +90,14 @@
         }
       ],
       "languageNote": "The listener is included in kāua.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-maua-study",
@@ -115,7 +129,14 @@
         }
       ],
       "languageNote": "English says 'we' for both kāua and māua; Hawaiian requires you to track whether the listener is included.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-kakou-study",
@@ -147,7 +168,14 @@
         }
       ],
       "languageNote": "kāua is inclusive dual; kākou is inclusive plural.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-makou-study",
@@ -179,7 +207,14 @@
         }
       ],
       "languageNote": "kākou includes the listener; mākou excludes the listener.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-kaua-vs-maua",
@@ -195,7 +230,14 @@
       ],
       "answer": "No — the speaker means themself and one other person",
       "answerLanguage": "en",
-      "explanation": "māua is dual exclusive: two people including the speaker, excluding the listener."
+      "explanation": "māua is dual exclusive: two people including the speaker, excluding the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-kakou-vs-makou",
@@ -211,7 +253,14 @@
       ],
       "answer": "You are included",
       "answerLanguage": "en",
-      "explanation": "kākou is plural inclusive: three or more people including the listener."
+      "explanation": "kākou is plural inclusive: three or more people including the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-dual-count",
@@ -228,7 +277,14 @@
       ],
       "answer": "Exactly two",
       "answerLanguage": "en",
-      "explanation": "kāua is first-person dual inclusive: you and me."
+      "explanation": "kāua is first-person dual inclusive: you and me.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-plural-count",
@@ -245,7 +301,14 @@
       ],
       "answer": "Three or more",
       "answerLanguage": "en",
-      "explanation": "mākou is first-person plural exclusive: three or more including the speaker, excluding the listener."
+      "explanation": "mākou is first-person plural exclusive: three or more including the speaker, excluding the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-you-two",
@@ -277,7 +340,14 @@
         }
       ],
       "languageNote": "Hawaiian distinguishes one listener, two listeners, and three-or-more listeners.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-you-plural",
@@ -309,7 +379,14 @@
         }
       ],
       "languageNote": "English 'you' hides number; Hawaiian does not.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-third-dual",
@@ -326,7 +403,14 @@
       ],
       "answer": "Two people went",
       "answerLanguage": "en",
-      "explanation": "lāua is third-person dual: they two."
+      "explanation": "lāua is third-person dual: they two.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-third-plural",
@@ -343,7 +427,14 @@
       ],
       "answer": "Three or more people",
       "answerLanguage": "en",
-      "explanation": "lākou is third-person plural: they, three or more."
+      "explanation": "lākou is third-person plural: they, three or more.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-kaua-recall",
@@ -355,7 +446,14 @@
       "support": "Type the inclusive dual pronoun.",
       "answer": "kāua",
       "answerLanguage": "haw",
-      "explanation": "kāua includes the listener and refers to exactly two people."
+      "explanation": "kāua includes the listener and refers to exactly two people.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-maua-recall",
@@ -367,7 +465,14 @@
       "support": "Type the exclusive dual pronoun.",
       "answer": "māua",
       "answerLanguage": "haw",
-      "explanation": "māua excludes the listener."
+      "explanation": "māua excludes the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-kakou-recall",
@@ -379,7 +484,14 @@
       "support": "Type the inclusive plural pronoun.",
       "answer": "kākou",
       "answerLanguage": "haw",
-      "explanation": "kākou includes the listener."
+      "explanation": "kākou includes the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
     },
     {
       "id": "pronoun-makou-recall",
@@ -391,7 +503,1053 @@
       "support": "Type the exclusive plural pronoun.",
       "answer": "mākou",
       "answerLanguage": "haw",
-      "explanation": "mākou excludes the listener."
+      "explanation": "mākou excludes the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "errorCategory": "pronouns"
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele ʻoe i ke kula?",
+      "errorCategory": "pronouns",
+      "diagnosis": "One listener; compare the dual and plural listener forms.",
+      "conceptId": "pronouns-ʻoe",
+      "id": "expand-04-1-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua hele ʻoe i ke kula?",
+      "naturalEnglish": "Ask whether one listener went to school.",
+      "patternName": "Connected practice",
+      "patternIntro": "One listener; compare the dual and plural listener forms.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ʻoe",
+          "note": "One listener; compare the dual and plural listener forms."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele ʻoe i ke kula?",
+      "errorCategory": "pronouns",
+      "diagnosis": "One listener; compare the dual and plural listener forms.",
+      "conceptId": "pronouns-ʻoe",
+      "id": "expand-04-1-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua hele ______ i ke kula?",
+      "support": "Ask whether one listener went to school.",
+      "answer": "ʻoe",
+      "answerLanguage": "haw",
+      "explanation": "One listener; compare the dual and plural listener forms."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele ʻoe i ke kula?",
+      "errorCategory": "pronouns",
+      "diagnosis": "One listener; compare the dual and plural listener forms.",
+      "conceptId": "pronouns-ʻoe",
+      "id": "expand-04-1-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask whether one listener went to school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua hele ʻoe i ke kula?",
+      "answerLanguage": "haw",
+      "explanation": "One listener; compare the dual and plural listener forms."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele ʻo ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The subject refers to a third person, not the listener.",
+      "conceptId": "pronouns-ʻo ia",
+      "id": "expand-04-2-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua hele ʻo ia i ke kula.",
+      "naturalEnglish": "Say that he or she went to school.",
+      "patternName": "Connected practice",
+      "patternIntro": "The subject refers to a third person, not the listener.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ʻo ia",
+          "note": "The subject refers to a third person, not the listener."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele ʻo ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The subject refers to a third person, not the listener.",
+      "conceptId": "pronouns-ʻo ia",
+      "id": "expand-04-2-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua hele ______ i ke kula.",
+      "support": "Say that he or she went to school.",
+      "answer": "ʻo ia",
+      "answerLanguage": "haw",
+      "explanation": "The subject refers to a third person, not the listener."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele ʻo ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The subject refers to a third person, not the listener.",
+      "conceptId": "pronouns-ʻo ia",
+      "id": "expand-04-2-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that he or she went to school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua hele ʻo ia i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The subject refers to a third person, not the listener."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele lāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "Two other people: neither speaker nor listener is included.",
+      "conceptId": "pronouns-lāua",
+      "id": "expand-04-3-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua hele lāua i ke kula.",
+      "naturalEnglish": "Say that two other people went to school.",
+      "patternName": "Connected practice",
+      "patternIntro": "Two other people: neither speaker nor listener is included.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "lāua",
+          "note": "Two other people: neither speaker nor listener is included."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele lāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "Two other people: neither speaker nor listener is included.",
+      "conceptId": "pronouns-lāua",
+      "id": "expand-04-3-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua hele ______ i ke kula.",
+      "support": "Say that two other people went to school.",
+      "answer": "lāua",
+      "answerLanguage": "haw",
+      "explanation": "Two other people: neither speaker nor listener is included."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele lāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "Two other people: neither speaker nor listener is included.",
+      "conceptId": "pronouns-lāua",
+      "id": "expand-04-3-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that two other people went to school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua hele lāua i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "Two other people: neither speaker nor listener is included."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele lākou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "Three or more others; do not confuse this with the dual.",
+      "conceptId": "pronouns-lākou",
+      "id": "expand-04-4-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua hele lākou i ke kula.",
+      "naturalEnglish": "Say that three or more other people went to school.",
+      "patternName": "Connected practice",
+      "patternIntro": "Three or more others; do not confuse this with the dual.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "lākou",
+          "note": "Three or more others; do not confuse this with the dual."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele lākou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "Three or more others; do not confuse this with the dual.",
+      "conceptId": "pronouns-lākou",
+      "id": "expand-04-4-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua hele ______ i ke kula.",
+      "support": "Say that three or more other people went to school.",
+      "answer": "lākou",
+      "answerLanguage": "haw",
+      "explanation": "Three or more others; do not confuse this with the dual."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua hele lākou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "Three or more others; do not confuse this with the dual.",
+      "conceptId": "pronouns-lākou",
+      "id": "expand-04-4-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that three or more other people went to school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua hele lākou i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "Three or more others; do not confuse this with the dual."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Hele ʻo ia me aʻu i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "After me, the speaker form is aʻu, not subject au.",
+      "conceptId": "pronouns-me aʻu",
+      "id": "expand-04-5-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Hele ʻo ia me aʻu i ke kula.",
+      "naturalEnglish": "Say that he or she goes to school with you, the speaker.",
+      "patternName": "Connected practice",
+      "patternIntro": "After me, the speaker form is aʻu, not subject au.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "me aʻu",
+          "note": "After me, the speaker form is aʻu, not subject au."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Hele ʻo ia me aʻu i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "After me, the speaker form is aʻu, not subject au.",
+      "conceptId": "pronouns-me aʻu",
+      "id": "expand-04-5-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Hele ʻo ia ______ i ke kula.",
+      "support": "Say that he or she goes to school with you, the speaker.",
+      "answer": "me aʻu",
+      "answerLanguage": "haw",
+      "explanation": "After me, the speaker form is aʻu, not subject au."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Hele ʻo ia me aʻu i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "After me, the speaker form is aʻu, not subject au.",
+      "conceptId": "pronouns-me aʻu",
+      "id": "expand-04-5-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that he or she goes to school with you, the speaker.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Hele ʻo ia me aʻu i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "After me, the speaker form is aʻu, not subject au."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike ʻo ia iaʻu i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The speaker is the person seen; identify actor and recipient separately.",
+      "conceptId": "pronouns-iaʻu",
+      "id": "expand-04-6-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua ʻike ʻo ia iaʻu i ke kula.",
+      "naturalEnglish": "Say that he or she saw you, the speaker, at school.",
+      "patternName": "Connected practice",
+      "patternIntro": "The speaker is the person seen; identify actor and recipient separately.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "iaʻu",
+          "note": "The speaker is the person seen; identify actor and recipient separately."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike ʻo ia iaʻu i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The speaker is the person seen; identify actor and recipient separately.",
+      "conceptId": "pronouns-iaʻu",
+      "id": "expand-04-6-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua ʻike ʻo ia ______ i ke kula.",
+      "support": "Say that he or she saw you, the speaker, at school.",
+      "answer": "iaʻu",
+      "answerLanguage": "haw",
+      "explanation": "The speaker is the person seen; identify actor and recipient separately."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike ʻo ia iaʻu i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The speaker is the person seen; identify actor and recipient separately.",
+      "conceptId": "pronouns-iaʻu",
+      "id": "expand-04-6-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that he or she saw you, the speaker, at school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua ʻike ʻo ia iaʻu i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The speaker is the person seen; identify actor and recipient separately."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Hele au me ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "After me, ia does not keep the subject marker ʻo.",
+      "conceptId": "pronouns-me ia",
+      "id": "expand-04-7-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Hele au me ia i ke kula.",
+      "naturalEnglish": "Say that you, the speaker, go to school with him or her.",
+      "patternName": "Connected practice",
+      "patternIntro": "After me, ia does not keep the subject marker ʻo.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "me ia",
+          "note": "After me, ia does not keep the subject marker ʻo."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Hele au me ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "After me, ia does not keep the subject marker ʻo.",
+      "conceptId": "pronouns-me ia",
+      "id": "expand-04-7-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Hele au ______ i ke kula.",
+      "support": "Say that you, the speaker, go to school with him or her.",
+      "answer": "me ia",
+      "answerLanguage": "haw",
+      "explanation": "After me, ia does not keep the subject marker ʻo."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Hele au me ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "After me, ia does not keep the subject marker ʻo.",
+      "conceptId": "pronouns-me ia",
+      "id": "expand-04-7-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that you, the speaker, go to school with him or her.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Hele au me ia i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "After me, ia does not keep the subject marker ʻo."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike au iā ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "au is the actor; iā ia identifies the person seen.",
+      "conceptId": "pronouns-iā ia",
+      "id": "expand-04-8-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua ʻike au iā ia i ke kula.",
+      "naturalEnglish": "Say that you saw him or her at school.",
+      "patternName": "Connected practice",
+      "patternIntro": "au is the actor; iā ia identifies the person seen.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "iā ia",
+          "note": "au is the actor; iā ia identifies the person seen."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike au iā ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "au is the actor; iā ia identifies the person seen.",
+      "conceptId": "pronouns-iā ia",
+      "id": "expand-04-8-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua ʻike au ______ i ke kula.",
+      "support": "Say that you saw him or her at school.",
+      "answer": "iā ia",
+      "answerLanguage": "haw",
+      "explanation": "au is the actor; iā ia identifies the person seen."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike au iā ia i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "au is the actor; iā ia identifies the person seen.",
+      "conceptId": "pronouns-iā ia",
+      "id": "expand-04-8-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that you saw him or her at school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua ʻike au iā ia i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "au is the actor; iā ia identifies the person seen."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "E hele ʻo ia me kāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The pair includes speaker and listener; the third person accompanies that pair.",
+      "conceptId": "pronouns-me kāua",
+      "id": "expand-04-9-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "E hele ʻo ia me kāua i ke kula.",
+      "naturalEnglish": "Say that he or she will go to school with you and the listener.",
+      "patternName": "Connected practice",
+      "patternIntro": "The pair includes speaker and listener; the third person accompanies that pair.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "me kāua",
+          "note": "The pair includes speaker and listener; the third person accompanies that pair."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "E hele ʻo ia me kāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The pair includes speaker and listener; the third person accompanies that pair.",
+      "conceptId": "pronouns-me kāua",
+      "id": "expand-04-9-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "E hele ʻo ia ______ i ke kula.",
+      "support": "Say that he or she will go to school with you and the listener.",
+      "answer": "me kāua",
+      "answerLanguage": "haw",
+      "explanation": "The pair includes speaker and listener; the third person accompanies that pair."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "E hele ʻo ia me kāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The pair includes speaker and listener; the third person accompanies that pair.",
+      "conceptId": "pronouns-me kāua",
+      "id": "expand-04-9-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that he or she will go to school with you and the listener.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "E hele ʻo ia me kāua i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The pair includes speaker and listener; the third person accompanies that pair."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike au iā lāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The people seen are a pair, not three or more.",
+      "conceptId": "pronouns-iā lāua",
+      "id": "expand-04-10-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua ʻike au iā lāua i ke kula.",
+      "naturalEnglish": "Say that you saw the two of them at school.",
+      "patternName": "Connected practice",
+      "patternIntro": "The people seen are a pair, not three or more.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "iā lāua",
+          "note": "The people seen are a pair, not three or more."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike au iā lāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The people seen are a pair, not three or more.",
+      "conceptId": "pronouns-iā lāua",
+      "id": "expand-04-10-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua ʻike au ______ i ke kula.",
+      "support": "Say that you saw the two of them at school.",
+      "answer": "iā lāua",
+      "answerLanguage": "haw",
+      "explanation": "The people seen are a pair, not three or more."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike au iā lāua i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The people seen are a pair, not three or more.",
+      "conceptId": "pronouns-iā lāua",
+      "id": "expand-04-10-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that you saw the two of them at school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua ʻike au iā lāua i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The people seen are a pair, not three or more."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The group includes the speaker but excludes the listener.",
+      "conceptId": "pronouns-iā mākou",
+      "id": "expand-04-11-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "naturalEnglish": "Say that he or she saw your group of three or more, excluding the listener, at school.",
+      "patternName": "Connected practice",
+      "patternIntro": "The group includes the speaker but excludes the listener.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "iā mākou",
+          "note": "The group includes the speaker but excludes the listener."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The group includes the speaker but excludes the listener.",
+      "conceptId": "pronouns-iā mākou",
+      "id": "expand-04-11-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua ʻike ʻo ia ______ i ke kula.",
+      "support": "Say that he or she saw your group of three or more, excluding the listener, at school.",
+      "answer": "iā mākou",
+      "answerLanguage": "haw",
+      "explanation": "The group includes the speaker but excludes the listener."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The group includes the speaker but excludes the listener.",
+      "conceptId": "pronouns-iā mākou",
+      "id": "expand-04-11-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that he or she saw your group of three or more, excluding the listener, at school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The group includes the speaker but excludes the listener."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "E hele au me ʻoukou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The addressed group has three or more people.",
+      "conceptId": "pronouns-me ʻoukou",
+      "id": "expand-04-12-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "E hele au me ʻoukou i ke kula.",
+      "naturalEnglish": "Say that you will go to school with three or more listeners.",
+      "patternName": "Connected practice",
+      "patternIntro": "The addressed group has three or more people.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "me ʻoukou",
+          "note": "The addressed group has three or more people."
+        }
+      ]
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "E hele au me ʻoukou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The addressed group has three or more people.",
+      "conceptId": "pronouns-me ʻoukou",
+      "id": "expand-04-12-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "E hele au ______ i ke kula.",
+      "support": "Say that you will go to school with three or more listeners.",
+      "answer": "me ʻoukou",
+      "answerLanguage": "haw",
+      "explanation": "The addressed group has three or more people."
+    },
+    {
+      "skill": "pronouns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker"
+        }
+      ],
+      "model": "E hele au me ʻoukou i ke kula.",
+      "errorCategory": "pronouns",
+      "diagnosis": "The addressed group has three or more people.",
+      "conceptId": "pronouns-me ʻoukou",
+      "id": "expand-04-12-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Say that you will go to school with three or more listeners.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "E hele au me ʻoukou i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The addressed group has three or more people."
+    },
+    {
+      "id": "pronoun-au-study-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "I will go to school.",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "E hele au i ke kula.",
+      "answerLanguage": "haw",
+      "model": "E hele au i ke kula.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "Do not memorize au as an isolated card only. Listen for what role it plays in the whole sentence.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "pronoun-kaua-study-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Let's you and me go to school.",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "E hele kāua i ke kula.",
+      "answerLanguage": "haw",
+      "model": "E hele kāua i ke kula.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "The listener is included in kāua.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "pronoun-maua-study-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "The two of us, not including you, will go to school.",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "E hele māua i ke kula.",
+      "answerLanguage": "haw",
+      "model": "E hele māua i ke kula.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "English says 'we' for both kāua and māua; Hawaiian requires you to track whether the listener is included.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "pronoun-kakou-study-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Let's go to school — three or more people, including you.",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "E hele kākou i ke kula.",
+      "answerLanguage": "haw",
+      "model": "E hele kākou i ke kula.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "kāua is inclusive dual; kākou is inclusive plural.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "pronoun-makou-study-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "We will go to school — three or more people, not including you.",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "E hele mākou i ke kula.",
+      "answerLanguage": "haw",
+      "model": "E hele mākou i ke kula.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "kākou includes the listener; mākou excludes the listener.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "pronoun-you-two-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Did you two go to school?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Ua hele ʻolua i ke kula?",
+      "answerLanguage": "haw",
+      "model": "Ua hele ʻolua i ke kula?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "Hawaiian distinguishes one listener, two listeners, and three-or-more listeners.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "pronoun-you-plural-produce",
+      "type": "sentence-recall",
+      "skill": "pronouns",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Did you, three or more people, go to school?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Ua hele ʻoukou i ke kula?",
+      "answerLanguage": "haw",
+      "model": "Ua hele ʻoukou i ke kula?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Nā Papani: Personal, As Subject and After a Preposition"
+        }
+      ],
+      "explanation": "English 'you' hides number; Hawaiian does not.",
+      "errorCategory": "pronouns"
+    },
+    {
+      "id": "bridge-04",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Listen for who is included",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Use the linked pronoun lesson to hear the speaker/listener distinction.",
+      "sourcePageUrl": "https://oleloonline.com/0703v-papani-part-2-kaua-maua/",
+      "audioSourceName": "ʻŌlelo Online — Kaliko Trapp",
+      "listeningNotes": [
+        "Listen for the contrast between the inclusive and exclusive pair.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://oleloonline.com/0703v-papani-part-2-kaua-maua/",
+          "section": "Official teaching source"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary."
     }
   ]
 }

@@ -1,6 +1,7 @@
-import { gradeAnswer } from "./grading.js";
-import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js";
-import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js";
+import { gradeAnswer } from "./grading.js?v=7.1.0";
+import { evidenceKind, recordEvidence, evidenceTotals, mixedQueue, diagnose } from "./learning.js?v=7.1.0";
+import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js?v=7.1.0";
+import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js?v=7.1.0";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -14,6 +15,16 @@ let currentActivity = null;
 let answerLocked = false;
 let activityStage = "answer";
 let selectedChoice = "";
+let usedHelp = false;
+let lessonSession = null;
+const modelKey = activity => (activity.model || activity.sentence || activity.studyWord || (activity.answerLanguage === 'haw' ? activity.answer : '') || '').normalize('NFC').toLowerCase().replace(/[.,!?]/g, '').trim();
+function markModelSeen(activity) {
+  const key = modelKey(activity);
+  if (!key) return;
+  progress.recentModels[key] = Date.now();
+  saveProgress(progress);
+}
+
 
 function shuffle(items) {
   const copy = items.slice();
@@ -25,48 +36,14 @@ function shuffle(items) {
 }
 
 function isScoredActivity(activity) {
-  return activity?.scored !== false && !["guided-listening", "sentence-study", "pronunciation-study"].includes(activity?.type);
-}
-
-function evidenceForActivity(activity) {
-  if (activity?.evidenceLevel) return activity.evidenceLevel;
-  if (activity?.lessonId === "mixed-checkpoint-01" || activity?.lessonId === "transfer-expansion-01") return "transfer";
-  if (["sentence-recall", "meaning-recall", "study-hide-recall"].includes(activity?.type)) return "recall";
-  return "recognition";
-}
-
-function errorFocusForActivity(activity) {
-  const labels = {
-    spelling: "exact spelling and diacritics",
-    pronunciation: "sound rule and written cue",
-    pronouns: "who is included, excluded, or how many people",
-    "noun-phrases": "singular/plural noun phrase meaning",
-    "sentence-patterns": "sentence pattern and marker relationship",
-    questions: "what information the question is requesting",
-    possessives: "who the possessor is and the relationship being expressed",
-    comprehension: "the whole message: participants, action, time, place, and relationships"
-  };
-  return labels[activity?.skill] || "the meaning relationship in this item";
-}
-
-function soundGuideFor(text = "") {
-  const value = String(text || "").normalize("NFC");
-  if (!value.trim()) return [];
-  const notes = [];
-  const okinaCount = (value.match(/ʻ/g) || []).length;
-  if (okinaCount) notes.push(okinaCount + " ʻokina" + (okinaCount === 1 ? "" : "s") + ": treat each as a consonant/glottal stop.");
-  const longVowels = [...new Set((value.match(/[āēīōūĀĒĪŌŪ]/g) || []).map(ch => ch.toLowerCase()))];
-  if (longVowels.length) notes.push("Kahakō present on " + longVowels.join(", ") + ": those vowels are longer and stressed.");
-  const sequences = [...new Set((value.toLowerCase().match(/ai|ae|ao|au|ei|eu|oi|ou|iu/g) || []))];
-  if (sequences.length) notes.push("Vowel sequence" + (sequences.length === 1 ? "" : "s") + " " + sequences.join(", ") + ": keep the second vowel audible instead of reducing it to an English-style glide.");
-  if (!notes.length) notes.push("Use stable Hawaiian vowel sounds and keep each syllable vowel-final.");
-  return notes;
+  return activity?.scored !== false && !["guided-listening", "sentence-study", "foundation-study"].includes(activity?.type);
 }
 
 function switchView(name) {
   $$(".nav-btn").forEach(btn => btn.classList.toggle("active", btn.dataset.view === name));
   $$(".view").forEach(view => view.classList.toggle("active", view.id === `view-${name}`));
   if (name === "progress") renderProgress();
+  if (name === "learn" && curriculum) renderCurriculum();
   if (name === "immerse") renderImmersionLibrary();
 }
 
@@ -150,6 +127,7 @@ function renderStages() {
 
 function renderCurriculum() {
   renderStages();
+  $('#vocabulary-families').innerHTML = (curriculum.vocabularyFamilies || []).map(family => `<div class="family-card"><strong>${escapeHtml(family.title)}</strong><p lang="haw">${escapeHtml(family.words)}</p><p>${escapeHtml(family.note)}</p><button type="button" class="text-btn" data-family-lesson="${escapeHtml(family.lessonId)}">Explore in context</button></div>`).join('');
   const list = $("#unit-list");
   list.innerHTML = "";
   curriculum.units
@@ -178,18 +156,35 @@ function renderCurriculum() {
         unit.lessons.forEach(lesson => {
           const row = document.createElement("div");
           row.className = "lesson-row";
-          const prereqNames = (lesson.prerequisites || []).map(id => {
-            const match = curriculum.units.flatMap(item => item.lessons || []).find(item => item.id === id);
-            return match?.title || id;
-          });
-          const prereqText = prereqNames.length ? `<span class="prereq-note">Recommended after: ${escapeHtml(prereqNames.join(" · "))}</span>` : "";
-          row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small>${prereqText}</div>`;
+          row.innerHTML = `<div><strong>${escapeHtml(lesson.title)}</strong><small>${escapeHtml(lesson.summary || "")}</small></div>`;
           if (lesson.status === "active" && lesson.playable) {
             const button = document.createElement("button");
             button.className = "primary-btn";
             button.textContent = "Start lesson";
             button.addEventListener("click", () => startLesson(lesson.id));
             row.appendChild(button);
+            const prerequisites = (lesson.prerequisites || []).map(id => curriculum.units.flatMap(u => u.lessons || []).find(l => l.id === id)).filter(Boolean);
+            if (prerequisites.length) {
+              const note = document.createElement('small');
+              note.className = 'prerequisites';
+              note.textContent = 'Builds on: ';
+              prerequisites.forEach((prior, index) => {
+                const link = document.createElement('button');
+                link.className = 'text-btn'; link.textContent = prior.title;
+                link.addEventListener('click', () => startLesson(prior.id));
+                note.append(link, index < prerequisites.length - 1 ? ' · ' : '');
+              });
+              row.firstElementChild.appendChild(note);
+            }
+            const total = activities.filter(a => a.lessonId === lesson.id).length;
+            const done = activities.filter(a => a.lessonId === lesson.id && (progress.reviews[a.id] || progress.exposures[a.id])).length;
+            const count = document.createElement('small'); count.textContent = `${done} of ${total} activities explored`;
+            row.firstElementChild.appendChild(count);
+            if (progress.lessonPositions?.[lesson.id]) {
+              button.textContent = 'Continue lesson';
+              const restart = document.createElement('button'); restart.className = 'text-btn'; restart.textContent = 'Start again';
+              restart.addEventListener('click', () => startLesson(lesson.id, true)); row.appendChild(restart);
+            }
           } else if (lesson.status === "active" && lesson.playable === false) {
             const tag = document.createElement("span");
             tag.className = "tag";
@@ -212,6 +207,7 @@ function renderCurriculum() {
 }
 
 function recordExposure(activity, key = activity.id) {
+  markModelSeen(activity);
   const previous = progress.exposures?.[key] || {};
   progress.exposures = progress.exposures || {};
   progress.exposures[key] = {
@@ -253,14 +249,16 @@ function renderImmersionLibrary() {
       ${bridge}
       <div class="immersion-actions">
         <a class="primary-link" href="${escapeHtml(activity.sourcePageUrl || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(activity.openLabel || "Open source")}</a>
-        <button class="secondary-btn log-listen-btn" type="button">Log listening session</button>
+        <button class="secondary-btn log-listen-btn" type="button">Start listening routine</button>
       </div>
       <p class="exposure-note">${escapeHtml(activity.sourceNote || "Open the trusted source in your browser for playback. Listening never changes your mastery score.")}</p>`;
     const button = card.querySelector(".log-listen-btn");
     button.addEventListener("click", () => {
-      recordExposure(activity);
-      button.textContent = "Session logged";
-      button.disabled = true;
+      lessonSession = null;
+      practiceQueue = [activity];
+      switchView('practice');
+      showNextActivity(false);
+      scrollPracticeToTop();
     });
     list.appendChild(card);
   });
@@ -270,13 +268,13 @@ function reviewStateFor(activityId) {
 }
 
 function dueActivities() {
-  return activities.filter(activity => isScoredActivity(activity) && isDue(reviewStateFor(activity.id)));
+  return activities.filter(activity => isScoredActivity(activity) && progress.reviews[activity.id] && isDue(reviewStateFor(activity.id)));
 }
 
 function updateDueCount() {
   const count = dueActivities().length;
   $("#practice-count").textContent = `${count} due`;
-  $("#start-due-btn").textContent = count ? `Mixed review · ${count} due` : "Mixed review";
+  $("#start-due-btn").textContent = count ? `Practice ${count} due` : "Review a lesson";
 }
 
 function needsMorePractice(state) {
@@ -348,8 +346,11 @@ function needsPracticeGroups() {
   }));
 }
 
-function startLesson(lessonId) {
-  practiceQueue = activities.filter(activity => activity.lessonId === lessonId);
+function startLesson(lessonId, restart = false) {
+  const lessonActivities = activities.filter(activity => activity.lessonId === lessonId);
+  const offset = restart ? 0 : (progress.lessonPositions?.[lessonId] || 0);
+  lessonSession = { id: lessonId, total: lessonActivities.length, position: offset };
+  practiceQueue = lessonActivities.slice(offset);
   switchView("practice");
   showNextActivity(false);
   scrollPracticeToTop("smooth");
@@ -357,8 +358,9 @@ function startLesson(lessonId) {
 
 function startDuePractice() {
   let due = dueActivities();
-  if (!due.length) due = activities.filter(isScoredActivity);
-  practiceQueue = shuffle(due);
+  lessonSession = null;
+  if (!due.length) due = activities.filter(a => isScoredActivity(a) && progress.reviews[a.id]);
+  practiceQueue = mixedQueue(shuffle(due).sort((a,b) => (progress.reviews[a.id]?.dueAt || 0) - (progress.reviews[b.id]?.dueAt || 0)));
   switchView("practice");
   showNextActivity(false);
   scrollPracticeToTop("smooth");
@@ -367,7 +369,8 @@ function startDuePractice() {
 function startNeedsPractice() {
   const weak = needsPracticeGroups().map(group => group.representative).filter(Boolean);
   if (!weak.length) return;
-  practiceQueue = shuffle(weak);
+  lessonSession = null;
+  practiceQueue = mixedQueue(shuffle(weak));
   switchView("practice");
   showNextActivity(false);
   scrollPracticeToTop("smooth");
@@ -387,10 +390,6 @@ function resetPracticeUi() {
   $("#paper-panel").hidden = true;
   $("#listening-panel").hidden = true;
   $("#sentence-panel").hidden = true;
-  $("#pronunciation-panel").hidden = true;
-  $("#sound-guide-panel").hidden = true;
-  $("#sound-guide-panel").open = false;
-  $("#sound-guide-content").innerHTML = "";
   $("#choice-panel").hidden = true;
   $("#choice-options").innerHTML = "";
   $("#choice-check-btn").disabled = true;
@@ -405,20 +404,29 @@ function resetPracticeUi() {
   $("#feedback").className = "feedback";
   $("#feedback").innerHTML = "";
   $("#retry-actions").hidden = true;
+  $("#sound-guide").hidden = true;
+  $("#model-help").hidden = true;
+  $("#source-details").open = false;
   audio.pause();
   audio.removeAttribute("src");
   audio.load();
 }
 
 function showNextActivity(returnToTop = true) {
+  if (currentActivity && lessonSession && returnToTop) {
+    lessonSession.position += 1;
+    progress.lessonPositions[lessonSession.id] = lessonSession.position >= lessonSession.total ? 0 : lessonSession.position;
+    saveProgress(progress);
+  }
   currentActivity = practiceQueue.shift() || null;
+  usedHelp = !!currentActivity && Date.now() - (progress.recentModels[modelKey(currentActivity)] || 0) < 86400000;
   answerLocked = false;
   resetPracticeUi();
 
   if (!currentActivity) {
     $("#practice-content").hidden = true;
     $("#practice-empty").hidden = false;
-    $("#practice-empty").textContent = "Round complete. This material will return when more practice is useful.";
+    $("#practice-empty").textContent = "Round complete. Return to Learn for the next lesson, or revisit introduced material in mixed review.";
     updateDueCount();
     if (returnToTop) scrollPracticeToTop();
     return;
@@ -433,33 +441,16 @@ function showNextActivity(returnToTop = true) {
     "sentence-study": "sentence study",
     "sentence-choice": "sentence check",
     "sentence-recall": "sentence recall",
-    "pronunciation-study": "pronunciation study",
     "guided-listening": "listening"
   };
   $("#activity-type").textContent = activityLabels[currentActivity.type] || currentActivity.type.replaceAll("-", " ");
-  $("#activity-focus").textContent = currentActivity.focus.join(" • ");
+  $("#activity-focus").textContent = currentActivity.transfer ? 'Mixed practice' : currentActivity.focus.join(" • ");
+  $("#session-position").textContent = lessonSession ? `Activity ${lessonSession.position + 1} of ${lessonSession.total} · You can leave and continue later` : `${practiceQueue.length + 1} remaining in this round`;
   $("#instruction").textContent = currentActivity.instruction || "Continue the activity.";
   $("#prompt").textContent = currentActivity.prompt || "";
-  const priorState = progress.reviews[currentActivity.id];
-  const fadeSupport = isScoredActivity(currentActivity) && (priorState?.correctCount || 0) >= 2;
-  $("#support").textContent = fadeSupport ? "Try this without the hint. Open the Sound guide only if pronunciation is the issue." : (currentActivity.support || "");
+  $("#support").textContent = currentActivity.support || "";
 
-  const hawaiianForGuide = currentActivity.studyWord || currentActivity.sentence || (currentActivity.answerLanguage === "haw" ? currentActivity.answer : "") || "";
-  const guideNotes = soundGuideFor(hawaiianForGuide);
-  if (hawaiianForGuide && guideNotes.length) {
-    $("#sound-guide-content").innerHTML = "<p lang=\"haw\"><strong>" + escapeHtml(hawaiianForGuide) + "</strong></p><ul>" + guideNotes.map(note => "<li>" + escapeHtml(note) + "</li>").join("") + "</ul><p>This guide points to Hawaiian spelling cues; it does not replace listening to proficient speakers.</p>";
-    $("#sound-guide-panel").hidden = false;
-  }
-
-  if (currentActivity.type === "pronunciation-study") {
-    activityStage = "pronunciation-study";
-    $("#answer-area").hidden = true;
-    $("#pronunciation-panel").hidden = false;
-    $("#pronunciation-source").textContent = currentActivity.sourceText || currentActivity.prompt || "";
-    $("#pronunciation-rule").textContent = currentActivity.ruleTitle || "Sound rule";
-    $("#pronunciation-notes").innerHTML = (currentActivity.soundNotes || []).map(note => "<li>" + escapeHtml(note) + "</li>").join("");
-    $("#pronunciation-language-note").textContent = currentActivity.languageNote || "";
-  } else if (currentActivity.type === "sentence-choice") {
+  if (currentActivity.type === "sentence-choice") {
     activityStage = "choice";
     $("#answer-area").hidden = true;
     $("#choice-panel").hidden = false;
@@ -470,12 +461,18 @@ function showNextActivity(returnToTop = true) {
     $("#choice-options").innerHTML = (currentActivity.options || []).map(option => `
       <button type="button" class="choice-option" data-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`
     ).join("");
-  } else if (currentActivity.type === "sentence-study") {
+  } else if (["sentence-study", "foundation-study"].includes(currentActivity.type)) {
     activityStage = "sentence-study";
     $("#answer-area").hidden = true;
     $("#sentence-panel").hidden = false;
     $("#sentence-text").textContent = currentActivity.sentence || "";
     $("#sentence-english").textContent = currentActivity.naturalEnglish || "";
+    const mode = progress.settings?.supportMode || 'auto';
+    const lessonProduction = activities.filter(a => a.lessonId === currentActivity.lessonId).reduce((n,a) => n + (progress.evidence[a.id]?.successes?.production || 0), 0);
+    const fade = currentActivity.type !== 'foundation-study' && (mode === 'hawaiian' || (mode === 'auto' && lessonProduction >= 3));
+    $('#sentence-meaning-details').open = !fade;
+    $('#foundation-listen').hidden = !currentActivity.listenUrl;
+    $('#foundation-listen').href = currentActivity.listenUrl || '#';
     $("#sentence-pattern-name").textContent = currentActivity.patternName || "Sentence pattern";
     $("#sentence-pattern-intro").textContent = currentActivity.patternIntro || "";
     $("#sentence-language-note").textContent = currentActivity.languageNote || "";
@@ -493,11 +490,18 @@ function showNextActivity(returnToTop = true) {
     $("#listening-source-name").textContent = currentActivity.audioSourceName || "Trusted audio source";
     $("#listening-speaker").textContent = currentActivity.audioSpeaker ? `Speaker: ${currentActivity.audioSpeaker}` : "";
     $("#listening-notes").innerHTML = (currentActivity.listeningNotes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
-    $("#listening-source-link").href = currentActivity.audioUrl;
+    $("#listening-source-link").href = currentActivity.sourcePageUrl || currentActivity.audioUrl;
     $("#listening-continue-btn").textContent = currentActivity.completionLabel || "Continue";
     const audio = $("#listening-audio");
-    audio.src = currentActivity.audioUrl;
-    audio.load();
+    audio.hidden = !currentActivity.audioUrl;
+    if (currentActivity.audioUrl) { audio.src = currentActivity.audioUrl; audio.load(); }
+    $('#listening-continue-btn').disabled = true;
+    $('#listening-confirm').checked = false;
+    $('#listening-skip-btn').hidden = false;
+    $('#listening-replay-stage').value = 'first';
+    $('#listening-status').textContent = 'Listen at the source, then record the step you completed. Skipping records no exposure.';
+    $('#listening-transcript').hidden = !currentActivity.transcriptUrl;
+    $('#listening-transcript').href = currentActivity.transcriptUrl || '#';
   } else if (currentActivity.type === "study-hide-recall") {
     activityStage = "study";
     $("#study-panel").hidden = false;
@@ -508,12 +512,18 @@ function showNextActivity(returnToTop = true) {
     activityStage = "answer";
   }
 
+  renderActivityHelp();
+  if (['sentence-study', 'foundation-study', 'study-hide-recall'].includes(currentActivity.type)) markModelSeen(currentActivity);
   if (returnToTop) scrollPracticeToTop();
 }
 
 function beginHiddenRecall() {
   if (!currentActivity || currentActivity.type !== "study-hide-recall") return;
   activityStage = "paper";
+  $("#sound-guide").hidden = true;
+  $("#source-details").hidden = true;
+  markModelSeen(currentActivity);
+  usedHelp = true;
   $("#study-panel").hidden = true;
   $("#prompt").textContent = currentActivity.studyWord?.includes(" ") ? "Write the phrase you just studied." : "Write the word you just studied.";
   $("#support").textContent = "Use paper if you have it. You can also skip this step and type the answer instead.";
@@ -536,17 +546,18 @@ function finishPaperStage() {
 function completeListeningActivity() {
   if (!currentActivity || currentActivity.type !== "guided-listening") return;
   recordExposure(currentActivity);
+  const key = currentActivity.id;
+  const previous = progress.listening[key] || {};
+  const stage = $('#listening-replay-stage').value;
+  const now = Date.now();
+  progress.listening[key] = { ...previous, [stage]: (previous[stage] || 0) + 1, lastAt: now,
+    delayedReplays: (previous.delayedReplays || 0) + (previous.lastAt && now - previous.lastAt >= 86400000 ? 1 : 0) };
+  saveProgress(progress);
   showNextActivity();
 }
 
 function completeSentenceStudy() {
-  if (!currentActivity || currentActivity.type !== "sentence-study") return;
-  recordExposure(currentActivity);
-  showNextActivity();
-}
-
-function completePronunciationStudy() {
-  if (!currentActivity || currentActivity.type !== "pronunciation-study") return;
+  if (!currentActivity || !["sentence-study", "foundation-study"].includes(currentActivity.type)) return;
   recordExposure(currentActivity);
   showNextActivity();
 }
@@ -562,7 +573,7 @@ function checkChoiceAnswer() {
   const selected = selectedChoice;
   const status = selected === currentActivity.answer ? "correct" : "incorrect";
   answerLocked = true;
-  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], status, Date.now(), evidenceForActivity(currentActivity));
+  recordAttempt(status);
   progress.totals[status] = (progress.totals[status] || 0) + 1;
   saveProgress(progress);
 
@@ -575,16 +586,15 @@ function checkChoiceAnswer() {
   const feedback = $("#feedback");
   feedback.hidden = false;
   feedback.className = `feedback ${status}`;
-  const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
-  const diagnosis = status === "correct" ? "" : `<p><strong>Review focus:</strong> ${escapeHtml(errorFocusForActivity(currentActivity))}</p>`;
+  const explanation = (currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : '') + `<p>${escapeHtml(diagnose(currentActivity.type === 'sentence-choice' ? selectedChoice : $('#answer-input').value, currentActivity, {status}))}</p>`;
   feedback.innerHTML = `
     <strong>${feedbackTitle(status)}</strong>
     ${status !== "correct" ? `<div class="expected-answer">Answer: ${escapeHtml(currentActivity.answer)}</div>` : ""}
-    ${diagnosis}
     ${explanation}`;
   $("#choice-check-btn").hidden = true;
   $("#choice-next-btn").hidden = false;
   $("#retry-actions").hidden = status === "correct";
+  renderActivityHelp(true);
   updateDueCount();
 }
 
@@ -595,7 +605,7 @@ function checkCurrentAnswer() {
 
   const result = gradeAnswer(given, currentActivity.answer, currentActivity.answerLanguage || "haw", currentActivity.alternatives || []);
   answerLocked = true;
-  progress.reviews[currentActivity.id] = scheduleReview(progress.reviews[currentActivity.id], result.status, Date.now(), evidenceForActivity(currentActivity));
+  recordAttempt(result.status);
   progress.totals[result.status] = (progress.totals[result.status] || 0) + 1;
   saveProgress(progress);
 
@@ -603,14 +613,12 @@ function checkCurrentAnswer() {
   feedback.hidden = false;
   feedback.className = `feedback ${result.status}`;
   const notes = (result.notes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
-  const explanation = currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : "";
+  const explanation = (currentActivity.explanation ? `<p>${escapeHtml(currentActivity.explanation)}</p>` : '') + `<p>${escapeHtml(diagnose(currentActivity.type === 'sentence-choice' ? selectedChoice : $('#answer-input').value, currentActivity, result))}</p>`;
   const correctionPractice = result.status === "correct" || currentActivity.skill === "sentence-patterns" ? "" : `<p><strong>Try it on paper:</strong> Write the correct spelling 3 times before moving on if you can.</p>`;
-  const diagnosis = result.status === "correct" ? "" : `<p><strong>Review focus:</strong> ${escapeHtml(errorFocusForActivity(currentActivity))}</p>`;
   feedback.innerHTML = `
     <strong>${feedbackTitle(result.status)}</strong>
     ${notes ? `<ul>${notes}</ul>` : ""}
     ${result.status !== "correct" ? `<div class="expected-answer" lang="haw">Expected: ${escapeHtml(result.expected)}</div>` : ""}
-    ${diagnosis}
     ${correctionPractice}
     ${explanation}`;
 
@@ -618,15 +626,16 @@ function checkCurrentAnswer() {
   $("#check-btn").hidden = true;
   $("#next-btn").hidden = false;
   $("#retry-actions").hidden = result.status === "correct";
+  renderActivityHelp(true);
   updateDueCount();
   settleAfterKeyboard();
 }
 
 function retryCurrentActivity() {
   if (!currentActivity || !answerLocked) return;
-  const retry = currentActivity;
+  const retry = { ...currentActivity, correctionRetry: true };
   practiceQueue.unshift(retry);
-  showNextActivity();
+  showNextActivity(false);
 }
 
 function insertCharacter(character) {
@@ -673,14 +682,9 @@ function renderSkillProgress() {
   const countReviewed = skill => scored.filter(activity => activity.skill === skill && progress.reviews[activity.id]).length;
   const countWeak = skill => groups.filter(group => group.skill === skill).length;
   const listeningSessions = exposureCountForSkill("listening");
-  const pronunciationStudies = exposureCountForSkill("pronunciation");
   const sentenceStudySessions = exposureCountForSkill("sentence-patterns");
 
   $("#skill-progress").innerHTML = `
-    <div class="skill-card">
-      <div><strong>Pronunciation foundations</strong><span>${countReviewed("pronunciation")} scored checks · ${pronunciationStudies} study session${pronunciationStudies === 1 ? "" : "s"}</span></div>
-      <span class="skill-detail">${countWeak("pronunciation")} item${countWeak("pronunciation") === 1 ? "" : "s"} need review</span>
-    </div>
     <div class="skill-card">
       <div><strong>Spelling & recall</strong><span>${countReviewed("spelling")} scored items practiced</span></div>
       <span class="skill-detail">${countWeak("spelling")} item${countWeak("spelling") === 1 ? "" : "s"} need${countWeak("spelling") === 1 ? "s" : ""} practice</span>
@@ -721,14 +725,62 @@ function renderProgress() {
   const weak = needsPracticeGroups().length;
   const totalAttempts = progress.totals.correct + progress.totals.almost + progress.totals.incorrect;
   const recallRate = totalAttempts ? Math.round((progress.totals.correct / totalAttempts) * 100) : 0;
-  const strongEvidence = activeReviewStates.filter(state => state.lastGrade === "correct" && ["recall", "transfer"].includes(state.strongestEvidence)).length;
-  const stats = [[reviewed, "items practiced"], [due, "due now"], [strongEvidence, "strong evidence"], [weak, "needs practice"]];
+  const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct answers"], [weak, "needs practice"]];
   $("#progress-summary").innerHTML = stats.map(([value, label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join("");
+  const e = evidenceTotals(progress.evidence);
+  $('#evidence-summary').innerHTML = [
+    [e.recognition, 'recognition successes'], [e.supported, 'supported recall successes'],
+    [e.production, 'independent model-production successes'], [e.delayedProduction, 'production successes after 24+ hours'],
+    [e.interpretation, 'typed meaning successes'], [e.retry, 'correction successes']
+  ].map(([value,label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join('');
+  const listening = Object.values(progress.listening || {});
+  $('#listening-evidence').textContent = `${listening.reduce((n,s)=>n+(s.first||0)+(s.support||0)+(s.hidden||0),0)} self-reported listening steps · ${listening.reduce((n,s)=>n+(s.delayedReplays||0),0)} returns after 24+ hours. Listening and written pronunciation knowledge are not spoken-skill scores.`;
   renderNeedsPractice();
   renderSkillProgress();
 }
 
+function recordAttempt(status) {
+  const prior = progress.reviews[currentActivity.id];
+  const supported = usedHelp || evidenceKind(currentActivity) === 'supported';
+  progress.evidence[currentActivity.id] = recordEvidence(progress.evidence[currentActivity.id], currentActivity, status, { helped: supported, retry: !!currentActivity.correctionRetry });
+  // Corrected or supported answers cannot erase a recent miss or extend its due date.
+  if (!(status === 'correct' && (supported || currentActivity.correctionRetry) && prior)) {
+    progress.reviews[currentActivity.id] = scheduleReview(prior, status);
+  }
+  markModelSeen(currentActivity);
+}
+
+function renderActivityHelp(afterAnswer = false) {
+  const a = currentActivity;
+  if (!a) return;
+  const guide = $('#sound-guide');
+  guide.open = false;
+  const visible = afterAnswer ? modelKey(a) : a.type === 'sentence-study' || a.type === 'foundation-study' ? a.sentence : a.type === 'study-hide-recall' ? a.studyWord : '';
+  guide.hidden = !visible;
+  const words = [...new Set((visible || '').match(/[a-zāēīōūʻ]+/gi) || [])];
+  $('#sound-guide-body').innerHTML = words.map(word => {
+    const marks = [...new Set(word.match(/[āēīōū]/gi) || [])];
+    const cues = [marks.length ? `Long vowel${marks.length>1?'s':''}: ${marks.join(', ')}.` : 'No written long vowel.', word.includes('ʻ') ? 'Keep the written glottal stop(s).' : 'Do not add an unwritten glottal stop.'];
+    return `<p><strong lang="haw">${escapeHtml(word)}</strong> — ${escapeHtml(cues.join(' '))}</p>`;
+  }).join('') + '<p>Syllables end in vowels. This is a spelling-based reminder, not a full phonetic transcription or a stress prediction. Hear the whole phrase in context.</p><a href="https://oleloonline.com/0400-series-index/" target="_blank" rel="noopener noreferrer">Hear pronunciation lessons</a> · <a href="https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/" target="_blank" rel="noopener noreferrer">UH spelling guidance</a>';
+  const help = $('#model-help'); help.open = false;
+  help.hidden = afterAnswer || !isScoredActivity(a) || a.type === 'sentence-choice' || a.type === 'study-hide-recall';
+  $('#model-help-text').textContent = a.model || a.answer || '';
+  $('#source-details').hidden = false;
+  $('#activity-sources').innerHTML = (a.sourceRefs || []).map(ref => `<li><a href="${escapeHtml(ref.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ref.section || 'Source')}</a></li>`).join('');
+}
+
 function bindEvents() {
+  $('#vocabulary-families').addEventListener('click', event => { const button = event.target.closest('[data-family-lesson]'); if (button) startLesson(button.dataset.familyLesson); });
+  $('#support-mode').value = progress.settings.supportMode || 'auto';
+  $('#support-mode').addEventListener('change', event => { progress.settings.supportMode = event.target.value; saveProgress(progress); });
+  $('#listening-confirm').addEventListener('change', event => { $('#listening-continue-btn').disabled = !event.target.checked; });
+  $('#listening-skip-btn').addEventListener('click', () => showNextActivity());
+  $('#model-help').addEventListener('toggle', event => { if (event.target.open && !answerLocked) { usedHelp = true; markModelSeen(currentActivity); } });
+  $('#source-details').addEventListener('toggle', event => { if (event.target.open && !answerLocked) usedHelp = true; });
+  $('#sound-guide').addEventListener('toggle', event => { if (event.target.open && !answerLocked) usedHelp = true; });
+  $('#listening-audio').addEventListener('error', () => { $('#listening-status').textContent = 'Playback did not load. Open the official source or skip this step.'; });
+
   $$(".nav-btn").forEach(btn => btn.addEventListener("click", () => switchView(btn.dataset.view)));
   $("#start-due-btn").addEventListener("click", startDuePractice);
   $("#practice-needs-btn").addEventListener("click", startNeedsPractice);
@@ -738,7 +790,6 @@ function bindEvents() {
   $("#check-btn").addEventListener("click", checkCurrentAnswer);
   $("#next-btn").addEventListener("click", showNextActivity);
   $("#sentence-continue-btn").addEventListener("click", completeSentenceStudy);
-  $("#pronunciation-continue-btn").addEventListener("click", completePronunciationStudy);
   $("#choice-options").addEventListener("click", event => {
     const button = event.target.closest(".choice-option");
     if (!button || answerLocked) return;
@@ -751,7 +802,7 @@ function bindEvents() {
   $("#retry-btn").addEventListener("click", retryCurrentActivity);
   $("#listening-continue-btn").addEventListener("click", completeListeningActivity);
   $("#listening-audio").addEventListener("play", () => {
-    if (currentActivity?.type === "guided-listening") $("#listening-continue-btn").disabled = false;
+    if (currentActivity?.type === "guided-listening") $("#listening-status").textContent = "After listening, mark the step you completed.";
   });
   $("#answer-input").addEventListener("keydown", event => {
     if (event.key !== "Enter") return;

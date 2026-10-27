@@ -11,13 +11,13 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-22",
-    "notes": "Examples are taken from UH Maui College E Hoʻoulu Lāhui and the modern Reference Grammar of the Hawaiian Language. Activities test interpretation of relationships and context rather than isolated word spotting.",
+    "reviewedAt": "2026-10-27",
     "sources": [
       "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
       "https://ehooululahui.maui.hawaii.edu/?page_id=1144",
       "https://hawaiian-grammar.org/current/"
-    ]
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
   },
   "activities": [
     {
@@ -55,7 +55,14 @@
         }
       ],
       "languageNote": "The reference grammar explicitly uses this example to show that e ... ana relies on surrounding context for time interpretation.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-yesterday-who",
@@ -72,7 +79,14 @@
       ],
       "answer": "The speaker",
       "answerLanguage": "en",
-      "explanation": "au means I, so the speaker is the person talking."
+      "explanation": "au means I, so the speaker is the person talking.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-yesterday-when",
@@ -89,7 +103,14 @@
       ],
       "answer": "nehinei",
       "answerLanguage": "en",
-      "explanation": "I nehinei means yesterday, which anchors the ongoing action in past context."
+      "explanation": "I nehinei means yesterday, which anchors the ongoing action in past context.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-question-oukou",
@@ -116,7 +137,14 @@
         }
       ],
       "languageNote": "Recognizing ʻoe tells you the question is directed to one listener.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-question-count",
@@ -133,7 +161,14 @@
       ],
       "answer": "One person",
       "answerLanguage": "en",
-      "explanation": "ʻoe is second-person singular."
+      "explanation": "ʻoe is second-person singular.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-papa-makou",
@@ -165,7 +200,14 @@
         }
       ],
       "languageNote": "Understanding the sentence requires tracking that kona connects both family relationships to ʻo ia.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-papa-listener",
@@ -182,7 +224,14 @@
       ],
       "answer": "His/her mother and father",
       "answerLanguage": "en",
-      "explanation": "kona is third-person singular possessive in both relationships."
+      "explanation": "kona is third-person singular possessive in both relationships.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-school-transfer",
@@ -199,7 +248,14 @@
       ],
       "answer": "The speaker's group of three or more, excluding the listener",
       "answerLanguage": "en",
-      "explanation": "iā mākou refers to us — three or more including the speaker but excluding the listener."
+      "explanation": "iā mākou refers to us — three or more including the speaker but excluding the listener.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-school-youplural",
@@ -216,7 +272,14 @@
       ],
       "answer": "You all — three or more people",
       "answerLanguage": "en",
-      "explanation": "me ʻoukou means with you, addressing three or more people."
+      "explanation": "me ʻoukou means with you, addressing three or more people.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
     },
     {
       "id": "context-eana-meaning",
@@ -233,7 +296,553 @@
       ],
       "answer": "Because nehinei gives a past-time context",
       "answerLanguage": "en",
-      "explanation": "The reference grammar notes that e ... ana can describe incomplete action in different time frames; surrounding context such as nehinei determines the interpretation."
+      "explanation": "The reference grammar notes that e ... ana can describe incomplete action in different time frames; surrounding context such as nehinei determines the interpretation.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; A Me; Incomplete Action; Personal pronouns"
+        }
+      ],
+      "errorCategory": "comprehension"
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ke kaʻa ma ʻaneʻi.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Track location separately from the thing located.",
+      "conceptId": "comprehension-ma ʻaneʻi",
+      "id": "expand-05-1-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia ke kaʻa ma ʻaneʻi.",
+      "naturalEnglish": "The car is here.",
+      "patternName": "Connected practice",
+      "patternIntro": "Track location separately from the thing located.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ma ʻaneʻi",
+          "note": "Track location separately from the thing located."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ke kaʻa ma ʻaneʻi.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Track location separately from the thing located.",
+      "conceptId": "comprehension-ma ʻaneʻi",
+      "id": "expand-05-1-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ke kaʻa ______.",
+      "support": "The car is here.",
+      "answer": "ma ʻaneʻi",
+      "answerLanguage": "haw",
+      "explanation": "Track location separately from the thing located."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ke kaʻa ma ʻaneʻi.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Track location separately from the thing located.",
+      "conceptId": "comprehension-ma ʻaneʻi",
+      "id": "expand-05-1-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The car is here.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia ke kaʻa ma ʻaneʻi.",
+      "answerLanguage": "haw",
+      "explanation": "Track location separately from the thing located."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ke moe nei ʻo Keola i loko o ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "The location phrase is not the actor.",
+      "conceptId": "comprehension-i loko o ka hale",
+      "id": "expand-05-2-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ke moe nei ʻo Keola i loko o ka hale.",
+      "naturalEnglish": "Keola is sleeping inside the house.",
+      "patternName": "Connected practice",
+      "patternIntro": "The location phrase is not the actor.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "i loko o ka hale",
+          "note": "The location phrase is not the actor."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ke moe nei ʻo Keola i loko o ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "The location phrase is not the actor.",
+      "conceptId": "comprehension-i loko o ka hale",
+      "id": "expand-05-2-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ke moe nei ʻo Keola ______.",
+      "support": "Keola is sleeping inside the house.",
+      "answer": "i loko o ka hale",
+      "answerLanguage": "haw",
+      "explanation": "The location phrase is not the actor."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ke moe nei ʻo Keola i loko o ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "The location phrase is not the actor.",
+      "conceptId": "comprehension-i loko o ka hale",
+      "id": "expand-05-2-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Keola is sleeping inside the house.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ke moe nei ʻo Keola i loko o ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "The location phrase is not the actor."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ke keiki ma ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "The child is the person located; no motion is stated.",
+      "conceptId": "comprehension-ke keiki",
+      "id": "expand-05-3-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia ke keiki ma ka hale.",
+      "naturalEnglish": "The child is at the house.",
+      "patternName": "Connected practice",
+      "patternIntro": "The child is the person located; no motion is stated.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ke keiki",
+          "note": "The child is the person located; no motion is stated."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ke keiki ma ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "The child is the person located; no motion is stated.",
+      "conceptId": "comprehension-ke keiki",
+      "id": "expand-05-3-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ka hale.",
+      "support": "The child is at the house.",
+      "answer": "ke keiki",
+      "answerLanguage": "haw",
+      "explanation": "The child is the person located; no motion is stated."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ke keiki ma ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "The child is the person located; no motion is stated.",
+      "conceptId": "comprehension-ke keiki",
+      "id": "expand-05-3-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The child is at the house.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia ke keiki ma ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "The child is the person located; no motion is stated."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ʻo Kimo ma ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "A location statement does not say that Kimo went there.",
+      "conceptId": "comprehension-ma ka hale",
+      "id": "expand-05-4-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia ʻo Kimo ma ka hale.",
+      "naturalEnglish": "Kimo is at the house.",
+      "patternName": "Connected practice",
+      "patternIntro": "A location statement does not say that Kimo went there.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ma ka hale",
+          "note": "A location statement does not say that Kimo went there."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ʻo Kimo ma ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "A location statement does not say that Kimo went there.",
+      "conceptId": "comprehension-ma ka hale",
+      "id": "expand-05-4-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ʻo Kimo ______.",
+      "support": "Kimo is at the house.",
+      "answer": "ma ka hale",
+      "answerLanguage": "haw",
+      "explanation": "A location statement does not say that Kimo went there."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Aia ʻo Kimo ma ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "A location statement does not say that Kimo went there.",
+      "conceptId": "comprehension-ma ka hale",
+      "id": "expand-05-4-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Kimo is at the house.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia ʻo Kimo ma ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "A location statement does not say that Kimo went there."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ua hele ke keiki i ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Compare motion with a location statement.",
+      "conceptId": "comprehension-ua hele",
+      "id": "expand-05-5-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua hele ke keiki i ka hale.",
+      "naturalEnglish": "The child went to the house.",
+      "patternName": "Connected practice",
+      "patternIntro": "Compare motion with a location statement.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Ua hele",
+          "note": "Compare motion with a location statement."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ua hele ke keiki i ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Compare motion with a location statement.",
+      "conceptId": "comprehension-ua hele",
+      "id": "expand-05-5-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ke keiki i ka hale.",
+      "support": "The child went to the house.",
+      "answer": "Ua hele",
+      "answerLanguage": "haw",
+      "explanation": "Compare motion with a location statement."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ua hele ke keiki i ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Compare motion with a location statement.",
+      "conceptId": "comprehension-ua hele",
+      "id": "expand-05-5-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The child went to the house.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua hele ke keiki i ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "Compare motion with a location statement."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "ʻAʻole i hele ke keiki i ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Negation changes whether the action happened.",
+      "conceptId": "comprehension-ʻaʻole i hele",
+      "id": "expand-05-6-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "ʻAʻole i hele ke keiki i ka hale.",
+      "naturalEnglish": "The child did not go to the house.",
+      "patternName": "Connected practice",
+      "patternIntro": "Negation changes whether the action happened.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ʻAʻole i hele",
+          "note": "Negation changes whether the action happened."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "ʻAʻole i hele ke keiki i ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Negation changes whether the action happened.",
+      "conceptId": "comprehension-ʻaʻole i hele",
+      "id": "expand-05-6-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ke keiki i ka hale.",
+      "support": "The child did not go to the house.",
+      "answer": "ʻAʻole i hele",
+      "answerLanguage": "haw",
+      "explanation": "Negation changes whether the action happened."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "ʻAʻole i hele ke keiki i ka hale.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Negation changes whether the action happened.",
+      "conceptId": "comprehension-ʻaʻole i hele",
+      "id": "expand-05-6-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The child did not go to the house.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "ʻAʻole i hele ke keiki i ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "Negation changes whether the action happened."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ua ʻai mua ʻo ia.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Here mua gives an earlier-time meaning.",
+      "conceptId": "comprehension-mua",
+      "id": "expand-05-7-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua ʻai mua ʻo ia.",
+      "naturalEnglish": "He or she ate earlier.",
+      "patternName": "Connected practice",
+      "patternIntro": "Here mua gives an earlier-time meaning.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "mua",
+          "note": "Here mua gives an earlier-time meaning."
+        }
+      ]
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ua ʻai mua ʻo ia.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Here mua gives an earlier-time meaning.",
+      "conceptId": "comprehension-mua",
+      "id": "expand-05-7-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua ʻai ______ ʻo ia.",
+      "support": "He or she ate earlier.",
+      "answer": "mua",
+      "answerLanguage": "haw",
+      "explanation": "Here mua gives an earlier-time meaning."
+    },
+    {
+      "skill": "comprehension",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers"
+        }
+      ],
+      "model": "Ua ʻai mua ʻo ia.",
+      "errorCategory": "comprehension",
+      "diagnosis": "Here mua gives an earlier-time meaning.",
+      "conceptId": "comprehension-mua",
+      "id": "expand-05-7-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "He or she ate earlier.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua ʻai mua ʻo ia.",
+      "answerLanguage": "haw",
+      "explanation": "Here mua gives an earlier-time meaning."
+    },
+    {
+      "id": "bridge-05",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Follow one whole utterance",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Open Kulāiwi Lesson 2. Follow the restaurant vignette on transcript pages 3–5. Listen once for who wants which food, then compare with the source text.",
+      "sourcePageUrl": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "audioSourceName": "Kamehameha Schools — Kulāiwi",
+      "listeningNotes": [
+        "Follow the restaurant vignette on transcript pages 3–5. Listen once for who wants which food, then compare with the source text.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+          "section": "Official teaching source"
+        },
+        {
+          "url": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson02_Final.pdf#page=3",
+          "section": "Kulāiwi Lesson 2, transcript page 3"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary.",
+      "transcriptUrl": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson02_Final.pdf#page=3"
     }
   ]
 }

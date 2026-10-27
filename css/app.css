@@ -105,19 +105,11 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
 .instruction { margin: 0 0 12px; color: #596262; }
 .prompt { font-size: clamp(1.45rem, 6vw, 2.35rem); font-weight: 850; line-height: 1.2; color: var(--ocean-dark); margin: 6px 0 10px; }
 .support-text { margin: 0 0 24px; color: #596262; line-height: 1.5; }
-.study-panel, .paper-panel, .listening-panel, .sentence-panel, .pronunciation-panel { border-radius: 16px; padding: 20px; margin: 8px 0 20px; }
+.study-panel, .paper-panel, .listening-panel, .sentence-panel { border-radius: 16px; padding: 20px; margin: 8px 0 20px; }
 .study-panel { background: var(--ocean-soft); border: 1px solid #aacbd0; }
 .paper-panel { background: var(--gold-soft); border: 1px solid #d2c17b; }
 .listening-panel { background: #eef5f2; border: 1px solid #b9d3c6; }
 .sentence-panel { background: #f2f6ef; border: 1px solid #b9cbb8; }
-.pronunciation-panel { background: #eef5f7; border: 1px solid #b6cfd5; }
-.pronunciation-source { font-size: clamp(2rem, 8vw, 3.2rem); font-weight: 900; line-height: 1.15; color: var(--ocean-dark); margin: 8px 0 18px; overflow-wrap: anywhere; }
-.sound-guide { margin: 0 0 18px; padding: 12px 14px; border-radius: 12px; border: 1px solid #c8d7d5; background: #f8fbfa; }
-.sound-guide summary { cursor: pointer; font-weight: 850; color: var(--ocean-dark); }
-.sound-guide ul { margin: 10px 0 0; padding-left: 20px; color: #4f5959; line-height: 1.55; }
-.sound-guide p { margin: 8px 0 0; color: #596262; font-size: .88rem; line-height: 1.5; }
-.prereq-note { display: block; margin-top: 5px; color: #6a7372; font-size: .76rem; }
-.evidence-badge { display: inline-flex; align-items: center; margin-top: 5px; border-radius: 999px; padding: 4px 8px; background: var(--leaf-soft); color: #31533b; font-size: .73rem; font-weight: 800; }
 .study-label, .paper-title { margin: 0 0 8px; font-size: .8rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--ocean-dark); }
 .study-word { font-size: clamp(2.2rem, 10vw, 4rem); font-weight: 900; line-height: 1.05; color: var(--ocean-dark); margin: 10px 0 16px; overflow-wrap: anywhere; }
 .study-notes { margin: 0 0 18px; padding-left: 20px; line-height: 1.6; color: #263333; }
@@ -201,8 +193,8 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
   .practice-card { padding: 18px; min-height: 0; }
   .progress-grid { grid-template-columns: repeat(2, 1fr); }
   .lesson-row { align-items: stretch; flex-direction: column; }
-  .lesson-row button, .study-panel .primary-btn, .paper-panel .primary-btn, .listening-panel .primary-btn, .listening-panel .secondary-link, .sentence-panel .primary-btn, .pronunciation-panel .primary-btn, .immersion-actions > * { width: 100%; }
-  .study-panel, .paper-panel, .listening-panel, .sentence-panel, .pronunciation-panel { padding: 17px; }
+  .lesson-row button, .study-panel .primary-btn, .paper-panel .primary-btn, .listening-panel .primary-btn, .listening-panel .secondary-link, .sentence-panel .primary-btn, .immersion-actions > * { width: 100%; }
+  .study-panel, .paper-panel, .listening-panel, .sentence-panel { padding: 17px; }
   .study-word { margin-top: 8px; }
   .needs-header { flex-direction: column; gap: 14px; }
   .needs-header .primary-btn { width: 100%; }
@@ -222,3 +214,18 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid 
 }
 
 .choice-actions { margin-top: 14px; }
+
+/* Keep native mobile pull-to-refresh: no touch interception or overscroll lock. */
+.learning-help, .support-preference { margin: 16px 0; padding: 12px 16px; background: #f1f6f3; border-radius: 12px; line-height: 1.6; }
+.learning-help summary, .sentence-meaning summary { cursor: pointer; font-weight: 650; }
+.learning-help p { margin: 8px 0; }
+.learning-help a, .text-btn { color: #075b63; }
+.text-btn { border: 0; background: transparent; text-decoration: underline; cursor: pointer; padding: 6px; font: inherit; }
+.prerequisites { display: block; line-height: 1.5; }
+.support-preference p { font-size: .85rem; margin-bottom: 0; }
+select { max-width: 100%; padding: 9px; border: 1px solid #9db3aa; border-radius: 8px; background: white; color: #173d38; font: inherit; }
+.listening-confirm { display: block; padding: 14px 0; }
+.sentence-meaning strong { display: block; margin-top: 8px; }
+#foundation-listen { display: inline-block; margin: 10px 0; }
+[hidden] { display: none !important; }
+button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visible { outline: 3px solid #a76520; outline-offset: 3px; }

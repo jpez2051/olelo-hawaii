@@ -10,11 +10,11 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-22",
-    "notes": "Question words and example sentences are taken from the modern Reference Grammar of the Hawaiian Language.",
+    "reviewedAt": "2026-10-27",
     "sources": [
       "https://hawaiian-grammar.org/current/"
-    ]
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
   },
   "activities": [
     {
@@ -42,7 +42,14 @@
         }
       ],
       "languageNote": "Do not reduce aha to a single fixed English word; its role depends on the whole question.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-hea-study",
@@ -69,7 +76,14 @@
         }
       ],
       "languageNote": "The question word tells you what type of information the listener must supply.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-wai-study",
@@ -96,7 +110,14 @@
         }
       ],
       "languageNote": "Recognizing wai immediately narrows the expected answer to a person or identity.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-when-study",
@@ -123,7 +144,14 @@
         }
       ],
       "languageNote": "Later you will contrast this with ināhea for past-time questions.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-when-past-study",
@@ -150,7 +178,14 @@
         }
       ],
       "languageNote": "The question word itself helps establish the time orientation.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-ehia-study",
@@ -177,7 +212,14 @@
         }
       ],
       "languageNote": "The listener should expect to answer with a quantity.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-anei-study",
@@ -209,7 +251,14 @@
         }
       ],
       "languageNote": "The expected response is yes/no or equivalent confirmation, not a missing person/place/quantity.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-type-aha",
@@ -226,7 +275,14 @@
       ],
       "answer": "A thing/identity",
       "answerLanguage": "en",
-      "explanation": "he aha asks what something is."
+      "explanation": "he aha asks what something is.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-type-hea",
@@ -243,7 +299,14 @@
       ],
       "answer": "A location",
       "answerLanguage": "en",
-      "explanation": "ma hea asks where."
+      "explanation": "ma hea asks where.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-type-wai",
@@ -260,7 +323,14 @@
       ],
       "answer": "A person/identity",
       "answerLanguage": "en",
-      "explanation": "wai asks who."
+      "explanation": "wai asks who.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-future-past",
@@ -276,7 +346,14 @@
       ],
       "answer": "āhea",
       "answerLanguage": "haw",
-      "explanation": "āhea is used for future 'when'; ināhea for past 'when'."
+      "explanation": "āhea is used for future 'when'; ināhea for past 'when'.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-quantity",
@@ -293,7 +370,14 @@
       ],
       "answer": "A number/amount",
       "answerLanguage": "en",
-      "explanation": "ʻehia asks how many/how much."
+      "explanation": "ʻehia asks how many/how much.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
     },
     {
       "id": "q-anei-check",
@@ -310,7 +394,693 @@
       ],
       "answer": "Yes/no confirmation",
       "answerLanguage": "en",
-      "explanation": "anei marks a yes/no question."
+      "explanation": "anei marks a yes/no question.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "errorCategory": "questions"
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "He pua aha kēia?",
+      "errorCategory": "questions",
+      "diagnosis": "This requests a kind of thing.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-1-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "He pua aha kēia?",
+      "naturalEnglish": "Ask what kind of flower this is.",
+      "patternName": "Connected practice",
+      "patternIntro": "This requests a kind of thing.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "aha",
+          "note": "This requests a kind of thing."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "He pua aha kēia?",
+      "errorCategory": "questions",
+      "diagnosis": "This requests a kind of thing.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-1-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "He pua ______ kēia?",
+      "support": "Ask what kind of flower this is.",
+      "answer": "aha",
+      "answerLanguage": "haw",
+      "explanation": "This requests a kind of thing."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "He pua aha kēia?",
+      "errorCategory": "questions",
+      "diagnosis": "This requests a kind of thing.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-1-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask what kind of flower this is.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "He pua aha kēia?",
+      "answerLanguage": "haw",
+      "explanation": "This requests a kind of thing."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Ua aha ʻoe?",
+      "errorCategory": "questions",
+      "diagnosis": "The question asks what happened, not where.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-2-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua aha ʻoe?",
+      "naturalEnglish": "Ask what happened to one listener.",
+      "patternName": "Connected practice",
+      "patternIntro": "The question asks what happened, not where.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "aha",
+          "note": "The question asks what happened, not where."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Ua aha ʻoe?",
+      "errorCategory": "questions",
+      "diagnosis": "The question asks what happened, not where.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-2-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua ______ ʻoe?",
+      "support": "Ask what happened to one listener.",
+      "answer": "aha",
+      "answerLanguage": "haw",
+      "explanation": "The question asks what happened, not where."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Ua aha ʻoe?",
+      "errorCategory": "questions",
+      "diagnosis": "The question asks what happened, not where.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-2-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask what happened to one listener.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua aha ʻoe?",
+      "answerLanguage": "haw",
+      "explanation": "The question asks what happened, not where."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "E aha ana ʻoe?",
+      "errorCategory": "questions",
+      "diagnosis": "Identify the activity being asked about.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-3-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "E aha ana ʻoe?",
+      "naturalEnglish": "Ask what one listener is doing.",
+      "patternName": "Connected practice",
+      "patternIntro": "Identify the activity being asked about.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "aha",
+          "note": "Identify the activity being asked about."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "E aha ana ʻoe?",
+      "errorCategory": "questions",
+      "diagnosis": "Identify the activity being asked about.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-3-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "E ______ ana ʻoe?",
+      "support": "Ask what one listener is doing.",
+      "answer": "aha",
+      "answerLanguage": "haw",
+      "explanation": "Identify the activity being asked about."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "E aha ana ʻoe?",
+      "errorCategory": "questions",
+      "diagnosis": "Identify the activity being asked about.",
+      "conceptId": "questions-aha",
+      "id": "expand-07-3-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask what one listener is doing.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "E aha ana ʻoe?",
+      "answerLanguage": "haw",
+      "explanation": "Identify the activity being asked about."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "No hea mai ʻo ia?",
+      "errorCategory": "questions",
+      "diagnosis": "This asks about origin, not current location.",
+      "conceptId": "questions-no hea mai",
+      "id": "expand-07-4-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "No hea mai ʻo ia?",
+      "naturalEnglish": "Ask where he or she is from.",
+      "patternName": "Connected practice",
+      "patternIntro": "This asks about origin, not current location.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "No hea mai",
+          "note": "This asks about origin, not current location."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "No hea mai ʻo ia?",
+      "errorCategory": "questions",
+      "diagnosis": "This asks about origin, not current location.",
+      "conceptId": "questions-no hea mai",
+      "id": "expand-07-4-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ʻo ia?",
+      "support": "Ask where he or she is from.",
+      "answer": "No hea mai",
+      "answerLanguage": "haw",
+      "explanation": "This asks about origin, not current location."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "No hea mai ʻo ia?",
+      "errorCategory": "questions",
+      "diagnosis": "This asks about origin, not current location.",
+      "conceptId": "questions-no hea mai",
+      "id": "expand-07-4-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask where he or she is from.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "No hea mai ʻo ia?",
+      "answerLanguage": "haw",
+      "explanation": "This asks about origin, not current location."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Āhea e pau ai ka papa?",
+      "errorCategory": "questions",
+      "diagnosis": "Future time; notice the e ... ai frame.",
+      "conceptId": "questions-āhea",
+      "id": "expand-07-5-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Āhea e pau ai ka papa?",
+      "naturalEnglish": "Ask when the class will end.",
+      "patternName": "Connected practice",
+      "patternIntro": "Future time; notice the e ... ai frame.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Āhea",
+          "note": "Future time; notice the e ... ai frame."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Āhea e pau ai ka papa?",
+      "errorCategory": "questions",
+      "diagnosis": "Future time; notice the e ... ai frame.",
+      "conceptId": "questions-āhea",
+      "id": "expand-07-5-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ e pau ai ka papa?",
+      "support": "Ask when the class will end.",
+      "answer": "Āhea",
+      "answerLanguage": "haw",
+      "explanation": "Future time; notice the e ... ai frame."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Āhea e pau ai ka papa?",
+      "errorCategory": "questions",
+      "diagnosis": "Future time; notice the e ... ai frame.",
+      "conceptId": "questions-āhea",
+      "id": "expand-07-5-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask when the class will end.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Āhea e pau ai ka papa?",
+      "answerLanguage": "haw",
+      "explanation": "Future time; notice the e ... ai frame."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "E hele ana anei ʻoe i Waimea?",
+      "errorCategory": "questions",
+      "diagnosis": "This asks for yes/no confirmation.",
+      "conceptId": "questions-anei",
+      "id": "expand-07-6-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "E hele ana anei ʻoe i Waimea?",
+      "naturalEnglish": "Ask whether one listener is going to Waimea.",
+      "patternName": "Connected practice",
+      "patternIntro": "This asks for yes/no confirmation.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "anei",
+          "note": "This asks for yes/no confirmation."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "E hele ana anei ʻoe i Waimea?",
+      "errorCategory": "questions",
+      "diagnosis": "This asks for yes/no confirmation.",
+      "conceptId": "questions-anei",
+      "id": "expand-07-6-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "E hele ana ______ ʻoe i Waimea?",
+      "support": "Ask whether one listener is going to Waimea.",
+      "answer": "anei",
+      "answerLanguage": "haw",
+      "explanation": "This asks for yes/no confirmation."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "E hele ana anei ʻoe i Waimea?",
+      "errorCategory": "questions",
+      "diagnosis": "This asks for yes/no confirmation.",
+      "conceptId": "questions-anei",
+      "id": "expand-07-6-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask whether one listener is going to Waimea.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "E hele ana anei ʻoe i Waimea?",
+      "answerLanguage": "haw",
+      "explanation": "This asks for yes/no confirmation."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Ke ʻai nei anei ʻo Pualani?",
+      "errorCategory": "questions",
+      "diagnosis": "The actor is Pualani; the question asks for confirmation.",
+      "conceptId": "questions-anei",
+      "id": "expand-07-7-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ke ʻai nei anei ʻo Pualani?",
+      "naturalEnglish": "Ask whether Pualani is eating now.",
+      "patternName": "Connected practice",
+      "patternIntro": "The actor is Pualani; the question asks for confirmation.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "anei",
+          "note": "The actor is Pualani; the question asks for confirmation."
+        }
+      ]
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Ke ʻai nei anei ʻo Pualani?",
+      "errorCategory": "questions",
+      "diagnosis": "The actor is Pualani; the question asks for confirmation.",
+      "conceptId": "questions-anei",
+      "id": "expand-07-7-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ke ʻai nei ______ ʻo Pualani?",
+      "support": "Ask whether Pualani is eating now.",
+      "answer": "anei",
+      "answerLanguage": "haw",
+      "explanation": "The actor is Pualani; the question asks for confirmation."
+    },
+    {
+      "skill": "questions",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Huneʻaʻau (anei)"
+        }
+      ],
+      "model": "Ke ʻai nei anei ʻo Pualani?",
+      "errorCategory": "questions",
+      "diagnosis": "The actor is Pualani; the question asks for confirmation.",
+      "conceptId": "questions-anei",
+      "id": "expand-07-7-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "Ask whether Pualani is eating now.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ke ʻai nei anei ʻo Pualani?",
+      "answerLanguage": "haw",
+      "explanation": "The actor is Pualani; the question asks for confirmation."
+    },
+    {
+      "id": "q-aha-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "What's that?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "He aha kēlā?",
+      "answerLanguage": "haw",
+      "model": "He aha kēlā?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "Do not reduce aha to a single fixed English word; its role depends on the whole question.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "q-hea-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Where is the teacher?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Aia ke kumu ma hea?",
+      "answerLanguage": "haw",
+      "model": "Aia ke kumu ma hea?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "The question word tells you what type of information the listener must supply.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "q-wai-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Who's the teacher?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "ʻO wai ke kumu?",
+      "answerLanguage": "haw",
+      "model": "ʻO wai ke kumu?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "Recognizing wai immediately narrows the expected answer to a person or identity.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "q-when-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "When will you come?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Āhea ʻoe e hele mai ai?",
+      "answerLanguage": "haw",
+      "model": "Āhea ʻoe e hele mai ai?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "Later you will contrast this with ināhea for past-time questions.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "q-when-past-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "When did you come?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Ināhea ʻoe i hele mai ai?",
+      "answerLanguage": "haw",
+      "model": "Ināhea ʻoe i hele mai ai?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "The question word itself helps establish the time orientation.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "q-ehia-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "How much money?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "ʻEhia kālā?",
+      "answerLanguage": "haw",
+      "model": "ʻEhia kālā?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "The listener should expect to answer with a quantity.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "q-anei-study-produce",
+      "type": "sentence-recall",
+      "skill": "questions",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Have you seen Keola?",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Ua ʻike anei ʻoe i Keola?",
+      "answerLanguage": "haw",
+      "model": "Ua ʻike anei ʻoe i Keola?",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)"
+        }
+      ],
+      "explanation": "The expected response is yes/no or equivalent confirmation, not a missing person/place/quantity.",
+      "errorCategory": "questions"
+    },
+    {
+      "id": "bridge-07",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Hear what a question requests",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Open Kulāiwi Lesson 1. Use the name-question discussion on transcript page 16. Listen for wai and identify the information being requested.",
+      "sourcePageUrl": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "audioSourceName": "Kamehameha Schools — Kulāiwi",
+      "listeningNotes": [
+        "Use the name-question discussion on transcript page 16. Listen for wai and identify the information being requested.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+          "section": "Official teaching source"
+        },
+        {
+          "url": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson01_Final.pdf#page=16",
+          "section": "Kulāiwi Lesson 1, transcript page 16"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary.",
+      "transcriptUrl": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson01_Final.pdf#page=16"
     }
   ]
 }

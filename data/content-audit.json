@@ -1,0 +1,1064 @@
+{
+  "checkedAt": "2026-10-27",
+  "status": "source-checked, not expert-reviewed",
+  "normalization": "Unicode ʻokina, NFC, capitalization and final punctuation only; older PDF font codes decoded. Short conventional language examples, not copied lesson prose.",
+  "forms": [
+    {
+      "form": "Ua hele ʻoe i ke kula?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele ʻo ia i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele lāua i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele lākou i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Hele ʻo ia me aʻu i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻike ʻo ia iaʻu i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Hele au me ia i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻike au iā ia i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele ʻo ia me kāua i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻike au iā lāua i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻike ʻo ia iā mākou i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele au me ʻoukou i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ke ao",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ka ua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ke keiki ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia nā keiki ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ka wahine ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia nā wāhine ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia he mau keiki ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia kekahi mau keiki ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia kaʻu mau keiki ma ʻō.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "He pua aha kēia?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua aha ʻoe?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E aha ana ʻoe?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "No hea mai ʻo ia?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Āhea e pau ai ka papa?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele ana anei ʻoe i Waimea?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ke ʻai nei anei ʻo Pualani?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kaʻu puke",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kaʻu keiki",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kaʻu ʻīlio",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu makuakāne",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu kaʻa",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu hoahānau",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu lio",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu manaʻo",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu hale",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kaʻu hale",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Hele au i ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele au i ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Kalaiwa au i ke kaʻa.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua kalaiwa au i ke kaʻa.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hana ana au i kēia manawa.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻai ʻo ia i ka poi.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua holoi au i nā pā.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ke hele aku nei au i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻAʻole au i hele aku i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ke kaʻa ma ʻaneʻi.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ke moe nei ʻo Keola i loko o ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ke keiki ma ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ʻo Kimo ma ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele ke keiki i ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻAʻole i hele ke keiki i ka hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻai mua ʻo ia.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻAi ʻo Lani i ka poi.",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻAʻole ʻai ʻo Lani i ka poi.",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele au i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele kāua i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele māua i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele kākou i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E hele mākou i ke kula.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele ʻolua i ke kula?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua hele ʻoukou i ke kula?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "E kamaʻilio ana au iā Kimo i nehinei.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; A Me; Incomplete Action; Personal pronouns",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ʻo ia me kona makuahine a me kona makua kāne.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; A Me; Incomplete Action; Personal pronouns",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ka hale",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "nā hale",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ke kao",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "nā kao",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "He aha kēlā?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ke kumu ma hea?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻO wai ke kumu?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Āhea ʻoe e hele mai ai?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ināhea ʻoe i hele mai ai?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻEhia kālā?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Ua ʻike anei ʻoe i Keola?",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "koʻu inoa",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kou kaʻa",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kāu ʻeke",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kāna kope",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "kā lākou ʻīlio",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ko māua makuakāne",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "Aia ʻo Kimo ma koʻu hale.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa",
+      "checkedAt": "2026-10-26",
+      "check": "Source-attested example; not expert reviewed."
+    },
+    {
+      "form": "ʻAʻole",
+      "url": "https://wehe.hilo.hawaii.edu/?q=ʻAʻole",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Hawaiʻi",
+      "url": "https://wehe.hilo.hawaii.edu/?q=Hawaiʻi",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻŌlelo Hawaiʻi",
+      "url": "https://wehe.hilo.hawaii.edu/?q=ʻŌlelo Hawaiʻi",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻAe",
+      "url": "https://wehe.hilo.hawaii.edu/?q=ʻAe",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻāina",
+      "url": "https://wehe.hilo.hawaii.edu/?q=ʻāina",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "kāne",
+      "url": "https://wehe.hilo.hawaii.edu/?q=kāne",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "mālama",
+      "url": "https://wehe.hilo.hawaii.edu/?q=mālama",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻōlelo",
+      "url": "https://wehe.hilo.hawaii.edu/?q=ʻōlelo",
+      "section": "Pukui–Elbert / Place Names entry",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Pāhoa",
+      "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+      "section": "Named audiogram",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Keaʻau",
+      "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+      "section": "Named audiogram",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Panaʻewa",
+      "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-hilo/",
+      "section": "Named audiogram",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻo Lani",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "i ka poi",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻAi",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ua hoʻi mai nei ke koa i Hawaiʻi",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi.",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "e hiki mai ana",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ua hoʻi mai nei",
+      "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "section": "Pepeke Painu; Warner, printed pages 8–9",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Hele",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ua hele",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Kalaiwa",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ua kalaiwa",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "E hana ana",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ua ʻai",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "i nā pā",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ke hele aku nei",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻAʻole au i",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "kāua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "māua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "kākou",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "mākou",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal, As Subject and After a Preposition",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻoe",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻo ia",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "lāua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "lākou",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "me aʻu",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "iaʻu",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "me ia",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "iā ia",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "me kāua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "iā lāua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "iā mākou",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "me ʻoukou",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Nā Papani: Personal — As Subject; After a Preposition or Object Marker",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ma ʻaneʻi",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "i loko o ka hale",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ke keiki",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ma ka hale",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻAʻole i hele",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "mua",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Locative Nouns; Sentence Types; mua / hope as time modifiers",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "nā",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ke",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ka",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "nā keiki",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ka wahine",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "nā wāhine",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "he mau keiki",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "kekahi mau keiki",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "kaʻu mau keiki",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Plurals; Ka, Ke, Nā (Definite)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "āhea",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Āhea / Ināhea; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "aha",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "No hea mai",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Āhea",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "anei",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Interrogative; Huneʻaʻau (anei)",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "kaʻu",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "koʻu",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Aia ke kumu i Honolulu.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Sentence components; Nā Papani; Articles",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "ʻAʻole au me Keola.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Sentence components; Nā Papani; Articles",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    },
+    {
+      "form": "Ke ʻai nei māua ʻo Keola.",
+      "url": "https://hawaiian-grammar.org/current/",
+      "section": "Sentence components; Nā Papani; Articles",
+      "checkedAt": "2026-10-27",
+      "check": "Source example or extracted form from the referenced example; not educator-reviewed."
+    }
+  ]
+}

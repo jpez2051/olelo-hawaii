@@ -10,14 +10,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="ʻŌlelo Hawaiʻi">
   <title>ʻŌlelo Hawaiʻi — Learn to use the language</title>
-  <link rel="stylesheet" href="./css/app.css?v=7.0.0">
+  <link rel="stylesheet" href="./css/app.css?v=7.1.0">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <p class="eyebrow" lang="haw">E ola ka ʻōlelo Hawaiʻi</p>
       <h1 lang="haw">ʻŌlelo Hawaiʻi</h1>
-      <p class="subtitle">Build accurate pronunciation, listening, memory, and whole-message Hawaiian comprehension.</p>
+      <p class="subtitle">Build understanding, listening, memory, and the ability to follow connected Hawaiian meaning.</p>
     </div>
   </header>
 
@@ -34,14 +34,16 @@
         <div>
           <p class="section-kicker">Your path</p>
           <h2 id="learn-title">Build the language in stages</h2>
-          <p>Start by learning how Hawaiian spelling carries sound, then build pronouns, noun phrases, action patterns, questions, possession, and whole-sentence comprehension. Hints fade as evidence gets stronger, and familiar grammar returns in new sourced contexts.</p>
+          <p>Build from sound and spelling into pronouns, noun phrases, action patterns, questions, possession, and mixed whole-sentence comprehension. The same grammar returns in new contexts so you learn meaning relationships instead of memorizing isolated answers.</p>
         </div>
         <button id="start-due-btn" class="primary-btn">Practice what’s due</button>
       </div>
 
+      <div class="support-preference"><label for="support-mode">Reading support</label> <select id="support-mode"><option value="auto">Fade English after independent recall</option><option value="full">Always show English</option><option value="hawaiian">Hawaiian first · tap for English</option></select><p>Translation support remains available. Practice never hides the question you need to answer.</p></div>
       <div id="stage-list" class="stage-list" aria-label="Learning stages"></div>
       <div id="curriculum-status" class="status-line" role="status">Loading curriculum…</div>
       <div id="unit-list" class="unit-list"></div>
+      <details class="learning-help"><summary>Vocabulary that connects the lessons</summary><div id="vocabulary-families"></div></details>
     </section>
 
     <section id="view-immerse" class="view" aria-labelledby="immerse-title">
@@ -73,26 +75,10 @@
             <span id="activity-focus" class="muted"></span>
           </div>
 
+          <p id="session-position" class="muted" role="status"></p>
           <p id="instruction" class="instruction"></p>
           <div id="prompt" class="prompt"></div>
           <p id="support" class="support-text"></p>
-
-          <details id="sound-guide-panel" class="sound-guide" hidden>
-            <summary>Sound guide</summary>
-            <div id="sound-guide-content"></div>
-          </details>
-
-          <div id="pronunciation-panel" class="pronunciation-panel" hidden>
-            <p class="study-label">Pronunciation foundation</p>
-            <div id="pronunciation-source" class="pronunciation-source" lang="haw"></div>
-            <div class="sentence-pattern-heading">
-              <p class="study-label">What to notice</p>
-              <span id="pronunciation-rule" class="tag"></span>
-            </div>
-            <ul id="pronunciation-notes" class="study-notes"></ul>
-            <p id="pronunciation-language-note" class="sentence-note"></p>
-            <button id="pronunciation-continue-btn" class="primary-btn" type="button">Continue</button>
-          </div>
 
           <div id="choice-panel" class="choice-panel" hidden>
             <p class="study-label">Check your understanding</p>
@@ -106,10 +92,11 @@
           <div id="sentence-panel" class="sentence-panel" hidden>
             <p class="study-label">Sentence</p>
             <div id="sentence-text" class="sentence-text" lang="haw"></div>
-            <div class="sentence-meaning">
-              <span>Natural English</span>
+            <details id="sentence-meaning-details" class="sentence-meaning" open>
+              <summary>Meaning &amp; explanation</summary>
               <strong id="sentence-english"></strong>
-            </div>
+            </details>
+            <a id="foundation-listen" class="secondary-link" target="_blank" rel="noopener noreferrer" hidden>Open trusted pronunciation teaching</a>
             <div class="sentence-pattern-heading">
               <p class="study-label">See the pattern</p>
               <span id="sentence-pattern-name" class="tag"></span>
@@ -130,10 +117,16 @@
             <p class="study-label">While you listen</p>
             <ul id="listening-notes" class="study-notes"></ul>
             <div class="practice-actions">
+              <button id="listening-skip-btn" class="secondary-btn" type="button">Skip for now</button>
               <button id="listening-continue-btn" class="primary-btn" type="button" disabled>Continue after listening</button>
               <a id="listening-source-link" class="secondary-link" href="#" target="_blank" rel="noopener noreferrer">Open official audio</a>
             </div>
-            <p class="exposure-note">Listening exposure is recorded separately from scored practice.</p>
+            <p id="listening-status" class="exposure-note" role="status"></p>
+            <a id="listening-transcript" target="_blank" rel="noopener noreferrer" hidden>Open the matching transcript passage</a>
+            <label for="listening-replay-stage">Listening step</label>
+            <select id="listening-replay-stage"><option value="first">First listen</option><option value="support">Compared with source text</option><option value="hidden">Replayed without text</option></select>
+            <label class="listening-confirm"><input id="listening-confirm" type="checkbox"> I completed this listening step</label>
+            <p class="exposure-note">Self-reported exposure only. Returns after 24 hours are recorded separately.</p>
           </div>
 
           <div id="study-panel" class="study-panel" hidden>
@@ -172,6 +165,9 @@
             </div>
           </div>
 
+          <details id="sound-guide" class="learning-help" hidden><summary>Sound guide</summary><div id="sound-guide-body"></div></details>
+          <details id="model-help" class="learning-help" hidden><summary>Show the taught model · counts as support</summary><p id="model-help-text" lang="haw"></p></details>
+          <details id="source-details" class="learning-help"><summary>Source &amp; review · opening counts as support</summary><p>Source-checked, not educator-reviewed. These are taught-model checks, not judgments of every possible translation.</p><ul id="activity-sources"></ul></details>
           <div id="feedback" class="feedback" hidden aria-live="polite"></div>
           <div id="retry-actions" class="retry-actions" hidden>
             <p>Use the correction, hide it, and try once more. The miss still stays in later review.</p>
@@ -186,6 +182,9 @@
         <p class="section-kicker">What is sticking</p>
         <h2 id="progress-title">Progress</h2>
         <div id="progress-summary" class="progress-grid"></div>
+        <h3>What the evidence shows</h3><div id="evidence-summary" class="progress-grid"></div>
+        <p>Earlier progress is preserved. Evidence categories begin with Version 7.1. Recognition, help, and immediate retries do not establish independent production. Delayed production means an unaided correct answer at least 24 hours after the previous attempt.</p>
+        <p id="listening-evidence"></p>
       </div>
 
       <div class="panel">
@@ -208,8 +207,8 @@
       </div>
 
       <div class="panel">
-        <h3>Mastery means more than recognition</h3>
-        <p>Scored practice separates spelling, pronunciation, pronouns/participants, noun phrases, sentence patterns, questions, possession, and whole-sentence comprehension. Recognition counts as weaker evidence than unaided recall or transfer in a new context; Immersion remains unscored exposure.</p>
+        <h3>Remembering needs stronger evidence</h3>
+        <p>Scored practice separates spelling, pronouns/participants, noun phrases, sentence patterns, questions, possession, and whole-sentence comprehension. Mixed checkpoints test whether those skills transfer across contexts; Immersion remains unscored exposure.</p>
         <div class="data-actions">
           <button id="export-btn" class="secondary-btn">Export progress</button>
           <button id="reset-btn" class="danger-btn">Reset local progress</button>
@@ -220,7 +219,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 7.0.0</span>
+    <span class="site-version">Version 7.1.0</span>
   </footer>
 
   <script>
@@ -236,6 +235,6 @@
       }, true);
     })();
   </script>
-  <script type="module" src="./js/app.js?v=7.0.0"></script>
+  <script type="module" src="./js/app.js?v=7.1.0"></script>
 </body>
 </html>

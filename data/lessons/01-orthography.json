@@ -57,7 +57,14 @@
       "support": "Restore the two missing ʻokina.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
-      "explanation": "ʻAʻole has two ʻokina: one at the beginning and one between A and o. It does not use a kahakō."
+      "explanation": "ʻAʻole has two ʻokina: one at the beginning and one between A and o. It does not use a kahakō.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻAʻole",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-aole-study",
@@ -75,7 +82,14 @@
       "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "ʻAʻole",
       "answerLanguage": "haw",
-      "explanation": "You recalled the spelling after the word disappeared instead of copying it while it was visible."
+      "explanation": "You recalled the spelling after the word disappeared instead of copying it while it was visible.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻAʻole",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-hawaii-repair",
@@ -86,7 +100,14 @@
       "support": "Restore the missing ʻokina.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "Hawaiʻi has an ʻokina before the final i. The ʻokina is part of the spelling."
+      "explanation": "Hawaiʻi has an ʻokina before the final i. The ʻokina is part of the spelling.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=Hawaiʻi",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-hawaii-study",
@@ -104,7 +125,14 @@
       "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "The goal is to remember where the ʻokina belongs, not simply recognize it when it is shown."
+      "explanation": "The goal is to remember where the ʻokina belongs, not simply recognize it when it is shown.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=Hawaiʻi",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-olelo-repair",
@@ -115,7 +143,14 @@
       "support": "Restore the missing ʻokina and kahakō.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "ʻŌlelo begins with an ʻokina and Ō has a kahakō. Hawaiʻi has an ʻokina before the final i."
+      "explanation": "ʻŌlelo begins with an ʻokina and Ō has a kahakō. Hawaiʻi has an ʻokina before the final i.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻŌlelo Hawaiʻi",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-olelo-study",
@@ -134,7 +169,14 @@
       "paperInstruction": "Write the phrase you just studied three times on paper from memory. Circle each ʻokina and underline the kahakō each time.",
       "answer": "ʻŌlelo Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "Writing, speaking, and then typing the phrase helps you remember the exact spelling instead of copying it."
+      "explanation": "Writing, speaking, and then typing the phrase helps you remember the exact spelling instead of copying it.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻŌlelo Hawaiʻi",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-ae-recall",
@@ -145,7 +187,14 @@
       "support": "Type the Hawaiian word accurately.",
       "answer": "ʻAe",
       "answerLanguage": "haw",
-      "explanation": "ʻAe begins with an ʻokina."
+      "explanation": "ʻAe begins with an ʻokina.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻAe",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-aina-repair",
@@ -156,7 +205,14 @@
       "support": "Restore the ʻokina and kahakō for ʻāina.",
       "answer": "ʻāina",
       "answerLanguage": "haw",
-      "explanation": "ʻĀina means land or earth. It begins with an ʻokina and the a carries a kahakō."
+      "explanation": "ʻĀina means land or earth. It begins with an ʻokina and the a carries a kahakō.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻāina",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-aina-study",
@@ -174,7 +230,14 @@
       "paperInstruction": "Write the word you just studied three times on paper from memory. Say it aloud each time.",
       "answer": "ʻāina",
       "answerLanguage": "haw",
-      "explanation": "The spelling of ʻāina includes both an initial ʻokina and ā."
+      "explanation": "The spelling of ʻāina includes both an initial ʻokina and ā.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻāina",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-kane-repair",
@@ -185,7 +248,14 @@
       "support": "For the word meaning male or husband, restore the missing kahakō.",
       "answer": "kāne",
       "answerLanguage": "haw",
-      "explanation": "Kāne uses a kahakō over the a."
+      "explanation": "Kāne uses a kahakō over the a.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=kāne",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-kane-study",
@@ -203,7 +273,14 @@
       "paperInstruction": "Write the word three times from memory. Underline the vowel with the kahakō each time.",
       "answer": "kāne",
       "answerLanguage": "haw",
-      "explanation": "Kāne is written with ā."
+      "explanation": "Kāne is written with ā.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=kāne",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-malama-repair",
@@ -214,7 +291,14 @@
       "support": "For the word meaning to care for or take care of, restore the missing kahakō.",
       "answer": "mālama",
       "answerLanguage": "haw",
-      "explanation": "Mālama begins with mā. The Pukui-Elbert entry includes meanings such as take care of, tend, preserve, and protect."
+      "explanation": "Mālama begins with mā. The Pukui-Elbert entry includes meanings such as take care of, tend, preserve, and protect.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=mālama",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-malama-study",
@@ -232,7 +316,14 @@
       "paperInstruction": "Write the word three times from memory. Underline the ā each time.",
       "answer": "mālama",
       "answerLanguage": "haw",
-      "explanation": "Mālama has a kahakō on the first a."
+      "explanation": "Mālama has a kahakō on the first a.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=mālama",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-olelo-word-repair",
@@ -243,7 +334,14 @@
       "support": "Restore the missing ʻokina and kahakō.",
       "answer": "ʻōlelo",
       "answerLanguage": "haw",
-      "explanation": "ʻŌlelo begins with an ʻokina and ō. Pukui-Elbert includes language, speech, word, speak, and say among its meanings."
+      "explanation": "ʻŌlelo begins with an ʻokina and ō. Pukui-Elbert includes language, speech, word, speak, and say among its meanings.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻōlelo",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-olelo-word-recall",
@@ -254,7 +352,14 @@
       "support": "Type the source-checked Hawaiian word accurately.",
       "answer": "ʻōlelo",
       "answerLanguage": "haw",
-      "explanation": "ʻŌlelo is written with an initial ʻokina and ō."
+      "explanation": "ʻŌlelo is written with an initial ʻokina and ō.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻōlelo",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-pahoa-repair",
@@ -265,7 +370,14 @@
       "support": "Restore the missing kahakō in the UH Hilo Inoa Matters spelling.",
       "answer": "Pāhoa",
       "answerLanguage": "haw",
-      "explanation": "UH Hilo's Inoa Matters series writes the Puna place name as Pāhoa, with a kahakō over the first a."
+      "explanation": "UH Hilo's Inoa Matters series writes the Puna place name as Pāhoa, with a kahakō over the first a.",
+      "sourceRefs": [
+        {
+          "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+          "section": "Named audiogram"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-keaau-repair",
@@ -276,7 +388,14 @@
       "support": "Restore the missing ʻokina.",
       "answer": "Keaʻau",
       "answerLanguage": "haw",
-      "explanation": "UH Hilo's Inoa Matters series writes the Puna place name as Keaʻau, with an ʻokina before the final au."
+      "explanation": "UH Hilo's Inoa Matters series writes the Puna place name as Keaʻau, with an ʻokina before the final au.",
+      "sourceRefs": [
+        {
+          "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+          "section": "Named audiogram"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-panaewa-repair",
@@ -287,7 +406,14 @@
       "support": "Restore the missing ʻokina.",
       "answer": "Panaʻewa",
       "answerLanguage": "haw",
-      "explanation": "UH Hilo's Inoa Matters series writes the Hilo place name as Panaʻewa, with an ʻokina between a and e."
+      "explanation": "UH Hilo's Inoa Matters series writes the Hilo place name as Panaʻewa, with an ʻokina between a and e.",
+      "sourceRefs": [
+        {
+          "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-hilo/",
+          "section": "Named audiogram"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-aina-meaning-recall",
@@ -298,7 +424,14 @@
       "support": "Type the source-checked Hawaiian word from memory.",
       "answer": "ʻāina",
       "answerLanguage": "haw",
-      "explanation": "ʻĀina is a source-checked word for land or earth. This time you had to retrieve the spelling without seeing a damaged version first."
+      "explanation": "ʻĀina is a source-checked word for land or earth. This time you had to retrieve the spelling without seeing a damaged version first.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=ʻāina",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-kane-meaning-recall",
@@ -309,7 +442,14 @@
       "support": "Type the source-checked Hawaiian word from memory.",
       "answer": "kāne",
       "answerLanguage": "haw",
-      "explanation": "Kāne includes a kahakō over the a."
+      "explanation": "Kāne includes a kahakō over the a.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=kāne",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
     },
     {
       "id": "ortho-malama-meaning-recall",
@@ -320,7 +460,45 @@
       "support": "Type the source-checked Hawaiian word from memory.",
       "answer": "mālama",
       "answerLanguage": "haw",
-      "explanation": "Mālama begins with mā. This recall step removes the misspelled-word cue used in the repair activity."
+      "explanation": "Mālama begins with mā. This recall step removes the misspelled-word cue used in the repair activity.",
+      "sourceRefs": [
+        {
+          "url": "https://wehe.hilo.hawaii.edu/?q=mālama",
+          "section": "Pukui–Elbert / Place Names entry"
+        }
+      ],
+      "errorCategory": "spelling"
+    },
+    {
+      "id": "bridge-01",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Hear the place names you can spell",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Choose the Keaʻau or Pāhoa audiogram.",
+      "sourcePageUrl": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+      "audioSourceName": "UH Hilo — Inoa Matters",
+      "listeningNotes": [
+        "Listen first, compare the spelling, then repeat without looking.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://hilo.hawaii.edu/blog/kaleookauluau/inoa-matters-moku-of-puna/",
+          "section": "Official teaching source"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary."
     }
-  ]
+  ],
+  "sourceReview": {
+    "reviewedAt": "2026-10-27",
+    "sources": [
+      "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/",
+      "https://wehe.hilo.hawaii.edu/"
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
+  }
 }

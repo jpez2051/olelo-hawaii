@@ -10,14 +10,12 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-09-25",
-    "notes": "Examples and verbal-marker forms are taken from UH Maui College's Pepeke Painu page. The lesson now progresses from recognition to partial and full typed recall while keeping all Hawaiian sentences source-grounded.",
+    "reviewedAt": "2026-10-27",
     "sources": [
-      "https://ehooululahui.maui.hawaii.edu/?page_id=1132",
-      "https://wehe.hilo.hawaii.edu/?q=%CA%BBai",
-      "https://wehe.hilo.hawaii.edu/?q=poi",
-      "https://wehe.hilo.hawaii.edu/?q=%CA%BB%C5%8D-"
-    ]
+      "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+      "https://hawaiian-grammar.org/current/"
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
   },
   "activities": [
     {
@@ -50,7 +48,14 @@
         }
       ],
       "languageNote": "For now, notice the shape: Action → Who → What. The Hawaiian sentence does not need to copy English word order.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-who-check",
@@ -67,7 +72,14 @@
       ],
       "answer": "ʻo Lani",
       "answerLanguage": "haw",
-      "explanation": "In this example, ʻo Lani identifies Lani as the person doing the action."
+      "explanation": "In this example, ʻo Lani identifies Lani as the person doing the action.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-what-check",
@@ -84,7 +96,14 @@
       ],
       "answer": "i ka poi",
       "answerLanguage": "haw",
-      "explanation": "In this example, i ka poi identifies what the action is directed toward."
+      "explanation": "In this example, i ka poi identifies what the action is directed toward.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-action-check",
@@ -101,7 +120,14 @@
       ],
       "answer": "ʻAi",
       "answerLanguage": "haw",
-      "explanation": "ʻAi is the action at the beginning of this example."
+      "explanation": "ʻAi is the action at the beginning of this example.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-negative-study",
@@ -133,7 +159,14 @@
         }
       ],
       "languageNote": "At this stage, the goal is recognition: see the contrast between the two sourced sentences before trying to generate negative sentences yourself.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-negative-choice",
@@ -149,7 +182,14 @@
       ],
       "answer": "ʻAʻole ʻai ʻo Lani i ka poi.",
       "answerLanguage": "haw",
-      "explanation": "The negative example begins with ʻAʻole: ʻAʻole ʻai ʻo Lani i ka poi."
+      "explanation": "The negative example begins with ʻAʻole: ʻAʻole ʻai ʻo Lani i ka poi.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-order-choice",
@@ -166,7 +206,14 @@
       ],
       "answer": "Action → Who → What",
       "answerLanguage": "en",
-      "explanation": "For this sourced example, the lesson breaks the sentence into Action → Who → What."
+      "explanation": "For this sourced example, the lesson breaks the sentence into Action → Who → What.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-ua-marker",
@@ -183,7 +230,14 @@
       ],
       "answer": "Ua hoʻi mai nei ke koa i Hawaiʻi",
       "answerLanguage": "haw",
-      "explanation": "UH Maui College gives “Ua hoʻi mai nei ke koa i Hawaiʻi” as an example under the Pepeke Painu verbal-marker section."
+      "explanation": "UH Maui College gives “Ua hoʻi mai nei ke koa i Hawaiʻi” as an example under the Pepeke Painu verbal-marker section.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-e-ana-marker",
@@ -200,7 +254,14 @@
       ],
       "answer": "ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi.",
       "answerLanguage": "haw",
-      "explanation": "In the UH Maui College example, e comes before hiki and ana follows it: e hiki mai ana."
+      "explanation": "In the UH Maui College example, e comes before hiki and ana follows it: e hiki mai ana.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-e-ana-parts",
@@ -217,7 +278,14 @@
       ],
       "answer": "e ... ana",
       "answerLanguage": "en",
-      "explanation": "The example contains e hiki mai ana, so the visible marker pair is e ... ana."
+      "explanation": "The example contains e hiki mai ana, so the visible marker pair is e ... ana.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-lani-full-recall",
@@ -229,7 +297,14 @@
       "support": "Type the complete Hawaiian sentence you studied. No choices this time.",
       "answer": "ʻAi ʻo Lani i ka poi.",
       "answerLanguage": "haw",
-      "explanation": "The sourced sentence is ʻAi ʻo Lani i ka poi. This step checks whether you can produce the whole form after the recognition exercises."
+      "explanation": "The sourced sentence is ʻAi ʻo Lani i ka poi. This step checks whether you can produce the whole form after the recognition exercises.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-negative-full-recall",
@@ -241,7 +316,14 @@
       "support": "Type the complete Hawaiian sentence you studied.",
       "answer": "ʻAʻole ʻai ʻo Lani i ka poi.",
       "answerLanguage": "haw",
-      "explanation": "The sourced negative sentence is ʻAʻole ʻai ʻo Lani i ka poi."
+      "explanation": "The sourced negative sentence is ʻAʻole ʻai ʻo Lani i ka poi.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-eana-partial-recall",
@@ -253,7 +335,14 @@
       "support": "Type only the missing words from the sourced UH Maui College example.",
       "answer": "e hiki mai ana",
       "answerLanguage": "haw",
-      "explanation": "The complete sourced example is ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi. The missing chunk is e hiki mai ana."
+      "explanation": "The complete sourced example is ʻApōpō, e hiki mai ana ka mokulele i ka hola ʻumi. The missing chunk is e hiki mai ana.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
     },
     {
       "id": "sentence-painu-ua-partial-recall",
@@ -265,7 +354,699 @@
       "support": "Type the missing beginning from the UH Maui College example.",
       "answer": "Ua hoʻi mai nei",
       "answerLanguage": "haw",
-      "explanation": "The sourced example is Ua hoʻi mai nei ke koa i Hawaiʻi."
+      "explanation": "The sourced example is Ua hoʻi mai nei ke koa i Hawaiʻi.",
+      "sourceRefs": [
+        {
+          "url": "https://maui.hawaii.edu/wp-content/uploads/2018/08/HwnLangK_1Guid.pdf",
+          "section": "Pepeke Painu; Warner, printed pages 8–9"
+        }
+      ],
+      "errorCategory": "sentence-patterns"
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Hele au i ka hale.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "An unmarked action can describe a habit.",
+      "conceptId": "sentence-patterns-hele",
+      "id": "expand-03-1-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Hele au i ka hale.",
+      "naturalEnglish": "I go to the house, as a regular activity.",
+      "patternName": "Connected practice",
+      "patternIntro": "An unmarked action can describe a habit.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Hele",
+          "note": "An unmarked action can describe a habit."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Hele au i ka hale.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "An unmarked action can describe a habit.",
+      "conceptId": "sentence-patterns-hele",
+      "id": "expand-03-1-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ au i ka hale.",
+      "support": "I go to the house, as a regular activity.",
+      "answer": "Hele",
+      "answerLanguage": "haw",
+      "explanation": "An unmarked action can describe a habit."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Hele au i ka hale.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "An unmarked action can describe a habit.",
+      "conceptId": "sentence-patterns-hele",
+      "id": "expand-03-1-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I go to the house, as a regular activity.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Hele au i ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "An unmarked action can describe a habit."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua hele au i ka hale.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "ua marks a completed action here.",
+      "conceptId": "sentence-patterns-ua hele",
+      "id": "expand-03-2-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua hele au i ka hale.",
+      "naturalEnglish": "I went to the house.",
+      "patternName": "Connected practice",
+      "patternIntro": "ua marks a completed action here.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Ua hele",
+          "note": "ua marks a completed action here."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua hele au i ka hale.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "ua marks a completed action here.",
+      "conceptId": "sentence-patterns-ua hele",
+      "id": "expand-03-2-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ au i ka hale.",
+      "support": "I went to the house.",
+      "answer": "Ua hele",
+      "answerLanguage": "haw",
+      "explanation": "ua marks a completed action here."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua hele au i ka hale.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "ua marks a completed action here.",
+      "conceptId": "sentence-patterns-ua hele",
+      "id": "expand-03-2-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I went to the house.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua hele au i ka hale.",
+      "answerLanguage": "haw",
+      "explanation": "ua marks a completed action here."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Kalaiwa au i ke kaʻa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "This habitual action is unmarked.",
+      "conceptId": "sentence-patterns-kalaiwa",
+      "id": "expand-03-3-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Kalaiwa au i ke kaʻa.",
+      "naturalEnglish": "I drive the car, as a regular activity.",
+      "patternName": "Connected practice",
+      "patternIntro": "This habitual action is unmarked.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Kalaiwa",
+          "note": "This habitual action is unmarked."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Kalaiwa au i ke kaʻa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "This habitual action is unmarked.",
+      "conceptId": "sentence-patterns-kalaiwa",
+      "id": "expand-03-3-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ au i ke kaʻa.",
+      "support": "I drive the car, as a regular activity.",
+      "answer": "Kalaiwa",
+      "answerLanguage": "haw",
+      "explanation": "This habitual action is unmarked."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Kalaiwa au i ke kaʻa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "This habitual action is unmarked.",
+      "conceptId": "sentence-patterns-kalaiwa",
+      "id": "expand-03-3-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I drive the car, as a regular activity.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Kalaiwa au i ke kaʻa.",
+      "answerLanguage": "haw",
+      "explanation": "This habitual action is unmarked."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua kalaiwa au i ke kaʻa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The completed action begins with ua.",
+      "conceptId": "sentence-patterns-ua kalaiwa",
+      "id": "expand-03-4-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua kalaiwa au i ke kaʻa.",
+      "naturalEnglish": "I drove the car.",
+      "patternName": "Connected practice",
+      "patternIntro": "The completed action begins with ua.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Ua kalaiwa",
+          "note": "The completed action begins with ua."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua kalaiwa au i ke kaʻa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The completed action begins with ua.",
+      "conceptId": "sentence-patterns-ua kalaiwa",
+      "id": "expand-03-4-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ au i ke kaʻa.",
+      "support": "I drove the car.",
+      "answer": "Ua kalaiwa",
+      "answerLanguage": "haw",
+      "explanation": "The completed action begins with ua."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua kalaiwa au i ke kaʻa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The completed action begins with ua.",
+      "conceptId": "sentence-patterns-ua kalaiwa",
+      "id": "expand-03-4-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I drove the car.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua kalaiwa au i ke kaʻa.",
+      "answerLanguage": "haw",
+      "explanation": "The completed action begins with ua."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "E hana ana au i kēia manawa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The time phrase supplies present context; e ... ana alone is not just future.",
+      "conceptId": "sentence-patterns-e hana ana",
+      "id": "expand-03-5-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "E hana ana au i kēia manawa.",
+      "naturalEnglish": "I am working at this time.",
+      "patternName": "Connected practice",
+      "patternIntro": "The time phrase supplies present context; e ... ana alone is not just future.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "E hana ana",
+          "note": "The time phrase supplies present context; e ... ana alone is not just future."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "E hana ana au i kēia manawa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The time phrase supplies present context; e ... ana alone is not just future.",
+      "conceptId": "sentence-patterns-e hana ana",
+      "id": "expand-03-5-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ au i kēia manawa.",
+      "support": "I am working at this time.",
+      "answer": "E hana ana",
+      "answerLanguage": "haw",
+      "explanation": "The time phrase supplies present context; e ... ana alone is not just future."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "E hana ana au i kēia manawa.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The time phrase supplies present context; e ... ana alone is not just future.",
+      "conceptId": "sentence-patterns-e hana ana",
+      "id": "expand-03-5-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I am working at this time.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "E hana ana au i kēia manawa.",
+      "answerLanguage": "haw",
+      "explanation": "The time phrase supplies present context; e ... ana alone is not just future."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua ʻai ʻo ia i ka poi.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "Track the completed action, actor, and food separately.",
+      "conceptId": "sentence-patterns-ua ʻai",
+      "id": "expand-03-6-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua ʻai ʻo ia i ka poi.",
+      "naturalEnglish": "He or she ate the poi.",
+      "patternName": "Connected practice",
+      "patternIntro": "Track the completed action, actor, and food separately.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Ua ʻai",
+          "note": "Track the completed action, actor, and food separately."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua ʻai ʻo ia i ka poi.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "Track the completed action, actor, and food separately.",
+      "conceptId": "sentence-patterns-ua ʻai",
+      "id": "expand-03-6-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ʻo ia i ka poi.",
+      "support": "He or she ate the poi.",
+      "answer": "Ua ʻai",
+      "answerLanguage": "haw",
+      "explanation": "Track the completed action, actor, and food separately."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua ʻai ʻo ia i ka poi.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "Track the completed action, actor, and food separately.",
+      "conceptId": "sentence-patterns-ua ʻai",
+      "id": "expand-03-6-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "He or she ate the poi.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua ʻai ʻo ia i ka poi.",
+      "answerLanguage": "haw",
+      "explanation": "Track the completed action, actor, and food separately."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua holoi au i nā pā.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The object is plural; au is the person washing.",
+      "conceptId": "sentence-patterns-i nā pā",
+      "id": "expand-03-7-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ua holoi au i nā pā.",
+      "naturalEnglish": "I washed the dishes.",
+      "patternName": "Connected practice",
+      "patternIntro": "The object is plural; au is the person washing.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "i nā pā",
+          "note": "The object is plural; au is the person washing."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua holoi au i nā pā.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The object is plural; au is the person washing.",
+      "conceptId": "sentence-patterns-i nā pā",
+      "id": "expand-03-7-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Ua holoi au ______.",
+      "support": "I washed the dishes.",
+      "answer": "i nā pā",
+      "answerLanguage": "haw",
+      "explanation": "The object is plural; au is the person washing."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ua holoi au i nā pā.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The object is plural; au is the person washing.",
+      "conceptId": "sentence-patterns-i nā pā",
+      "id": "expand-03-7-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I washed the dishes.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ua holoi au i nā pā.",
+      "answerLanguage": "haw",
+      "explanation": "The object is plural; au is the person washing."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ke hele aku nei au i ke kula.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "ke ... nei marks the ongoing action here.",
+      "conceptId": "sentence-patterns-ke hele aku nei",
+      "id": "expand-03-8-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Ke hele aku nei au i ke kula.",
+      "naturalEnglish": "I am going to school right now.",
+      "patternName": "Connected practice",
+      "patternIntro": "ke ... nei marks the ongoing action here.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "Ke hele aku nei",
+          "note": "ke ... nei marks the ongoing action here."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ke hele aku nei au i ke kula.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "ke ... nei marks the ongoing action here.",
+      "conceptId": "sentence-patterns-ke hele aku nei",
+      "id": "expand-03-8-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ au i ke kula.",
+      "support": "I am going to school right now.",
+      "answer": "Ke hele aku nei",
+      "answerLanguage": "haw",
+      "explanation": "ke ... nei marks the ongoing action here."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "Ke hele aku nei au i ke kula.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "ke ... nei marks the ongoing action here.",
+      "conceptId": "sentence-patterns-ke hele aku nei",
+      "id": "expand-03-8-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I am going to school right now.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Ke hele aku nei au i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "ke ... nei marks the ongoing action here."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "ʻAʻole au i hele aku i ke kula.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The pronoun follows the negative; i marks this completed-action negative.",
+      "conceptId": "sentence-patterns-ʻaʻole au i",
+      "id": "expand-03-9-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "ʻAʻole au i hele aku i ke kula.",
+      "naturalEnglish": "I did not go to school.",
+      "patternName": "Connected practice",
+      "patternIntro": "The pronoun follows the negative; i marks this completed-action negative.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ʻAʻole au i",
+          "note": "The pronoun follows the negative; i marks this completed-action negative."
+        }
+      ]
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "ʻAʻole au i hele aku i ke kula.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The pronoun follows the negative; i marks this completed-action negative.",
+      "conceptId": "sentence-patterns-ʻaʻole au i",
+      "id": "expand-03-9-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ hele aku i ke kula.",
+      "support": "I did not go to school.",
+      "answer": "ʻAʻole au i",
+      "answerLanguage": "haw",
+      "explanation": "The pronoun follows the negative; i marks this completed-action negative."
+    },
+    {
+      "skill": "sentence-patterns",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Simple Verbal Sentences: Habitual / Completed / Incomplete / Happening Right Now; Pepeke Painu Hōʻole; Kālele ʻĀkena comparison"
+        }
+      ],
+      "model": "ʻAʻole au i hele aku i ke kula.",
+      "errorCategory": "sentence-patterns",
+      "diagnosis": "The pronoun follows the negative; i marks this completed-action negative.",
+      "conceptId": "sentence-patterns-ʻaʻole au i",
+      "id": "expand-03-9-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "I did not go to school.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "ʻAʻole au i hele aku i ke kula.",
+      "answerLanguage": "haw",
+      "explanation": "The pronoun follows the negative; i marks this completed-action negative."
+    },
+    {
+      "id": "bridge-03",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Hear actions in context",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Open Kulāiwi Lesson 3. Follow the school vignette: identify an action, its participant, and the food or place mentioned.",
+      "sourcePageUrl": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "audioSourceName": "Kamehameha Schools — Kulāiwi",
+      "listeningNotes": [
+        "Follow the school vignette: identify an action, its participant, and the food or place mentioned.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+          "section": "Official teaching source"
+        },
+        {
+          "url": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson03_Final.pdf#page=3",
+          "section": "Kulāiwi Lesson 3, transcript page 3"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary.",
+      "transcriptUrl": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson03_Final.pdf#page=3"
     }
   ]
 }

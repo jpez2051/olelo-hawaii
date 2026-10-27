@@ -1,132 +1,123 @@
 {
   "schemaVersion": 1,
   "id": "pronunciation-01",
-  "title": "Pronunciation Foundations: Read What You Hear",
-  "description": "Learn the sound rules carried by Hawaiian spelling so the words you rehearse in your head match what you are more likely to recognize in speech.",
+  "title": "Read the Sounds",
   "focus": [
     "pronunciation",
-    "listening",
-    "orthography"
+    "listening"
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-26",
-    "notes": "Pronunciation rules are taken from UH and the modern Reference Grammar. Learner help describes Hawaiian sound cues rather than replacing Hawaiian spelling with English-style respelling.",
+    "reviewedAt": "2026-10-27",
     "sources": [
-      "https://www.hawaii.edu/site/info/diacritics.php",
       "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/",
-      "https://hawaiian-grammar.org/current/"
-    ]
+      "https://kaiwakiloumoku.ksbe.edu/article/essays-noho-pono-i-ka-ihu-tips-from-a-hawaiian-language-judge",
+      "https://oleloonline.com/0400-series-index/"
+    ],
+    "notes": "Original concise explanations grounded in UH, Kīhei de Silva, and Kaliko Trapp teaching. Written checks assess knowledge, not spoken pronunciation."
   },
   "activities": [
     {
       "id": "pron-vowels",
-      "type": "pronunciation-study",
+      "type": "foundation-study",
       "skill": "pronunciation",
       "scored": false,
-      "instruction": "Build a stable vowel map.",
-      "prompt": "a · e · i · o · u",
-      "support": "Hawaiian vowel qualities are much more stable than English spelling.",
-      "sourceText": "a e i o u",
-      "ruleTitle": "Five core vowels",
-      "soundNotes": [
-        "a — like the a in above",
-        "e — like e in bet",
-        "i — like the final y in city",
-        "o — like o in sole, but without the English off-glide",
-        "u — like oo in moon, without an added off-glide"
+      "prompt": "Five vowel letters",
+      "sentence": "a e i o u",
+      "naturalEnglish": "Keep the vowel sounds clear. Hawaiian vowel length is a sound contrast, not the English distinction between “long a” and “short a.” Learn the vowel qualities by listening and repeating.",
+      "patternIntro": "Hear the sound in a trusted teaching source, then return to continue.",
+      "sourceRefs": [
+        {
+          "url": "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/",
+          "section": "Five vowel letters"
+        }
       ],
-      "languageNote": "Use these as sound anchors, not as an English respelling system."
+      "listenUrl": "https://oleloonline.com/0400-series-index/"
     },
     {
       "id": "pron-long-vowels",
-      "type": "pronunciation-study",
+      "type": "foundation-study",
       "skill": "pronunciation",
       "scored": false,
-      "instruction": "Hear what the kahakō changes.",
-      "prompt": "ā · ē · ī · ō · ū",
-      "support": "A kahakō marks a longer vowel and that vowel is stressed.",
-      "sourceText": "ā ē ī ō ū",
-      "ruleTitle": "Long vowels with kahakō",
-      "soundNotes": [
-        "ā — longer a; compare the reference sound to a in far",
-        "ē — longer e; reference comparison ay in pay",
-        "ī — longer i; reference comparison ee in see",
-        "ō — longer o",
-        "ū — longer u",
-        "Vowels with kahakō are somewhat longer and are always stressed"
+      "prompt": "Vowel length",
+      "sentence": "ā ē ī ō ū",
+      "naturalEnglish": "A kahakō marks a long vowel. Hold the vowel rather than inserting a glottal stop. Length can distinguish words. Use a recording to hear how length works at a natural pace.",
+      "patternIntro": "Hear the sound in a trusted teaching source, then return to continue.",
+      "sourceRefs": [
+        {
+          "url": "https://www.hawaii.edu/site/info/diacritics.php",
+          "section": "Vowel length"
+        }
       ],
-      "languageNote": "Do not treat a kahakō as decoration. It changes pronunciation and can distinguish words."
+      "listenUrl": "https://oleloonline.com/0402p-pronunciation-practice-kahako/"
     },
     {
       "id": "pron-okina",
-      "type": "pronunciation-study",
+      "type": "foundation-study",
       "skill": "pronunciation",
       "scored": false,
-      "instruction": "Treat the ʻokina as a consonant.",
-      "prompt": "ʻ",
-      "support": "The ʻokina is part of the Hawaiian alphabet.",
-      "sourceText": "ʻ",
-      "ruleTitle": "ʻOkina — glottal stop",
-      "soundNotes": [
-        "The ʻokina is a glottal stop.",
-        "UH compares it to the break between the two parts of English “oh-oh.”",
-        "Because it is a consonant, it can separate adjacent vowels into different syllables."
+      "prompt": "The ʻokina is a consonant",
+      "sentence": "ʻ",
+      "naturalEnglish": "The ʻokina represents a glottal stop. It is not an accent over a vowel. Keep it in the spelling and hear where the speaker closes and releases the airflow.",
+      "patternIntro": "Hear the sound in a trusted teaching source, then return to continue.",
+      "sourceRefs": [
+        {
+          "url": "https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/",
+          "section": "The ʻokina is a consonant"
+        }
       ],
-      "languageNote": "When you see ʻ, do not silently skip it."
+      "listenUrl": "https://oleloonline.com/0403p-pronunciation-practice-okina/"
     },
     {
       "id": "pron-syllables",
-      "type": "pronunciation-study",
+      "type": "foundation-study",
       "skill": "pronunciation",
       "scored": false,
-      "instruction": "Learn the shape of a Hawaiian syllable.",
-      "prompt": "Every Hawaiian syllable ends in a vowel.",
-      "support": "This makes written Hawaiian unusually informative once you know the sound system.",
-      "sourceText": "Hawaiʻi",
-      "ruleTitle": "Syllable shape",
-      "soundNotes": [
-        "A Hawaiian syllable is a vowel by itself or a consonant followed by a vowel.",
-        "Two ordinary consonants do not occur together inside a Hawaiian syllable.",
-        "The ʻokina counts as a consonant.",
-        "A Hawaiian word ends in a vowel."
+      "prompt": "Vowel-final syllables",
+      "sentence": "mālama",
+      "naturalEnglish": "Hawaiian syllables end in vowels. Avoid doubling a consonant as you move between syllables. The ʻokina can begin a syllable; it cannot close one.",
+      "patternIntro": "Hear the sound in a trusted teaching source, then return to continue.",
+      "sourceRefs": [
+        {
+          "url": "https://kaiwakiloumoku.ksbe.edu/article/essays-noho-pono-i-ka-ihu-tips-from-a-hawaiian-language-judge",
+          "section": "Vowel-final syllables"
+        }
       ],
-      "languageNote": "Use the written vowels to help you hear syllable boundaries instead of compressing the word using English habits."
+      "listenUrl": "https://oleloonline.com/0400-series-index/"
     },
     {
       "id": "pron-stress",
-      "type": "pronunciation-study",
+      "type": "foundation-study",
       "skill": "pronunciation",
       "scored": false,
-      "instruction": "Notice where emphasis falls.",
-      "prompt": "Stress is part of sounding natural.",
-      "support": "The reference grammar gives predictable default stress rules, with longer words forming accent groups.",
-      "sourceText": "makuahine",
-      "ruleTitle": "Basic stress",
-      "soundNotes": [
-        "In words shorter than four syllables, stress normally falls on the second-to-last syllable.",
-        "If the final syllable has a kahakō, that final long vowel receives the strongest emphasis.",
-        "Longer words may have more than one accent group.",
-        "A stressed Hawaiian syllable is somewhat louder, longer, and often higher in pitch."
+      "prompt": "Stress and rhythm",
+      "sentence": "ʻōlelo",
+      "naturalEnglish": "Stress often falls near the end of a word, but vowel length, vowel sequences, accent groups, and connected speech matter. Kahakō is not a complete map of every stressed syllable. Listen to the whole word and phrase; this app does not guess stress from spelling alone.",
+      "patternIntro": "Hear the sound in a trusted teaching source, then return to continue.",
+      "sourceRefs": [
+        {
+          "url": "https://kaiwakiloumoku.ksbe.edu/article/essays-noho-pono-i-ka-ihu-tips-from-a-hawaiian-language-judge",
+          "section": "Stress and rhythm"
+        }
       ],
-      "languageNote": "These are useful reading rules, but fluent speech still needs listening practice."
+      "listenUrl": "https://oleloonline.com/0400-series-index/"
     },
     {
       "id": "pron-vowel-sequences",
-      "type": "pronunciation-study",
+      "type": "foundation-study",
       "skill": "pronunciation",
       "scored": false,
-      "instruction": "Do not flatten Hawaiian vowel sequences into English diphthongs.",
-      "prompt": "ai · ae · ao · au · ei · eu · oi · ou",
-      "support": "The second vowel retains more vowel quality than an English off-glide.",
-      "sourceText": "ai ae ao au ei eu oi ou",
-      "ruleTitle": "Common rising vowel sequences",
-      "soundNotes": [
-        "The reference grammar groups ei, eu, oi, ou, ai, ae, ao, and au as rising diphthongs.",
-        "The first element is stressed.",
-        "The second element remains more vowel-like than the weak glide heard in many English diphthongs."
+      "prompt": "Adjacent vowels",
+      "sentence": "ai / ae",
+      "naturalEnglish": "Different vowel sequences can sound distinct. Do not replace them with an English rhyme or insert an ʻokina just because two vowels meet. Listen, repeat, and compare the sequence in the source.",
+      "patternIntro": "Hear the sound in a trusted teaching source, then return to continue.",
+      "sourceRefs": [
+        {
+          "url": "https://kaiwakiloumoku.ksbe.edu/article/essays-noho-pono-i-ka-ihu-tips-from-a-hawaiian-language-judge",
+          "section": "Adjacent vowels"
+        }
       ],
-      "languageNote": "This is one reason an English-looking respelling can easily teach the wrong sound."
+      "listenUrl": "https://oleloonline.com/0401p-pronunciation-practice-vowels/"
     },
     {
       "id": "pron-mark-check",
@@ -144,7 +135,12 @@
       "answer": "The vowel is longer and stressed",
       "answerLanguage": "en",
       "explanation": "The modern reference grammar describes vowels with kahakō as somewhat longer and always stressed.",
-      "evidenceLevel": "recognition"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Overview: vowels, syllables, accent"
+        }
+      ]
     },
     {
       "id": "pron-okina-check",
@@ -162,7 +158,12 @@
       "answer": "A consonant representing a glottal stop",
       "answerLanguage": "en",
       "explanation": "UH and the reference grammar treat the ʻokina as a consonant/glottal stop.",
-      "evidenceLevel": "recognition"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Overview: vowels, syllables, accent"
+        }
+      ]
     },
     {
       "id": "pron-syllable-check",
@@ -180,7 +181,12 @@
       "answer": "A syllable always ends in a vowel",
       "answerLanguage": "en",
       "explanation": "The reference grammar states that Hawaiian syllables always end in a vowel.",
-      "evidenceLevel": "recognition"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Overview: vowels, syllables, accent"
+        }
+      ]
     },
     {
       "id": "pron-reading-transfer",
@@ -198,7 +204,35 @@
       "answer": "Pronounce both cues rather than ignoring them",
       "answerLanguage": "en",
       "explanation": "Both marks carry pronunciation information and belong to correct Hawaiian orthography.",
-      "evidenceLevel": "transfer"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Overview: vowels, syllables, accent"
+        }
+      ]
+    },
+    {
+      "id": "bridge-00",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Vowel length and glottal stops",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Open the pronunciation sequence. Choose vowel practice, kahakō practice, then ʻokina practice.",
+      "sourcePageUrl": "https://oleloonline.com/0400-series-index/",
+      "audioSourceName": "ʻŌlelo Online — pronunciation teaching",
+      "listeningNotes": [
+        "Notice one sound contrast; repeat after the teacher.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://oleloonline.com/0400-series-index/",
+          "section": "Official teaching source"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary."
     }
   ]
 }

@@ -39,14 +39,11 @@
       "lessons": [
         {
           "id": "pronunciation-01",
-          "title": "Pronunciation Foundations: Read What You Hear",
-          "summary": "Learn vowels, long vowels, ʻokina, syllable shape, stress, and vowel sequences before relying on your own internal pronunciation.",
-          "focus": [
-            "pronunciation",
-            "listening"
-          ],
+          "title": "Read the Sounds",
+          "summary": "Vowels, length, glottal stops, syllables, rhythm, and a listen–compare–repeat routine.",
           "path": "./data/lessons/10-pronunciation-foundations.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": []
         },
         {
           "id": "orthography-01",
@@ -73,7 +70,7 @@
           "path": "./data/lessons/04-pronouns.json",
           "status": "active",
           "prerequisites": [
-            "orthography-01"
+            "pronunciation-01"
           ]
         },
         {
@@ -87,7 +84,7 @@
           "path": "./data/lessons/06-noun-phrases.json",
           "status": "active",
           "prerequisites": [
-            "pronouns-01"
+            "orthography-01"
           ]
         }
       ]
@@ -114,7 +111,8 @@
             "immersion"
           ],
           "path": "./data/lessons/02-listening-pronunciation.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": []
         }
       ],
       "status": "active"
@@ -203,7 +201,12 @@
             "context"
           ],
           "path": "./data/lessons/05-context-comprehension.json",
-          "status": "active"
+          "status": "active",
+          "prerequisites": [
+            "sentence-foundations-01",
+            "questions-01",
+            "possessives-01"
+          ]
         },
         {
           "id": "mixed-checkpoint-01",
@@ -216,9 +219,7 @@
           "path": "./data/lessons/09-mixed-checkpoint.json",
           "status": "active",
           "prerequisites": [
-            "context-comprehension-01",
-            "questions-01",
-            "possessives-01"
+            "context-comprehension-01"
           ]
         },
         {
@@ -237,6 +238,32 @@
         }
       ],
       "status": "active"
+    }
+  ],
+  "vocabularyFamilies": [
+    {
+      "title": "People & relationships",
+      "words": "au · ʻoe · kāua · māua · keiki · makuakāne",
+      "lessonId": "pronouns-01",
+      "note": "Track who is speaking, who is included, and whose relationship is described."
+    },
+    {
+      "title": "Home & school",
+      "words": "hale · kula · kumu · kaʻa",
+      "lessonId": "context-comprehension-01",
+      "note": "Return to familiar people and places in location and action sentences."
+    },
+    {
+      "title": "Daily actions",
+      "words": "hele · ʻai · hana · holoi",
+      "lessonId": "sentence-foundations-01",
+      "note": "Follow going, eating, working, and washing through different action frames."
+    },
+    {
+      "title": "Time & questions",
+      "words": "āhea · ināhea · nehinei · kēia manawa",
+      "lessonId": "questions-01",
+      "note": "Use the time context to understand what happened or what is being asked."
     }
   ]
 }

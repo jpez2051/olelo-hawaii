@@ -10,7 +10,7 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-26",
+    "reviewedAt": "2026-10-27",
     "notes": "All Hawaiian sentences in this lesson are exact examples from the modern Reference Grammar of the Hawaiian Language.",
     "sources": [
       "https://hawaiian-grammar.org/current/"
@@ -47,7 +47,14 @@
         }
       ],
       "languageNote": "Try to understand the relationship as a whole rather than translating Aia by itself.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-not-with",
@@ -79,7 +86,14 @@
         }
       ],
       "languageNote": "The message depends on combining all three pieces.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-eating-dual",
@@ -111,7 +125,14 @@
         }
       ],
       "languageNote": "This shows why pronouns must be understood as relationships, not isolated translations.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-saw-them-two",
@@ -148,7 +169,14 @@
         }
       ],
       "languageNote": "Understanding lāua changes the number of people in the event.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-my-house",
@@ -175,7 +203,14 @@
         }
       ],
       "languageNote": "This sentence requires both location and possession knowledge.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-main-meaning-1",
@@ -193,7 +228,13 @@
       "answer": "I am not with Keola",
       "answerLanguage": "en",
       "explanation": "ʻAʻole negates the relationship, au is I, and me Keola means with Keola.",
-      "evidenceLevel": "transfer"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-main-meaning-2",
@@ -211,7 +252,13 @@
       "answer": "Keola and the speaker",
       "answerLanguage": "en",
       "explanation": "māua is a pair including the speaker and excluding the listener; ʻo Keola names the second member.",
-      "evidenceLevel": "transfer"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-main-meaning-3",
@@ -229,7 +276,13 @@
       "answer": "I saw the two of them at school",
       "answerLanguage": "en",
       "explanation": "au is the subject and iā lāua is the dual object.",
-      "evidenceLevel": "transfer"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-main-meaning-4",
@@ -247,7 +300,13 @@
       "answer": "Kimo is at my house",
       "answerLanguage": "en",
       "explanation": "koʻu marks the house as the speaker's; Aia gives the location relationship.",
-      "evidenceLevel": "transfer"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     },
     {
       "id": "xfer-recall-laua",
@@ -260,7 +319,13 @@
       "answer": "lāua",
       "answerLanguage": "haw",
       "explanation": "lāua is third-person dual.",
-      "evidenceLevel": "recall"
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Sentence components; Nā Papani; Articles"
+        }
+      ],
+      "transfer": true
     }
   ]
 }

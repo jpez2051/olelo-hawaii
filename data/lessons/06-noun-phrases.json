@@ -10,11 +10,11 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-22",
-    "notes": "Rules and examples are taken from the modern Reference Grammar of the Hawaiian Language. The lesson teaches the general ka/ke/nā pattern while explicitly noting that ke has exceptions.",
+    "reviewedAt": "2026-10-27",
     "sources": [
       "https://hawaiian-grammar.org/current/"
-    ]
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
   },
   "activities": [
     {
@@ -42,7 +42,14 @@
         }
       ],
       "languageNote": "This is a noun phrase, not a complete sentence. The goal is to notice how number is signaled.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-na-hale-study",
@@ -69,7 +76,14 @@
         }
       ],
       "languageNote": "Plural meaning can be carried by the determiner even when the noun form itself does not change.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-ke-kao-study",
@@ -96,7 +110,14 @@
         }
       ],
       "languageNote": "This is a general rule, not an exception-free formula. Some nouns take ke outside that simple pattern.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-na-kao-study",
@@ -123,7 +144,14 @@
         }
       ],
       "languageNote": "Listen for nā because it can immediately change how many participants or things are being discussed.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-hale-number",
@@ -139,7 +167,14 @@
       ],
       "answer": "More than one house",
       "answerLanguage": "en",
-      "explanation": "nā marks the definite noun phrase as plural."
+      "explanation": "nā marks the definite noun phrase as plural.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-keiki-number",
@@ -155,7 +190,14 @@
       ],
       "answer": "Singular",
       "answerLanguage": "en",
-      "explanation": "ke is singular in this phrase; the sourced sentence means the child is over there."
+      "explanation": "ke is singular in this phrase; the sourced sentence means the child is over there.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-keiki-plural",
@@ -172,7 +214,14 @@
       ],
       "answer": "The number of children changed",
       "answerLanguage": "en",
-      "explanation": "nā makes the noun phrase plural."
+      "explanation": "nā makes the noun phrase plural.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-ka-ke-rule",
@@ -188,7 +237,14 @@
       ],
       "answer": "ke kao",
       "answerLanguage": "haw",
-      "explanation": "ke kao is the sourced example for 'the goat.'"
+      "explanation": "ke kao is the sourced example for 'the goat.'",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-na-recall",
@@ -200,7 +256,14 @@
       "support": "Type the Hawaiian determiner.",
       "answer": "nā",
       "answerLanguage": "haw",
-      "explanation": "nā marks definite plural noun phrases."
+      "explanation": "nā marks definite plural noun phrases.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
     },
     {
       "id": "noun-context-poi",
@@ -217,7 +280,779 @@
       ],
       "answer": "It is a singular definite noun phrase",
       "answerLanguage": "en",
-      "explanation": "ka is a singular definite determiner in ka poi."
+      "explanation": "ka is a singular definite determiner in ka poi.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "errorCategory": "noun-phrases"
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "ke ao",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "This singular noun uses ke.",
+      "conceptId": "noun-phrases-ke",
+      "id": "expand-06-1-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "ke ao",
+      "naturalEnglish": "the cloud",
+      "patternName": "Connected practice",
+      "patternIntro": "This singular noun uses ke.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ke",
+          "note": "This singular noun uses ke."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "ke ao",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "This singular noun uses ke.",
+      "conceptId": "noun-phrases-ke",
+      "id": "expand-06-1-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ao",
+      "support": "the cloud",
+      "answer": "ke",
+      "answerLanguage": "haw",
+      "explanation": "This singular noun uses ke."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "ke ao",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "This singular noun uses ke.",
+      "conceptId": "noun-phrases-ke",
+      "id": "expand-06-1-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "the cloud",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "ke ao",
+      "answerLanguage": "haw",
+      "explanation": "This singular noun uses ke."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "ka ua",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "This noun uses ka; do not treat every vowel alike.",
+      "conceptId": "noun-phrases-ka",
+      "id": "expand-06-2-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "ka ua",
+      "naturalEnglish": "the rain",
+      "patternName": "Connected practice",
+      "patternIntro": "This noun uses ka; do not treat every vowel alike.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ka",
+          "note": "This noun uses ka; do not treat every vowel alike."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "ka ua",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "This noun uses ka; do not treat every vowel alike.",
+      "conceptId": "noun-phrases-ka",
+      "id": "expand-06-2-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ua",
+      "support": "the rain",
+      "answer": "ka",
+      "answerLanguage": "haw",
+      "explanation": "This noun uses ka; do not treat every vowel alike."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "ka ua",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "This noun uses ka; do not treat every vowel alike.",
+      "conceptId": "noun-phrases-ka",
+      "id": "expand-06-2-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "the rain",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "ka ua",
+      "answerLanguage": "haw",
+      "explanation": "This noun uses ka; do not treat every vowel alike."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia ke keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "One child; the location is unchanged.",
+      "conceptId": "noun-phrases-ke keiki",
+      "id": "expand-06-3-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia ke keiki ma ʻō.",
+      "naturalEnglish": "The child is over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "One child; the location is unchanged.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ke keiki",
+          "note": "One child; the location is unchanged."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia ke keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "One child; the location is unchanged.",
+      "conceptId": "noun-phrases-ke keiki",
+      "id": "expand-06-3-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "The child is over there.",
+      "answer": "ke keiki",
+      "answerLanguage": "haw",
+      "explanation": "One child; the location is unchanged."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia ke keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "One child; the location is unchanged.",
+      "conceptId": "noun-phrases-ke keiki",
+      "id": "expand-06-3-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The child is over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia ke keiki ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "One child; the location is unchanged."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia nā keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "More than one child; nā marks the plural.",
+      "conceptId": "noun-phrases-nā keiki",
+      "id": "expand-06-4-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia nā keiki ma ʻō.",
+      "naturalEnglish": "The children are over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "More than one child; nā marks the plural.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "nā keiki",
+          "note": "More than one child; nā marks the plural."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia nā keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "More than one child; nā marks the plural.",
+      "conceptId": "noun-phrases-nā keiki",
+      "id": "expand-06-4-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "The children are over there.",
+      "answer": "nā keiki",
+      "answerLanguage": "haw",
+      "explanation": "More than one child; nā marks the plural."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia nā keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "More than one child; nā marks the plural.",
+      "conceptId": "noun-phrases-nā keiki",
+      "id": "expand-06-4-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The children are over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia nā keiki ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "More than one child; nā marks the plural."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia ka wahine ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Singular woman; compare the plural vowel length.",
+      "conceptId": "noun-phrases-ka wahine",
+      "id": "expand-06-5-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia ka wahine ma ʻō.",
+      "naturalEnglish": "The woman is over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "Singular woman; compare the plural vowel length.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "ka wahine",
+          "note": "Singular woman; compare the plural vowel length."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia ka wahine ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Singular woman; compare the plural vowel length.",
+      "conceptId": "noun-phrases-ka wahine",
+      "id": "expand-06-5-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "The woman is over there.",
+      "answer": "ka wahine",
+      "answerLanguage": "haw",
+      "explanation": "Singular woman; compare the plural vowel length."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia ka wahine ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Singular woman; compare the plural vowel length.",
+      "conceptId": "noun-phrases-ka wahine",
+      "id": "expand-06-5-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The woman is over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia ka wahine ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "Singular woman; compare the plural vowel length."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia nā wāhine ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Both the determiner and vowel length distinguish this plural form.",
+      "conceptId": "noun-phrases-nā wāhine",
+      "id": "expand-06-6-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia nā wāhine ma ʻō.",
+      "naturalEnglish": "The women are over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "Both the determiner and vowel length distinguish this plural form.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "nā wāhine",
+          "note": "Both the determiner and vowel length distinguish this plural form."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia nā wāhine ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Both the determiner and vowel length distinguish this plural form.",
+      "conceptId": "noun-phrases-nā wāhine",
+      "id": "expand-06-6-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "The women are over there.",
+      "answer": "nā wāhine",
+      "answerLanguage": "haw",
+      "explanation": "Both the determiner and vowel length distinguish this plural form."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia nā wāhine ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Both the determiner and vowel length distinguish this plural form.",
+      "conceptId": "noun-phrases-nā wāhine",
+      "id": "expand-06-6-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "The women are over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia nā wāhine ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "Both the determiner and vowel length distinguish this plural form."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia he mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Indefinite plural; compare definite nā keiki.",
+      "conceptId": "noun-phrases-he mau keiki",
+      "id": "expand-06-7-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia he mau keiki ma ʻō.",
+      "naturalEnglish": "There are children over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "Indefinite plural; compare definite nā keiki.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "he mau keiki",
+          "note": "Indefinite plural; compare definite nā keiki."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia he mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Indefinite plural; compare definite nā keiki.",
+      "conceptId": "noun-phrases-he mau keiki",
+      "id": "expand-06-7-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "There are children over there.",
+      "answer": "he mau keiki",
+      "answerLanguage": "haw",
+      "explanation": "Indefinite plural; compare definite nā keiki."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia he mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Indefinite plural; compare definite nā keiki.",
+      "conceptId": "noun-phrases-he mau keiki",
+      "id": "expand-06-7-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "There are children over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia he mau keiki ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "Indefinite plural; compare definite nā keiki."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia kekahi mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Some children; keep the complete determiner phrase together.",
+      "conceptId": "noun-phrases-kekahi mau keiki",
+      "id": "expand-06-8-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia kekahi mau keiki ma ʻō.",
+      "naturalEnglish": "There are some children over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "Some children; keep the complete determiner phrase together.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "kekahi mau keiki",
+          "note": "Some children; keep the complete determiner phrase together."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia kekahi mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Some children; keep the complete determiner phrase together.",
+      "conceptId": "noun-phrases-kekahi mau keiki",
+      "id": "expand-06-8-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "There are some children over there.",
+      "answer": "kekahi mau keiki",
+      "answerLanguage": "haw",
+      "explanation": "Some children; keep the complete determiner phrase together."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia kekahi mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "Some children; keep the complete determiner phrase together.",
+      "conceptId": "noun-phrases-kekahi mau keiki",
+      "id": "expand-06-8-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "There are some children over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia kekahi mau keiki ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "Some children; keep the complete determiner phrase together."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia kaʻu mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "The possessor is the speaker; mau makes the possessed noun plural.",
+      "conceptId": "noun-phrases-kaʻu mau keiki",
+      "id": "expand-06-9-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "Aia kaʻu mau keiki ma ʻō.",
+      "naturalEnglish": "My children are over there.",
+      "patternName": "Connected practice",
+      "patternIntro": "The possessor is the speaker; mau makes the possessed noun plural.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "kaʻu mau keiki",
+          "note": "The possessor is the speaker; mau makes the possessed noun plural."
+        }
+      ]
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia kaʻu mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "The possessor is the speaker; mau makes the possessed noun plural.",
+      "conceptId": "noun-phrases-kaʻu mau keiki",
+      "id": "expand-06-9-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "Aia ______ ma ʻō.",
+      "support": "My children are over there.",
+      "answer": "kaʻu mau keiki",
+      "answerLanguage": "haw",
+      "explanation": "The possessor is the speaker; mau makes the possessed noun plural."
+    },
+    {
+      "skill": "noun-phrases",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Plurals; Ka, Ke, Nā (Definite)"
+        }
+      ],
+      "model": "Aia kaʻu mau keiki ma ʻō.",
+      "errorCategory": "noun-phrases",
+      "diagnosis": "The possessor is the speaker; mau makes the possessed noun plural.",
+      "conceptId": "noun-phrases-kaʻu mau keiki",
+      "id": "expand-06-9-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "My children are over there.",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "Aia kaʻu mau keiki ma ʻō.",
+      "answerLanguage": "haw",
+      "explanation": "The possessor is the speaker; mau makes the possessed noun plural."
+    },
+    {
+      "id": "noun-ka-hale-study-produce",
+      "type": "sentence-recall",
+      "skill": "noun-phrases",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "the house",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "ka hale",
+      "answerLanguage": "haw",
+      "model": "ka hale",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "explanation": "This is a noun phrase, not a complete sentence. The goal is to notice how number is signaled.",
+      "errorCategory": "noun-phrases"
+    },
+    {
+      "id": "noun-na-hale-study-produce",
+      "type": "sentence-recall",
+      "skill": "noun-phrases",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "the houses",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "nā hale",
+      "answerLanguage": "haw",
+      "model": "nā hale",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "explanation": "Plural meaning can be carried by the determiner even when the noun form itself does not change.",
+      "errorCategory": "noun-phrases"
+    },
+    {
+      "id": "noun-ke-kao-study-produce",
+      "type": "sentence-recall",
+      "skill": "noun-phrases",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "the goat",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "ke kao",
+      "answerLanguage": "haw",
+      "model": "ke kao",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "explanation": "This is a general rule, not an exception-free formula. Some nouns take ke outside that simple pattern.",
+      "errorCategory": "noun-phrases"
+    },
+    {
+      "id": "noun-na-kao-study-produce",
+      "type": "sentence-recall",
+      "skill": "noun-phrases",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "the goats",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "nā kao",
+      "answerLanguage": "haw",
+      "model": "nā kao",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ka, Ke, Nā (Definite); Plurals; Nā Hamani"
+        }
+      ],
+      "explanation": "Listen for nā because it can immediately change how many participants or things are being discussed.",
+      "errorCategory": "noun-phrases"
+    },
+    {
+      "id": "bridge-06",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Listen for singular and plural",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Open Kulāiwi Lesson 2. Use the discussion of plural nā on transcript page 22. Compare the determiner you hear with the number of people being described.",
+      "sourcePageUrl": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "audioSourceName": "Kamehameha Schools — Kulāiwi",
+      "listeningNotes": [
+        "Use the discussion of plural nā on transcript page 22. Compare the determiner you hear with the number of people being described.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+          "section": "Official teaching source"
+        },
+        {
+          "url": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson02_Final.pdf#page=22",
+          "section": "Kulāiwi Lesson 2, transcript page 22"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary.",
+      "transcriptUrl": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson02_Final.pdf#page=22"
     }
   ]
 }

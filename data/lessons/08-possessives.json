@@ -10,11 +10,11 @@
   ],
   "contentStatus": "source-checked",
   "sourceReview": {
-    "reviewedAt": "2026-10-22",
-    "notes": "Possessive forms and examples are taken from the modern Reference Grammar. The lesson introduces the existence of a-class/o-class relationships without pretending the distinction can be reduced to one simple English rule.",
+    "reviewedAt": "2026-10-27",
     "sources": [
       "https://hawaiian-grammar.org/current/"
-    ]
+    ],
+    "notes": "Source check, not educator review. Source spellings are normalized to Unicode ʻokina and NFC. Judd is not used to authorize any live form."
   },
   "activities": [
     {
@@ -42,7 +42,14 @@
         }
       ],
       "languageNote": "Do not assume every English 'my' uses koʻu; Hawaiian has both o-class and a-class possessive relationships.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-kou-study",
@@ -69,7 +76,14 @@
         }
       ],
       "languageNote": "The possessor changed from speaker to listener.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-kau-study",
@@ -96,7 +110,14 @@
         }
       ],
       "languageNote": "Do not reduce a-class/o-class to a single memorized English rule. Learn the relationship patterns with examples.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-kana-study",
@@ -123,7 +144,14 @@
         }
       ],
       "languageNote": "Third-person forms also vary by possessive class.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-kalākou-study",
@@ -150,7 +178,14 @@
         }
       ],
       "languageNote": "Your pronoun knowledge now helps decode possession too.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-komaua-study",
@@ -177,7 +212,14 @@
         }
       ],
       "languageNote": "Possessive grammar builds on the pronoun system rather than replacing it.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-context-house",
@@ -204,7 +246,14 @@
         }
       ],
       "languageNote": "Understanding koʻu changes whose location is being described.",
-      "completionLabel": "Continue"
+      "completionLabel": "Continue",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-who-koʻu",
@@ -221,7 +270,14 @@
       ],
       "answer": "The speaker's",
       "answerLanguage": "en",
-      "explanation": "koʻu means my in this sourced o-class example."
+      "explanation": "koʻu means my in this sourced o-class example.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-who-kou",
@@ -238,7 +294,14 @@
       ],
       "answer": "The listener's",
       "answerLanguage": "en",
-      "explanation": "kou is second-person singular: your."
+      "explanation": "kou is second-person singular: your.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-our-group",
@@ -254,7 +317,14 @@
       ],
       "answer": "No",
       "answerLanguage": "en",
-      "explanation": "māua is dual exclusive, so the listener is not included."
+      "explanation": "māua is dual exclusive, so the listener is not included.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-their-count",
@@ -271,7 +341,14 @@
       ],
       "answer": "Three or more",
       "answerLanguage": "en",
-      "explanation": "lākou is third-person plural."
+      "explanation": "lākou is third-person plural.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
     },
     {
       "id": "poss-class-awareness",
@@ -288,7 +365,912 @@
       ],
       "answer": "English 'your' can map to different Hawaiian possessive classes",
       "answerLanguage": "en",
-      "explanation": "Hawaiian distinguishes a-class and o-class possessive relationships; English 'your' does not show that distinction."
+      "explanation": "Hawaiian distinguishes a-class and o-class possessive relationships; English 'your' does not show that distinction.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "errorCategory": "possessives"
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu puke",
+      "errorCategory": "possessives",
+      "diagnosis": "The speaker is the possessor; this example uses a-class.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-1-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "kaʻu puke",
+      "naturalEnglish": "my book",
+      "patternName": "Connected practice",
+      "patternIntro": "The speaker is the possessor; this example uses a-class.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "kaʻu",
+          "note": "The speaker is the possessor; this example uses a-class."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu puke",
+      "errorCategory": "possessives",
+      "diagnosis": "The speaker is the possessor; this example uses a-class.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-1-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ puke",
+      "support": "my book",
+      "answer": "kaʻu",
+      "answerLanguage": "haw",
+      "explanation": "The speaker is the possessor; this example uses a-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu puke",
+      "errorCategory": "possessives",
+      "diagnosis": "The speaker is the possessor; this example uses a-class.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-1-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my book",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "kaʻu puke",
+      "answerLanguage": "haw",
+      "explanation": "The speaker is the possessor; this example uses a-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu keiki",
+      "errorCategory": "possessives",
+      "diagnosis": "Do not put every family relationship into o-class.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-2-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "kaʻu keiki",
+      "naturalEnglish": "my child",
+      "patternName": "Connected practice",
+      "patternIntro": "Do not put every family relationship into o-class.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "kaʻu",
+          "note": "Do not put every family relationship into o-class."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu keiki",
+      "errorCategory": "possessives",
+      "diagnosis": "Do not put every family relationship into o-class.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-2-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ keiki",
+      "support": "my child",
+      "answer": "kaʻu",
+      "answerLanguage": "haw",
+      "explanation": "Do not put every family relationship into o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu keiki",
+      "errorCategory": "possessives",
+      "diagnosis": "Do not put every family relationship into o-class.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-2-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my child",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "kaʻu keiki",
+      "answerLanguage": "haw",
+      "explanation": "Do not put every family relationship into o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu ʻīlio",
+      "errorCategory": "possessives",
+      "diagnosis": "This example uses an a-class relationship.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-3-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "kaʻu ʻīlio",
+      "naturalEnglish": "my dog",
+      "patternName": "Connected practice",
+      "patternIntro": "This example uses an a-class relationship.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "kaʻu",
+          "note": "This example uses an a-class relationship."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu ʻīlio",
+      "errorCategory": "possessives",
+      "diagnosis": "This example uses an a-class relationship.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-3-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ ʻīlio",
+      "support": "my dog",
+      "answer": "kaʻu",
+      "answerLanguage": "haw",
+      "explanation": "This example uses an a-class relationship."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu ʻīlio",
+      "errorCategory": "possessives",
+      "diagnosis": "This example uses an a-class relationship.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-3-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my dog",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "kaʻu ʻīlio",
+      "answerLanguage": "haw",
+      "explanation": "This example uses an a-class relationship."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu makuakāne",
+      "errorCategory": "possessives",
+      "diagnosis": "The speaker’s father; this example uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-4-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "koʻu makuakāne",
+      "naturalEnglish": "my father",
+      "patternName": "Connected practice",
+      "patternIntro": "The speaker’s father; this example uses o-class.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "koʻu",
+          "note": "The speaker’s father; this example uses o-class."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu makuakāne",
+      "errorCategory": "possessives",
+      "diagnosis": "The speaker’s father; this example uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-4-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ makuakāne",
+      "support": "my father",
+      "answer": "koʻu",
+      "answerLanguage": "haw",
+      "explanation": "The speaker’s father; this example uses o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu makuakāne",
+      "errorCategory": "possessives",
+      "diagnosis": "The speaker’s father; this example uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-4-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my father",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "koʻu makuakāne",
+      "answerLanguage": "haw",
+      "explanation": "The speaker’s father; this example uses o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu kaʻa",
+      "errorCategory": "possessives",
+      "diagnosis": "A car used as transport takes o-class in this example.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-5-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "koʻu kaʻa",
+      "naturalEnglish": "my car",
+      "patternName": "Connected practice",
+      "patternIntro": "A car used as transport takes o-class in this example.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "koʻu",
+          "note": "A car used as transport takes o-class in this example."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu kaʻa",
+      "errorCategory": "possessives",
+      "diagnosis": "A car used as transport takes o-class in this example.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-5-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ kaʻa",
+      "support": "my car",
+      "answer": "koʻu",
+      "answerLanguage": "haw",
+      "explanation": "A car used as transport takes o-class in this example."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu kaʻa",
+      "errorCategory": "possessives",
+      "diagnosis": "A car used as transport takes o-class in this example.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-5-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my car",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "koʻu kaʻa",
+      "answerLanguage": "haw",
+      "explanation": "A car used as transport takes o-class in this example."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu hoahānau",
+      "errorCategory": "possessives",
+      "diagnosis": "The family relationship here uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-6-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "koʻu hoahānau",
+      "naturalEnglish": "my cousin",
+      "patternName": "Connected practice",
+      "patternIntro": "The family relationship here uses o-class.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "koʻu",
+          "note": "The family relationship here uses o-class."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu hoahānau",
+      "errorCategory": "possessives",
+      "diagnosis": "The family relationship here uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-6-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ hoahānau",
+      "support": "my cousin",
+      "answer": "koʻu",
+      "answerLanguage": "haw",
+      "explanation": "The family relationship here uses o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu hoahānau",
+      "errorCategory": "possessives",
+      "diagnosis": "The family relationship here uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-6-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my cousin",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "koʻu hoahānau",
+      "answerLanguage": "haw",
+      "explanation": "The family relationship here uses o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu lio",
+      "errorCategory": "possessives",
+      "diagnosis": "The riding relationship is o-class in this example.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-7-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "koʻu lio",
+      "naturalEnglish": "my horse",
+      "patternName": "Connected practice",
+      "patternIntro": "The riding relationship is o-class in this example.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "koʻu",
+          "note": "The riding relationship is o-class in this example."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu lio",
+      "errorCategory": "possessives",
+      "diagnosis": "The riding relationship is o-class in this example.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-7-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ lio",
+      "support": "my horse",
+      "answer": "koʻu",
+      "answerLanguage": "haw",
+      "explanation": "The riding relationship is o-class in this example."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu lio",
+      "errorCategory": "possessives",
+      "diagnosis": "The riding relationship is o-class in this example.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-7-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my horse",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "koʻu lio",
+      "answerLanguage": "haw",
+      "explanation": "The riding relationship is o-class in this example."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu manaʻo",
+      "errorCategory": "possessives",
+      "diagnosis": "Keep the possessive form and noun together.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-8-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "koʻu manaʻo",
+      "naturalEnglish": "my thoughts or feelings",
+      "patternName": "Connected practice",
+      "patternIntro": "Keep the possessive form and noun together.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "koʻu",
+          "note": "Keep the possessive form and noun together."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu manaʻo",
+      "errorCategory": "possessives",
+      "diagnosis": "Keep the possessive form and noun together.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-8-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ manaʻo",
+      "support": "my thoughts or feelings",
+      "answer": "koʻu",
+      "answerLanguage": "haw",
+      "explanation": "Keep the possessive form and noun together."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu manaʻo",
+      "errorCategory": "possessives",
+      "diagnosis": "Keep the possessive form and noun together.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-8-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my thoughts or feelings",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "koʻu manaʻo",
+      "answerLanguage": "haw",
+      "explanation": "Keep the possessive form and noun together."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu hale",
+      "errorCategory": "possessives",
+      "diagnosis": "The house as your dwelling uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-9-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "koʻu hale",
+      "naturalEnglish": "my house, where I live",
+      "patternName": "Connected practice",
+      "patternIntro": "The house as your dwelling uses o-class.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "koʻu",
+          "note": "The house as your dwelling uses o-class."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu hale",
+      "errorCategory": "possessives",
+      "diagnosis": "The house as your dwelling uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-9-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ hale",
+      "support": "my house, where I live",
+      "answer": "koʻu",
+      "answerLanguage": "haw",
+      "explanation": "The house as your dwelling uses o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "koʻu hale",
+      "errorCategory": "possessives",
+      "diagnosis": "The house as your dwelling uses o-class.",
+      "conceptId": "possessives-koʻu",
+      "id": "expand-08-9-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my house, where I live",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "koʻu hale",
+      "answerLanguage": "haw",
+      "explanation": "The house as your dwelling uses o-class."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu hale",
+      "errorCategory": "possessives",
+      "diagnosis": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-10-study",
+      "type": "sentence-study",
+      "scored": false,
+      "instruction": "Connect the form to its context.",
+      "prompt": "Read the Hawaiian first.",
+      "sentence": "kaʻu hale",
+      "naturalEnglish": "my house, which I built for someone else",
+      "patternName": "Connected practice",
+      "patternIntro": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone.",
+      "parts": [
+        {
+          "label": "Focus",
+          "hawaiian": "kaʻu",
+          "note": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone."
+        }
+      ]
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu hale",
+      "errorCategory": "possessives",
+      "diagnosis": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-10-gap",
+      "type": "sentence-recall",
+      "evidenceKind": "supported",
+      "instruction": "Fill the gap with the taught chunk.",
+      "prompt": "______ hale",
+      "support": "my house, which I built for someone else",
+      "answer": "kaʻu",
+      "answerLanguage": "haw",
+      "explanation": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone."
+    },
+    {
+      "skill": "possessives",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "Ke Kinoʻō A Me Ke Kinoʻā; K-Possessives"
+        }
+      ],
+      "model": "kaʻu hale",
+      "errorCategory": "possessives",
+      "diagnosis": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone.",
+      "conceptId": "possessives-kaʻu",
+      "id": "expand-08-10-produce",
+      "type": "sentence-recall",
+      "evidenceKind": "production",
+      "instruction": "Express this context using the model you studied.",
+      "prompt": "my house, which I built for someone else",
+      "support": "Type the taught Hawaiian form. Other valid ways to express this may exist.",
+      "answer": "kaʻu hale",
+      "answerLanguage": "haw",
+      "explanation": "Same noun, different relationship. Do not memorize a/o as a property of the noun alone."
+    },
+    {
+      "id": "poss-koʻu-study-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "my name",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "koʻu inoa",
+      "answerLanguage": "haw",
+      "model": "koʻu inoa",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "Do not assume every English 'my' uses koʻu; Hawaiian has both o-class and a-class possessive relationships.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "poss-kou-study-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "your car",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "kou kaʻa",
+      "answerLanguage": "haw",
+      "model": "kou kaʻa",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "The possessor changed from speaker to listener.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "poss-kau-study-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "your bag",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "kāu ʻeke",
+      "answerLanguage": "haw",
+      "model": "kāu ʻeke",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "Do not reduce a-class/o-class to a single memorized English rule. Learn the relationship patterns with examples.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "poss-kana-study-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "his coffee",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "kāna kope",
+      "answerLanguage": "haw",
+      "model": "kāna kope",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "Third-person forms also vary by possessive class.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "poss-kalākou-study-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "their dog",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "kā lākou ʻīlio",
+      "answerLanguage": "haw",
+      "model": "kā lākou ʻīlio",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "Your pronoun knowledge now helps decode possession too.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "poss-komaua-study-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "our father",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "ko māua makuakāne",
+      "answerLanguage": "haw",
+      "model": "ko māua makuakāne",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "Possessive grammar builds on the pronoun system rather than replacing it.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "poss-context-house-produce",
+      "type": "sentence-recall",
+      "skill": "possessives",
+      "evidenceKind": "production",
+      "instruction": "Recall the taught Hawaiian form for this meaning.",
+      "prompt": "Kimo is at my house.",
+      "support": "Use the model from this lesson; the check is not a judge of all possible translations.",
+      "answer": "Aia ʻo Kimo ma koʻu hale.",
+      "answerLanguage": "haw",
+      "model": "Aia ʻo Kimo ma koʻu hale.",
+      "sourceRefs": [
+        {
+          "url": "https://hawaiian-grammar.org/current/",
+          "section": "K-possessives; Nā Kaʻi Iloa a Hōʻiloa"
+        }
+      ],
+      "explanation": "Understanding koʻu changes whose location is being described.",
+      "errorCategory": "possessives"
+    },
+    {
+      "id": "bridge-08",
+      "type": "guided-listening",
+      "skill": "listening",
+      "scored": false,
+      "prompt": "Hear relationships",
+      "instruction": "Connect listening to this lesson.",
+      "support": "Open Kulāiwi Lesson 1. Use the name discussion on transcript pages 16–17. Listen for the contrast between kou and koʻu, then replay without reading.",
+      "sourcePageUrl": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+      "audioSourceName": "Kamehameha Schools — Kulāiwi",
+      "listeningNotes": [
+        "Use the name discussion on transcript pages 16–17. Listen for the contrast between kou and koʻu, then replay without reading.",
+        "First listen for the target. Next read the source support. Replay with the text hidden.",
+        "Return later and replay without reading. Mark only what you actually completed."
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://www.ksbe.edu/ksdl/hawaiian-resources/kulaiwi",
+          "section": "Official teaching source"
+        },
+        {
+          "url": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson01_Final.pdf#page=16",
+          "section": "Kulāiwi Lesson 1, transcript page 16"
+        }
+      ],
+      "sourceNote": "Self-reported listening exposure, not a comprehension or pronunciation score. Source access or playback may vary.",
+      "transcriptUrl": "https://www.ksbe.edu/assets/ksdl/KulaiwiTranscription_Lesson01_Final.pdf#page=16"
     }
   ]
 }
