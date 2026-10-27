@@ -14,7 +14,9 @@ export function freshReviewState() {
     correctCount: 0,
     almostCount: 0,
     incorrectCount: 0,
-    consecutiveCorrect: 0
+    consecutiveCorrect: 0,
+    strongestEvidence: "none",
+    evidenceCounts: { recognition: 0, recall: 0, transfer: 0 }
   };
 }
 
@@ -23,11 +25,19 @@ export function isDue(state, now = Date.now()) {
   return !state.dueAt || state.dueAt <= now;
 }
 
-export function scheduleReview(previousState, grade, now = Date.now()) {
+const EVIDENCE_RANK = { none: 0, recognition: 1, recall: 2, transfer: 3 };
+
+export function scheduleReview(previousState, grade, now = Date.now(), evidenceLevel = "recognition") {
   const state = { ...freshReviewState(), ...(previousState || {}) };
   state.lastReviewedAt = new Date(now).toISOString();
   state.lastGrade = grade;
   state.attempts = (state.attempts || 0) + 1;
+  state.evidenceCounts = { recognition: 0, recall: 0, transfer: 0, ...(state.evidenceCounts || {}) };
+  if (grade === "correct") {
+    const level = EVIDENCE_RANK[evidenceLevel] ? evidenceLevel : "recognition";
+    state.evidenceCounts[level] = (state.evidenceCounts[level] || 0) + 1;
+    if (EVIDENCE_RANK[level] > EVIDENCE_RANK[state.strongestEvidence || "none"]) state.strongestEvidence = level;
+  }
 
   if (grade === "correct") {
     state.correctCount = (state.correctCount || 0) + 1;
