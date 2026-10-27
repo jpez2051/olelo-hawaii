@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "id": "transfer-expansion-01",
+  "title": "Expanded Transfer: Follow Meaning Across New Sentences",
+  "description": "Use familiar grammar in new exact source examples so you must combine participants, action, location, possession, and number.",
+  "focus": [
+    "transfer",
+    "comprehension",
+    "context"
+  ],
+  "contentStatus": "source-checked",
+  "sourceReview": {
+    "reviewedAt": "2026-10-26",
+    "notes": "All Hawaiian sentences in this lesson are exact examples from the modern Reference Grammar of the Hawaiian Language.",
+    "sources": [
+      "https://hawaiian-grammar.org/current/"
+    ]
+  },
+  "activities": [
+    {
+      "id": "xfer-teacher-location",
+      "type": "sentence-study",
+      "skill": "comprehension",
+      "scored": false,
+      "instruction": "Track location without translating word-by-word.",
+      "prompt": "Identify who and where.",
+      "support": "This is an exact reference-grammar example.",
+      "sentence": "Aia ke kumu i Honolulu.",
+      "naturalEnglish": "The teacher is in Honolulu.",
+      "patternName": "Location",
+      "patternIntro": "Aia introduces the location relationship; ke kumu is the person being located.",
+      "parts": [
+        {
+          "label": "Location frame",
+          "hawaiian": "Aia",
+          "note": "location/existence frame"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "ke kumu",
+          "note": "the teacher"
+        },
+        {
+          "label": "Where",
+          "hawaiian": "i Honolulu",
+          "note": "in Honolulu"
+        }
+      ],
+      "languageNote": "Try to understand the relationship as a whole rather than translating Aia by itself.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "xfer-not-with",
+      "type": "sentence-study",
+      "skill": "comprehension",
+      "scored": false,
+      "instruction": "Track negation and participants.",
+      "prompt": "Who is not with whom?",
+      "support": "Use ʻaʻole, au, and me together.",
+      "sentence": "ʻAʻole au me Keola.",
+      "naturalEnglish": "I am not with Keola.",
+      "patternName": "Negative relationship",
+      "patternIntro": "ʻAʻole negates the relationship; au identifies the speaker.",
+      "parts": [
+        {
+          "label": "Negative",
+          "hawaiian": "ʻAʻole",
+          "note": "not"
+        },
+        {
+          "label": "Who",
+          "hawaiian": "au",
+          "note": "I"
+        },
+        {
+          "label": "Relationship",
+          "hawaiian": "me Keola",
+          "note": "with Keola"
+        }
+      ],
+      "languageNote": "The message depends on combining all three pieces.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "xfer-eating-dual",
+      "type": "sentence-study",
+      "skill": "comprehension",
+      "scored": false,
+      "instruction": "Reuse the dual system in a natural participant phrase.",
+      "prompt": "Who is eating?",
+      "support": "māua is linked with an additional named participant in this sourced example.",
+      "sentence": "Ke ʻai nei māua ʻo Keola.",
+      "naturalEnglish": "Keola and I are eating.",
+      "patternName": "Dual participant + named person",
+      "patternIntro": "māua is first-person dual exclusive; ʻo Keola identifies the other member of the pair.",
+      "parts": [
+        {
+          "label": "Action frame",
+          "hawaiian": "Ke ʻai nei",
+          "note": "are eating / ongoing action"
+        },
+        {
+          "label": "Pair",
+          "hawaiian": "māua",
+          "note": "two including speaker, excluding listener"
+        },
+        {
+          "label": "Named participant",
+          "hawaiian": "ʻo Keola",
+          "note": "Keola"
+        }
+      ],
+      "languageNote": "This shows why pronouns must be understood as relationships, not isolated translations.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "xfer-saw-them-two",
+      "type": "sentence-study",
+      "skill": "comprehension",
+      "scored": false,
+      "instruction": "Track subject and object.",
+      "prompt": "Who saw whom?",
+      "support": "The object pronoun tells you the group size.",
+      "sentence": "Ua ʻike au iā lāua i ke kula.",
+      "naturalEnglish": "I saw the two of them at school.",
+      "patternName": "Subject + dual object",
+      "patternIntro": "au is the subject; iā lāua is the object referring to exactly two people.",
+      "parts": [
+        {
+          "label": "Action",
+          "hawaiian": "Ua ʻike",
+          "note": "saw"
+        },
+        {
+          "label": "Who acted",
+          "hawaiian": "au",
+          "note": "I"
+        },
+        {
+          "label": "Who was seen",
+          "hawaiian": "iā lāua",
+          "note": "the two of them"
+        },
+        {
+          "label": "Where",
+          "hawaiian": "i ke kula",
+          "note": "at school"
+        }
+      ],
+      "languageNote": "Understanding lāua changes the number of people in the event.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "xfer-my-house",
+      "type": "sentence-study",
+      "skill": "comprehension",
+      "scored": false,
+      "instruction": "Combine location and possession.",
+      "prompt": "Where is Kimo, and whose place is it?",
+      "support": "Use both Aia and koʻu.",
+      "sentence": "Aia ʻo Kimo ma koʻu hale.",
+      "naturalEnglish": "Kimo is at my house.",
+      "patternName": "Location + possession",
+      "patternIntro": "Aia locates Kimo; koʻu identifies the house in relation to the speaker.",
+      "parts": [
+        {
+          "label": "Who",
+          "hawaiian": "ʻo Kimo",
+          "note": "Kimo"
+        },
+        {
+          "label": "Where",
+          "hawaiian": "ma koʻu hale",
+          "note": "at my house"
+        }
+      ],
+      "languageNote": "This sentence requires both location and possession knowledge.",
+      "completionLabel": "Continue"
+    },
+    {
+      "id": "xfer-main-meaning-1",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Interpret the whole sentence.",
+      "prompt": "ʻAʻole au me Keola.",
+      "support": "Choose the message, not a word gloss.",
+      "options": [
+        "I am not with Keola",
+        "Keola is not with them",
+        "I did not see Keola"
+      ],
+      "answer": "I am not with Keola",
+      "answerLanguage": "en",
+      "explanation": "ʻAʻole negates the relationship, au is I, and me Keola means with Keola.",
+      "evidenceLevel": "transfer"
+    },
+    {
+      "id": "xfer-main-meaning-2",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Interpret participant number.",
+      "prompt": "Ke ʻai nei māua ʻo Keola.",
+      "support": "Who is eating?",
+      "options": [
+        "Keola and the speaker",
+        "Keola and the listener",
+        "Three or more people"
+      ],
+      "answer": "Keola and the speaker",
+      "answerLanguage": "en",
+      "explanation": "māua is a pair including the speaker and excluding the listener; ʻo Keola names the second member.",
+      "evidenceLevel": "transfer"
+    },
+    {
+      "id": "xfer-main-meaning-3",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Interpret subject and object.",
+      "prompt": "Ua ʻike au iā lāua i ke kula.",
+      "support": "What happened?",
+      "options": [
+        "I saw the two of them at school",
+        "The two of them saw me at school",
+        "I saw three or more people at school"
+      ],
+      "answer": "I saw the two of them at school",
+      "answerLanguage": "en",
+      "explanation": "au is the subject and iā lāua is the dual object.",
+      "evidenceLevel": "transfer"
+    },
+    {
+      "id": "xfer-main-meaning-4",
+      "type": "sentence-choice",
+      "skill": "comprehension",
+      "scored": true,
+      "instruction": "Interpret location and possession together.",
+      "prompt": "Aia ʻo Kimo ma koʻu hale.",
+      "support": "Which meaning fits?",
+      "options": [
+        "Kimo is at my house",
+        "My house belongs to Kimo",
+        "Kimo is at your house"
+      ],
+      "answer": "Kimo is at my house",
+      "answerLanguage": "en",
+      "explanation": "koʻu marks the house as the speaker's; Aia gives the location relationship.",
+      "evidenceLevel": "transfer"
+    },
+    {
+      "id": "xfer-recall-laua",
+      "type": "meaning-recall",
+      "skill": "pronouns",
+      "scored": true,
+      "instruction": "Retrieve the dual third-person pronoun.",
+      "prompt": "they two / the two of them",
+      "support": "Type the Hawaiian pronoun used in the sourced transfer sentence.",
+      "answer": "lāua",
+      "answerLanguage": "haw",
+      "explanation": "lāua is third-person dual.",
+      "evidenceLevel": "recall"
+    }
+  ]
+}
