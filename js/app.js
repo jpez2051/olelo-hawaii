@@ -387,6 +387,10 @@ function resetPracticeUi() {
   $("#paper-panel").hidden = true;
   $("#listening-panel").hidden = true;
   $("#sentence-panel").hidden = true;
+  $("#pronunciation-panel").hidden = true;
+  $("#sound-guide-panel").hidden = true;
+  $("#sound-guide-panel").open = false;
+  $("#sound-guide-content").innerHTML = "";
   $("#choice-panel").hidden = true;
   $("#choice-options").innerHTML = "";
   $("#choice-check-btn").disabled = true;
@@ -429,15 +433,33 @@ function showNextActivity(returnToTop = true) {
     "sentence-study": "sentence study",
     "sentence-choice": "sentence check",
     "sentence-recall": "sentence recall",
+    "pronunciation-study": "pronunciation study",
     "guided-listening": "listening"
   };
   $("#activity-type").textContent = activityLabels[currentActivity.type] || currentActivity.type.replaceAll("-", " ");
   $("#activity-focus").textContent = currentActivity.focus.join(" • ");
   $("#instruction").textContent = currentActivity.instruction || "Continue the activity.";
   $("#prompt").textContent = currentActivity.prompt || "";
-  $("#support").textContent = currentActivity.support || "";
+  const priorState = progress.reviews[currentActivity.id];
+  const fadeSupport = isScoredActivity(currentActivity) && (priorState?.correctCount || 0) >= 2;
+  $("#support").textContent = fadeSupport ? "Try this without the hint. Open the Sound guide only if pronunciation is the issue." : (currentActivity.support || "");
 
-  if (currentActivity.type === "sentence-choice") {
+  const hawaiianForGuide = currentActivity.studyWord || currentActivity.sentence || (currentActivity.answerLanguage === "haw" ? currentActivity.answer : "") || "";
+  const guideNotes = soundGuideFor(hawaiianForGuide);
+  if (hawaiianForGuide && guideNotes.length) {
+    $("#sound-guide-content").innerHTML = "<p lang=\"haw\"><strong>" + escapeHtml(hawaiianForGuide) + "</strong></p><ul>" + guideNotes.map(note => "<li>" + escapeHtml(note) + "</li>").join("") + "</ul><p>This guide points to Hawaiian spelling cues; it does not replace listening to proficient speakers.</p>";
+    $("#sound-guide-panel").hidden = false;
+  }
+
+  if (currentActivity.type === "pronunciation-study") {
+    activityStage = "pronunciation-study";
+    $("#answer-area").hidden = true;
+    $("#pronunciation-panel").hidden = false;
+    $("#pronunciation-source").textContent = currentActivity.sourceText || currentActivity.prompt || "";
+    $("#pronunciation-rule").textContent = currentActivity.ruleTitle || "Sound rule";
+    $("#pronunciation-notes").innerHTML = (currentActivity.soundNotes || []).map(note => "<li>" + escapeHtml(note) + "</li>").join("");
+    $("#pronunciation-language-note").textContent = currentActivity.languageNote || "";
+  } else if (currentActivity.type === "sentence-choice") {
     activityStage = "choice";
     $("#answer-area").hidden = true;
     $("#choice-panel").hidden = false;
