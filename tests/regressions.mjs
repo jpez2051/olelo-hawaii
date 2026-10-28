@@ -1,3 +1,4 @@
+import { matchingEntries } from '../js/lexicon.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { gradeAnswer } from '../js/grading.js';
@@ -27,3 +28,6 @@ assert.equal(gradeAnswer("'oe",'ʻoe').status,'correct');
 assert.equal(gradeAnswer('māua','kāua').status,'incorrect');
 assert.deepEqual(mixedQueue([{id:1,skill:'a'},{id:2,skill:'a'},{id:3,skill:'b'}],3).map(a=>a.id),[1,3,2]);
 console.log(`PASS: ${lessons.length} lessons, ${activities.length} activities; traceability, cloze forms, grading, evidence and mixed review.`);
+
+assert.deepEqual(matchingEntries('kūmū').map(e=>e.word), []);
+assert.deepEqual(matchingEntries('Ke kumu, ma ke kula.').map(e=>e.word), ['kula','kumu']);

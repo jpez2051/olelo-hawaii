@@ -16,12 +16,16 @@ try{
 const page=await browser.newPage({viewport:{width:390,height:844}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto(`http://127.0.0.1:${server.address().port}`);
 await page.waitForFunction(()=>document.querySelector('#curriculum-status').textContent.includes('activities loaded'));
-await page.evaluate(async()=>{window.testApp=await import('/js/app.js?v=7.1.0');});
+await page.evaluate(async()=>{window.testApp=await import('/js/app.js?v=7.2.0');});
 const ids=await page.evaluate(()=>[...new Set(testApp.testState().activities.filter(a=>a.unitMode!=='immersion').map(a=>a.lessonId))]);let count=0;
 for(const id of ids){
  await page.evaluate(id=>testApp.startLesson(id,true),id);
  while(await page.evaluate(()=>!!testApp.testState().currentActivity)) {
   const a=await page.evaluate(()=>testApp.testState().currentActivity);
+  if (['sentence-study','foundation-study'].includes(a.type)) {
+   assert.equal(await page.locator('#sentence-language-note').isVisible(), !!a.languageNote?.trim(), a.id + ': note visibility');
+   assert.equal(await page.locator('#sentence-parts').isVisible(), !!a.parts?.length, a.id + ': parts visibility');
+  } else if(a.type !== 'study-hide-recall') assert(await page.locator('#word-meanings').isHidden(), a.id + ': dictionary must not reveal answers');
   await page.evaluate(a=>{
    const click=s=>document.querySelector(s).click();
    if(['sentence-study','foundation-study'].includes(a.type)) click('#sentence-continue-btn');
@@ -36,15 +40,18 @@ for(const id of ids){
   count++;
  }
 }
+assert(await page.locator('#round-actions').isVisible());
 // Verify that the recall answer is not exposed through Sound guide.
 await page.evaluate(()=>testApp.startLesson('orthography-01',true));
 assert(await page.locator('#sound-guide').isHidden());
+assert(await page.locator('#word-meanings').isHidden());
 await page.evaluate(()=>{document.querySelector('#answer-input').value='wrong';document.querySelector('#check-btn').click();});
 const before=await page.evaluate(()=>testApp.testState().progress.reviews[testApp.testState().currentActivity.id].dueAt);
 await page.evaluate(()=>document.querySelector('#retry-btn').click());
 await page.evaluate(()=>{document.querySelector('#answer-input').value=testApp.testState().currentActivity.answer;document.querySelector('#check-btn').click();});
 assert.equal(await page.evaluate(()=>testApp.testState().progress.reviews[testApp.testState().currentActivity.id].dueAt),before);
 assert.equal(await page.evaluate(()=>testApp.testState().progress.evidence[testApp.testState().currentActivity.id].successes.retry),1);
+assert.match(await page.locator('#feedback').innerText(), /Recorded as correction practice/);
 assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
 assert.deepEqual(errors,[]);
 await page.screenshot({path:process.env.SCREENSHOT_PATH || 'browser-check.png',fullPage:true});

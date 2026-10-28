@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="ʻŌlelo Hawaiʻi">
   <title>ʻŌlelo Hawaiʻi — Learn to use the language</title>
-  <link rel="stylesheet" href="./css/app.css?v=7.1.0">
+  <link rel="stylesheet" href="./css/app.css?v=7.2.0">
 </head>
 <body>
   <header class="site-header">
@@ -67,6 +67,7 @@
       </div>
 
       <article id="practice-card" class="practice-card">
+        <div id="round-actions" class="practice-actions" hidden><button id="round-learn-btn" class="primary-btn" type="button">Choose a lesson</button><button id="round-review-btn" class="secondary-btn" type="button">Mixed review</button></div>
         <div id="practice-empty" class="empty-state">Choose a lesson from Learn, or practice material that is due for review.</div>
 
         <div id="practice-content" hidden>
@@ -165,6 +166,7 @@
             </div>
           </div>
 
+          <details id="word-meanings" class="learning-help" hidden><summary>Words in context · dictionary</summary><div id="word-meanings-body"></div></details>
           <details id="sound-guide" class="learning-help" hidden><summary>Sound guide</summary><div id="sound-guide-body"></div></details>
           <details id="model-help" class="learning-help" hidden><summary>Show the taught model · counts as support</summary><p id="model-help-text" lang="haw"></p></details>
           <details id="source-details" class="learning-help"><summary>Source &amp; review · opening counts as support</summary><p>Source-checked, not educator-reviewed. These are taught-model checks, not judgments of every possible translation.</p><ul id="activity-sources"></ul></details>
@@ -219,7 +221,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 7.1.0</span>
+    <span class="site-version">Version 7.2.0</span>
   </footer>
 
   <script>
@@ -235,6 +237,6 @@
       }, true);
     })();
   </script>
-  <script type="module" src="./js/app.js?v=7.1.0"></script>
+  <script type="module" src="./js/app.js?v=7.2.0"></script>
 </body>
 </html>

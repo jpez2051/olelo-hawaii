@@ -1,7 +1,8 @@
-import { gradeAnswer } from "./grading.js?v=7.1.0";
-import { evidenceKind, recordEvidence, evidenceTotals, mixedQueue, diagnose } from "./learning.js?v=7.1.0";
-import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js?v=7.1.0";
-import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js?v=7.1.0";
+import { matchingEntries } from './lexicon.js?v=7.2.0';
+import { gradeAnswer } from "./grading.js?v=7.2.0";
+import { evidenceKind, recordEvidence, evidenceTotals, mixedQueue, diagnose } from "./learning.js?v=7.2.0";
+import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js?v=7.2.0";
+import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js?v=7.2.0";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -405,6 +406,7 @@ function resetPracticeUi() {
   $("#feedback").innerHTML = "";
   $("#retry-actions").hidden = true;
   $("#sound-guide").hidden = true;
+  $("#word-meanings").hidden = true;
   $("#model-help").hidden = true;
   $("#source-details").open = false;
   audio.pause();
@@ -426,6 +428,7 @@ function showNextActivity(returnToTop = true) {
   if (!currentActivity) {
     $("#practice-content").hidden = true;
     $("#practice-empty").hidden = false;
+    $("#round-actions").hidden = false;
     $("#practice-empty").textContent = "Round complete. Return to Learn for the next lesson, or revisit introduced material in mixed review.";
     updateDueCount();
     if (returnToTop) scrollPracticeToTop();
@@ -433,6 +436,7 @@ function showNextActivity(returnToTop = true) {
   }
 
   $("#practice-empty").hidden = true;
+  $("#round-actions").hidden = true;
   $("#practice-content").hidden = false;
   const activityLabels = {
     "repair-spelling": "spelling repair",
@@ -476,6 +480,11 @@ function showNextActivity(returnToTop = true) {
     $("#sentence-pattern-name").textContent = currentActivity.patternName || "Sentence pattern";
     $("#sentence-pattern-intro").textContent = currentActivity.patternIntro || "";
     $("#sentence-language-note").textContent = currentActivity.languageNote || "";
+    $("#sentence-language-note").hidden = !currentActivity.languageNote?.trim();
+    $('#sentence-panel .study-label').textContent = currentActivity.type === 'foundation-study' ? 'Pronunciation foundation' : 'Sentence';
+    $('.sentence-pattern-heading').hidden = !currentActivity.patternName;
+    $('#sentence-pattern-intro').hidden = !currentActivity.patternIntro?.trim();
+    $('#sentence-parts').hidden = !currentActivity.parts?.length;
     $("#sentence-continue-btn").textContent = currentActivity.completionLabel || "Continue";
     $("#sentence-parts").innerHTML = (currentActivity.parts || []).map(part => `
       <div class="sentence-part">
@@ -521,6 +530,7 @@ function beginHiddenRecall() {
   if (!currentActivity || currentActivity.type !== "study-hide-recall") return;
   activityStage = "paper";
   $("#sound-guide").hidden = true;
+  $("#word-meanings").hidden = true;
   $("#source-details").hidden = true;
   markModelSeen(currentActivity);
   usedHelp = true;
@@ -562,6 +572,13 @@ function completeSentenceStudy() {
   showNextActivity();
 }
 
+function attemptDescription() {
+  if (currentActivity.correctionRetry) return 'Recorded as correction practice. Revisit later without the answer to check retention.';
+  if (usedHelp || evidenceKind(currentActivity) === 'supported') return 'Recorded as supported practice because a model or help was available recently. Revisit after a day without help to check retention.';
+  const kind = evidenceKind(currentActivity);
+  return kind === 'recognition' ? 'Recorded as recognition: choosing an answer is different from producing it yourself.' : kind === 'interpretation' ? 'Recorded as meaning interpretation. This does not assess spoken comprehension.' : 'Recorded as an unaided written attempt. A later successful attempt provides stronger evidence of retention.';
+}
+
 function feedbackTitle(status) {
   if (status === "correct") return "Correct";
   if (status === "almost") return "Almost — check the spelling";
@@ -590,7 +607,7 @@ function checkChoiceAnswer() {
   feedback.innerHTML = `
     <strong>${feedbackTitle(status)}</strong>
     ${status !== "correct" ? `<div class="expected-answer">Answer: ${escapeHtml(currentActivity.answer)}</div>` : ""}
-    ${explanation}`;
+    ${explanation}<p class="evidence-note">${escapeHtml(attemptDescription())}</p>`;
   $("#choice-check-btn").hidden = true;
   $("#choice-next-btn").hidden = false;
   $("#retry-actions").hidden = status === "correct";
@@ -620,7 +637,7 @@ function checkCurrentAnswer() {
     ${notes ? `<ul>${notes}</ul>` : ""}
     ${result.status !== "correct" ? `<div class="expected-answer" lang="haw">Expected: ${escapeHtml(result.expected)}</div>` : ""}
     ${correctionPractice}
-    ${explanation}`;
+    ${explanation}<p class="evidence-note">${escapeHtml(attemptDescription())}</p>`;
 
   $("#answer-input").disabled = true;
   $("#check-btn").hidden = true;
@@ -763,6 +780,10 @@ function renderActivityHelp(afterAnswer = false) {
     const cues = [marks.length ? `Long vowel${marks.length>1?'s':''}: ${marks.join(', ')}.` : 'No written long vowel.', word.includes('ʻ') ? 'Keep the written glottal stop(s).' : 'Do not add an unwritten glottal stop.'];
     return `<p><strong lang="haw">${escapeHtml(word)}</strong> — ${escapeHtml(cues.join(' '))}</p>`;
   }).join('') + '<p>Syllables end in vowels. This is a spelling-based reminder, not a full phonetic transcription or a stress prediction. Hear the whole phrase in context.</p><a href="https://oleloonline.com/0400-series-index/" target="_blank" rel="noopener noreferrer">Hear pronunciation lessons</a> · <a href="https://www.hawaii.edu/offices/communications/standards/hawaiian-language-considerations/" target="_blank" rel="noopener noreferrer">UH spelling guidance</a>';
+  const entries = matchingEntries(visible || '');
+  $('#word-meanings').hidden = !entries.length;
+  $('#word-meanings').open = false;
+  $('#word-meanings-body').innerHTML = '<p>Selected dictionary senses, not automatic translations. Read the sentence context. Pukui–Elbert (1986), via UH Hilo Wehewehe Wikiwiki.</p>' + entries.map(entry => `<p><strong lang="haw">${escapeHtml(entry.word)}</strong> — ${escapeHtml(entry.meaning)}<br>${escapeHtml(entry.note)} <a href="${entry.url}" target="_blank" rel="noopener noreferrer">Read dictionary entry</a></p>`).join('');
   const help = $('#model-help'); help.open = false;
   help.hidden = afterAnswer || !isScoredActivity(a) || a.type === 'sentence-choice' || a.type === 'study-hide-recall';
   $('#model-help-text').textContent = a.model || a.answer || '';
@@ -771,6 +792,8 @@ function renderActivityHelp(afterAnswer = false) {
 }
 
 function bindEvents() {
+  $('#round-learn-btn').addEventListener('click', () => switchView('learn'));
+  $('#round-review-btn').addEventListener('click', startDuePractice);
   $('#vocabulary-families').addEventListener('click', event => { const button = event.target.closest('[data-family-lesson]'); if (button) startLesson(button.dataset.familyLesson); });
   $('#support-mode').value = progress.settings.supportMode || 'auto';
   $('#support-mode').addEventListener('change', event => { progress.settings.supportMode = event.target.value; saveProgress(progress); });
