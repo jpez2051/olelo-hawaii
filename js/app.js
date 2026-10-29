@@ -1,8 +1,8 @@
-import { matchingEntries } from './lexicon.js?v=7.2.0';
-import { gradeAnswer } from "./grading.js?v=7.2.0";
-import { evidenceKind, recordEvidence, evidenceTotals, mixedQueue, diagnose } from "./learning.js?v=7.2.0";
-import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js?v=7.2.0";
-import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js?v=7.2.0";
+import { matchingEntries } from './lexicon.js?v=7.3.0';
+import { gradeAnswer } from "./grading.js?v=7.3.0";
+import { evidenceKind, recordEvidence, evidenceTotals, mixedQueue, diagnose } from "./learning.js?v=7.3.0";
+import { dueLabel, freshReviewState, isDue, scheduleReview } from "./srs.js?v=7.3.0";
+import { clearProgress, exportProgress, loadProgress, saveProgress } from "./storage.js?v=7.3.0";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -18,6 +18,8 @@ let activityStage = "answer";
 let selectedChoice = "";
 let usedHelp = false;
 let lessonSession = null;
+let roundAttempts = 0;
+let roundCorrect = 0;
 const modelKey = activity => (activity.model || activity.sentence || activity.studyWord || (activity.answerLanguage === 'haw' ? activity.answer : '') || '').normalize('NFC').toLowerCase().replace(/[.,!?]/g, '').trim();
 function markModelSeen(activity) {
   const key = modelKey(activity);
@@ -256,6 +258,7 @@ function renderImmersionLibrary() {
     const button = card.querySelector(".log-listen-btn");
     button.addEventListener("click", () => {
       lessonSession = null;
+      roundAttempts = 0; roundCorrect = 0;
       practiceQueue = [activity];
       switchView('practice');
       showNextActivity(false);
@@ -351,7 +354,15 @@ function startLesson(lessonId, restart = false) {
   const lessonActivities = activities.filter(activity => activity.lessonId === lessonId);
   const offset = restart ? 0 : (progress.lessonPositions?.[lessonId] || 0);
   lessonSession = { id: lessonId, total: lessonActivities.length, position: offset };
-  practiceQueue = lessonActivities.slice(offset);
+  const remaining = lessonActivities.slice(offset);
+  let end = Math.min(12, remaining.length);
+  // Prefer stopping before a new study model, keeping its follow-up with it.
+  for (let i = 8; i < end; i++) if (['sentence-study','foundation-study','study-hide-recall'].includes(remaining[i].type)) { end = i; break; }
+  practiceQueue = remaining.slice(0, end);
+  roundAttempts = 0; roundCorrect = 0;
+  const lesson = curriculum.units.flatMap(u => u.lessons || []).find(l => l.id === lessonId);
+  $('#lesson-purpose').textContent = lesson?.summary || 'Practice this lesson in manageable steps.';
+  $('#lesson-purpose').hidden = false;
   switchView("practice");
   showNextActivity(false);
   scrollPracticeToTop("smooth");
@@ -360,6 +371,8 @@ function startLesson(lessonId, restart = false) {
 function startDuePractice() {
   let due = dueActivities();
   lessonSession = null;
+  roundAttempts = 0; roundCorrect = 0;
+  $('#lesson-purpose').hidden = true;
   if (!due.length) due = activities.filter(a => isScoredActivity(a) && progress.reviews[a.id]);
   practiceQueue = mixedQueue(shuffle(due).sort((a,b) => (progress.reviews[a.id]?.dueAt || 0) - (progress.reviews[b.id]?.dueAt || 0)));
   switchView("practice");
@@ -371,6 +384,8 @@ function startNeedsPractice() {
   const weak = needsPracticeGroups().map(group => group.representative).filter(Boolean);
   if (!weak.length) return;
   lessonSession = null;
+  roundAttempts = 0; roundCorrect = 0;
+  $('#lesson-purpose').hidden = true;
   practiceQueue = mixedQueue(shuffle(weak));
   switchView("practice");
   showNextActivity(false);
@@ -429,7 +444,10 @@ function showNextActivity(returnToTop = true) {
     $("#practice-content").hidden = true;
     $("#practice-empty").hidden = false;
     $("#round-actions").hidden = false;
-    $("#practice-empty").textContent = "Round complete. Return to Learn for the next lesson, or revisit introduced material in mixed review.";
+    const more = lessonSession && lessonSession.position < lessonSession.total;
+    $('#round-continue-btn').hidden = !more;
+    const recap = roundAttempts ? `${roundCorrect} of ${roundAttempts} checks correct in this round (including supported attempts and retries).` : 'This round introduced material; it did not measure independent recall.';
+    $("#practice-empty").textContent = `${more ? 'Section complete. Your place is saved. Continue now or take a break.' : 'Round complete. Choose another lesson or revisit introduced material.'} ${recap} Completion is not a mastery score.`;
     updateDueCount();
     if (returnToTop) scrollPracticeToTop();
     return;
@@ -445,7 +463,8 @@ function showNextActivity(returnToTop = true) {
     "sentence-study": "sentence study",
     "sentence-choice": "sentence check",
     "sentence-recall": "sentence recall",
-    "guided-listening": "listening"
+    "guided-listening": "listening",
+    "foundation-study": "pronunciation study"
   };
   $("#activity-type").textContent = activityLabels[currentActivity.type] || currentActivity.type.replaceAll("-", " ");
   $("#activity-focus").textContent = currentActivity.transfer ? 'Mixed practice' : currentActivity.focus.join(" • ");
@@ -496,6 +515,9 @@ function showNextActivity(returnToTop = true) {
     activityStage = "listening";
     $("#answer-area").hidden = true;
     $("#listening-panel").hidden = false;
+    $('#lesson-purpose').hidden = true;
+    $('#listening-reflection').value = '';
+    $('#listening-reflection-status').textContent = '';
     $("#listening-source-name").textContent = currentActivity.audioSourceName || "Trusted audio source";
     $("#listening-speaker").textContent = currentActivity.audioSpeaker ? `Speaker: ${currentActivity.audioSpeaker}` : "";
     $("#listening-notes").innerHTML = (currentActivity.listeningNotes || []).map(note => `<li>${escapeHtml(note)}</li>`).join("");
@@ -560,7 +582,8 @@ function completeListeningActivity() {
   const previous = progress.listening[key] || {};
   const stage = $('#listening-replay-stage').value;
   const now = Date.now();
-  progress.listening[key] = { ...previous, [stage]: (previous[stage] || 0) + 1, lastAt: now,
+  const reflection = $('#listening-reflection').value;
+  progress.listening[key] = { ...previous, reflection, [stage]: (previous[stage] || 0) + 1, lastAt: now,
     delayedReplays: (previous.delayedReplays || 0) + (previous.lastAt && now - previous.lastAt >= 86400000 ? 1 : 0) };
   saveProgress(progress);
   showNextActivity();
@@ -744,10 +767,12 @@ function renderProgress() {
   const recallRate = totalAttempts ? Math.round((progress.totals.correct / totalAttempts) * 100) : 0;
   const stats = [[reviewed, "items practiced"], [due, "due now"], [recallRate + "%", "correct answers"], [weak, "needs practice"]];
   $("#progress-summary").innerHTML = stats.map(([value, label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join("");
+  $('#progress-next').textContent = due ? `${due} introduced activities are due. A short mixed round will revisit them.` : weak ? `${weak} items need more practice. Review the explanation, then return later without help.` : 'Choose a lesson to build on what you have studied. Revisit it later without help to check retention.';
+  $('#progress-next-btn').textContent = due ? 'Review due material' : weak ? 'Practice difficult items' : 'Choose a lesson';
   const e = evidenceTotals(progress.evidence);
   $('#evidence-summary').innerHTML = [
     [e.recognition, 'recognition successes'], [e.supported, 'supported recall successes'],
-    [e.production, 'independent model-production successes'], [e.delayedProduction, 'production successes after 24+ hours'],
+    [e.production, 'unaided written successes'], [e.delayedProduction, 'production successes after 24+ hours'],
     [e.interpretation, 'typed meaning successes'], [e.retry, 'correction successes']
   ].map(([value,label]) => `<div class="stat-card"><span class="value">${value}</span><span class="label">${label}</span></div>`).join('');
   const listening = Object.values(progress.listening || {});
@@ -757,6 +782,8 @@ function renderProgress() {
 }
 
 function recordAttempt(status) {
+  roundAttempts++;
+  if (status === 'correct') roundCorrect++;
   const prior = progress.reviews[currentActivity.id];
   const supported = usedHelp || evidenceKind(currentActivity) === 'supported';
   progress.evidence[currentActivity.id] = recordEvidence(progress.evidence[currentActivity.id], currentActivity, status, { helped: supported, retry: !!currentActivity.correctionRetry });
@@ -792,11 +819,14 @@ function renderActivityHelp(afterAnswer = false) {
 }
 
 function bindEvents() {
+  $('#round-continue-btn').addEventListener('click', () => { if (lessonSession) startLesson(lessonSession.id); });
+  $('#progress-next-btn').addEventListener('click', () => { if (dueActivities().length) startDuePractice(); else if(needsPracticeGroups().length) startNeedsPractice(); else switchView('learn'); });
   $('#round-learn-btn').addEventListener('click', () => switchView('learn'));
   $('#round-review-btn').addEventListener('click', startDuePractice);
   $('#vocabulary-families').addEventListener('click', event => { const button = event.target.closest('[data-family-lesson]'); if (button) startLesson(button.dataset.familyLesson); });
   $('#support-mode').value = progress.settings.supportMode || 'auto';
   $('#support-mode').addEventListener('change', event => { progress.settings.supportMode = event.target.value; saveProgress(progress); });
+  $('#listening-reflection').addEventListener('change', event => { $('#listening-reflection-status').textContent = event.target.value === 'uncertain' ? 'Replay a short passage with source support. Choose one sound or word to notice, then listen again.' : event.target.value === 'noticed' ? 'Replay without text and check whether you notice the same detail again. This is reflection, not a comprehension score.' : ''; });
   $('#listening-confirm').addEventListener('change', event => { $('#listening-continue-btn').disabled = !event.target.checked; });
   $('#listening-skip-btn').addEventListener('click', () => showNextActivity());
   $('#model-help').addEventListener('toggle', event => { if (event.target.open && !answerLocked) { usedHelp = true; markModelSeen(currentActivity); } });

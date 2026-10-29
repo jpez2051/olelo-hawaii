@@ -64,5 +64,13 @@ export function diagnose(given, activity, result) {
       return `Compare ${pair.join(' / ')}: ${pair[0].startsWith('kā') && pair[1].startsWith('mā') ? 'does the group include the listener?' : pair[0] === 'āhea' ? 'is the question about past or future time?' : pair[0].startsWith('ko') ? 'which relationship class does this context require?' : 'how many people does the form refer to?'}`;
     }
   }
-  return activity.diagnosis || 'Compare your answer with the model and the explanation. This check accepts the taught form; it does not judge every possible Hawaiian phrasing.';
+  const focus = {
+    pronouns: 'Identify the speaker, the listener, and the number of people first. Then compare those relationships with the model.',
+    'noun-phrases': 'Check the determiner and whether the context calls for one person or thing, or more than one. Compare any number-related spelling change with the model.',
+    questions: 'Identify what information is being requested: a person, place, time, action, or yes/no answer. Then compare the question form.',
+    possessives: 'Identify the possessor and the relationship expressed in this example. Consult the lesson explanation before choosing the possession form.',
+    'sentence-patterns': 'Find the action or description, its participant, and any time or location clues. Compare the order and markers with the sourced model.',
+    spelling: 'Compare one word at a time, including every vowel and written mark. Say it with the trusted audio when available.'
+  };
+  return activity.diagnosis || focus[activity.skill] || 'Compare your answer with the model and the explanation. This check accepts the taught form; it does not judge every possible Hawaiian phrasing.';
 }

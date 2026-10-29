@@ -16,11 +16,12 @@ try{
 const page=await browser.newPage({viewport:{width:390,height:844}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto(`http://127.0.0.1:${server.address().port}`);
 await page.waitForFunction(()=>document.querySelector('#curriculum-status').textContent.includes('activities loaded'));
-await page.evaluate(async()=>{window.testApp=await import('/js/app.js?v=7.2.0');});
+await page.evaluate(async()=>{window.testApp=await import('/js/app.js?v=7.3.0');});
 const ids=await page.evaluate(()=>[...new Set(testApp.testState().activities.filter(a=>a.unitMode!=='immersion').map(a=>a.lessonId))]);let count=0;
 for(const id of ids){
  await page.evaluate(id=>testApp.startLesson(id,true),id);
- while(await page.evaluate(()=>!!testApp.testState().currentActivity)) {
+ while(await page.evaluate(()=>!!testApp.testState().currentActivity) || await page.locator('#round-continue-btn').isVisible()) {
+  if(!await page.evaluate(()=>!!testApp.testState().currentActivity)) { await page.locator('#round-continue-btn').click(); }
   const a=await page.evaluate(()=>testApp.testState().currentActivity);
   if (['sentence-study','foundation-study'].includes(a.type)) {
    assert.equal(await page.locator('#sentence-language-note').isVisible(), !!a.languageNote?.trim(), a.id + ': note visibility');
@@ -41,6 +42,16 @@ for(const id of ids){
  }
 }
 assert(await page.locator('#round-actions').isVisible());
+// Verify saved section progress survives reload.
+await page.evaluate(()=>testApp.startLesson('pronunciation-01',true));
+const firstId = await page.evaluate(()=>testApp.testState().currentActivity.id);
+await page.locator('#sentence-continue-btn').click();
+const nextId = await page.evaluate(()=>testApp.testState().currentActivity.id);
+assert.notEqual(firstId,nextId);
+await page.reload();
+await page.waitForFunction(()=>document.querySelector('#curriculum-status').textContent.includes('activities loaded'));
+await page.evaluate(async()=>{window.testApp=await import('/js/app.js?v=7.3.0');testApp.startLesson('pronunciation-01');});
+assert.equal(await page.evaluate(()=>testApp.testState().currentActivity.id),nextId);
 // Verify that the recall answer is not exposed through Sound guide.
 await page.evaluate(()=>testApp.startLesson('orthography-01',true));
 assert(await page.locator('#sound-guide').isHidden());
@@ -53,7 +64,20 @@ assert.equal(await page.evaluate(()=>testApp.testState().progress.reviews[testAp
 assert.equal(await page.evaluate(()=>testApp.testState().progress.evidence[testApp.testState().currentActivity.id].successes.retry),1);
 assert.match(await page.locator('#feedback').innerText(), /Recorded as correction practice/);
 assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+assert.equal(count,346);
+await page.evaluate(()=>{testApp.startLesson('listening-01',true);});
+assert(await page.locator('#listening-continue-btn').isDisabled());
+await page.locator('#listening-panel details summary').click();
+await page.locator('#listening-reflection').selectOption('uncertain');
+assert.match(await page.locator('#listening-reflection-status').innerText(), /Replay a short passage/);
+await page.locator('#listening-confirm').check();
+const listeningId=await page.evaluate(()=>testApp.testState().currentActivity.id);
+await page.locator('#listening-continue-btn').click();
+assert.equal(await page.evaluate(id=>testApp.testState().progress.listening[id].reflection,listeningId),'uncertain');
+await page.locator('.nav-btn[data-view="progress"]').click();
+assert(await page.locator('#progress-next-btn').isVisible());
 assert.deepEqual(errors,[]);
 await page.screenshot({path:process.env.SCREENSHOT_PATH || 'browser-check.png',fullPage:true});
 console.log(`PASS: traversed ${count} activities; mobile layout, answer concealment, retry scheduling, no runtime errors.`);
 }finally{await browser.close();server.close();}
+

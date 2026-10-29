@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="ʻŌlelo Hawaiʻi">
   <title>ʻŌlelo Hawaiʻi — Learn to use the language</title>
-  <link rel="stylesheet" href="./css/app.css?v=7.2.0">
+  <link rel="stylesheet" href="./css/app.css?v=7.3.0">
 </head>
 <body>
   <header class="site-header">
@@ -67,7 +67,8 @@
       </div>
 
       <article id="practice-card" class="practice-card">
-        <div id="round-actions" class="practice-actions" hidden><button id="round-learn-btn" class="primary-btn" type="button">Choose a lesson</button><button id="round-review-btn" class="secondary-btn" type="button">Mixed review</button></div>
+        <p id="lesson-purpose" class="learning-help" hidden></p>
+        <div id="round-actions" class="practice-actions" hidden><button id="round-continue-btn" class="primary-btn" type="button" hidden>Continue lesson</button><button id="round-learn-btn" class="primary-btn" type="button">Choose a lesson</button><button id="round-review-btn" class="secondary-btn" type="button">Mixed review</button></div>
         <div id="practice-empty" class="empty-state">Choose a lesson from Learn, or practice material that is due for review.</div>
 
         <div id="practice-content" hidden>
@@ -126,6 +127,7 @@
             <a id="listening-transcript" target="_blank" rel="noopener noreferrer" hidden>Open the matching transcript passage</a>
             <label for="listening-replay-stage">Listening step</label>
             <select id="listening-replay-stage"><option value="first">First listen</option><option value="support">Compared with source text</option><option value="hidden">Replayed without text</option></select>
+            <details class="learning-help"><summary>After listening: reflect and replay</summary><p>Choose one detail from “While you listen.” Recall it before reopening the source. Compare with the speaker or source text when available. If it is unclear, replay a short passage; you do not need to understand everything.</p><label for="listening-reflection">How did this step feel? (optional)</label><select id="listening-reflection"><option value="">Choose a reflection</option><option value="noticed">I noticed the detail I was listening for</option><option value="uncertain">I need another supported listen</option></select><p id="listening-reflection-status" role="status"></p></details>
             <label class="listening-confirm"><input id="listening-confirm" type="checkbox"> I completed this listening step</label>
             <p class="exposure-note">Self-reported exposure only. Returns after 24 hours are recorded separately.</p>
           </div>
@@ -170,7 +172,7 @@
           <details id="sound-guide" class="learning-help" hidden><summary>Sound guide</summary><div id="sound-guide-body"></div></details>
           <details id="model-help" class="learning-help" hidden><summary>Show the taught model · counts as support</summary><p id="model-help-text" lang="haw"></p></details>
           <details id="source-details" class="learning-help"><summary>Source &amp; review · opening counts as support</summary><p>Source-checked, not educator-reviewed. These are taught-model checks, not judgments of every possible translation.</p><ul id="activity-sources"></ul></details>
-          <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+          <div id="feedback" role="status" aria-live="polite" class="feedback" hidden></div>
           <div id="retry-actions" class="retry-actions" hidden>
             <p>Use the correction, hide it, and try once more. The miss still stays in later review.</p>
             <button id="retry-btn" class="primary-btn" type="button">Retry from memory</button>
@@ -183,6 +185,7 @@
       <div class="panel">
         <p class="section-kicker">What is sticking</p>
         <h2 id="progress-title">Progress</h2>
+        <div class="learning-help"><p id="progress-next"></p><button id="progress-next-btn" class="primary-btn" type="button">Choose a lesson</button><p>Correct-answer percentages include help and retries. Use the separate evidence counts below to distinguish recognition from unaided recall.</p></div>
         <div id="progress-summary" class="progress-grid"></div>
         <h3>What the evidence shows</h3><div id="evidence-summary" class="progress-grid"></div>
         <p>Earlier progress is preserved. Evidence categories begin with Version 7.1. Recognition, help, and immediate retries do not establish independent production. Delayed production means an unaided correct answer at least 24 hours after the previous attempt.</p>
@@ -221,7 +224,7 @@
 
   <footer class="site-footer">
     <span lang="haw">E hoʻomau i ke aʻo ʻana.</span> Keep learning.
-    <span class="site-version">Version 7.2.0</span>
+    <span class="site-version">Version 7.3.0</span>
   </footer>
 
   <script>
@@ -237,6 +240,6 @@
       }, true);
     })();
   </script>
-  <script type="module" src="./js/app.js?v=7.2.0"></script>
+  <script type="module" src="./js/app.js?v=7.3.0"></script>
 </body>
 </html>
